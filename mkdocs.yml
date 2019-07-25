@@ -41,7 +41,7 @@ extra:
 
 # Repository
 repo_name: PegaSysEng/EthSigner
-repo_url: https://github.com/PegaSysEng/doc.ethsigner
+repo_url: https://github.com/PegaSysEng/ethsigner
 
 theme:
   name: material
