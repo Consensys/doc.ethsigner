@@ -57,6 +57,7 @@ nav:
   - Installation:
     - Install Binary Distribution: Installation/Install-Binaries.md
     - Build from Source: Installation/Build-From-Source.md
+    - Running from Docker Image: Installation/Docker.md
   - Using EthSigner:
     - Getting Started: Using-EthSigner/Getting-Started.md
     - Using EthSigner: Using-EthSigner/Using-EthSigner.md
