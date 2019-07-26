@@ -19,6 +19,7 @@ copyright: EthSigner and its documentation are licensed under Apache 2.0 license
 
 #extra project info and template customisation
 extra:
+  doc_site_edit_url: https://github.com/PegaSysEng/doc.ethsigner/
   versions:
     stable: '0.1.1'
   latest_version_warning:
@@ -39,7 +40,7 @@ extra:
     tokenizer: '[\s]+'
 
 
-# Repository
+# Software Repository
 repo_name: PegaSysEng/EthSigner
 repo_url: https://github.com/PegaSysEng/ethsigner
 
