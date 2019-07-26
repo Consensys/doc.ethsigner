@@ -1,9 +1,13 @@
-description: Install EthSigner from binary distribution
+description: Getting started with EthSigner
 <!--- END of page meta data -->
 
 # Getting Started 
 
-EthSigner requires a V3 Keystore key file and a password file. 
+For file-based signing, EthSigner requires a V3 Keystore key file and a password file.
+
+!!! tip 
+    EthSigner also supports signing transactions with a key stored in an external vault (for example, 
+    [Hashicorp Vault](Hashicorp.md)).  
 
 ## Prerequisites 
 
@@ -30,6 +34,19 @@ option set to `8590`.
 ## Create Password and Key Files 
 
 Create a text file containing the password for the V3 Keystore key file to be created (for example, `passwordFile`). 
+
+!!! attention "Password text file must not contain characters other than those used in your password"
+    EthSigner reads the password file as binary and any character in the file is considered part
+    of your password.
+    
+    _Some POSIX compliant editors automatically add an end-of-line in text files. If your editor adds an
+    end-of-line character, the end-of-line is considered part of your password._
+    
+    Use the following command to ensure the password file is correct:
+    ```bash
+    echo -n "Type your password:";read -s password;echo -ne $password > passwordFile;
+    ```
+    Enter the password when prompted.
 
 Use the [web3.js library](https://github.com/ethereum/web3.js/) to create a key file where: 
 
@@ -84,7 +101,20 @@ Start EthSigner with options specified as follows:
 
 !!! example
     ```
-    ethsigner --chain-id=2018 --downstream-http-port=8590 --key-file=/mydirectory/keyFile --password-file=/mydirectory/passwordFile
+    ethsigner --chain-id=2018 --downstream-http-port=8590 file-based-signer --key-file=/mydirectory/keyFile --password-file=/mydirectory/passwordFile
+    ```
+
+## Confirm EthSigner is Up
+
+Use the `upcheck` endpoint to confirm EthSigner is running.
+
+!!! example
+    ```bash tab="curl HTTP request"
+    curl -X GET http://127.0.0.1:8545/upcheck
+    ```
+   
+    ```json tab="Result"
+    I'm up
     ```
 
 ## Confirm EthSigner Passing Requests to Pantheon 
