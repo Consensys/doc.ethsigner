@@ -24,20 +24,18 @@ docker run pegasyseng/ethsigner:latest --help
 !!! note
     `latest` runs the latest cached version. To pull the latest version, use `docker pull pegasyseng/pantheon:latest`. 
  
-## Exposing Ports
+## Expose Listening Port
 
-QUESTION WITH JASON
+Exposing the listening port is required to use the  default listening port (`8545`) or the port specified using 
+[`--http-listen-port`](../Reference/EthSigner-CLI.md#http-listen-port). 
 
-Expose the downstream and listening ports. Exposing the ports is required to use the  default ports or the ports specified using 
-[`--downstream-http-port`](../Reference/EthSigner-CLI.md#downstream-http-port) and [`--http-listen-port`](../Reference/EthSigner-CLI.md#http-listen-port). 
-
-To run EthSigner exposing local ports for access: 
+To run EthSigner exposing listening port for access: 
 ```bash
-docker run -p <listenPort>:8545 pegasyseng/ethsigner:latest --downstream-http-port=8590
+docker run -p <listenPort>:8545 pegasyseng/ethsigner:latest <options>
 ```
 
 !!!example
-    To run EthSigner using [file-based signing](../Installation/Docker.md) using the default listing port and 8590 as the downstream port:
+    To run EthSigner using [file-based signing](../Using-EthSigner/Getting-Started.md) using the default listing port and 8590 as the downstream port:
     ```bash
     docker run -p 8545:8545 -v ~/myKeyFile:/opt/ethsigner/keyfile -v ~/myPasswordFile:/opt/ethsigner/passwordfile pegasyseng/ethsigner --chain-id=2018 --downstream-http-host=pantheonHost --downstream-http-port=8590 --http-listen-host=0.0.0.0 file-based-signer -k /opt/ethsigner/keyfile -p /opt/ethsigner/passwordfile
     ```
