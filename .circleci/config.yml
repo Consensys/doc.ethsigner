@@ -9,7 +9,7 @@ jobs:
 
       - restore_cache:
           keys:
-            - deps-{{ checksum "requirements.txt" }}
+            - deps-{{ checksum "docs/requirements.txt" }}
       - run:
           name: install dependencies
           command: |
@@ -19,7 +19,7 @@ jobs:
       - save_cache:
           paths:
             - ./venv
-          key: deps-{{ checksum "requirements.txt" }}
+          key: deps-{{ checksum "docs/requirements.txt" }}
 
       - run:
           name: Run MkDocs
@@ -27,3 +27,6 @@ jobs:
             . venv/bin/activate
             mkdocs build -s
             
+      - store_artifacts:
+          path: ./site
+          destination: site
