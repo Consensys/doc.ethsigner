@@ -72,9 +72,9 @@ workflows:
   version: 2
   default:
     jobs:
-      - mkdocs
+      - build
       - vale
       - markdownlint
       - linkchecker:
           requires:
-            - mkdocs
+            - build
