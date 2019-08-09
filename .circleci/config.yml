@@ -37,7 +37,7 @@ jobs:
       - run:
           name: Run Vale
           command: |
-            docker run --rm -v $PWD:/doc jdkato/vale --config /doc/.vale.ini --glob=‘*.{md}’ . > vale.out
+            docker run --rm -v $PWD:/doc jdkato/vale --config /doc/.vale.ini --glob='*.{md}' --no-exit . > vale.out
       - store_artifacts:
           path: ./vale.out
           destination: vale.out
