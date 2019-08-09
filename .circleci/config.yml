@@ -62,8 +62,10 @@ jobs:
       - checkout
       - run:
           # Ignored result for now until we fix all MD syntax and decide what rules we keep or not
-          # just remove the [| echo "Ignored result"] part thaat aalways return 0 to make it count.
+          # just remove the [| echo "Ignored result"] part that always return 0 and the custom shell
+          # to make it count.
           name: Run Markdownlint
+          shell: /bin/bash
           command: |
             docker run --rm -v $PWD:/doc -w /doc pipelinecomponents/markdownlint mdl --style all . > markdownlint.out | echo "Ignored result"
       - store_artifacts:
