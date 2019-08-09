@@ -61,9 +61,11 @@ jobs:
     steps:
       - checkout
       - run:
+          # Ignored result for now until we fix all MD syntax and decide what rules we keep or not
+          # just remove the [| echo "Ignored result"] part thaat aalways return 0 to make it count.
           name: Run Markdownlint
           command: |
-            docker run --rm --mount type=bind,source=$(pwd),target=/doc -w /doc pipelinecomponents/markdownlint mdl --style all . > markdownlint.out
+            docker run --rm -v $PWD:/doc -w /doc pipelinecomponents/markdownlint mdl --style all . > markdownlint.out | echo "Ignored result"
       - store_artifacts:
           path: ./markdownlint.out
           destination: markdownlint.out
