@@ -63,7 +63,7 @@ jobs:
       - run:
           name: Run Markdownlint
           command: |
-            - docker run --rm --mount type=bind,source=$(pwd),target=/doc -w /doc pipelinecomponents/markdownlint mdl --style all . > markdownlint.out
+            docker run --rm --mount type=bind,source=$(pwd),target=/doc -w /doc pipelinecomponents/markdownlint mdl --style all . > markdownlint.out
       - store_artifacts:
           path: ./markdownlint.out
           destination: markdownlint.out
