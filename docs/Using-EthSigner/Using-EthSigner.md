@@ -48,7 +48,7 @@ Transaction object for private transactions:
     the pending transaction with the new one. 
 
 !!! note
-    If a non-zero `value` is included in the transaction object, an error is returned.  Ether transfers cannot 
+    If a non-zero `value` is included in the transaction object, an error is returned. Ether transfers cannot 
     be private transactions. 
 
 **Returns**
@@ -97,7 +97,7 @@ None
 
 Creates and signs a transaction using the [keystore account](../Using-EthSigner/Getting-Started.md#create-password-and-key-files). 
 
-EthSigner submits the signed transaction to Pantheon using [`eth_sendRawTransaction`](https://docs.pantheon.pegasys.tech/en/stable/Reference/JSON-RPC-API-Methods/#eth_sendrawtransaction). 
+EthSigner submits the signed transaction to Pantheon using [`eth_sendRawTransaction`](https://docs.pantheon.pegasys.tech/Reference/Pantheon-API-Methods/#eth_sendrawtransaction). 
 
 **Parameters**
 
