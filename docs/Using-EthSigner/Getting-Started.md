@@ -119,7 +119,7 @@ Use the `upcheck` endpoint to confirm EthSigner is running.
 
 ## Confirm EthSigner Passing Requests to Pantheon 
 
-Request the current block number using [`eth_blockNumber`](https://docs.pantheon.pegasys.tech/en/stable/Reference/JSON-RPC-API-Methods/#eth_blocknumber) with the EthSigner JSON-RPC endpoint (`8545` in this example): 
+Request the current block number using [`eth_blockNumber`](https://docs.pantheon.pegasys.tech/Reference/Pantheon-API-Methods/#eth_blocknumber) with the EthSigner JSON-RPC endpoint (`8545` in this example): 
 
 ```bash
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":51}' http://127.0.0.1:8545
