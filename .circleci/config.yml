@@ -51,10 +51,22 @@ jobs:
       - run:
           name: Run LinkChecker
           command: |
-            docker run --rm -u $(id -u):$(id -g) -v $PWD:/doc linkchecker/linkchecker -v /doc/site/ --ignore-url='custom_theme' --ignore-url='404.html' --check-extern --no-status > linkchecker.out
+            docker run --rm -u $(id -u):$(id -g) -v $PWD:/doc linkchecker/linkchecker /doc/site/ --ignore-url='custom_theme' --ignore-url='404.html' --check-extern --no-status > linkchecker.out
       - store_artifacts:
           path: ./linkchecker.out
           destination: linkchecker.out
+
+  markdownlint:
+    machine: true
+    steps:
+      - checkout
+      - run:
+          name: Run Markdownlint
+          command: |
+            - docker run --rm --mount type=bind,source=$(pwd),target=/doc -w /doc pipelinecomponents/markdownlint mdl --style all . > markdownlint.out
+      - store_artifacts:
+          path: ./markdownlint.out
+          destination: markdownlint.out
 
 workflows:
   version: 2
@@ -62,6 +74,7 @@ workflows:
     jobs:
       - mkdocs
       - vale
+      - markdownlint
       - linkchecker:
           requires:
             - mkdocs
