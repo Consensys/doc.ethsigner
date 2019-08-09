@@ -48,7 +48,7 @@ Transaction object for private transactions:
     the pending transaction with the new one. 
 
 !!! note
-    If a non-zero `value` is included in the transaction object, an error is returned.  Ether transfers cannot 
+    If a non-zero `value` is included in the transaction object, an error is returned. Ether transfers cannot 
     be private transactions. 
 
 **Returns**

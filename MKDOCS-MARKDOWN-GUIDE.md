@@ -67,16 +67,16 @@ To preview EthSigner documentation locally:
   ```
 - Follow the link displayed on the output of this command that
 looks like `[I 190206 18:48:47 server:298] Serving on http://127.0.0.1:8000`, 
-here connect to [http://127.0.0.1:8000]
+here connect to [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
 You can let this doc server run while you work on the doc, it updates the local website
 automatically when you save changes in your Markdown files. 
 
 ## Formatting Markdown For Doc Site
 
-Final documentation rendering is essential, but the format of the Markdown files is also very important.
+Final documentation rendering is essential, but the format of the Markdown files is also important.
 
-Formatting the Markdown code helps reviewers and writers easily navigate in the code and review your changes.
+Formatting the Markdown code helps reviewers and writers to navigate in the code and review your changes.
 
 A few basic rules:
 
@@ -147,7 +147,7 @@ Example:
 
 The 4 spaces indentation is required for the content to be part of the admonition.
 
-We generally use the following [types](https://squidfunk.github.io/mkdocs-material/extensions/admonition/#types)
+We use the following [types](https://squidfunk.github.io/mkdocs-material/extensions/admonition/#types)
 in our documentation:
 
 - **Note** : Used to add information about a subject that doesn't directly needs to be taken in account 
@@ -201,7 +201,7 @@ directly in the Markdown.
 
 ### Abbreviations
 
-Generally we avoid the use of abbreviations but some like "PoW" for proof-of-work or "dApp" for 
+Avoid the use of abbreviations but some like "PoW" for proof-of-work or "dApp" for 
 decentralized application are now part of the Ethereum jargon. The [Abbreviation extension](https://python-markdown.github.io/extensions/abbreviations/)
 enables a tool tip hint to be provided for abbreviations.
 
@@ -272,7 +272,7 @@ Example:
 
 ### Magic Links
 
-If you want an URL to be displayed as a link, simply write it and this extension automatically displays it as 
+If you want a URL to be displayed as a link, simply write it and this extension automatically displays it as 
 a link. You don't need to surround it with Markdown links syntax.
 
 ### Highlight Content

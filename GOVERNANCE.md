@@ -20,14 +20,14 @@ project objectives and design principles.
 See [code of conduct]
 
 ## Community membership
-See [community membership]
+See [kub community membership]
 
 ## Decision Making
-Decision making will be handled by the Approvers (see [community membership]).
+Decision making will be handled by the Approvers (see [kub community membership]).
 If consensus cannot be reached, the Benevolent Dictator will provide the final word on the decision.
 
-## CLA
-All contributors must sign the CLA, as described in [CLA.md].
+## Contributor License Agreement
+All contributors must sign the Contributor License Agreement (CLA), as described in [CLA.md].
 
 ## Attribution
 This document was influenced by the following:

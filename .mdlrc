@@ -1,2 +1,2 @@
 rules "~MD034"
-show_kramdown_warnings false
+show_kramdown_warnings true
