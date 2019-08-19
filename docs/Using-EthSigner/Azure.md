@@ -20,8 +20,8 @@ Take note of the following to specify when starting EthSigner:
 
 ## Start Pantheon 
 
-[Start Pantheon](https://docs.pantheon.pegasys.tech/en/stable/Getting-Started/Starting-Pantheon/) with the 
-[`--rpc-http-port`](https://docs.pantheon.pegasys.tech/en/stable/Reference/Pantheon-CLI-Syntax/#rpc-http-port)
+[Start Pantheon](https://docs.pantheon.pegasys.tech/Getting-Started/Starting-Pantheon/) with the 
+[`--rpc-http-port`](https://docs.pantheon.pegasys.tech/Reference/Pantheon-CLI-Syntax/#rpc-http-port)
 option set to `8590` to avoid conflict with the default EthSigner listening port (`8545`). 
 
 !!! example
