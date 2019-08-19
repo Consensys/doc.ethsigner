@@ -12,7 +12,7 @@ For file-based signing, EthSigner requires a V3 Keystore key file and a password
 ## Prerequisites 
 
 * [EthSigner](../Installation/Install-Binaries.md)
-* [Pantheon](https://docs.pantheon.pegasys.tech/en/stable/Installation/Install-Binaries/)
+* [Pantheon](https://docs.pantheon.pegasys.tech/Installation/Install-Binaries/)
 * [Node.js](https://nodejs.org/en/download/)
 * [web3.js](https://github.com/ethereum/web3.js/)
 
@@ -22,8 +22,8 @@ For file-based signing, EthSigner requires a V3 Keystore key file and a password
 
 ## Start Pantheon 
 
-[Start Pantheon](https://docs.pantheon.pegasys.tech/en/stable/Getting-Started/Starting-Pantheon/) with the 
-[`--rpc-http-port`](https://docs.pantheon.pegasys.tech/en/stable/Reference/Pantheon-CLI-Syntax/#rpc-http-port)
+[Start Pantheon](https://docs.pantheon.pegasys.tech/Getting-Started/Starting-Pantheon/) with the 
+[`--rpc-http-port`](https://docs.pantheon.pegasys.tech/Reference/Pantheon-CLI-Syntax/#rpc-http-port)
 option set to `8590`. 
 
 !!! example
