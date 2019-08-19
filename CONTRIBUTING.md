@@ -11,7 +11,7 @@ and feel free to propose changes to this document in a pull request.
 [I just have a quick question](#i-just-have-a-quick-question)
 
 [How To Contribute](#how-to-contribute)
-  * [Reporting Bugs](#reporting-bugs)
+  * [Reporting Documentation Bugs](#reporting-documentation-bugs)
   * [Suggesting Enhancements](#suggesting-enhancements)
   * [Your First Contribution](#your-first-contribution)
   * [Pull Requests](#pull-requests)
@@ -63,6 +63,24 @@ attach them in the report.
 * **Provide specific examples to demonstrate the steps**. Include links to files or GitHub projects, 
 or copy/pasteable snippets, which you use in those examples. If you're providing code snippets in the issue, 
 use backticks (```) to format the snippets.
+* **Describe the behavior you observed after following the steps** and point out what exactly is the problem with that behavior.
+* **Explain which behavior you expected to see instead and why.**
+* **Include screenshots, a video, or both**, which show you following the described steps and clearly demonstrate the problem.
+
+Provide more context by answering these questions:
+
+* **Did the problem start happening recently** (e.g. after switching to a new version of the software) or was this always a problem?
+* If the problem started happening recently, **can you reproduce the problem in an older version of the documentation?** 
+What's the most recent version in which the problem doesn't happen? 
+* **Can you reliably reproduce the issue?** If not, provide details about how often the problem happens and under which conditions it normally happens.
+
+Include details about your configuration and environment:
+
+* **Which version of the documentation are you using?** The exact version is shown in the URL. For example, in the URL `https://docs.ethsigner.pegasys.tech/en/stable/`, the version is `stable`.
+* **Which OS & version are you running?**
+* **Which browser and version are you using?**
+* **What version of Java are you running?** You can get the exact version by looking at the EthSigner logfile during startup.
+or copy/pasteable snippets, which you use in those examples. If you're providing code snippets in the issue, use backticks (```) to format the snippets.
 
 ### Suggesting Enhancements
 
@@ -168,6 +186,7 @@ If you are unfamiliar with Markdown syntax, see our [MKDocs Markdown guide](MKDO
 * Use the imperative mood ("Move cursor" not "Moves cursor").
 * Provide a summary on the first line with more details on additional lines, as needed.
 * Reference issues and pull requests liberally.
+* For more information about how to write great commit messages, see [How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/).
 
 # Pull-Request Labels
 
