@@ -47,7 +47,7 @@ jobs:
             docker create -v /doc --name docVol alpine:3.4 /bin/true
             # copy files into this volume
             docker cp ./ docVol:/doc
-            docker run --rm --volumes-from docVol jdkato/vale --config /doc/.vale.ini --glob='*.{md}' --no-exit . > vale.out
+            docker run --rm --volumes-from docVol jdkato/vale --config /doc/.vale.ini --glob='*.{md}' . > vale.out
       - store_artifacts:
           path: ./vale.out
           destination: vale.out
@@ -77,17 +77,13 @@ jobs:
       - checkout
       - setup_remote_docker
       - run:
-          # Ignored result for now until we fix all MD syntax and decide what rules we keep or not
-          # just remove the [| echo "Ignored result"] part that always return 0 and the custom shell
-          # to make it count.
           name: Run Markdownlint
-          shell: /bin/bash
           command: |
             # create a dummy container which will hold a volume with data
             docker create -v /doc --name docVol alpine:3.4 /bin/true
             # copy files into this volume
             docker cp ./ docVol:/doc
-            docker run --rm --volumes-from docVol -w /doc pipelinecomponents/markdownlint mdl --style all . > markdownlint.out | echo "Ignored result"
+            docker run --rm --volumes-from docVol -w /doc pipelinecomponents/markdownlint mdl --style all . > markdownlint.out
       - store_artifacts:
           path: ./markdownlint.out
           destination: markdownlint.out
