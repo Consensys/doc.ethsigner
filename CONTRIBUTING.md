@@ -48,7 +48,7 @@ checklist as you might find out that you don't need to create one. When you crea
 open a new issue and include a link to the original issue in the body of your new one.
 
 #### Before Submitting A Bug Report
-* **Perform a [cursory search of project issues](https://pegasys1.atlassian.net/browse/ES-27?jql=project%20%3D%20ES)** 
+* **Perform a [cursory search of project issues](https://pegasys1.atlassian.net/secure/Dashboard.jspa?selectPageId=10121)** 
 to see if the problem has already been reported. If it has **and the issue is still open**, add a comment 
 to the existing issue instead of opening a new one.
 
