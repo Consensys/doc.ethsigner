@@ -79,7 +79,7 @@ When you are creating an enhancement suggestion,
 
 #### Before Submitting An Enhancement Suggestion
 
-* **Perform a [cursory search of project issues](https://pegasys1.atlassian.net/browse/ES-27?jql=project%20%3D%20ES)** 
+* **Perform a [cursory search of project issues](https://pegasys1.atlassian.net/secure/Dashboard.jspa?selectPageId=10121)** 
 to see whether the suggestion has been made already. If it has **and the issue is still open**, add a comment 
 to the existing issue instead of opening a new one.
 
