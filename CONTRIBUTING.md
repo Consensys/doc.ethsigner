@@ -181,7 +181,7 @@ If you are unfamiliar with Markdown syntax, see our [MKDocs Markdown guide](MKDO
 
 [private@pegasys.tech]: mailto:private@pegasys.tech
 [Gitter]: https://gitter.im/PegaSysEng/EthSigner
-[EthSigner documentation]: https://docs.ethsigner.pegasys.tech/en/stable/
+[EthSigner documentation]: https://docs.ethsigner.pegasys.tech/
 [CLA.md]: /CLA.md
 [Code Reviews]: /docs/community/code-reviews.md
 [MkDocs]: https://www.mkdocs.org/
