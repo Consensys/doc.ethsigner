@@ -66,7 +66,7 @@ jobs:
             docker create -v /doc --name docVol alpine:3.4 /bin/true
             # copy files into this volume
             docker cp ./ docVol:/doc
-            docker run --rm -u $(id -u):$(id -g) --volumes-from docVol linkchecker/linkchecker /doc/site/ --ignore-url='custom_theme' --ignore-url='404.html' --check-extern --no-status > linkchecker.out
+            docker run --rm -u $(id -u):$(id -g) --volumes-from docVol linkchecker/linkchecker /doc/site/ --ignore-url='custom_theme' --ignore-url='404.html' --ignore-url='http://localhost' --ignore-url='https://localhost' --check-extern --no-status > linkchecker.out
       - store_artifacts:
           path: ./linkchecker.out
           destination: linkchecker.out
