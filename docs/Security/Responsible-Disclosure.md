@@ -1,4 +1,4 @@
-description: Pantheon responsible disclosure statement.
+description: Ethsigner responsible disclosure statement.
 <!--- END of page meta data -->
 
 # Responsible Disclosure Policy
