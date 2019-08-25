@@ -66,6 +66,8 @@ nav:
     - Creating an External Signer: Extending-EthSigner/Adding-Signer.md
   - Reference:
     - EthSigner Command Line: Reference/EthSigner-CLI.md
+  - Security Disclosure:
+    - Security Disclosure Policy: Security/Responsible-Disclosure.md
 
 markdown_extensions:
   - toc:
