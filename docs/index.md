@@ -6,7 +6,7 @@ description: EthSigner is an open-source private transaction manager developed u
 
 ## What is Ethsigner?
 
-EthSigner is an open-source, client-agnostic, Ethereum transaction signer developed under the Apache 2.0 license and written in Java. It adds a layer of security when operating in Ethereum by signing transactions using a private key that can be secured in a variety of cloud providers, or encrypted on a local disk. EthSigner therefore separates private key management from transaction validation. 
+EthSigner is an open-source, client-agnostic, Ethereum transaction signer developed under the Apache 2.0 license and written in Java. It adds a layer of security by signing transactions using a private key that can be secured in a variety of cloud providers, or encrypted on a local disk. EthSigner therefore separates private key management from transaction validation. 
 
 ## How does it work?
 
@@ -15,7 +15,7 @@ EthSigner acts as a proxy service by forwarding requests between the client and 
 !!! note
     EthSigner currently supports a single private key only. That is, only one private key can be stored in the location specified when starting EthSigner.
 
-Ethsigner can sign transactions with a key stored in:
+EthSigner can sign transactions with a key stored in:
 
 * A V3 keystore file
 * [Hashicorp Vault](Using-EthSigner/Hashicorp.md) 
