@@ -4,7 +4,7 @@ EthSigner documentation is written using [Markdown](https://daringfireball.net/p
 
 However, we use two flavors of this syntax:
 
-- One for pages inside the [/docs](/docs) directory that will be rendered by [MkDocs] as described below
+- One for pages inside the [/docs] directory that will be rendered by [MkDocs] as described below
 in the [Installed Markdown Extensions](#installed-markdown-extensions) section.
 - Another using the [Github syntax](https://guides.github.com/features/mastering-markdown/) 
 for pages outside of this documentation directory. These are mainly files to support our [open source 
@@ -13,11 +13,11 @@ community](https://github.com/PegaSysEng/ethsigner/community).
 ## MkDocs Documentation Website
 
 The [EthSigner documentation website](https://docs.ethsigner.pegasys.tech/) is maintained by PegaSys from 
-the content of the [/docs](/docs) directory.
+the content of the [/docs] directory.
 
 ### /docs Directory
 
-The [/docs](/docs) directory in the EthSigner repository contains all the documentation that 
+The [/docs] directory in the EthSigner repository contains all the documentation that 
 is generated into a static HTML website using [MkDocs] and the [Mkdocs Material] theme and hosted by [readthedocs.org].
 
 The documentation is automatically updated using [WebHooks](https://docs.readthedocs.io/en/stable/webhooks.html)
@@ -34,7 +34,7 @@ If any issues occur, contact the maintainers of the [EthSigner documentation pro
 
 Our [MkDocs] setup uses a [Mkdocs Material] theme to render the html pages. It also comes with a number of useful extensions.
 
-[MkDocs] in configured in the [mdkocs.yml](/mkdocs.yml) file.
+[MkDocs] in configured in the [mdkocs.yml](./mkdocs.yml) file.
 
 This file configures:
 
@@ -55,11 +55,11 @@ to ensure the Markdown is correctly understood and displayed.
 
 To preview EthSigner documentation locally: 
 
-- [Install Python](https://www.mkdocs.org/#installing-python)
-- [Install PIP](https://www.mkdocs.org/#installing-pip)
+- [Install Python 3](https://www.python.org/downloads/)
+- Have PIP3 installed alongside Python 3.
 - Install all the required dependencies :
   ```bash
-  pip install -r docs/requirements.txt
+  pip3 install -r docs/requirements.txt
   ```
 - Run the following command in the project directory :
   ```bash
@@ -67,10 +67,17 @@ To preview EthSigner documentation locally:
   ```
 - Follow the link displayed on the output of this command that
 looks like `[I 190206 18:48:47 server:298] Serving on http://127.0.0.1:8000`, 
-here connect to [http://127.0.0.1:8000](http://127.0.0.1:8000)
+here connect to [http://127.0.0.1:8000]
 
 You can let this doc server run while you work on the doc, it updates the local website
-automatically when you save changes in your Markdown files. 
+automatically when you save changes in your Markdown files.
+
+>**Important**
+> 
+> Run `python --version` to make sure you are using version indicated in [readthedocs.yml](readthedocs.yml) file.
+>
+> If you are updating from a previous Python version you will also have to run pip3 install again and 
+check your path.
 
 ## Formatting Markdown For Doc Site
 
@@ -102,7 +109,7 @@ You can quickly achieve this by using a tool like http://markdowntable.com/
 ## Installed Markdown Extensions
 
 >**Important** 
-> Extensions are only available for the docs under [/docs](/docs) directory.
+> Extensions are only available for the docs under [/docs] directory.
 
 As markdown can be a bit limited when it comes to some specific rendering of code, TOCs, and other documentation 
 elements, we configured some extensions for these items.
@@ -132,6 +139,15 @@ To include the content of the "test_accounts.md" page in the "/docs/global" dire
 ```markdown
 {!global/test_accounts.md!}
 ```
+
+>**Important**
+> An [exclude plugin](https://github.com/apenwarr/mkdocs-exclude) is installed
+> (see [mkdocs.yml](mkdocs.yml) file for the config of exclusions).
+> It excludes pages from the final rendered site as otherwise every .md file is rendered and copied.
+> Pages will still be in the source repository but they won't be copied in the final site and won't
+> appear in the search results even if you did not link them from the navigation. It's handy to
+> prevent include files to be reachable as standalone pages as they are intended to be included in
+> other pages.
 
 ### Admonition
 
@@ -396,6 +412,7 @@ Pygment is the implementation for this extension, refer to Pygment website for a
 
 
 
+[/docs]: ./docs
 [MkDocs]: https://www.mkdocs.org/
 [readthedocs.org]: https://readthedocs.org/
 [Mkdocs Material]: https://squidfunk.github.io/mkdocs-material/
