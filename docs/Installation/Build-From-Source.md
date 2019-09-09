@@ -12,7 +12,7 @@ description: Building EthSigner from source code
 
 * [Git](https://git-scm.com/downloads) or [GitHub Desktop](https://desktop.github.com/)
 
-## Installation on Linux / Unix / Mac OS X
+## Installation on Linux / Unix / macOS
 
 ### Clone the EthSigner Repository
 

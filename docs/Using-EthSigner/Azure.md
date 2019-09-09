@@ -20,11 +20,12 @@ Take note of the following to specify when starting EthSigner:
 
 ## Start Pantheon 
 
-[Start Pantheon](https://docs.pantheon.pegasys.tech/en/stable/Getting-Started/Starting-Pantheon/) with the 
-[`--rpc-http-port`](https://docs.pantheon.pegasys.tech/en/stable/Reference/Pantheon-CLI-Syntax/#rpc-http-port)
+[Start Pantheon](https://docs.pantheon.pegasys.tech/Getting-Started/Starting-Pantheon/) with the 
+[`--rpc-http-port`](https://docs.pantheon.pegasys.tech/Reference/Pantheon-CLI-Syntax/#rpc-http-port)
 option set to `8590` to avoid conflict with the default EthSigner listening port (`8545`). 
 
 !!! example
+
     ```bash
     pantheon --network=dev --miner-enabled --miner-coinbase=0xfe3b557e8fb62b89f4916b721be55ceb828dbd73 --rpc-http-cors-origins="all" --host-whitelist=* --rpc-http-enabled --rpc-http-port=8590 --data-path=/tmp/tmpDatdir
     ```
@@ -34,11 +35,12 @@ option set to `8590` to avoid conflict with the default EthSigner listening port
 Start EthSigner.
 
 !!! example  
+
     ```bash
     ethsigner --chain-id=2018 --downstream-http-port=8590 azure-signer --client-id=<ClientID> --client-secret-path=mypath/mysecretfile --key-name=<KeyName> --key-version=<KeyVersion> --keyvault-name=<KeyVaultName>
     ```
 
-!!! tip
+!!! warning "Important"
     Use the [--http-listen-port](../Reference/EthSigner-CLI.md#http-listen-port) option to change the
     EthSigner listening port if `8545` is in use.  
 

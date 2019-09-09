@@ -1,0 +1,105 @@
+---
+version: 2.1
+executors:
+  python_executor:
+    docker:
+      - image: circleci/python:3.7.4
+  node_executor:
+    docker:
+      - image: circleci/node:12.9.0-stretch
+jobs:
+  build:
+    executor: python_executor
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - deps-{{ checksum "docs/requirements.txt" }}
+      - run:
+          name: install dependencies
+          command: |
+            python3 -m venv venv
+            . venv/bin/activate
+            pip install -r docs/requirements.txt
+      - save_cache:
+          paths:
+            - ./venv
+          key: deps-{{ checksum "docs/requirements.txt" }}
+      - run:
+          name: Run MkDocs
+          command: |
+            . venv/bin/activate
+            mkdocs build -s
+
+  vale:
+    executor: python_executor
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run:
+          name: Run Vale
+          command: |
+            # create a dummy container which will hold a volume with data
+            docker create -v /doc --name docVol alpine:3.4 /bin/true
+            # copy files into this volume
+            docker cp ./ docVol:/doc
+            docker run --rm --volumes-from docVol jdkato/vale --config /doc/.vale.ini --glob='*.{md}' . > vale.out
+      - store_artifacts:
+          path: ./vale.out
+          destination: vale.out
+
+  linkchecker:
+    executor: node_executor
+    steps:
+      - checkout
+      - run:
+          name: update-npm
+          command: 'sudo npm install -g npm@latest'
+      - restore_cache:
+          keys:
+            - deps-{{ checksum "package.json" }}
+      - run:
+          # copy files into this volume
+          name: Install dependencies
+          command: |
+            npm install
+      - run:
+          # copy files into this volume
+          name: Run markdown link checker
+          command: |
+            find . -name \*.md ! -path "./node_modules/*" -exec ./node_modules/markdown-link-check/markdown-link-check -q -c link_check_conf.json {} \; > linkchecker.out 2>&1
+            cat ./linkchecker.out
+            ! grep "ERROR:" ./linkchecker.out
+      - save_cache:
+          paths:
+            - ./node_modules
+          key: deps-{{ checksum "package.json" }}
+      - store_artifacts:
+          path: ./linkchecker.out
+          destination: linkchecker.out
+
+  markdownlint:
+    executor: python_executor
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run:
+          name: Run Markdownlint
+          command: |
+            # create a dummy container which will hold a volume with data
+            docker create -v /doc --name docVol alpine:3.4 /bin/true
+            # copy files into this volume
+            docker cp ./ docVol:/doc
+            docker run --rm --volumes-from docVol -w /doc pipelinecomponents/markdownlint mdl --style all . > markdownlint.out
+      - store_artifacts:
+          path: ./markdownlint.out
+          destination: markdownlint.out
+
+workflows:
+  version: 2
+  default:
+    jobs:
+      - build
+      - vale
+      - markdownlint
+      - linkchecker
