@@ -22,7 +22,7 @@ Display the EthSigner command line help using the Docker image:
 docker run pegasyseng/ethsigner:latest --help
 ```
 !!! note
-    `latest` runs the latest cached version. To pull the latest version, use `docker pull pegasyseng/pantheon:latest`. 
+    `latest` runs the latest cached version. To pull the latest version, use `docker pull pegasyseng/ethsigner:latest`. 
  
 ## Expose Listening Port
 
@@ -37,5 +37,5 @@ docker run -p <listenPort>:8545 pegasyseng/ethsigner:latest <options>
 !!!example
     To run EthSigner using [file-based signing](../Using-EthSigner/Getting-Started.md) using the default listing port and 8590 as the downstream port:
     ```bash
-    docker run -p 8545:8545 -v ~/myKeyFile:/opt/ethsigner/keyfile -v ~/myPasswordFile:/opt/ethsigner/passwordfile pegasyseng/ethsigner --chain-id=2018 --downstream-http-host=pantheonHost --downstream-http-port=8590 --http-listen-host=0.0.0.0 file-based-signer -k /opt/ethsigner/keyfile -p /opt/ethsigner/passwordfile
+    docker run -p <listenPort>:8545 -v <~/myKeyFile>:/opt/ethsigner/keyfile -v <~/myPasswordFile>:/opt/ethsigner/passwordfile pegasyseng/ethsigner:latest --chain-id=2018 --downstream-http-host=<PantheonHost> --downstream-http-port=8590 --http-listen-host=0.0.0.0 file-based-signer -k /opt/ethsigner/keyfile -p /opt/ethsigner/passwordfile
     ```
