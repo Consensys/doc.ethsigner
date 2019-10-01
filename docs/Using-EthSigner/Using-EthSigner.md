@@ -10,7 +10,7 @@ methods:
 * [`eth_accounts`](#eth_accounts)
 * [`eth_sendTransaction`](#eth_sendtransaction)
 
-All other JSON-RPC requests are passed through EthSigner to Pantheon and the result from Pantheon returned 
+All other JSON-RPC requests are passed through EthSigner to Hyperledger Besu and the result from Besu returned 
 by EthSigner. 
 
 !!! note 
@@ -18,13 +18,13 @@ by EthSigner.
 
 # eea_sendTransaction 
 
-Creates and signs a [private transaction](https://docs.pantheon.pegasys.tech/Privacy/Explanation/Privacy-Overview/)
+Creates and signs a [private transaction](https://besu.hyperledger.org/en/stable/Concepts/Privacy/Privacy-Overview/)
 using the [keystore account](../Using-EthSigner/Getting-Started.md#create-password-and-key-files). 
 
-EthSigner submits the signed transaction to Pantheon using [`eea_sendRawTransaction`](https://docs.pantheon.pegasys.tech/Reference/Pantheon-API-Methods/#eea_sendrawtransaction). 
+EthSigner submits the signed transaction to Besu using [`eea_sendRawTransaction`](https://besu.hyperledger.org/en/stable/Reference/API-Methods/#eea_sendrawtransaction). 
 
 !!! note 
-    Pantheon uses a Transaction Manager to implement privacy. [Orion](http://docs.orion.pegasys.tech) is
+    Besu uses a Transaction Manager to implement privacy. [Orion](http://docs.orion.pegasys.tech) is
     the Transaction Manager used in this documentation but EthSigner can be used with other Transaction Managers.  
 
 **Parameters**
@@ -37,11 +37,11 @@ Transaction object for private transactions:
 | **to**          | Data, 20&nbsp;bytes | Not required for contract creation | `null` for contract creation transaction. Contract address for contract invocation transactions.                                                           |
 | **gas**         | Quantity            | Optional                           | Gas provided by the sender. Default is `90000`.                                                                               |
 | **gasPrice**    | Quantity            | Optional                           | Gas price provided by the sender in Wei. Default is `0`.                                                                      |
-| **nonce**       | Quantity            | Required                           | Number of transactions sent from the `from` account before this one. Use [`priv_getTransactionCount`](https://docs.pantheon.pegasys.tech/Reference/Pantheon-API-Methods/#priv_gettransactioncount) to calculate |                                                                    |
+| **nonce**       | Quantity            | Required                           | Number of transactions sent from the `from` account before this one. Use [`priv_getTransactionCount`](https://besu.hyperledger.org/en/stable/Reference/API-Methods/#priv_gettransactioncount) to calculate |                                                                    |
 | **data**        | Quantity            | Optional                           | Compiled contract code or hash of the invoked method signature and encoded parameters.                                        |
 | **privateFrom** | Data, 20&nbsp;bytes | Required                           | Orion address of the sender                                                                                                         |
 | **privateFor**  | Array of data       | Required                           | Orion addresses of recipients                                                                                                       |
-| **restriction** | String              | Required                           | Must be [`restricted`](https://docs.pantheon.pegasys.tech/Privacy/Explanation/Privacy-Overview/#private-transaction-attributes) |
+| **restriction** | String              | Required                           | Must be [`restricted`](https://besu.hyperledger.org/en/stable/Concepts/Privacy/Privacy-Overview/#private-transaction-attributes) |
 
 !!! tip
     Submitting a transaction with the same nonce as a pending transaction and a higher gas price replaces 
@@ -97,7 +97,7 @@ None
 
 Creates and signs a transaction using the [keystore account](../Using-EthSigner/Getting-Started.md#create-password-and-key-files). 
 
-EthSigner submits the signed transaction to Pantheon using [`eth_sendRawTransaction`](https://docs.pantheon.pegasys.tech/Reference/Pantheon-API-Methods/#eth_sendrawtransaction). 
+EthSigner submits the signed transaction to Besu using [`eth_sendRawTransaction`](https://besu.hyperledger.org/en/stable/Reference/API-Methods/#eth_sendrawtransaction). 
 
 **Parameters**
 
