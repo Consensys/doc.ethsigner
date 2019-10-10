@@ -30,6 +30,10 @@ option set to `8590` to avoid conflict with the default EthSigner listening port
     besu --network=dev --miner-enabled --miner-coinbase=0xfe3b557e8fb62b89f4916b721be55ceb828dbd73 --rpc-http-cors-origins="all" --host-whitelist=* --rpc-http-enabled --rpc-http-port=8590 --data-path=/tmp/tmpDatdir
     ```
 
+!!! important 
+    To use EthSigner for signing transactions, the Ethereum client genesis file must include at least the 
+    `byzantium` milestone.
+    
 ## Start EthSigner with Azure Key Vault Signing 
 
 Start EthSigner.

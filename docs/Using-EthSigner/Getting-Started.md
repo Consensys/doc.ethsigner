@@ -19,7 +19,6 @@ For file-based signing, EthSigner requires a V3 Keystore key file and a password
 !!! note
     The Ethereum client used in this documentation is Hyperledger Besu but EthSigner can be used with any Ethereum client.     
 
-
 ## Start Besu 
 
 [Start Besu](https://besu.hyperledger.org/en/stable/HowTo/Get-Started/Starting-node/) with the 
@@ -30,6 +29,10 @@ option set to `8590`.
     ```bash
     besu --network=dev --miner-enabled --miner-coinbase=0xfe3b557e8fb62b89f4916b721be55ceb828dbd73 --rpc-http-cors-origins="all" --host-whitelist=* --rpc-http-enabled --rpc-http-port=8590 --data-path=/tmp/tmpDatdir
     ```
+
+!!! important 
+    To use EthSigner for signing transactions, the Ethereum client genesis file must include at least the 
+    `byzantium` milestone.
 
 ## Create Password and Key Files 
 
