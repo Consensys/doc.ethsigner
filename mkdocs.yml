@@ -54,18 +54,19 @@ theme:
   logo:
     icon: vpn_key
 nav:
-  - Installation:
-    - Install Binary Distribution: Installation/Install-Binaries.md
-    - Build from Source: Installation/Build-From-Source.md
-  - Using EthSigner:
-    - Getting Started: Using-EthSigner/Getting-Started.md
-    - Using EthSigner: Using-EthSigner/Using-EthSigner.md
-    - Using Hashicorp Vault: Using-EthSigner/Hashicorp.md
-    - Using Azure Key Vault: Using-EthSigner/Azure.md
-  - Extending EthSigner:
-    - Creating an External Signer: Extending-EthSigner/Adding-Signer.md
-  - Reference:
-    - EthSigner Command Line: Reference/EthSigner-CLI.md
+    - How To:
+        - Get Started with EthSigner:
+            - Install Binary Distribution: HowTo/Get-Started/Install-Binaries.md
+            - Build from Source: HowTo/Get-Started/Build-From-Source.md
+            - Start EthSigner: HowTo/Get-Started/Getting-Started.md
+        - Make Transactions: HowTo/Transactions/Make-Transactions.md
+        - Store Keys Externally:
+            - Use Hashicorp Vault: HowTo/Store-Keys/Use-Hashicorp.md
+            - Use Azure Key Vault: HowTo/Store-Keys/Use-Azure.md
+        - Create External Signers: HowTo/Extending-EthSigner/Add-Signer.md
+    - Reference:
+        - EthSigner Command Line: Reference/CLI/CLI-Syntax.md
+        - Security Disclosure Policy: Reference/Security/Responsible-Disclosure.md
 
 markdown_extensions:
   - toc:
