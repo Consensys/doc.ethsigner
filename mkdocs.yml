@@ -60,6 +60,7 @@ nav:
     - Running from Docker Image: Installation/Docker.md
   - Using EthSigner:
     - Getting Started: Using-EthSigner/Getting-Started.md
+    - Using Multiple Keys: Using-EthSigner/Multifile.md
     - Using EthSigner: Using-EthSigner/Using-EthSigner.md
     - Using Hashicorp Vault: Using-EthSigner/Hashicorp.md
     - Using Azure Key Vault: Using-EthSigner/Azure.md

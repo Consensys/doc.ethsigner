@@ -12,15 +12,17 @@ EthSigner is an open-source, client-agnostic, Ethereum transaction signer develo
 
 EthSigner acts as a proxy service by forwarding requests to the Ethereum client. When EthSigner receives a transaction it generates a signature using the stored private key, and forwards the signed transaction to the Ethereum client.
 
-!!! note
-    EthSigner currently supports a single private key only. That is, only one private key's location can be specified when starting EthSigner.
-
 EthSigner can sign transactions with a key stored in:
 
 * A V3 keystore file stored on a file system accessible by the host.
 * [Hashicorp Vault](Using-EthSigner/Hashicorp.md) 
 * [Azure Key Vault](Using-EthSigner/Azure.md). 
 
+!!! note
+    EthSigner currently only supports using multiple private keys with file-based signing (using V3 keystore files). That is, the location of multiple private keys can be specified when starting EthSigner.
+    
+    This functionality is not available using Hashicorp Vault or Azure Key Vault.
+    
 The transaction process when using EthSigner is:
 
 ![EthSigner Transaction](images/EthSigner_Transaction.png)

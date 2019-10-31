@@ -9,6 +9,7 @@ signs transaction with a key stored in an encrypted file or an external vault (f
 * `ethsigner [Options] file-based-signer [File Options]`
 * `ethsigner [Options] hashicorp-signer [Hashicorp Options]`
 * `ethsigner [Options] azure-signer [Azure Options]`
+* `ethsigner [Options] multifile-based-signer [Multifile Options]`
 
 !!! tip
     To view the command line help for the subcommands: 
@@ -16,6 +17,7 @@ signs transaction with a key stored in an encrypted file or an external vault (f
     * [`ethsigner help file-based-signer`](#file-options)
     * [`ethsigner help hashicorp-signer`](#hashicorp-options) 
     * [`ethsigner help azure-signer`](#azure-options)
+    * [`ethsigner help multifile-based-signer`](#multifile-options)
 
 ## Options
 
@@ -283,3 +285,18 @@ Name of the vault to access. Sub-domain of `vault.azure.net`.
 ```bash tab="Example"
 --keyvault-name="MyKeyVault" 
 ```
+
+## Multifile Options
+
+### directory
+
+Path to the directory containing the keys and password files.
+
+```bash tab="Syntax"
+--directory=<directoryPath>
+```
+
+```bash tab="Example"
+--directory=/Users/me/keys
+```
+
