@@ -7,11 +7,11 @@ For file-based signing, EthSigner requires a V3 Keystore key file and a password
 
 !!! tip 
     EthSigner also supports signing transactions with a key stored in an external vault (for example, 
-    [Hashicorp Vault](Hashicorp.md)).  
+    [Hashicorp Vault](../HowTo/Store-Keys/Use-Hashicorp.md)).  
 
 ## Prerequisites 
 
-* [EthSigner](../Installation/Install-Binaries.md)
+* [EthSigner](../HowTo/Get-Started/Install-Binaries.md)
 * [Hyperledger Besu](https://besu.hyperledger.org/en/stable/HowTo/Get-Started/Install-Binaries/)
 * [Node.js](https://nodejs.org/en/download/)
 * [web3.js](https://github.com/ethereum/web3.js/)

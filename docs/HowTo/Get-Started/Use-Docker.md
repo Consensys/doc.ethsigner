@@ -27,7 +27,7 @@ docker run pegasyseng/ethsigner:latest --help
 ## Expose Listening Port
 
 Exposing the listening port is required to use the  default listening port (`8545`) or the port specified using 
-[`--http-listen-port`](../Reference/EthSigner-CLI.md#http-listen-port). 
+[`--http-listen-port`](../../Reference/CLI/CLI-Syntax.md#http-listen-port). 
 
 To run EthSigner exposing listening port for access: 
 ```bash
@@ -35,7 +35,7 @@ docker run -p <listenPort>:8545 pegasyseng/ethsigner:latest <options>
 ```
 
 !!!example
-    To run EthSigner using [file-based signing](../Using-EthSigner/Getting-Started.md) using the default listing port and 8590 as the downstream port:
+    To run EthSigner using [file-based signing](../../Tutorials/Start-EthSigner.md) using the default listing port and 8590 as the downstream port:
     ```bash
     docker run -p <listenPort>:8545 -v <~/myKeyFile>:/opt/ethsigner/keyfile -v <~/myPasswordFile>:/opt/ethsigner/passwordfile pegasyseng/ethsigner:latest --chain-id=2018 --downstream-http-host=<PantheonHost> --downstream-http-port=8590 --http-listen-host=0.0.0.0 file-based-signer -k /opt/ethsigner/keyfile -p /opt/ethsigner/passwordfile
     ```

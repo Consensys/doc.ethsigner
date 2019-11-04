@@ -41,7 +41,7 @@ Start EthSigner.
     ```
 
 !!! warning "Important"
-    Use the [--http-listen-port](../Reference/EthSigner-CLI.md#http-listen-port) option to change the
+    Use the [--http-listen-port](../../Reference/CLI/CLI-Syntax.md#http-listen-port) option to change the
     EthSigner listening port if `8545` is in use.  
 
-You can now [use EthSigner to sign transactions](Using-EthSigner.md) with the key stored in the Azure Key Vault.  
+You can now [use EthSigner to sign transactions](../Transactions/Make-Transactions.md) with the key stored in the Azure Key Vault.  
