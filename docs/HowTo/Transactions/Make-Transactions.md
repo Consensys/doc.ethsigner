@@ -1,7 +1,7 @@
-description: Using EthSigner
+description: Make Transactions 
 <!--- END of page meta data -->
 
-# Using EthSigner
+# Make Transactions
 
 EthSigner provides transaction signing and access to your keystore by implementing the following JSON-RPC 
 methods:   
@@ -19,7 +19,7 @@ by EthSigner.
 # eea_sendTransaction 
 
 Creates and signs a [private transaction](https://besu.hyperledger.org/en/stable/Concepts/Privacy/Privacy-Overview/)
-using the [keystore account](../Using-EthSigner/Getting-Started.md#create-password-and-key-files). 
+using the [keystore account](../../Tutorials/Start-EthSigner.md#create-password-and-key-files). 
 
 EthSigner submits the signed transaction to Besu using [`eea_sendRawTransaction`](https://besu.hyperledger.org/en/stable/Reference/API-Methods/#eea_sendrawtransaction). 
 
@@ -70,7 +70,7 @@ Transaction object for private transactions:
 
 # eth_accounts
 
-Returns the account address with which EthSigner is signing transactions. That is, the account of the [keystore key file](../Using-EthSigner/Getting-Started.md#create-password-and-key-files).
+Returns the account address with which EthSigner is signing transactions. That is, the account of the [keystore key file](../../Tutorials/Start-EthSigner.md#create-password-and-key-files).
 
 **Parameters**
 
@@ -95,7 +95,7 @@ None
 
 # eth_sendTransaction 
 
-Creates and signs a transaction using the [keystore account](../Using-EthSigner/Getting-Started.md#create-password-and-key-files). 
+Creates and signs a transaction using the [keystore account](../../Tutorials/Start-EthSigner.md#create-password-and-key-files). 
 
 EthSigner submits the signed transaction to Besu using [`eth_sendRawTransaction`](https://besu.hyperledger.org/en/stable/Reference/API-Methods/#eth_sendrawtransaction). 
 
