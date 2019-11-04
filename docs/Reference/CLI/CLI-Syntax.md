@@ -138,7 +138,7 @@ Displays the version and exits.
 
 ### key-file
 
-File containing [key with which transactions are signed](../Using-EthSigner/Getting-Started.md#create-password-and-key-files).  
+File containing [key with which transactions are signed](../../Tutorials/Start-EthSigner.md#create-password-and-key-files).  
 
 ```bash tab="Syntax"
 -k, --key-file=<keyFile>
@@ -150,7 +150,7 @@ File containing [key with which transactions are signed](../Using-EthSigner/Gett
 
 ### password-file
 
-File containing password for the [key with which transactions are signed](../Using-EthSigner/Getting-Started.md#create-password-and-key-files).  
+File containing password for the [key with which transactions are signed](../../Tutorials/Start-EthSigner.md#create-password-and-key-files).  
 
 ```bash tab="Syntax"
 -p, --password-file=<passwordFile>
@@ -165,7 +165,7 @@ File containing password for the [key with which transactions are signed](../Usi
 ### auth-file
 
 File containing authentication data for Hashicorp Vault. The authentication data is the [root token displayed by
-the Hashicorp Vault server](../Using-EthSigner/Hashicorp.md#storing-private-key-in-hashcorp-vault). 
+the Hashicorp Vault server](../../HowTo/Store-Keys/Use-Hashicorp.md#storing-private-key-in-hashcorp-vault). 
 
 ```bash tab="Syntax"
 --auth-file=<authFile>
