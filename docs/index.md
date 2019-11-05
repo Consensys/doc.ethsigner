@@ -19,9 +19,7 @@ EthSigner can sign transactions with a key stored in:
 * [Azure Key Vault](HowTo/Store-Keys/Use-Azure.md). 
 
 !!! note
-    EthSigner currently only supports using multiple private keys with file-based signing (using V3 keystore files). That is, the location of multiple private keys can be specified when starting EthSigner.
-    
-    This functionality is not available using Hashicorp Vault or Azure Key Vault.
+    EthSigner supports multiple private keys with file-based signing only (using V3 keystore files). That is, the location of multiple private keys can be specified when starting EthSigner.
     
 The transaction process when using EthSigner is:
 

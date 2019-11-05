@@ -63,9 +63,13 @@ nav:
         - Store Keys Externally:
             - Use Hashicorp Vault: HowTo/Store-Keys/Use-Hashicorp.md
             - Use Azure Key Vault: HowTo/Store-Keys/Use-Azure.md
+        - Store Multiple Keys:
+          - Use Multiple Keys: HowTo/Store-Keys/Multifile.md
         - Create External Signers: HowTo/Extending-EthSigner/Add-Signer.md
     - Tutorials:
         - Start EthSigner: Tutorials/Start-EthSigner.md
+    - Concepts:
+        - Store Multiple Key Files: Concepts/Multiple-Key-Files.md
     - Reference:
         - EthSigner Command Line: Reference/CLI/CLI-Syntax.md
         - Security Disclosure Policy: Reference/Responsible-Disclosure.md

@@ -3,24 +3,7 @@ description: Signing transactions with multiple keys.
 
 # Using EthSigner with Multiple Key Signers
 
-EthSigner supports file-based signing using one of multiple keys stored in a directory. The key must be a V3 Keystore key file and must have an identically named password file.  
-
-!!! note
-    EthSigner does not support using multiple key signers with Hashicorp Vault or Azure Key Vault.
-
-The key file filename must contain the public key address and be formatted as `[prefix]<accountAddress>.key`. The password file must have an identical name and end with the `.password` extension.
-
-!!! example
-    238724a0b6af3c5c3c3c2838b44445ebe5944010.key
-    238724a0b6af3c5c3c3c2838b44445ebe5944010.password
-
-    10-10-2019_78e6e236592597c09d5c137c2af40aecd42d12a2.key
-    10-10-2019_78e6e236592597c09d5c137c2af40aecd42d12a2.password
-    
-!!! tip
-    Use the [`public-key export-address`](https://besu.hyperledger.org/en/latest/Reference/CLI/CLI-Subcommands/#export-address) Hyperledger Besu command to obtain the public key address of the node. 
-    
-No key files can have the same key address in its name even if the prefix differs.
+EthSigner supports file-based signing using [multiple keys](../../Concepts/Multiple-Key-Files.md).
 
 ## Prerequisites 
 
@@ -106,11 +89,11 @@ Start EthSigner with options specified as follows:
 
 * `downstream-http-port` is the `rpc-http-port` specified for Besu (`8590` in this example). 
 
-* `key-file` and `password-file` are the key and password files [created above](#create-password-and-key-files).  
+* `key-file` and `password-file` are the key and password files [created above](#create-passwords-and-key-files).  
 
 !!! example
     ```
-    ethsigner --chain-id=2018 --downstream-http-port=8590 multifile-based-signer --directory=Users/me/mydirectory
+    ethsigner --chain-id=2018 --downstream-http-port=8590 multifile-based-signer --directory=/Users/me/mydirectory
     ```
 
 ## Confirm EthSigner is Up
