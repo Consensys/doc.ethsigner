@@ -12,11 +12,11 @@ The key file must follow the appropriate naming convention, and have an accompan
 
 The key file name must contain the public key address and follow the `[<prefix>]<accountAddress>.key` format. The password file must have an identical name and end with the `.password` extension. No two key files can have the same key address in the file name, even if the prefix differs.
 
-!!! example
-    `238724a0b6af3c5c3c3c2838b44445ebe5944010.key`<br>
-    `238724a0b6af3c5c3c3c2838b44445ebe5944010.password`
+In the example the account address is prefixed with the date.
 
-    `10-10-2019_78e6e236592597c09d5c137c2af40aecd42d12a2.key`<br>
+!!! example
+    `10-10-2019_78e6e236592597c09d5c137c2af40aecd42d12a2.key`
+    
     `10-10-2019_78e6e236592597c09d5c137c2af40aecd42d12a2.password`
     
 !!! tip
