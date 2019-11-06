@@ -3,11 +3,11 @@ description: Signing transactions with multiple keys.
 
 # Using EthSigner with Multiple Key Signers
 
-EthSigner supports file-based signing using [multiple keys](../../Concepts/Multiple-Key-Files.md).
+EthSigner supports file-based signing using [multiple keys](../Concepts/Multiple-Key-Files.md).
 
 ## Prerequisites 
 
-* [EthSigner](../Installation/Install-Binaries.md)
+* [EthSigner](../HowTo/Get-Started/Install-Binaries.md)
 * [Hyperledger Besu](https://besu.hyperledger.org/en/stable/HowTo/Get-Started/Install-Binaries/)
 * [Node.js](https://nodejs.org/en/download/)
 * [web3.js](https://github.com/ethereum/web3.js/)
@@ -25,7 +25,7 @@ option set to `8590`.
     
 ## Create Passwords and Key Files 
 
-Create a password file and V3 Keystore key for each node that needs to sign a transaction. The password files and V3 Keystore keys must follow the naming convention and be available in the same directory.
+Create a password file and V3 Keystore key for each node that needs to sign a transaction. The password files and V3 Keystore keys must follow the [naming convention](../Concepts/Multiple-Key-Files.md) and be available in the same directory.
 
 !!! attention "Password text file must not contain characters other than those used in your password"
     EthSigner reads the password file as binary and any character in the file is considered part
@@ -36,7 +36,7 @@ Create a password file and V3 Keystore key for each node that needs to sign a tr
     
     Replace the placeholders and use the following command to ensure the password file is correct:
     ```bash
-    echo -n "Type your password:";read -s password;echo -ne $password > [prefix]<accountAddress>.password;
+    echo -n "Type your password:";read -s password;echo -ne $password > [<prefix>]<accountAddress>.password;
     ```
     Enter the password when prompted.
   
@@ -79,7 +79,7 @@ Use the JS script to display the text for the key file:
 node createKeyFile.js
 ```
 
-Copy and paste the text to a file that is named `[prefix]<accountAddress>.key`. The file name must be identical to the password file.
+Copy and paste the text to a file that is named `[<prefix>]<accountAddress>.key`. The file name must be identical to the password file.
 
 ## Start EthSigner
 
@@ -89,7 +89,7 @@ Start EthSigner with options specified as follows:
 
 * `downstream-http-port` is the `rpc-http-port` specified for Besu (`8590` in this example). 
 
-* `key-file` and `password-file` are the key and password files [created above](#create-passwords-and-key-files).  
+* `directory` is the location of the key and password files [created above](#create-passwords-and-key-files).  
 
 !!! example
     ```
