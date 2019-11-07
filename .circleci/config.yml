@@ -7,9 +7,6 @@ executors:
   node_executor:
     docker:
       - image: circleci/node:12.9.0-stretch
-  ruby_executor:
-    docker:
-      - image: circleci/ruby:2.6.5-stretch
 jobs:
   build:
     executor: python_executor
@@ -17,17 +14,17 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - deps-{{ checksum "docs/requirements.txt" }}
+            - deps-{{ checksum "requirements.txt" }}
       - run:
           name: install dependencies
           command: |
             python3 -m venv venv
             . venv/bin/activate
-            pip install -r docs/requirements.txt
+            pip install -r requirements.txt
       - save_cache:
           paths:
             - ./venv
-          key: deps-{{ checksum "docs/requirements.txt" }}
+          key: deps-{{ checksum "requirements.txt" }}
       - run:
           name: Run MkDocs
           command: |
@@ -45,7 +42,7 @@ jobs:
       - run:
           name: Run Vale
           command: |
-            ./bin/vale --config .vale.ini --glob='*.{md}' --output=line . | tee vale.out
+            ./bin/vale --config .circleci/vale/.vale.ini --glob='*.{md}' --output=line . | tee vale.out
       - store_artifacts:
           path: ./vale.out
           destination: vale.out
@@ -54,12 +51,9 @@ jobs:
     executor: node_executor
     steps:
       - checkout
-      - run:
-          name: update-npm
-          command: 'sudo npm install -g npm@latest'
       - restore_cache:
           keys:
-            - deps-{{ checksum "package.json" }}
+            - deps-{{ checksum "./package.json" }}
       - run:
           name: Install dependencies
           command: |
@@ -71,30 +65,23 @@ jobs:
       - save_cache:
           paths:
             - ./node_modules
-          key: deps-{{ checksum "package.json" }}
+          key: deps-{{ checksum "./package.json" }}
       - store_artifacts:
           path: ./linkchecker.out
           destination: linkchecker.out
 
   markdownlint:
-    executor: ruby_executor
+    executor: node_executor
     steps:
       - checkout
-      - restore_cache:
-          keys:
-            - deps-{{ checksum "Gemfile" }}
       - run:
           name: Install dependencies
           command: |
-            bundle install
+            npm install
       - run:
           name: Run Markdownlint
           command: |
-            find . -name \*.md -exec mdl --style all {} \; | tee markdownlint.out
-      - save_cache:
-          paths:
-            - ./vendor/cache
-          key: deps-{{ checksum "Gemfile" }}
+            ./node_modules/markdownlint-cli/markdownlint.js --config .circleci/markdownlint/markdownlint.yml *.md | tee markdownlint.out
       - store_artifacts:
           path: ./markdownlint.out
           destination: markdownlint.out
