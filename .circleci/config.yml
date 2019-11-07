@@ -7,6 +7,9 @@ executors:
   node_executor:
     docker:
       - image: circleci/node:12.9.0-stretch
+  ruby_executor:
+    docker:
+      - image: circleci/ruby:2.6.5-stretch
 jobs:
   build:
     executor: python_executor
@@ -75,18 +78,28 @@ jobs:
           destination: linkchecker.out
 
   markdownlint:
-    executor: python_executor
+    executor: ruby_executor
     steps:
       - checkout
-      - setup_remote_docker
+      - restore_cache:
+          keys:
+            - deps-{{ checksum "Gemfile" }}
+      - run:
+          name: Install dependencies
+          command: |
+            bundle install
       - run:
           name: Run Markdownlint
           command: |
-            # create a dummy container which will hold a volume with data
-            docker create -v /doc --name docVol alpine:3.4 /bin/true
-            # copy files into this volume
-            docker cp ./ docVol:/doc
-            docker run --rm --volumes-from docVol -w /doc pipelinecomponents/markdownlint mdl --style all . > markdownlint.out
+            find . -name \*.md -exec mdl --style all {} \; > markdownlint.out
+      - run:
+          name: Display results on console
+          command: |
+            cat markdownlint.out
+      - save_cache:
+          paths:
+            - ./vendor/cache
+          key: deps-{{ checksum "Gemfile" }}
       - store_artifacts:
           path: ./markdownlint.out
           destination: markdownlint.out
