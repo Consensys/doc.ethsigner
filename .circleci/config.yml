@@ -38,15 +38,14 @@ jobs:
     executor: python_executor
     steps:
       - checkout
-      - setup_remote_docker
+      - run:
+          name: Install dependencies
+          command: |
+            curl -sfL https://install.goreleaser.com/github.com/ValeLint/vale.sh | sh -s v1.7.1
       - run:
           name: Run Vale
           command: |
-            # create a dummy container which will hold a volume with data
-            docker create -v /doc --name docVol alpine:3.4 /bin/true
-            # copy files into this volume
-            docker cp ./ docVol:/doc
-            docker run --rm --volumes-from docVol jdkato/vale --config /doc/.vale.ini --glob='*.{md}' . > vale.out
+            ./bin/vale --config .vale.ini --glob='*.{md}' --output=line . | tee vale.out
       - store_artifacts:
           path: ./vale.out
           destination: vale.out
@@ -91,11 +90,7 @@ jobs:
       - run:
           name: Run Markdownlint
           command: |
-            find . -name \*.md -exec mdl --style all {} \; > markdownlint.out
-      - run:
-          name: Display results on console
-          command: |
-            cat markdownlint.out
+            find . -name \*.md -exec mdl --style all {} \; | tee markdownlint.out
       - save_cache:
           paths:
             - ./vendor/cache
