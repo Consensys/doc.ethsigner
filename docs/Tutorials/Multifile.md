@@ -1,7 +1,7 @@
 description: Signing transactions with multiple keys.
 <!--- END of page meta data -->
 
-# Using EthSigner with Multiple Key Signers
+# Using EthSigner with Multiple Signing Keys
 
 EthSigner supports file-based signing using [multiple keys](../Concepts/Multiple-Key-Files.md).
 
@@ -20,10 +20,10 @@ option set to `8590`.
 
 !!! example
     ```bash
-    besu --network=dev --miner-enabled --miner-coinbase=0xfe3b557e8fb62b89f4916b721be55ceb828dbd73 --rpc-http-cors-origins="all" --host-whitelist=* --rpc-http-enabled --rpc-http-port=8590 --data-path=/tmp/tmpDatdir
+    besu --network=dev --miner-enabled --miner-coinbase=0xfe3b557e8fb62b89f4916b721be55ceb828dbd73 --rpc-http-cors-origins="all" --host-whitelist=* --rpc-http-enabled --rpc-http-port=8590 --data-path=/Users/me/Datadir
     ```
     
-## Create Passwords and Key Files 
+## Create Password and Key Files 
 
 Create a password file and V3 Keystore key for each account that needs to sign transactions. The password files and V3 Keystore keys must follow the [naming convention](../Concepts/Multiple-Key-Files.md) and be in the same directory. 
 

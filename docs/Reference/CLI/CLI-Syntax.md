@@ -290,7 +290,7 @@ Name of the vault to access. Sub-domain of `vault.azure.net`.
 
 ### directory
 
-Path to the directory containing the keys and password files.
+Path to the directory containing the key and password files.
 
 ```bash tab="Syntax"
 --directory=<directoryPath>
