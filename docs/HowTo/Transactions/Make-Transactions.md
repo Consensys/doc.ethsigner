@@ -16,10 +16,12 @@ by EthSigner.
 !!! note 
     EthSigner supports the JSON-RPC service over HTTP only. 
 
+The sender specified in [`eea_sendTransaction`](#eea_sendtransaction) and [`eth_sendTransaction`](#eth_sendtransaction) requires a signing key. Signing keys can be [stored externally or locally](../../Concepts/Overview.md).  
+
 # eea_sendTransaction 
 
 Creates and signs a [private transaction](https://besu.hyperledger.org/en/stable/Concepts/Privacy/Privacy-Overview/)
-using the [keystore account](../../Tutorials/Start-EthSigner.md#create-password-and-key-files). 
+using the [signing key](../../Concepts/Overview.md). 
 
 EthSigner submits the signed transaction to Besu using [`eea_sendRawTransaction`](https://besu.hyperledger.org/en/stable/Reference/API-Methods/#eea_sendrawtransaction). 
 
@@ -33,7 +35,7 @@ Transaction object for private transactions:
 
 | Key             | Type                | Required/Optional                  | Value                                                                                                                         |
 |-----------------|--:-:----------------|----------------------------------- |-------------------------------------------------------------------------------------------------------------------------------|
-| **from**        | Data, 20&nbsp;bytes | Required                           | Address of the sender. Must be the address of the keystore account.                                                                                                        |
+| **from**        | Data, 20&nbsp;bytes | Required                           | Address of the sender. Must be the address of the keystore account.                           |
 | **to**          | Data, 20&nbsp;bytes | Not required for contract creation | `null` for contract creation transaction. Contract address for contract invocation transactions.                                                           |
 | **gas**         | Quantity            | Optional                           | Gas provided by the sender. Default is `90000`.                                                                               |
 | **gasPrice**    | Quantity            | Optional                           | Gas price provided by the sender in Wei. Default is `0`.                                                                      |
@@ -70,7 +72,9 @@ Transaction object for private transactions:
 
 # eth_accounts
 
-Returns the account address with which EthSigner is signing transactions. That is, the account of the [keystore key file](../../Tutorials/Start-EthSigner.md#create-password-and-key-files).
+Returns the account address with which EthSigner is signing transactions. That is, the account of the [signing key](../../Concepts/Overview.md). 
+
+Returns multiple accounts if multiple signers are configured. 
 
 **Parameters**
 
@@ -95,7 +99,7 @@ None
 
 # eth_sendTransaction 
 
-Creates and signs a transaction using the [keystore account](../../Tutorials/Start-EthSigner.md#create-password-and-key-files). 
+Creates and signs a transaction using the [signing key](../../Concepts/Overview.md). 
 
 EthSigner submits the signed transaction to Besu using [`eth_sendRawTransaction`](https://besu.hyperledger.org/en/stable/Reference/API-Methods/#eth_sendrawtransaction). 
 
