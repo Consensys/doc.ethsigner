@@ -408,7 +408,7 @@ Example:
 ```` 
 
 Pygment is the implementation for this extension, refer to Pygment website for a 
-[list of the supported languages](https://pygments.org/languages/).
+[list of the supported languages](https://pygments.org/languages.html).
 
 
 
