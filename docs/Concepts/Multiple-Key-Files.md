@@ -20,4 +20,4 @@ In the example the account address is prefixed with the date. The `0x` portion o
     `10-10-2019_78e6e236592597c09d5c137c2af40aecd42d12a2.password`
     
 !!! tip
-    Use the [`export-address`](https://besu.hyperledger.org/en/latest/Reference/CLI/CLI-Subcommands/#export-address) Hyperledger Besu subcommand to obtain the public key address of the node. 
+    Use the [`export-address`](https://besu.hyperledger.org/en/latest/Reference/CLI/CLI-Subcommands/#export-address) Hyperledger Besu subcommand to obtain the account address of the node. 

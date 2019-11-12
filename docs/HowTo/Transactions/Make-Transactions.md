@@ -21,7 +21,7 @@ The sender specified in [`eea_sendTransaction`](#eea_sendtransaction) and [`eth_
 # eea_sendTransaction 
 
 Creates and signs a [private transaction](https://besu.hyperledger.org/en/stable/Concepts/Privacy/Privacy-Overview/)
-using the [keystore account](../../Tutorials/Start-EthSigner.md#create-password-and-key-files). 
+using the [signing key](../../Concepts/Overview.md). 
 
 EthSigner submits the signed transaction to Besu using [`eea_sendRawTransaction`](https://besu.hyperledger.org/en/stable/Reference/API-Methods/#eea_sendrawtransaction). 
 
@@ -72,7 +72,9 @@ Transaction object for private transactions:
 
 # eth_accounts
 
-Returns the account address with which EthSigner is signing transactions. That is, the account of the [keystore key file](../../Tutorials/Start-EthSigner.md#create-password-and-key-files).
+Returns the account address with which EthSigner is signing transactions. That is, the account of the [signing key](../../Concepts/Overview.md). 
+
+Returns multiple accounts if multiple signers are configured. 
 
 **Parameters**
 
@@ -97,7 +99,7 @@ None
 
 # eth_sendTransaction 
 
-Creates and signs a transaction using the [keystore account](../../Tutorials/Start-EthSigner.md#create-password-and-key-files). 
+Creates and signs a transaction using the [signing key](../../Concepts/Overview.md). 
 
 EthSigner submits the signed transaction to Besu using [`eth_sendRawTransaction`](https://besu.hyperledger.org/en/stable/Reference/API-Methods/#eth_sendrawtransaction). 
 

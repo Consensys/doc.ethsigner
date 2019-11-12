@@ -68,7 +68,7 @@ nav:
         - Start EthSigner with a Single Signer: Tutorials/Start-EthSigner.md
         - Start EthSigner with Multiple Signers: Tutorials/Multifile.md
     - Concepts:
-        - EthSigner Transaction Overview: Concepts/Overview.md
+        - Overview: Concepts/Overview.md
         - Store Multiple Key Files: Concepts/Multiple-Key-Files.md
     - Reference:
         - EthSigner Command Line: Reference/CLI/CLI-Syntax.md

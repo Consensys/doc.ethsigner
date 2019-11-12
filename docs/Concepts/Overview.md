@@ -1,7 +1,7 @@
 description: EthSigner overview
 <!--- END of page meta data -->
 
-# EthSigner Transaction Overview
+# Overview
 
 EthSigner acts as a proxy service by forwarding requests to the Ethereum client. When EthSigner receives a transaction it generates a signature using the stored private key, and forwards the signed transaction to the Ethereum client.
 
