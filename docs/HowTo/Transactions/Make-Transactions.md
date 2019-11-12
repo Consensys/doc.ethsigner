@@ -16,6 +16,8 @@ by EthSigner.
 !!! note 
     EthSigner supports the JSON-RPC service over HTTP only. 
 
+The sender specified in [`eea_sendTransaction`](#eea_sendtransaction) and [`eth_sendTransaction`](#eth_sendtransaction) requires a signing key. Signing keys can be [stored externally or locally](../../Concepts/Overview.md).  
+
 # eea_sendTransaction 
 
 Creates and signs a [private transaction](https://besu.hyperledger.org/en/stable/Concepts/Privacy/Privacy-Overview/)
@@ -33,7 +35,7 @@ Transaction object for private transactions:
 
 | Key             | Type                | Required/Optional                  | Value                                                                                                                         |
 |-----------------|--:-:----------------|----------------------------------- |-------------------------------------------------------------------------------------------------------------------------------|
-| **from**        | Data, 20&nbsp;bytes | Required                           | Address of the sender. Must be the address of the keystore account. If using [multiple key files](../../Concepts/Multiple-Key-Files.md), the keystore file name must contain the sender's address.                           |
+| **from**        | Data, 20&nbsp;bytes | Required                           | Address of the sender. Must be the address of the keystore account.                           |
 | **to**          | Data, 20&nbsp;bytes | Not required for contract creation | `null` for contract creation transaction. Contract address for contract invocation transactions.                                                           |
 | **gas**         | Quantity            | Optional                           | Gas provided by the sender. Default is `90000`.                                                                               |
 | **gasPrice**    | Quantity            | Optional                           | Gas price provided by the sender in Wei. Default is `0`.                                                                      |
@@ -105,7 +107,7 @@ Transaction object:
 
 | Key          | Type                | Required/Optional              | Value                                                                                  |
 |--------------|-:-:-----------------|--------------------------------|----------------------------------------------------------------------------------------|
-| **from**     | Data, 20&nbsp;bytes | Required                       | Address of the sender. If using [multiple key files](../../Concepts/Multiple-Key-Files.md), the keystore file name must contain the sender's address.                                                                |
+| **from**     | Data, 20&nbsp;bytes | Required                       | Address of the sender.                                                                 |
 | **to**       | Data, 20&nbsp;bytes | Optional for contract creation | Address of the receiver. `null` if a contract creation transaction.                    |
 | **gas**      | Quantity            | Optional                       | Gas provided by the sender. Default is `90000`.                                                           |
 | **gasPrice** | Quantity            | Optional                       | Gas price provided by the sender in Wei. Default is `0`.                                              |

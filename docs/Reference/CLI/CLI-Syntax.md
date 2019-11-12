@@ -15,9 +15,9 @@ signs transaction with a key stored in an encrypted file or an external vault (f
     To view the command line help for the subcommands: 
     
     * [`ethsigner help file-based-signer`](#file-options)
+    * [`ethsigner help multifile-based-signer`](#multifile-options)
     * [`ethsigner help hashicorp-signer`](#hashicorp-options) 
     * [`ethsigner help azure-signer`](#azure-options)
-    * [`ethsigner help multifile-based-signer`](#multifile-options)
 
 ## Options
 

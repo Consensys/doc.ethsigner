@@ -124,3 +124,5 @@ Request the current block number using [`eth_blockNumber`](https://besu.hyperled
 ```bash
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":51}' http://127.0.0.1:8545
 ```
+
+You can now [use EthSigner to sign transactions](../HowTo/Transactions/Make-Transactions.md) with the key stored in the V3 Keystore key file.

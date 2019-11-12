@@ -25,9 +25,11 @@ option set to `8590`.
     
 ## Create Passwords and Key Files 
 
-Create a password file and V3 Keystore key for each node that needs to sign a transaction. The password files and V3 Keystore keys must follow the [naming convention](../Concepts/Multiple-Key-Files.md) and be available in the same directory.
+Create a password file and V3 Keystore key for each account that needs to sign transactions. The password files and V3 Keystore keys must follow the [naming convention](../Concepts/Multiple-Key-Files.md) and be in the same directory. 
 
-!!! attention "Password text file must not contain characters other than those used in your password"
+The password file must be named `[<prefix>]<accountAddress>.password`. The `0x` portion of the account address must be removed. For example, `78e6e236592597c09d5c137c2af40aecd42d12a2.password`
+
+!!! caution "Password text file must not contain characters other than those used in your password"
     EthSigner reads the password file as binary and any character in the file is considered part
     of your password.
     
@@ -79,13 +81,13 @@ Use the JS script to display the text for the key file:
 node createKeyFile.js
 ```
 
-Copy and paste the text to a file that is named `[<prefix>]<accountAddress>.key`. The file name must be identical to the password file.
+Copy and paste the text to a file that is named `[<prefix>]<accountAddress>.key`. The file name must be identical to the password file except for the `.key` suffix.
 
 ## Start EthSigner
 
-Start EthSigner with options specified as follows: 
+Start EthSigner with options: 
 
-* `chain-id` is the chain ID specified in the Besu genesis file. 
+* `chain-id` is the chain ID specified in the [Besu genesis file](https://besu.hyperledger.org/en/stable/Reference/Config-Items/). 
 
 * `downstream-http-port` is the `rpc-http-port` specified for Besu (`8590` in this example). 
 
@@ -108,3 +110,13 @@ Use the `upcheck` endpoint to confirm EthSigner is running.
     ```json tab="Result"
     I'm up
     ```
+
+## Confirm EthSigner Passing Requests to Besu 
+
+Request the current block number using [`eth_blockNumber`](https://besu.hyperledger.org/en/stable/Reference/API-Methods/#eth_blocknumber) with the EthSigner JSON-RPC endpoint (`8545` in this example): 
+
+```bash
+curl -X POST --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":51}' http://127.0.0.1:8545
+```
+
+You can now [use EthSigner to sign transactions](../HowTo/Transactions/Make-Transactions.md) with the keys stored in the V3 Keystore key files.
