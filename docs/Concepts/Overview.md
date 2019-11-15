@@ -8,7 +8,7 @@ EthSigner acts as a proxy service by forwarding requests to the Ethereum client.
 EthSigner can sign transactions with a key stored in:
 
 * A V3 keystore file stored on a file system accessible by the host.
-* [Hashicorp Vault](../HowTo/Store-Keys/Use-Hashicorp.md) 
+* [Hashicorp Vault](../HowTo/Store-Keys/Use-Hashicorp.md).
 * [Azure Key Vault](../HowTo/Store-Keys/Use-Azure.md). 
 
 !!! note

@@ -39,7 +39,7 @@ Transaction object for private transactions:
 | **to**          | Data, 20&nbsp;bytes | Not required for contract creation | `null` for contract creation transaction. Contract address for contract invocation transactions.                                                           |
 | **gas**         | Quantity            | Optional                           | Gas provided by the sender. Default is `90000`.                                                                               |
 | **gasPrice**    | Quantity            | Optional                           | Gas price provided by the sender in Wei. Default is `0`.                                                                      |
-| **nonce**       | Quantity            | Required                           | Number of transactions sent from the `from` account before this one. Use [`priv_getTransactionCount`](https://besu.hyperledger.org/en/stable/Reference/API-Methods/#priv_gettransactioncount) to calculate |                                                                    |
+| **nonce**       | Quantity            | Optional                           | Number of transactions sent from the `from` account before this one.  |                                                                    |
 | **data**        | Quantity            | Optional                           | Compiled contract code or hash of the invoked method signature and encoded parameters.                                        |
 | **privateFrom** | Data, 20&nbsp;bytes | Required                           | Orion address of the sender                                                                                                         |
 | **privateFor**  | Array of data       | Required                           | Orion addresses of recipients                                                                                                       |
@@ -47,7 +47,9 @@ Transaction object for private transactions:
 
 !!! tip
     Submitting a transaction with the same nonce as a pending transaction and a higher gas price replaces 
-    the pending transaction with the new one. 
+    the pending transaction with the new one. Use [`priv_getTransactionCount`](https://besu.hyperledger.org/en/stable/Reference/API-Methods/#priv_gettransactioncount) to calculate the nonce.
+    
+    If not attempting to replace a pending transaction, do not include the `nonce` in the private transaction object and nonce management is handled automatically.
 
 !!! note
     If a non-zero `value` is included in the transaction object, an error is returned. Ether transfers cannot 
