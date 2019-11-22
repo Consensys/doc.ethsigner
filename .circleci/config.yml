@@ -7,6 +7,10 @@ executors:
   node_executor:
     docker:
       - image: circleci/node:12.9.0-stretch
+  ruby_executor:
+    docker:
+      - image: circleci/ruby:2-stretch
+
 jobs:
   build:
     executor: python_executor
@@ -71,17 +75,17 @@ jobs:
           destination: linkchecker.out
 
   markdownlint:
-    executor: node_executor
+    executor: ruby_executor
     steps:
       - checkout
       - run:
           name: Install dependencies
           command: |
-            npm install
+            gem install mdl
       - run:
           name: Run Markdownlint
           command: |
-            ./node_modules/markdownlint-cli/markdownlint.js --config .circleci/markdownlint/markdownlint.yml *.md | tee markdownlint.out
+            mdl --ignore-front-matter --style .circleci/markdownlint/style.rb . | tee markdownlint.out
       - store_artifacts:
           path: ./markdownlint.out
           destination: markdownlint.out

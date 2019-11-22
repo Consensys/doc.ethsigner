@@ -1,5 +1,6 @@
+---
 description: Install EthSigner from binary distribution
-<!--- END of page meta data -->
+---
 
 # Install Binary Distribution
 
@@ -9,14 +10,14 @@ description: Install EthSigner from binary distribution
 
 !!!important
     EthSigner requires Java 11+; earlier versions are not supported.
-    
+
 ## Install Binaries
 
 Download the EthSigner [packaged binaries](https://bintray.com/consensys/pegasys-repo/ethsigner/_latestVersion#files).
 
-Unpack the downloaded files and change into the `ethsigner-<release>` directory. 
+Unpack the downloaded files and change into the `ethsigner-<release>` directory.
 
-Display EthSigner command line help to confirm installation: 
+Display EthSigner command line help to confirm installation:
 
 ```bash tab="Linux/macOS"
 $ bin/ethsigner --help
