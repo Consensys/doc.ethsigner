@@ -427,8 +427,8 @@ Example:
 ```
 ````
 
-Pygment is the implementation for this extension, refer to [Pygment website](https://pygments.org/) for a 
-list of the supported languages.
+Pygment is the implementation for this extension, refer to [Pygment website](https://pygments.org/)
+for a list of the supported languages.
 
 [/docs]: ./docs
 [MkDocs]: https://www.mkdocs.org/
