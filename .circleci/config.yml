@@ -57,7 +57,7 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - deps-{{ checksum "./package.json" }}
+            - deps-{{ checksum "package.json" }}
       - run:
           name: Install dependencies
           command: |
