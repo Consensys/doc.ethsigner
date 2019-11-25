@@ -1,10 +1,11 @@
+---
 description: EthSigner command line interface reference
-<!--- END of page meta data -->
+---
 
 # EthSigner Command Line
 
-This reference describes the syntax of the EthSigner Command Line Interface (CLI) options. EthSigner 
-signs transaction with a key stored in an encrypted file or an external vault (for example, Hashicorp): 
+This reference describes the syntax of the EthSigner Command Line Interface (CLI) options. EthSigner
+signs transaction with a key stored in an encrypted file or an external vault (for example, Hashicorp):
 
 * `ethsigner [Options] file-based-signer [File Options]`
 * `ethsigner [Options] hashicorp-signer [Hashicorp Options]`
@@ -12,18 +13,18 @@ signs transaction with a key stored in an encrypted file or an external vault (f
 * `ethsigner [Options] multifile-based-signer [Multifile Options]`
 
 !!! tip
-    To view the command line help for the subcommands: 
-    
+    To view the command line help for the subcommands:
+
     * [`ethsigner help file-based-signer`](#file-options)
     * [`ethsigner help multifile-based-signer`](#multifile-options)
-    * [`ethsigner help hashicorp-signer`](#hashicorp-options) 
+    * [`ethsigner help hashicorp-signer`](#hashicorp-options)
     * [`ethsigner help azure-signer`](#azure-options)
 
 ## Options
 
 ### chain-id
 
-Chain ID of the network to receive the signed transactions. 
+Chain ID of the network to receive the signed transactions.
 
 ```bash tab="Syntax"
 --chain-id=<chainId>
@@ -35,7 +36,7 @@ Chain ID of the network to receive the signed transactions.
 
 ### data-path
 
-Directory in which to store temporary files.  
+Directory in which to store temporary files.
 
 ```bash tab="Syntax"
 --data-path=<PATH>
@@ -47,7 +48,7 @@ Directory in which to store temporary files.
 
 ### downstream-http-host
 
-Endpoint to which received requests are forwarded. Default is `localhost`. 
+Endpoint to which received requests are forwarded. Default is `localhost`.
 
 ```bash tab="Syntax"
 --downstream-http-host=<downstreamHttpHost>
@@ -59,7 +60,7 @@ Endpoint to which received requests are forwarded. Default is `localhost`.
 
 ### downstream-http-port
 
-Endpoint to which received requests are forwarded. 
+Endpoint to which received requests are forwarded.
 
 ```bash tab="Syntax"
 --downstream-http-port=<downstreamHttpPort>
@@ -71,7 +72,7 @@ Endpoint to which received requests are forwarded.
 
 ### downstream-http-request-timeout
 
-Timeout period (in milliseconds) for downstream requests. Default is 5000. 
+Timeout period (in milliseconds) for downstream requests. Default is 5000.
 
 ```bash tab="Syntax"
 --downstream-http-request-timeout=<downstreamHttpRequestTimeout>
@@ -83,7 +84,7 @@ Timeout period (in milliseconds) for downstream requests. Default is 5000.
 
 ### http-listen-host
 
-Host on which JSON-RPC HTTP listens. Default is `localhost`. 
+Host on which JSON-RPC HTTP listens. Default is `localhost`.
 
 ```bash tab="Syntax"
 --http-listen-host=<httpListenHost>
@@ -95,7 +96,7 @@ Host on which JSON-RPC HTTP listens. Default is `localhost`.
 
 ### http-listen-port
 
-Port on which JSON-RPC HTTP listens. Default is 8545. 
+Port on which JSON-RPC HTTP listens. Default is 8545.
 
 ```bash tab="Syntax"
 --http-listen-port=<httpListenPort>
@@ -107,8 +108,8 @@ Port on which JSON-RPC HTTP listens. Default is 8545.
 
 ### logging
 
-Logging verbosity levels. Options are: `OFF`, `FATAL`, `WARN`, `INFO`, `DEBUG`, `TRACE`, `ALL`. 
-Default is `INFO`.  
+Logging verbosity levels. Options are: `OFF`, `FATAL`, `WARN`, `INFO`, `DEBUG`, `TRACE`, `ALL`.
+Default is `INFO`.
 
 ```bash tab="Syntax"
 -l, --logging=<LOG VERBOSITY LEVEL>
@@ -120,7 +121,7 @@ Default is `INFO`.
 
 ### help
 
-Displays the help and exits.  
+Displays the help and exits.
 
 ```bash tab="Syntax"
 -h, --help
@@ -128,17 +129,17 @@ Displays the help and exits.
 
 ### version
 
-Displays the version and exits.  
+Displays the version and exits.
 
 ```bash tab="Syntax"
 -V, --version
 ```
 
-## File Options 
+## File Options
 
 ### key-file
 
-File containing [key with which transactions are signed](../../Tutorials/Start-EthSigner.md#create-password-and-key-files).  
+File containing [key with which transactions are signed](../../Tutorials/Start-EthSigner.md#create-password-and-key-files).
 
 ```bash tab="Syntax"
 -k, --key-file=<keyFile>
@@ -150,7 +151,7 @@ File containing [key with which transactions are signed](../../Tutorials/Start-E
 
 ### password-file
 
-File containing password for the [key with which transactions are signed](../../Tutorials/Start-EthSigner.md#create-password-and-key-files).  
+File containing password for the [key with which transactions are signed](../../Tutorials/Start-EthSigner.md#create-password-and-key-files).
 
 ```bash tab="Syntax"
 -p, --password-file=<passwordFile>
@@ -160,12 +161,12 @@ File containing password for the [key with which transactions are signed](../../
 --password-file=/Users/me/my_node/password
 ```
 
-## Hashicorp Options 
+## Hashicorp Options
 
 ### auth-file
 
 File containing authentication data for Hashicorp Vault. The authentication data is the [root token displayed by
-the Hashicorp Vault server](../../HowTo/Store-Keys/Use-Hashicorp.md#storing-private-key-in-hashcorp-vault). 
+the Hashicorp Vault server](../../HowTo/Store-Keys/Use-Hashicorp.md#storing-private-key-in-hashcorp-vault).
 
 ```bash tab="Syntax"
 --auth-file=<authFile>
@@ -177,7 +178,7 @@ the Hashicorp Vault server](../../HowTo/Store-Keys/Use-Hashicorp.md#storing-priv
 
 ### host
 
-Host of the Hashicorp Vault server. Default is `localhost`. 
+Host of the Hashicorp Vault server. Default is `localhost`.
 
 ```bash tab="Syntax"
 --host=<serverHost>
@@ -189,7 +190,7 @@ Host of the Hashicorp Vault server. Default is `localhost`.
 
 ### port
 
-Port of the Hashicorp Vault server. Default is 8200. 
+Port of the Hashicorp Vault server. Default is 8200.
 
 ```bash tab="Syntax"
 --port=<serverPort>
@@ -202,7 +203,7 @@ Port of the Hashicorp Vault server. Default is 8200.
 ### signing-key-path
 
 Path to secret in the Hashicorp Vault containing the private key for signing transactions. Default is
-` /secret/data/ethsignerSigningKey`. 
+` /secret/data/ethsignerSigningKey`.
 
 ```bash tab="Syntax"
 --signing-key-path=<signingKeyPath>
@@ -214,7 +215,7 @@ Path to secret in the Hashicorp Vault containing the private key for signing tra
 
 ### timeout
 
-Timeout in milliseconds for requests to the Hashicorp Vault server. Default is 10000. 
+Timeout in milliseconds for requests to the Hashicorp Vault server. Default is 10000.
 
 ```bash tab="Syntax"
 --timeout=<timeout>
@@ -224,11 +225,11 @@ Timeout in milliseconds for requests to the Hashicorp Vault server. Default is 1
 --timeout=5000
 ```
 
-## Azure Options 
+## Azure Options
 
 ### client-id
 
-ID used to authenticate with Azure Key Vault. 
+ID used to authenticate with Azure Key Vault.
 
 ```bash tab="Syntax"
 --client-id=<clientID>
@@ -240,7 +241,7 @@ ID used to authenticate with Azure Key Vault.
 
 ### client-secret-path
 
-Path to file containing secret used to access the vault. 
+Path to file containing secret used to access the vault.
 
 ```bash tab="Syntax"
 --client-secret-path=<clientSecretPath>
@@ -252,7 +253,7 @@ Path to file containing secret used to access the vault.
 
 ### key-name
 
-Name of key to be used. 
+Name of key to be used.
 
 ```bash tab="Syntax"
 --key-name=<keyName>
@@ -264,7 +265,7 @@ Name of key to be used.
 
 ### key-version
 
-Version of the specified key to use. 
+Version of the specified key to use.
 
 ```bash tab="Syntax"
 --key-version=<keyVersion>
@@ -276,14 +277,14 @@ Version of the specified key to use.
 
 ### keyvault-name
 
-Name of the vault to access. Sub-domain of `vault.azure.net`. 
+Name of the vault to access. Sub-domain of `vault.azure.net`.
 
 ```bash tab="Syntax"
 --keyvault-name=<keyVaultName>
 ```
 
 ```bash tab="Example"
---keyvault-name="MyKeyVault" 
+--keyvault-name="MyKeyVault"
 ```
 
 ## Multifile Options

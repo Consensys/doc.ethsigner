@@ -7,6 +7,10 @@ executors:
   node_executor:
     docker:
       - image: circleci/node:12.9.0-stretch
+  ruby_executor:
+    docker:
+      - image: circleci/ruby:2-stretch
+
 jobs:
   build:
     executor: python_executor
@@ -14,17 +18,17 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - deps-{{ checksum "docs/requirements.txt" }}
+            - deps-{{ checksum "requirements.txt" }}
       - run:
           name: install dependencies
           command: |
             python3 -m venv venv
             . venv/bin/activate
-            pip install -r docs/requirements.txt
+            pip install -r requirements.txt
       - save_cache:
           paths:
             - ./venv
-          key: deps-{{ checksum "docs/requirements.txt" }}
+          key: deps-{{ checksum "requirements.txt" }}
       - run:
           name: Run MkDocs
           command: |
@@ -35,15 +39,14 @@ jobs:
     executor: python_executor
     steps:
       - checkout
-      - setup_remote_docker
+      - run:
+          name: Install dependencies
+          command: |
+            curl -sfL https://install.goreleaser.com/github.com/ValeLint/vale.sh | sh -s v1.7.1
       - run:
           name: Run Vale
           command: |
-            # create a dummy container which will hold a volume with data
-            docker create -v /doc --name docVol alpine:3.4 /bin/true
-            # copy files into this volume
-            docker cp ./ docVol:/doc
-            docker run --rm --volumes-from docVol jdkato/vale --config /doc/.vale.ini --glob='*.{md}' . > vale.out
+            ./bin/vale --config .circleci/vale/.vale.ini --glob='*.{md}' --output=line . | tee vale.out
       - store_artifacts:
           path: ./vale.out
           destination: vale.out
@@ -52,9 +55,6 @@ jobs:
     executor: node_executor
     steps:
       - checkout
-      - run:
-          name: update-npm
-          command: 'sudo npm install -g npm@latest'
       - restore_cache:
           keys:
             - deps-{{ checksum "package.json" }}
@@ -75,18 +75,17 @@ jobs:
           destination: linkchecker.out
 
   markdownlint:
-    executor: python_executor
+    executor: ruby_executor
     steps:
       - checkout
-      - setup_remote_docker
+      - run:
+          name: Install dependencies
+          command: |
+            gem install mdl
       - run:
           name: Run Markdownlint
           command: |
-            # create a dummy container which will hold a volume with data
-            docker create -v /doc --name docVol alpine:3.4 /bin/true
-            # copy files into this volume
-            docker cp ./ docVol:/doc
-            docker run --rm --volumes-from docVol -w /doc pipelinecomponents/markdownlint mdl --style all . > markdownlint.out
+            mdl --ignore-front-matter --style .circleci/markdownlint/style.rb . | tee markdownlint.out
       - store_artifacts:
           path: ./markdownlint.out
           destination: markdownlint.out

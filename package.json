@@ -7,9 +7,9 @@
     "doc": "docs"
   },
   "scripts": {
-    "test:links:check": "find . -name \\*.md ! -path \"./node_modules/*\" -exec ./node_modules/markdown-link-check/markdown-link-check -q -c link_check_conf.json {} \\; > linkchecker.out 2>&1",
+    "test:links:check": "find . -name \\*.md ! -path \"./node_modules/*\" -exec ./node_modules/markdown-link-check/markdown-link-check -q -c .circleci/linkchecker/link_check_conf.json {} \\; | tee linkchecker.out",
     "test:links:display": "cat ./linkchecker.out",
-    "test:links:verify": "! grep 'ERROR:' ./linkchecker.out",
+    "test:links:verify": "! grep '[✖]' ./linkchecker.out",
     "test:links": "npm run test:links:check && npm run test:links:display && npm run test:links:verify",
     "test": "npm run test:links"
   },
@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/PegaSysEng/doc.ethsigner#readme",
   "dependencies": {
-    "markdown-link-check": "3.7.3"
+    "markdown-link-check": "3.7.3",
+    "markdownlint-cli": "^0.19.0"
   }
 }
