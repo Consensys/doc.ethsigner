@@ -69,7 +69,7 @@ jobs:
       - save_cache:
           paths:
             - ./node_modules
-          key: deps-{{ checksum "./package.json" }}
+          key: deps-{{ checksum "package.json" }}
       - store_artifacts:
           path: ./linkchecker.out
           destination: linkchecker.out
