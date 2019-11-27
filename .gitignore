@@ -3,5 +3,5 @@ site/
 env/
 *.out
 node_modules/
-.circleci/process.yml
+common/build_tools/circleci/process.yml
 **/.DS_Store
