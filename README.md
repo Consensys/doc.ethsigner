@@ -7,7 +7,7 @@ The software sources are hosted in https://github.com/PegaSysEng/ethsigner
 This repository only contains the sources for [EthSigner documentation website hosted by ReadTheDocs].
 
 This repository uses a Git submodule. Please refer to the [common tools wiki] for explanation about
-how to build and contribute to the documentation.
+how to build and contribute to this documentation.
 
 [EthSigner]: https://github.com/PegaSysEng/ethsigner
 [common tools wiki]: https://github.com/PegaSysEng/doc.common/wiki
