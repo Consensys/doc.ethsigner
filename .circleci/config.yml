@@ -98,3 +98,13 @@ workflows:
       - vale
       - markdownlint
       - linkchecker
+  nightly:
+    triggers:
+      - schedule: # GMT
+          cron: "0 0 * * *"
+          filters:
+            branches:
+              only:
+                - master
+    jobs:
+      - linkchecker
