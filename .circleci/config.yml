@@ -20,17 +20,17 @@ jobs:
       - run: git submodule update --init
       - restore_cache:
           keys:
-            - deps-{{ checksum "common/build_tools/requirements.txt" }}
+            - deps-{{ checksum "./common/build_tools/requirements.txt" }}
       - run:
           name: install dependencies
           command: |
             python3 -m venv venv
             . venv/bin/activate
-            pip install -r common/build_tools/requirements.txt
+            pip install -r ./common/build_tools/requirements.txt
       - save_cache:
           paths:
             - ./venv
-          key: deps-{{ checksum "common/build_tools/requirements.txt" }}
+          key: deps-{{ checksum "./common/build_tools/requirements.txt" }}
       - run:
           name: Run MkDocs
           command: |
@@ -50,10 +50,10 @@ jobs:
       - run:
           name: Run Vale
           command: |
-            ./bin/vale --config common/build_tools/vale/.vale.ini --glob='*.{md}' --output=line . | tee vale.out
+            ./bin/vale --config ./common/build_tools/vale/.vale.ini --glob='*.{md}' --output=line . | tee ./vale.out
       - store_artifacts:
           path: ./vale.out
-          destination: vale.out
+          destination: ./vale.out
 
   linkchecker:
     executor: node_executor
@@ -63,7 +63,7 @@ jobs:
       - run: git submodule update --init
       - restore_cache:
           keys:
-            - deps-{{ checksum "common/build_tools/package.json" }}
+            - deps-{{ checksum "./common/build_tools/package.json" }}
       - run:
           name: Install dependencies
           command: |
@@ -75,10 +75,10 @@ jobs:
       - save_cache:
           paths:
             - ./node_modules
-          key: deps-{{ checksum "common/build_tools/package.json" }}
+          key: deps-{{ checksum "./common/build_tools/package.json" }}
       - store_artifacts:
           path: ./linkchecker.out
-          destination: linkchecker.out
+          destination: ./linkchecker.out
 
   markdownlint:
     executor: ruby_executor
@@ -93,10 +93,10 @@ jobs:
       - run:
           name: Run Markdownlint
           command: |
-            mdl --ignore-front-matter --style common/build_tools/markdownlint/style.rb . | tee markdownlint.out
+            mdl --ignore-front-matter --style ./common/build_tools/markdownlint/style.rb . | tee ./markdownlint.out
       - store_artifacts:
           path: ./markdownlint.out
-          destination: markdownlint.out
+          destination: ./markdownlint.out
 
 workflows:
   version: 2
