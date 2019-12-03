@@ -46,7 +46,7 @@ repo_url: https://github.com/PegaSysEng/ethsigner
 
 theme:
   name: material
-  custom_dir: docs/custom_theme
+  custom_dir: common/custom_theme
   palette:
     primary: orange
     accent: teal
