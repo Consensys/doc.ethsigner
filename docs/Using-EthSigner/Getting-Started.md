@@ -31,8 +31,9 @@ option set to `8590`.
     ```
 
 !!! important 
-    To use EthSigner for signing transactions, the Ethereum client genesis file must include at least the 
-    `byzantium` milestone.
+    EthSigner requires a [chain ID](https://besu.hyperledger.org/en/stable/Concepts/NetworkID-And-ChainID/) to be 
+    used when signing transactions. The Ethereum client genesis file must include at least the Spurious Dragon
+    milestone (that is, `eip158Block`) so the blockchain is using a chain ID. 
 
 ## Create Password and Key Files 
 
