@@ -5,3 +5,5 @@ env/
 node_modules/
 .circleci/process.yml
 .DS_Store
+**/.DS_Store
+*.iml
