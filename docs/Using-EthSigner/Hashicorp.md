@@ -45,6 +45,12 @@ option set to `8590` to avoid conflict with the default EthSigner listening port
     besu --network=dev --miner-enabled --miner-coinbase=0xfe3b557e8fb62b89f4916b721be55ceb828dbd73 --rpc-http-cors-origins="all" --host-whitelist=* --rpc-http-enabled --rpc-http-port=8590 --data-path=/tmp/tmpDatdir
     ```
 
+!!! important 
+    EthSigner requires a [chain ID](https://besu.hyperledger.org/en/stable/Concepts/NetworkID-And-ChainID/) to be 
+    used when signing transactions. The downstream Ethereum client must be operating in a milestone supporting replay
+    protection. That is, the genesis file must include at least the Spurious Dragon milestone 
+    (defined as `eip158Block` in the genesis file) so the blockchain is using a chain ID. 
+
 ## Start EthSigner with Hashicorp Vault Signing 
 
 Start EthSigner.
