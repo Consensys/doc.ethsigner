@@ -32,8 +32,9 @@ option set to `8590` to avoid conflict with the default EthSigner listening port
 
 !!! important 
     EthSigner requires a [chain ID](https://besu.hyperledger.org/en/stable/Concepts/NetworkID-And-ChainID/) to be 
-    used when signing transactions. The Ethereum client genesis file must include at least the Spurious Dragon
-    milestone (that is, `eip158Block`) so the blockchain is using a chain ID. 
+    used when signing transactions. The downstream Ethereum client must be operating in a milestone supporting replay
+    protection. That is, the genesis file must include at least the Spurious Dragon milestone 
+    (defined as `eip158Block` in the genesis file) so the blockchain is using a chain ID. 
     
 ## Start EthSigner with Azure Key Vault Signing 
 
