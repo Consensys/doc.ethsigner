@@ -2,7 +2,7 @@
 description: Signing transactions with multiple keys.
 ---
 
-# Using EthSigner with Multiple Signing Keys
+# Start EthSigner with multiple signing keys
 
 EthSigner supports file-based signing using [multiple keys](../Concepts/Multiple-Key-Files.md).
 
@@ -25,7 +25,7 @@ option set to `8590`.
     besu --network=dev --miner-enabled --miner-coinbase=0xfe3b557e8fb62b89f4916b721be55ceb828dbd73 --rpc-http-cors-origins="all" --host-whitelist=* --rpc-http-enabled --rpc-http-port=8590 --data-path=/Users/me/Datadir
     ```
 
-## Create Password and Key Files
+## Create password and key files
 
 Create a password file and V3 Keystore key for each account that needs to sign transactions.
 The password files and V3 Keystore keys must follow the
@@ -107,7 +107,7 @@ Start EthSigner with options:
     ethsigner --chain-id=2018 --downstream-http-port=8590 multifile-based-signer --directory=/Users/me/mydirectory
     ```
 
-## Confirm EthSigner is Up
+## Confirm EthSigner is up
 
 Use the `upcheck` endpoint to confirm EthSigner is running.
 
@@ -121,7 +121,7 @@ Use the `upcheck` endpoint to confirm EthSigner is running.
     I'm up
     ```
 
-## Confirm EthSigner Passing Requests to Besu
+## Confirm EthSigner passing requests to Besu
 
 Request the current block number using [`eth_blockNumber`](https://besu.hyperledger.org/en/stable/Reference/API-Methods/#eth_blocknumber)
 with the EthSigner JSON-RPC endpoint (`8545` in this example):
