@@ -6,6 +6,8 @@ description: Signing transactions with multiple keys.
 
 EthSigner supports file-based signing using [multiple keys](../Concepts/Multiple-Key-Files.md).
 
+In this tutorial we will configure multiple keys using a V3 keystore file. To configure multiple keys for Hashicorp Vault or Azure Key Vault, update the [TOML configuration file](../Reference/Multifile-Parameters.md) accordingly.
+
 ## Prerequisites
 
 * [EthSigner](../HowTo/Get-Started/Install-Binaries.md)
@@ -24,27 +26,21 @@ option set to `8590`.
     ```bash
     besu --network=dev --miner-enabled --miner-coinbase=0xfe3b557e8fb62b89f4916b721be55ceb828dbd73 --rpc-http-cors-origins="all" --host-whitelist=* --rpc-http-enabled --rpc-http-port=8590 --data-path=/Users/me/Datadir
     ```
-
 ## Create Password and Key Files
 
-Create a password file and V3 Keystore key for each account that needs to sign transactions.
-The password files and V3 Keystore keys must follow the
-[naming convention](../Concepts/Multiple-Key-Files.md) and be in the same directory.
+Create a text file containing the password for the V3 Keystore key file to be created (for example, `passwordFile`).
 
-The password file must be named `[<prefix>]<accountAddress>.password`. The `0x` portion of the
-account address must be removed. For example, `78e6e236592597c09d5c137c2af40aecd42d12a2.password`
-
-!!! caution "Password text file must not contain characters other than those used in your password"
+!!! attention "Password text file must not contain characters other than those used in your password"
     EthSigner reads the password file as binary and any character in the file is considered part
     of your password.
 
     _Some POSIX compliant editors automatically add an end-of-line in text files. If your editor adds an
     end-of-line character, the end-of-line is considered part of your password._
 
-    Replace the placeholders and use the following command to ensure the password file is correct:
+    Use the following command to ensure the password file is correct:
 
     ```bash
-    echo -n "Type your password:";read -s password;echo -ne $password > [<prefix>]<accountAddress>.password;
+    echo -n "Type your password:";read -s password;echo -ne $password > passwordFile;
     ```
 
     Enter the password when prompted.
@@ -52,9 +48,8 @@ account address must be removed. For example, `78e6e236592597c09d5c137c2af40aecd
 Use the [web3.js library](https://github.com/ethereum/web3.js/) to create a key file where:
 
 * `<AccountPrivateKey>` is the private key of the account with which EthSigner will sign transactions.
-
-* `<Password>` is the password for the key file being created. The password must match the password
-  saved in the password file created above.
+* `<Password>` is the password for the key file being created. The password must match the password saved in the
+   password file created above (`passwordFile` in this example).
 
 !!! example
 
@@ -88,8 +83,27 @@ Use the JS script to display the text for the key file:
 node createKeyFile.js
 ```
 
-Copy and paste the text to a file that is named `[<prefix>]<accountAddress>.key`. The file name must
-be identical to the password file except for the `.key` suffix.
+Copy and paste the text to a file (for example, `keyFile`). The file is your V3 Keystore key file.
+
+
+## Create the TOML File
+
+Create the TOML file that contains the settings to access the key file.
+
+The TOML file name must use the format `[<prefix>]<accountAddress>.toml`. The `0x` portion of the account address must be removed.
+For example, `78e6e236592597c09d5c137c2af40aecd42d12a2.toml`.
+
+!!! example
+    ```
+    [metadata]
+    createdAt = 2019-11-05T08:15:30-05:00
+    description = "File based configuration"
+
+    [signing]
+    type = "file-based-signer"
+    key-file = "/Users/me/project/keyFile"
+    password-file = "/Users/me/project/passwordFile"
+    ```
 
 ## Start EthSigner
 
@@ -99,12 +113,12 @@ Start EthSigner with options:
 
 * `downstream-http-port` is the `rpc-http-port` specified for Besu (`8590` in this example).
 
-* `directory` is the location of the key and password files [created above](#create-passwords-and-key-files).
+* `directory` is the location of TOML file [created above](#create-the-toml-file).
 
 !!! example
 
     ```
-    ethsigner --chain-id=2018 --downstream-http-port=8590 multifile-based-signer --directory=/Users/me/mydirectory
+    ethsigner --chain-id=2018 --downstream-http-port=8590 multikey-signer --directory=/Users/me/project
     ```
 
 ## Confirm EthSigner is Up

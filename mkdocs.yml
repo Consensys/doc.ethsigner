@@ -72,6 +72,7 @@ nav:
         - Store Multiple Key Files: Concepts/Multiple-Key-Files.md
     - Reference:
         - EthSigner Command Line: Reference/CLI/CLI-Syntax.md
+        - Multikey TOML Parameters: Reference/Multifile-Parameters.md
         - Security Disclosure Policy: Reference/Responsible-Disclosure.md
 markdown_extensions:
   - toc:
