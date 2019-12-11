@@ -6,7 +6,7 @@ description: Signing transactions with multiple keys.
 
 EthSigner supports file-based signing using [multiple keys](../Concepts/Multiple-Key-Files.md).
 
-In this tutorial we will configure multiple keys using a V3 keystore file. To configure multiple keys for Hashicorp Vault or Azure Key Vault, update the [TOML configuration file](../Reference/Multifile-Parameters.md) accordingly.
+This tutorial covers configuring multiple keys using a V3 keystore file. To configure multiple keys for Hashicorp Vault or Azure Key Vault, update the [TOML configuration file](../Reference/Multifile-Parameters.md) accordingly.
 
 ## Prerequisites
 
@@ -88,9 +88,9 @@ Copy and paste the text to a file (for example, `keyFile`). The file is your V3 
 
 ## Create the TOML File
 
-Create the TOML file that contains the settings to access the key file.
+Create the TOML file that contains the settings to access the key file. Each key that signs transactions requires a TOML file.
 
-The TOML file name must use the format `[<prefix>]<accountAddress>.toml`. The `0x` portion of the account address must be removed.
+The file name must use the format `[<prefix>]<accountAddress>.toml`. The `0x` portion of the account address must be removed.
 For example, `78e6e236592597c09d5c137c2af40aecd42d12a2.toml`.
 
 !!! example
