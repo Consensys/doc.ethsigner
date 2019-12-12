@@ -4,15 +4,15 @@ description: Adding an external signer to EthSigner
 
 # Creating an External Signer for EthSigner
 
-EthSigner supports the implementation of additional external signers in same way as Hashicorp Vault.
+EthSigner supports the implementation of additional external signers in the same way as Hashicorp Vault.
 
 To create an external signer:
 
 1. Clone the [EthSigner repository](https://github.com/PegaSysEng/ethsigner).
 
-1. Create a gradle module for the new signer in the `ethsigner/signer` directory.
+1. Create a Gradle module for the new signer in the `ethsigner/signer` directory.
 
-1. To ensure the module for the new signer is built, add the module to the `settings.gradle` file.
+1. Add the module to the `settings.gradle` file to include the module in the build.
 
 1. In the new module, create a concrete child class of `SignerSubCommand`.
 
@@ -23,8 +23,7 @@ To create an external signer:
    Your signer is exposed only as a `TransactionSigner`.
 
     !!! note
-        The new signing class is responsible for fulfilling the `TransactionSigner` interface.
-        To fulfill the `TransactionSigner` interface, the class must be able to create a signature for
+        The new signing class fulfills the `TransactionSigner` interface. To fulfill the `TransactionSigner` interface, the class must be able to create a signature for
         a block of bytes and provide the address associated with the key pair in the signer.
 
 1. In `EthSignerApp.java`, register the new `SignerSubCommand` with the `cmdLineParser` as for existing signers.

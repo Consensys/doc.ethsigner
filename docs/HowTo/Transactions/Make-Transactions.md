@@ -11,14 +11,13 @@ methods:
 * [`eth_accounts`](#eth_accounts)
 * [`eth_sendTransaction`](#eth_sendtransaction)
 
-All other JSON-RPC requests are passed through EthSigner to Hyperledger Besu and the result from Besu returned
+All other JSON-RPC requests pass through EthSigner to Hyperledger Besu and the result from Besu returned
 by EthSigner.
 
 !!! note
     EthSigner supports the JSON-RPC service over HTTP only.
 
-The sender specified in [`eea_sendTransaction`](#eea_sendtransaction) and
-[`eth_sendTransaction`](#eth_sendtransaction) requires a signing key.
+The sender specified in [`eea_sendTransaction`](#eea_sendtransaction) and [`eth_sendTransaction`](#eth_sendtransaction) requires a signing key.
 Signing keys can be [stored externally or locally](../../Concepts/Overview.md).
 
 ## eea_sendTransaction
@@ -29,8 +28,8 @@ using the [signing key](../../Concepts/Overview.md).
 EthSigner submits the signed transaction to Besu using [`eea_sendRawTransaction`](https://besu.hyperledger.org/en/stable/Reference/API-Methods/#eea_sendrawtransaction).
 
 !!! note
-    Besu uses a Transaction Manager to implement privacy. [Orion](http://docs.orion.pegasys.tech) is
-    the Transaction Manager used in this documentation but EthSigner can be used with other Transaction Managers.
+    Besu uses a transaction manager to implement privacy. [Orion](http://docs.orion.pegasys.tech) is
+    the transaction manager used in this documentation, but you can use EthSigner with other transaction managers.
 
 ### Parameters
 
@@ -55,8 +54,7 @@ Transaction object for private transactions:
     If not attempting to replace a pending transaction, do not include the `nonce` in the private transaction object and nonce management is handled automatically.
 
 !!! note
-    If a non-zero `value` is included in the transaction object, an error is returned. Ether transfers cannot
-    be private transactions.
+    If a non-zero `value` is in the transaction object, an error is returned. Ether transfers cannot be private transactions.
 
 ### Returns
 
@@ -80,7 +78,7 @@ Transaction object for private transactions:
 
 Returns the account address with which EthSigner is signing transactions. That is, the account of the [signing key](../../Concepts/Overview.md).
 
-Returns multiple accounts if multiple signers are configured.
+Returns multiple accounts, if multiple signers are configured.
 
 ### Parameters
 
@@ -125,8 +123,7 @@ Transaction object:
 | **data**     | Quantity            | Optional                       | Compiled contract code or hash of the invoked method signature and encoded parameters. |
 
 !!! tip
-    Submitting a transaction with the same nonce as a pending transaction and a higher gas price replaces
-    the pending transaction with the new one.
+    Submitting a transaction with the same nonce as a pending transaction and a higher gas price replaces the pending transaction with the new one.
 
 ### Returns
 

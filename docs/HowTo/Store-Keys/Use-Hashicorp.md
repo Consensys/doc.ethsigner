@@ -7,8 +7,7 @@ description: Signing transactions with key stored in Hashicorp Key Vault
 EthSigner supports storing the signing key in a [Hashicorp Vault](https://www.hashicorp.com/products/vault/).
 
 !!! caution
-    EthSigner with Hashicorp Vault does not support TLS. If using a remote Hashicorp Vault, apply appropriate
-    security.
+    EthSigner with Hashicorp Vault does not support TLS. If using a remote Hashicorp Vault, apply appropriate security.
 
 ## Storing Private Key in Hashicorp Vault
 
@@ -33,8 +32,7 @@ After installing [Hashicorp Vault](https://learn.hashicorp.com/vault/getting-sta
     vault kv put secret/ethsignerSigningKey value=8f2a55949038a9610f50fb23b5883af3b4ecb3c3bb792cbcefbd1542c692be63
     ```
 
-    The private key is stored in the default location for EthSigner. The key must be a base 64
-    encoded private key for ECDSA for curve secp256k1.
+    The private key is stored in the default location for EthSigner. The key must be a Base64-encoded private key for ECDSA for curve secp256k1.
 
 ## Start Besu
 
@@ -59,8 +57,7 @@ Start EthSigner.
     ```
 
 !!! tip
-    Use the [--http-listen-port](../../Reference/CLI/CLI-Syntax.md#http-listen-port) option to change the
-    EthSigner listening port if `8545` is in use.
+    If `8545` is used, use the [--http-listen-port](../../Reference/CLI/CLI-Syntax.md#http-listen-port) option to change the EthSigner listening port.
 
 You can now [use EthSigner to sign transactions](../Transactions/Make-Transactions.md) with the key
 stored in the Hashicorp Vault.

@@ -18,7 +18,7 @@ For file-based signing, EthSigner requires a V3 Keystore key file and a password
 * [web3.js](https://github.com/ethereum/web3.js/)
 
 !!! note
-    The Ethereum client used in this documentation is Hyperledger Besu but EthSigner can be used with any Ethereum client.
+    The Ethereum client used in this documentation is Hyperledger Besu, but you can use EthSigner with any Ethereum client.
 
 ## Start Besu
 
