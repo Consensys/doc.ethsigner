@@ -6,7 +6,7 @@ description: Signing transactions with multiple keys.
 
 EthSigner supports file-based signing using [multiple keys](../Concepts/Multiple-Key-Files.md).
 
-This tutorial covers configuring multiple keys using a V3 keystore file. To configure multiple keys for Hashicorp Vault or Azure Key Vault, update the [TOML configuration file](../Reference/Multifile-Parameters.md) accordingly.
+This tutorial covers configuring multiple keys using a V3 keystore file. To configure multiple keys for Hashicorp Vault or Azure Key Vault, update the [TOML configuration file](../Reference/Multikey-Parameters.md) accordingly.
 
 ## Prerequisites
 

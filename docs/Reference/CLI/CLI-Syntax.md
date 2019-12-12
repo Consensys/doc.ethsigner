@@ -291,7 +291,7 @@ Name of the vault to access. Sub-domain of `vault.azure.net`.
 
 ### directory
 
-Path to the directory containing the [TOML files which define parameters](../Multifile-Parameters.md) required to access key files.
+Path to the directory containing the [TOML files](../Multikey-Parameters.md) required to access keys.
 
 ```bash tab="Syntax"
 --directory=<directoryPath>

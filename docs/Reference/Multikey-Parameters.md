@@ -4,7 +4,7 @@ description: TOML file parameters for multi signers.
 
 # Multikey Parameters
 
-Create a TOML configuration file for each key that signs transactions. Keys can be stored in a V3 keystore file, Hashicorp Vault, and Azure Key Vault.
+Create a TOML configuration file for each key that signs transactions. Keys can be stored in a V3 keystore file, Hashicorp Vault, or Azure Key Vault.
 
 The filename must be formatted as `[<prefix>]<accountAddress>.toml` and must be located in the directory 
 specified using the [`multikey-signer --directory`](../CLI/CLI-Syntax#multikey-options) command line option.
@@ -61,7 +61,7 @@ The `[signing]` section contains the parameters required for the signing type.
   
 | Key                  | Description                           |
 |----------------------|---------------------------------------|
-| **type**             | Type of key signing. Use `hashicorp-based-signer`|  
+| **type**             | Type of key signing. Use `hashicorp-signer`|  
 | **signing-key-path** | Path to secret in the Hashicorp Vault containing the private key for signing transactions |
 | **host**             | Host of the Hashicorp Vault server  |
 | **port**             | Port of the Hashicorp Vault server  |
@@ -87,9 +87,9 @@ The `[signing]` section contains the parameters required for the signing type.
 
 | Key                  | Description                           |
 |----------------------|---------------------------------------|
-| **type**             | Type of key signing. Use `azure-based-signer`|  
+| **type**             | Type of key signing. Use `azure-signer`|  
 | **key-vault-name**   | Name of the vault to access. Sub-domain of `vault.azure.net` |
 | **key-name**         | Name of key to be used |
-| **key-version**      | Version of the specified key to use |
+| **key-version**      | Version of the specified key |
 | **client-id**        | ID used to authenticate with Azure Key Vault |
 | **client-secret**    | Secret used to access the vault |
