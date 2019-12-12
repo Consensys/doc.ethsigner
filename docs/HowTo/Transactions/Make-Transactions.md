@@ -2,7 +2,7 @@
 description: Make Transactions
 ---
 
-# Make Transactions
+# Make transactions
 
 EthSigner provides transaction signing and access to your keystore by implementing the following JSON-RPC
 methods:
