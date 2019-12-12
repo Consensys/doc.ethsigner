@@ -2,7 +2,7 @@
 description: Adding an external signer to EthSigner
 ---
 
-# Creating an External Signer for EthSigner
+# Creating an external signer for EthSigner
 
 EthSigner supports the implementation of additional external signers in the same way as Hashicorp Vault.
 

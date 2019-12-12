@@ -2,7 +2,7 @@
 description: Signing transactions with multiple keys.
 ---
 
-# Store Multiple Key Files
+# Store multiple key files
 
 EthSigner supports file-based signing using multiple V3 keystore files. Each account that signs
 transactions requires a key file.

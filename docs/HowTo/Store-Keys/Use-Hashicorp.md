@@ -9,7 +9,7 @@ EthSigner supports storing the signing key in a [Hashicorp Vault](https://www.ha
 !!! caution
     EthSigner with Hashicorp Vault does not support TLS. If using a remote Hashicorp Vault, apply appropriate security.
 
-## Storing Private Key in Hashicorp Vault
+## Storing private key in Hashicorp Vault
 
 After installing [Hashicorp Vault](https://learn.hashicorp.com/vault/getting-started/install) and
 [starting the server](https://learn.hashicorp.com/vault/getting-started/dev-server):
@@ -46,7 +46,7 @@ option set to `8590` to avoid conflict with the default EthSigner listening port
     besu --network=dev --miner-enabled --miner-coinbase=0xfe3b557e8fb62b89f4916b721be55ceb828dbd73 --rpc-http-cors-origins="all" --host-whitelist=* --rpc-http-enabled --rpc-http-port=8590 --data-path=/tmp/tmpDatdir
     ```
 
-## Start EthSigner with Hashicorp Vault Signing
+## Start EthSigner with Hashicorp Vault signing
 
 Start EthSigner.
 
