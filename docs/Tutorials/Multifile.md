@@ -88,8 +88,7 @@ Use the JS script to display the text for the key file:
 node createKeyFile.js
 ```
 
-Copy and paste the text to a file that is named `[<prefix>]<accountAddress>.key`. The file name must
-be identical to the password file except for the `.key` suffix.
+Copy and paste the text to a file that is named `[<prefix>]<accountAddress>.key`. The key file name and the password file name must be the same except for the `.key` suffix.
 
 ## Start EthSigner
 
