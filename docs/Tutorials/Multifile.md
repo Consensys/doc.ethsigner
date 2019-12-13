@@ -4,9 +4,9 @@ description: Signing transactions with multiple keys.
 
 # Using EthSigner with Multiple Signing Keys
 
-EthSigner supports file-based signing using [multiple keys](../Concepts/Multiple-Key-Files.md).
+EthSigner supports transaction signing using [multiple keys](../HowTo/Use-Multiple-Signers.md).
 
-This tutorial covers configuring multiple keys using a V3 keystore file. To configure multiple keys for Hashicorp Vault or Azure Key Vault, update the [TOML configuration file](../Reference/Multikey-Parameters.md) accordingly.
+This tutorial covers configuring multiple keys using V3 keystore files. To configure keys for [Hashicorp Vault](../HowTo/Store-Keys/Use-Hashicorp.md) or [Azure Key Vault](../HowTo/Store-Keys/Use-Azure.md), update the [TOML configuration file](../Reference/Multikey-Parameters.md) accordingly.
 
 ## Prerequisites
 
@@ -28,7 +28,7 @@ option set to `8590`.
     ```
 ## Create Password and Key Files
 
-Create a text file containing the password for the V3 Keystore key file to be created (for example, `passwordFile`).
+You can create one or more password and V3 Keystore key files. Create a text file containing the password for the V3 Keystore key file to be created (for example, `passwordFile`).
 
 !!! attention "Password text file must not contain characters other than those used in your password"
     EthSigner reads the password file as binary and any character in the file is considered part
@@ -83,8 +83,7 @@ Use the JS script to display the text for the key file:
 node createKeyFile.js
 ```
 
-Copy and paste the text to a file (for example, `keyFile`). The file is your V3 Keystore key file.
-
+Copy and paste the text to a file (for example, `keyFile`). The file is your V3 Keystore key file. Each key file requires a TOML file.
 
 ## Create the TOML File
 

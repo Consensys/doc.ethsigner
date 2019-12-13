@@ -4,18 +4,13 @@ description: TOML file parameters for multi signers.
 
 # Multikey Parameters
 
-Create a TOML configuration file for each key that signs transactions. Keys can be stored in a V3 keystore file, Hashicorp Vault, or Azure Key Vault.
-
-The filename must be formatted as `[<prefix>]<accountAddress>.toml` and must be located in the directory 
-specified using the [`multikey-signer --directory`](../CLI/CLI-Syntax#multikey-options) command line option.
-
-The optional `[metadata]` section in the TOML files is used for data that is not required by EthSigner.
+The optional `[metadata]` section in the TOML files contains data that is not required by EthSigner.
 The `[signing]` section contains the parameters required for the signing type.
 
 !!! important
     All parameters in the `[signing]` section are mandatory.
 
-## File-based Signing 
+## File-based Signing
 
 !!! example
     ```
@@ -38,7 +33,7 @@ The `[signing]` section contains the parameters required for the signing type.
 | **key-file**         | V3 keystore file containing the [key with which transactions are signed](../Tutorials/Multifile.md#create-password-and-key-files) |
 | **password-file**    | File containing the password for the [key with which transactions are signed](../Tutorials/Multifile.md#create-password-and-key-files).    |
 
-    
+
 ## Hashicorp Vault Signing
 
 !!! example
@@ -46,7 +41,7 @@ The `[signing]` section contains the parameters required for the signing type.
     [metadata]
     createdAt = 2019-07-01T12:11:30Z
     description = "Example of a valid Hashicorp based configuration"
-   
+
     [signing]
     type = "hashicorp-signer"
     signing-key-path = "/secret/data/ethsignerKey"
@@ -58,7 +53,7 @@ The `[signing]` section contains the parameters required for the signing type.
 
 !!! note
     We recommend using an absolute path when specifying `auth-file`. Relative paths are located relative to where EthSigner is executed.
-  
+
 | Key                  | Description                           |
 |----------------------|---------------------------------------|
 | **type**             | Type of key signing. Use `hashicorp-signer`|  
@@ -67,7 +62,7 @@ The `[signing]` section contains the parameters required for the signing type.
 | **port**             | Port of the Hashicorp Vault server  |
 | **auth-file**        | File containing authentication data for Hashicorp Vault. The authentication data is the [root token displayed by the Hashicorp Vault server](../HowTo/Store-Keys/Use-Hashicorp.md#storing-private-key-in-hashcorp-vault)    |
 | **timeout**    | Timeout in milliseconds for requests to the Hashicorp Vault server    |
-   
+
 ## Azure Key Vault Signing
 
 !!! example
@@ -75,7 +70,7 @@ The `[signing]` section contains the parameters required for the signing type.
     [metadata]
     createdAt = 2011-11-01T12:15:30Z
     description = "Example of an Azure Key Vault based configuration"
-  
+
     [signing]
     type = "azure-signer"
     key-vault-name = "AzureKeyVault"
