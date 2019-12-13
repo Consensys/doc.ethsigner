@@ -22,8 +22,7 @@ To create an external signer:
 1. Make the `createSigner()` function the entry point to create and return your signer. Your signer is exposed only as a `TransactionSigner`.
 
     !!! note
-        The new signing class fulfills the `TransactionSigner` interface. To fulfill the `TransactionSigner` interface, the class must be able to create a signature for
-        a block of bytes and provide the address associated with the key pair in the signer.
+        The new signing class fulfills the `TransactionSigner` interface. To fulfill the `TransactionSigner` interface, the class must be able to create a signature for a block of bytes and provide the address associated with the key pair in the signer.
 
 1. In `EthSignerApp.java`, register the new `SignerSubCommand` with the `cmdLineParser` as for existing signers.
 
