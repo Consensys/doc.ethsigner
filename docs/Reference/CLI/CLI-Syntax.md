@@ -12,6 +12,10 @@ signs transaction with a key stored in an encrypted file or an external vault (f
 * `ethsigner [Options] azure-signer [Azure Options]`
 * `ethsigner [Options] multikey-signer [Multikey Options]`
 
+!!! note
+    * The [`file-based-signer`](#file-options), [`hashicorp-signer`](#hashicorp-options), and [`azure-signer`](#azure-options) command line options are used for a [single key only](../../Tutorials/Start-EthSigner.md).
+    * The [`multikey-signer`](#multikey-options) command line option is used for [one or more keys](../../Tutorials/Multifile.md).
+
 !!! tip
     To view the command line help for the subcommands:
 
@@ -300,4 +304,3 @@ Path to the directory containing the [TOML files](../Multikey-Parameters.md) req
 ```bash tab="Example"
 --directory=/Users/me/keys
 ```
-
