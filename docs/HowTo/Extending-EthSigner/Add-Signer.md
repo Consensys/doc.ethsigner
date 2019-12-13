@@ -19,8 +19,7 @@ To create an external signer:
     The new `SignerSubCommand` must include the parameters (tagged with PicoCLI annotations) to
     initialize your signer.
 
-1. Update the `createSigner()` function to be the entry point to create and return your signer.
-   Your signer is exposed only as a `TransactionSigner`.
+1. Make the `createSigner()` function the entry point to create and return your signer. Your signer is exposed only as a `TransactionSigner`.
 
     !!! note
         The new signing class fulfills the `TransactionSigner` interface. To fulfill the `TransactionSigner` interface, the class must be able to create a signature for
