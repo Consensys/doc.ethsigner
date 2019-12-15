@@ -6,7 +6,7 @@ description: Signing transactions with key stored in Azure Key Vault
 
 EthSigner supports storing the signing key in an [Azure Key Vault](https://azure.microsoft.com/en-au/services/key-vault/).
 
-## Storing Private Key in Azure Key Vault
+## Storing private key in Azure Key Vault
 
 Create a SECP256k1 key in the [Azure Key Vault](https://docs.microsoft.com/en-us/azure/key-vault/)
 and register EthSigner as an application for the key.
@@ -37,7 +37,7 @@ option set to `8590` to avoid conflict with the default EthSigner listening port
     protection. That is, the genesis file must include at least the Spurious Dragon milestone 
     (defined as `eip158Block` in the genesis file) so the blockchain is using a chain ID. 
 
-## Start EthSigner with Azure Key Vault Signing
+## Start EthSigner with Azure Key Vault signing
 
 Start EthSigner.
 

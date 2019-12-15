@@ -2,7 +2,7 @@
 description: EthSigner command line interface reference
 ---
 
-# EthSigner Command Line
+# EthSigner command line
 
 This reference describes the syntax of the EthSigner Command Line Interface (CLI) options. EthSigner
 signs transaction with a key stored in an encrypted file or an external vault (for example, Hashicorp):
@@ -135,7 +135,7 @@ Displays the version and exits.
 -V, --version
 ```
 
-## File Options
+## File options
 
 ### key-file
 
@@ -161,7 +161,7 @@ File containing password for the [key with which transactions are signed](../../
 --password-file=/Users/me/my_node/password
 ```
 
-## Hashicorp Options
+## Hashicorp options
 
 ### auth-file
 
@@ -225,7 +225,7 @@ Timeout in milliseconds for requests to the Hashicorp Vault server. Default is 1
 --timeout=5000
 ```
 
-## Azure Options
+## Azure options
 
 ### client-id
 
@@ -287,7 +287,7 @@ Name of the vault to access. Sub-domain of `vault.azure.net`.
 --keyvault-name="MyKeyVault"
 ```
 
-## Multifile Options
+## Multifile options
 
 ### directory
 

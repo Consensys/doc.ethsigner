@@ -2,7 +2,7 @@
 description: Getting started with EthSigner
 ---
 
-# Using EthSigner with a Single Signer
+# Start EthSigner with a single signer
 
 For file-based signing, EthSigner requires a V3 Keystore key file and a password file.
 
@@ -38,7 +38,7 @@ option set to `8590`.
     protection. That is, the genesis file must include at least the Spurious Dragon milestone
     (defined as `eip158Block` in the genesis file) so the blockchain is using a chain ID.
 
-## Create Password and Key Files
+## Create password and key files
 
 Create a text file containing the password for the V3 Keystore key file to be created (for example, `passwordFile`).
 
@@ -114,7 +114,7 @@ Start EthSigner with options specified as follows:
     ethsigner --chain-id=2018 --downstream-http-port=8590 file-based-signer --key-file=/mydirectory/keyFile --password-file=/mydirectory/passwordFile
     ```
 
-## Confirm EthSigner is Up
+## Confirm EthSigner is up
 
 Use the `upcheck` endpoint to confirm EthSigner is running.
 
@@ -128,7 +128,7 @@ Use the `upcheck` endpoint to confirm EthSigner is running.
     I'm up
     ```
 
-## Confirm EthSigner Passing Requests to Besu
+## Confirm EthSigner passing requests to Besu
 
 Request the current block number using [`eth_blockNumber`] with the EthSigner JSON-RPC endpoint
 (`8545` in this example):

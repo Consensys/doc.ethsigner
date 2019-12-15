@@ -2,7 +2,7 @@
 description: Ethsigner responsible disclosure statement.
 ---
 
-# Responsible Disclosure Policy
+# Responsible disclosure policy
 
 At PegaSys, security is a priority. But regardless of how much effort we put into system security,
 there may still be vulnerabilities present.

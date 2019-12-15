@@ -2,7 +2,7 @@
 description: Building EthSigner from source code
 ---
 
-# Build from Source
+# Build from source
 
 ## Prerequisites
 
