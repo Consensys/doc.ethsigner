@@ -31,7 +31,7 @@ option set to `8590`.
     ```bash
     besu --network=dev --miner-enabled --miner-coinbase=0xfe3b557e8fb62b89f4916b721be55ceb828dbd73 --rpc-http-cors-origins="all" --host-whitelist=* --rpc-http-enabled --rpc-http-port=8590 --data-path=/Users/me/Datadir
     ```
-    
+
 !!! important
     EthSigner requires a [chain ID](https://besu.hyperledger.org/en/stable/Concepts/NetworkID-And-ChainID/) to be
     used when signing transactions. The downstream Ethereum client must be operating in a milestone supporting replay
