@@ -10,15 +10,22 @@ signs transaction with a key stored in an encrypted file or an external vault (f
 * `ethsigner [Options] file-based-signer [File Options]`
 * `ethsigner [Options] hashicorp-signer [Hashicorp Options]`
 * `ethsigner [Options] azure-signer [Azure Options]`
-* `ethsigner [Options] multifile-based-signer [Multifile Options]`
+* `ethsigner [Options] multikey-signer [Multikey Options]`
+
+!!! note
+
+    * The [`file-based-signer`](#file-options), [`hashicorp-signer`](#hashicorp-options), and [`azure-signer`](#azure-options)
+    command line options are used for a [single key only](../../Tutorials/Start-EthSigner.md).
+    * The [`multikey-signer`](#multikey-options) command line option is used for
+    [one or more keys](../../Tutorials/Multifile.md).
 
 !!! tip
     To view the command line help for the subcommands:
 
     * [`ethsigner help file-based-signer`](#file-options)
-    * [`ethsigner help multifile-based-signer`](#multifile-options)
     * [`ethsigner help hashicorp-signer`](#hashicorp-options)
     * [`ethsigner help azure-signer`](#azure-options)
+    * [`ethsigner help multikey-signer`](#multikey-options)
 
 ## Options
 
@@ -287,11 +294,12 @@ Name of the vault to access. Sub-domain of `vault.azure.net`.
 --keyvault-name="MyKeyVault"
 ```
 
-## Multifile options
+## Multikey Options
 
 ### directory
 
-Path to the directory containing the key and password files.
+Path to the directory containing the [TOML files](../Multikey-Parameters.md)
+required to access keys.
 
 ```bash tab="Syntax"
 --directory=<directoryPath>
@@ -300,4 +308,3 @@ Path to the directory containing the key and password files.
 ```bash tab="Example"
 --directory=/Users/me/keys
 ```
-

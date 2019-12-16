@@ -59,6 +59,8 @@ nav:
             - Install binary distribution: HowTo/Get-Started/Install-Binaries.md
             - Run EthSigner from Docker image: HowTo/Get-Started/Use-Docker.md
             - Build from source: HowTo/Get-Started/Build-From-Source.md
+        - Use a single signing key: HowTo/Use-Single-Signer.md
+        - Use multiple signing keys: HowTo/Use-Multiple-Signers.md
         - Make transactions: HowTo/Transactions/Make-Transactions.md
         - Store keys externally:
             - Use Hashicorp Vault: HowTo/Store-Keys/Use-Hashicorp.md
@@ -69,10 +71,10 @@ nav:
         - Start EthSigner with multiple signers: Tutorials/Multifile.md
     - Concepts:
         - Overview: Concepts/Overview.md
-        - Store multiple key files: Concepts/Multiple-Key-Files.md
     - Reference:
         - EthSigner command line: Reference/CLI/CLI-Syntax.md
-        - Responsible disclosure policy: Reference/Responsible-Disclosure.md
+        - Multikey TOML parameters: Reference/Multikey-Parameters.md
+        - Security disclosure policy: Reference/Responsible-Disclosure.md
 markdown_extensions:
   - toc:
       permalink: 
