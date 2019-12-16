@@ -260,7 +260,7 @@ Path to file containing secret used to access the vault.
 
 ### key-name
 
-Name of key to be used.
+Name of key to use.
 
 ```bash tab="Syntax"
 --key-name=<keyName>

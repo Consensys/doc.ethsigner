@@ -4,9 +4,7 @@ description: Use a Single Signer
 
 # Use a single signing key
 
-The key used to [sign transactions](Transactions/Make-Transactions.md) can be stored externally
-using [Hashicorp Vault](Store-Keys/Use-Hashicorp.md) or [Azure Key Vault](Store-Keys/Use-Azure.md), or
-in a [V3 keystore file](../Tutorials/Start-EthSigner.md#create-password-and-key-files).
+You can externally store the key used to [sign transactions](Transactions/Make-Transactions.md) using [Hashicorp Vault](Store-Keys/Use-Hashicorp.md) or [Azure Key Vault](Store-Keys/Use-Azure.md), or in a [V3 keystore file](../Tutorials/Start-EthSigner.md#create-password-and-key-files).
 
 To [start EthSigner with a single signing key](../Tutorials/Start-EthSigner.md), use the subcommands:
 

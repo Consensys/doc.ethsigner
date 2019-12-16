@@ -37,8 +37,7 @@ file containing the password for the V3 Keystore key file to be created
 (for example, `passwordFile`).
 
 !!! attention "Password text file must not contain characters other than those used in your password"
-    EthSigner reads the password file as binary and any character in the file is
-    considered part of your password.
+    EthSigner reads the password file as binary and considers any character in the file as part of your password.
 
     _Some POSIX compliant editors automatically add an end-of-line in text files.
     If your editor adds an end-of-line character, the end-of-line is considered
@@ -151,12 +150,10 @@ Use the `upcheck` endpoint to confirm EthSigner is running.
 
 ## Confirm EthSigner passing requests to Besu
 
-Request the current block number using [`eth_blockNumber`](https://besu.hyperledger.org/en/stable/Reference/API-Methods/#eth_blocknumber)
-with the EthSigner JSON-RPC endpoint (`8545` in this example):
+Request the current block number using [`eth_blockNumber`](https://besu.hyperledger.org/en/stable/Reference/API-Methods/#eth_blocknumber) with the EthSigner JSON-RPC endpoint (`8545` in this example):
 
 ```bash
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":51}' http://127.0.0.1:8545
 ```
 
-You can now [use EthSigner to sign transactions](../HowTo/Transactions/Make-Transactions.md) with
-the keys stored in the V3 Keystore key files.
+You can now [use EthSigner to sign transactions](../HowTo/Transactions/Make-Transactions.md) with the keys stored in the V3 Keystore key files.

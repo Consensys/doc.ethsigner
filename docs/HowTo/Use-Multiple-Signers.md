@@ -13,20 +13,19 @@ Each account that signs transactions requires a key. EthSigner supports
 * [Azure Key Vault](../HowTo/Store-Keys/Use-Azure.md).
 
 Each key requires a separate [TOML file](../Reference/Multikey-Parameters.md) that defines
-the parameters to access the key. The TOML files must be placed in a single
-directory specified using the [`multikey-signer --directory`](../Reference/CLI/CLI-Syntax.md#multikey-options) subcommand.
+the parameters to access the key. Put the TOML files in a single directory specified using the [`multikey-signer --directory`](../Reference/CLI/CLI-Syntax.md#multikey-options) subcommand.
 
 !!! tip
-    Files can be added or removed from the directory without needing to
+    You can add or remove files from the directory without needing to
     restart EthSigner.
 
 The TOML file name must use the format `[<prefix>]<accountAddress>.toml`. The
 prefix can be anything you want. No two TOML files can have the same key address
 in the file name, even if the prefix differs.
 
-The `0x` portion of the account address must be removed.
+Remove the `0x` portion of the account address.
 For example, `78e6e236592597c09d5c137c2af40aecd42d12a2.toml`
 
 !!! tip
-    Use the [`export-address`](https://besu.hyperledger.org/en/latest/Reference/CLI/CLI-Subcommands/#export-address)
-    Hyperledger Besu subcommand to obtain the account address of the node.
+    To obtain the account address of the node, use the [`export-address`](https://besu.hyperledger.org/en/latest/Reference/CLI/CLI-Subcommands/#export-address)
+    Hyperledger Besu subcommand.
