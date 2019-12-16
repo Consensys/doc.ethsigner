@@ -2,7 +2,7 @@
 description: Use a Single Signer
 ---
 
-# Use Multiple Signing Keys
+# Use multiple signing keys
 
 Each account that signs transactions requires a key. EthSigner supports [multiple keys](../Tutorials/Multifile.md) stored in:
 
