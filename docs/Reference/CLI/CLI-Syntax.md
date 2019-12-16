@@ -13,8 +13,10 @@ signs transaction with a key stored in an encrypted file or an external vault (f
 * `ethsigner [Options] multikey-signer [Multikey Options]`
 
 !!! note
-    * The [`file-based-signer`](#file-options), [`hashicorp-signer`](#hashicorp-options), and [`azure-signer`](#azure-options) command line options are used for a [single key only](../../Tutorials/Start-EthSigner.md).
-    * The [`multikey-signer`](#multikey-options) command line option is used for [one or more keys](../../Tutorials/Multifile.md).
+    * The [`file-based-signer`](#file-options), [`hashicorp-signer`](#hashicorp-options), and [`azure-signer`](#azure-options)
+    command line options are used for a [single key only](../../Tutorials/Start-EthSigner.md).
+    * The [`multikey-signer`](#multikey-options) command line option is used for
+    [one or more keys](../../Tutorials/Multifile.md).
 
 !!! tip
     To view the command line help for the subcommands:
@@ -295,7 +297,8 @@ Name of the vault to access. Sub-domain of `vault.azure.net`.
 
 ### directory
 
-Path to the directory containing the [TOML files](../Multikey-Parameters.md) required to access keys.
+Path to the directory containing the [TOML files](../Multikey-Parameters.md)
+required to access keys.
 
 ```bash tab="Syntax"
 --directory=<directoryPath>
@@ -304,4 +307,3 @@ Path to the directory containing the [TOML files](../Multikey-Parameters.md) req
 ```bash tab="Example"
 --directory=/Users/me/keys
 ```
-

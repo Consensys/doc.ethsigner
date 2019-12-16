@@ -4,8 +4,9 @@ description: TOML file parameters for multi signers.
 
 # Multikey Parameters
 
-The optional `[metadata]` section in the TOML files contains data that is not required by EthSigner.
-The `[signing]` section contains the parameters required for the signing type.
+The optional `[metadata]` section in the TOML files contains data that is not
+required by EthSigner. The `[signing]` section contains the parameters required
+for the signing type.
 
 !!! important
     All parameters in the `[signing]` section are mandatory.
@@ -13,6 +14,7 @@ The `[signing]` section contains the parameters required for the signing type.
 ## File-based Signing
 
 !!! example
+
     ```
     [metadata]
     createdAt = 1994-11-05T08:15:30-05:00
@@ -25,18 +27,20 @@ The `[signing]` section contains the parameters required for the signing type.
     ```
 
 !!! note
-    We recommend using absolute paths when specifying `key-file` and `password-file`. Relative paths are located relative to where EthSigner is executed.
+    We recommend using absolute paths when specifying `key-file` and
+    `password-file`. Relative paths are located relative to where EthSigner
+    is executed.
 
 | Key                  | Description                           |
 |----------------------|---------------------------------------|
-| **type**             | Type of key signing. Use `file-based-signer`|  
+| **type**             | Type of key signing. Use `file-based-signer`|
 | **key-file**         | V3 keystore file containing the [key with which transactions are signed](../Tutorials/Multifile.md#create-password-and-key-files) |
 | **password-file**    | File containing the password for the [key with which transactions are signed](../Tutorials/Multifile.md#create-password-and-key-files).    |
-
 
 ## Hashicorp Vault Signing
 
 !!! example
+
     ```
     [metadata]
     createdAt = 2019-07-01T12:11:30Z
@@ -52,11 +56,12 @@ The `[signing]` section contains the parameters required for the signing type.
     ```
 
 !!! note
-    We recommend using an absolute path when specifying `auth-file`. Relative paths are located relative to where EthSigner is executed.
+    We recommend using an absolute path when specifying `auth-file`. Relative
+    paths are located relative to where EthSigner is executed.
 
 | Key                  | Description                           |
 |----------------------|---------------------------------------|
-| **type**             | Type of key signing. Use `hashicorp-signer`|  
+| **type**             | Type of key signing. Use `hashicorp-signer`|
 | **signing-key-path** | Path to secret in the Hashicorp Vault containing the private key for signing transactions |
 | **host**             | Host of the Hashicorp Vault server  |
 | **port**             | Port of the Hashicorp Vault server  |
@@ -66,6 +71,7 @@ The `[signing]` section contains the parameters required for the signing type.
 ## Azure Key Vault Signing
 
 !!! example
+
     ```
     [metadata]
     createdAt = 2011-11-01T12:15:30Z
@@ -82,7 +88,7 @@ The `[signing]` section contains the parameters required for the signing type.
 
 | Key                  | Description                           |
 |----------------------|---------------------------------------|
-| **type**             | Type of key signing. Use `azure-signer`|  
+| **type**             | Type of key signing. Use `azure-signer`|
 | **key-vault-name**   | Name of the vault to access. Sub-domain of `vault.azure.net` |
 | **key-name**         | Name of key to be used |
 | **key-version**      | Version of the specified key |

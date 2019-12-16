@@ -106,6 +106,7 @@ portion of the account address must be removed.
 For example, `78e6e236592597c09d5c137c2af40aecd42d12a2.toml`.
 
 !!! example
+
     ```
     [metadata]
     createdAt = 2019-11-05T08:15:30-05:00
