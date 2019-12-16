@@ -37,8 +37,7 @@ file containing the password for the V3 Keystore key file to be created
 (for example, `passwordFile`).
 
 !!! attention "Password text file must not contain characters other than those used in your password"
-    EthSigner reads the password file as binary and any character in the file is
-    considered part of your password.
+    EthSigner reads the password file as binary and considers any character in the file as part of your password.
 
     _Some POSIX compliant editors automatically add an end-of-line in text files.
     If your editor adds an end-of-line character, the end-of-line is considered
