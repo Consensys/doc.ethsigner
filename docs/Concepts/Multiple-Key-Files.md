@@ -15,12 +15,9 @@ the directory location.
 !!! note
     EthSigner does not support using multiple key signers with Hashicorp Vault or Azure Key Vault.
 
-The key file name must contain the account address and follow the `[<prefix>]<accountAddress>.key`
-format. The password file must have an identical name and end with the `.password` extension.
-No two key files can have the same key address in the file name, even if the prefix differs.
+The key file name must contain the account address without the `0x` prefix and follow the `[<prefix>]<accountAddress>.key` format. No two key files can have the same key address in the file name, even if the prefix differs. The password file and key file must have identical names except the password file must have the `.password` extension. 
 
-In the example the account address is prefixed with the date. The `0x` portion of the account address
-must be removed.
+In the example the date prefixes the account address.
 
 !!! example
     `10-10-2019_78e6e236592597c09d5c137c2af40aecd42d12a2.key`
@@ -28,5 +25,4 @@ must be removed.
     `10-10-2019_78e6e236592597c09d5c137c2af40aecd42d12a2.password`
 
 !!! tip
-    Use the [`export-address`](https://besu.hyperledger.org/en/latest/Reference/CLI/CLI-Subcommands/#export-address)
-    Hyperledger Besu subcommand to obtain the account address of the node.
+    Use the [`export-address`](https://besu.hyperledger.org/en/latest/Reference/CLI/CLI-Subcommands/#export-address) Hyperledger Besu subcommand to obtain the account address of the node.

@@ -28,8 +28,7 @@ docker run pegasyseng/ethsigner:latest --help
 
 ## Expose listening port
 
-Exposing the listening port is required to use the  default listening port (`8545`) or the port
-specified using [`--http-listen-port`](../../Reference/CLI/CLI-Syntax.md#http-listen-port).
+To use the default listening port (`8545`) or the port specified using [`--http-listen-port`](../../Reference/CLI/CLI-Syntax.md#http-listen-port), you must expose the listening port.
 
 To run EthSigner exposing listening port for access:
 

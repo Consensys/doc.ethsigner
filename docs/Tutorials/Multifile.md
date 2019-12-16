@@ -28,15 +28,12 @@ option set to `8590`.
 ## Create password and key files
 
 Create a password file and V3 Keystore key for each account that needs to sign transactions.
-The password files and V3 Keystore keys must follow the
-[naming convention](../Concepts/Multiple-Key-Files.md) and be in the same directory.
+The password files and V3 Keystore keys must follow the [naming convention](../Concepts/Multiple-Key-Files.md) and be in the same directory.
 
-The password file must be named `[<prefix>]<accountAddress>.password`. The `0x` portion of the
-account address must be removed. For example, `78e6e236592597c09d5c137c2af40aecd42d12a2.password`
+The password file must follow the format `[<prefix>]<accountAddress>.password` and exclude the `0x` prefix of the account address. For example, `78e6e236592597c09d5c137c2af40aecd42d12a2.password`.
 
 !!! caution "Password text file must not contain characters other than those used in your password"
-    EthSigner reads the password file as binary and any character in the file is considered part
-    of your password.
+    EthSigner reads the password file as binary and considers every character in the file as part of your password.
 
     _Some POSIX compliant editors automatically add an end-of-line in text files. If your editor adds an
     end-of-line character, the end-of-line is considered part of your password._
@@ -123,8 +120,7 @@ Use the `upcheck` endpoint to confirm EthSigner is running.
 
 ## Confirm EthSigner passing requests to Besu
 
-Request the current block number using [`eth_blockNumber`](https://besu.hyperledger.org/en/stable/Reference/API-Methods/#eth_blocknumber)
-with the EthSigner JSON-RPC endpoint (`8545` in this example):
+Request the current block number using [`eth_blockNumber`](https://besu.hyperledger.org/en/stable/Reference/API-Methods/#eth_blocknumber) with the EthSigner JSON-RPC endpoint (`8545` in this example):
 
 ```bash
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":51}' http://127.0.0.1:8545
