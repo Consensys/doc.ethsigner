@@ -9,7 +9,7 @@ description: Building EthSigner from source code
 * [Java JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
 
 !!!important
-    EthSigner requires Java 11 are later releases.
+    EthSigner requires Java 11 or later releases.
 
 * [Git](https://git-scm.com/downloads) or [GitHub Desktop](https://desktop.github.com/)
 
