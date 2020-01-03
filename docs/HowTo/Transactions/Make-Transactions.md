@@ -21,7 +21,7 @@ The sender specified in [`eea_sendTransaction`](#eea_sendtransaction) and
 [`eth_sendTransaction`](#eth_sendtransaction) requires a signing key.
 Signing keys can be [stored externally or locally](../../Concepts/Overview.md).
 
-## eea_sendTransaction
+## `eea_sendTransaction`
 
 Creates and signs a [private transaction](https://besu.hyperledger.org/en/stable/Concepts/Privacy/Privacy-Overview/)
 using the [signing key](../../Concepts/Overview.md).
@@ -76,7 +76,7 @@ Transaction object for private transactions:
     }
     ```
 
-## eth_accounts
+## `eth_accounts`
 
 Returns the account address with which EthSigner is signing transactions. That is, the account of the [signing key](../../Concepts/Overview.md).
 
@@ -104,7 +104,7 @@ None
     }
     ```
 
-## eth_sendTransaction
+## `eth_sendTransaction`
 
 Creates and signs a transaction using the [signing key](../../Concepts/Overview.md).
 
