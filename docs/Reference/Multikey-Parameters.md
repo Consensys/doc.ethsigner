@@ -27,9 +27,9 @@ for the signing type.
     ```
 
 !!! note
-    We recommend using absolute paths when specifying `key-file` and
-    `password-file`. Relative paths are located relative to where EthSigner
-    is executed.
+    EthSigner supports absolute paths or relative paths when specifying
+    `key-file` and `password-file`. Relative paths are relative to
+    the directory specified in the [`multikey-signer --directory`](../Reference/CLI/CLI-Syntax.md#multikey-options) subcommand.
 
 | Key                  | Description                           |
 |----------------------|---------------------------------------|
@@ -56,8 +56,9 @@ for the signing type.
     ```
 
 !!! note
-    We recommend using an absolute path when specifying `auth-file`. Relative
-    paths are located relative to where EthSigner is executed.
+    EthSigner supports an absolute path or relative path when specifying
+    `auth-file`. The relative path is relative to the directory specified
+    in the [`multikey-signer --directory`](../Reference/CLI/CLI-Syntax.md#multikey-options) subcommand.
 
 | Key                  | Description                           |
 |----------------------|---------------------------------------|
