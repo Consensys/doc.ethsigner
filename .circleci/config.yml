@@ -66,7 +66,7 @@ jobs:
       - run:
           name: Run Vale
           command: |
-            ./bin/vale --config ./common/build_tools/vale/.vale.ini --glob='*.{md}' --output=line . | tee ./vale.out
+            ./bin/vale --config ./common/build_tools/vale/.vale.ini --glob='*.{md}' . | tee ./vale.out
       - notify
       - store_artifacts:
           path: ./vale.out
