@@ -296,7 +296,7 @@ Name of the vault to access. Sub-domain of `vault.azure.net`.
 
 ## Multikey Options
 
-### ``directory``
+### `directory`
 
 Path to the directory containing the [TOML files](../Multikey-Parameters.md)
 required to access keys.
