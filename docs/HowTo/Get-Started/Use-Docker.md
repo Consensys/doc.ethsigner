@@ -2,7 +2,7 @@
 description: Run EthSigner from Docker image
 ---
 
-# Running EthSigner from Docker Image
+# Run EthSigner from Docker image
 
 A Docker image is provided to run EthSigner in a Docker container.
 
@@ -26,10 +26,10 @@ docker run pegasyseng/ethsigner:latest --help
 !!! note
     `latest` runs the latest cached version. To pull the latest version, use `docker pull pegasyseng/ethsigner:latest`.
 
-## Expose Listening Port
+## Expose listening port
 
-Exposing the listening port is required to use the  default listening port (`8545`) or the port
-specified using [`--http-listen-port`](../../Reference/CLI/CLI-Syntax.md#http-listen-port).
+To use the default listening port (`8545`) or the port specified using
+[`--http-listen-port`](../../Reference/CLI/CLI-Syntax.md#http-listen-port), you must expose the listening port.
 
 To run EthSigner exposing listening port for access:
 

@@ -2,7 +2,7 @@
 description: EthSigner command line interface reference
 ---
 
-# EthSigner Command Line
+# EthSigner command line
 
 This reference describes the syntax of the EthSigner Command Line Interface (CLI) options. EthSigner
 signs transaction with a key stored in an encrypted file or an external vault (for example, Hashicorp):
@@ -10,19 +10,26 @@ signs transaction with a key stored in an encrypted file or an external vault (f
 * `ethsigner [Options] file-based-signer [File Options]`
 * `ethsigner [Options] hashicorp-signer [Hashicorp Options]`
 * `ethsigner [Options] azure-signer [Azure Options]`
-* `ethsigner [Options] multifile-based-signer [Multifile Options]`
+* `ethsigner [Options] multikey-signer [Multikey Options]`
+
+!!! note
+
+    * The [`file-based-signer`](#file-options), [`hashicorp-signer`](#hashicorp-options), and [`azure-signer`](#azure-options)
+    command line options are used for a [single key only](../../Tutorials/Start-EthSigner.md).
+    * The [`multikey-signer`](#multikey-options) command line option is used for
+    [one or more keys](../../Tutorials/Multifile.md).
 
 !!! tip
     To view the command line help for the subcommands:
 
     * [`ethsigner help file-based-signer`](#file-options)
-    * [`ethsigner help multifile-based-signer`](#multifile-options)
     * [`ethsigner help hashicorp-signer`](#hashicorp-options)
     * [`ethsigner help azure-signer`](#azure-options)
+    * [`ethsigner help multikey-signer`](#multikey-options)
 
 ## Options
 
-### chain-id
+### `chain-id`
 
 Chain ID of the network to receive the signed transactions.
 
@@ -34,7 +41,7 @@ Chain ID of the network to receive the signed transactions.
 --chain-id=2017
 ```
 
-### data-path
+### `data-path`
 
 Directory in which to store temporary files.
 
@@ -46,7 +53,7 @@ Directory in which to store temporary files.
 --data-path=/Users/me/my_node/data
 ```
 
-### downstream-http-host
+### `downstream-http-host`
 
 Endpoint to which received requests are forwarded. Default is `localhost`.
 
@@ -58,7 +65,7 @@ Endpoint to which received requests are forwarded. Default is `localhost`.
 --downstream-http-host=192.168.05.14
 ```
 
-### downstream-http-port
+### `downstream-http-port`
 
 Endpoint to which received requests are forwarded.
 
@@ -70,7 +77,7 @@ Endpoint to which received requests are forwarded.
 --downstream-http-port=6174
 ```
 
-### downstream-http-request-timeout
+### `downstream-http-request-timeout`
 
 Timeout period (in milliseconds) for downstream requests. Default is 5000.
 
@@ -82,7 +89,7 @@ Timeout period (in milliseconds) for downstream requests. Default is 5000.
 --downstream-http-request-timeout=3000
 ```
 
-### http-listen-host
+### `http-listen-host`
 
 Host on which JSON-RPC HTTP listens. Default is `localhost`.
 
@@ -94,7 +101,7 @@ Host on which JSON-RPC HTTP listens. Default is `localhost`.
 --http-listen-host=8.8.8.8
 ```
 
-### http-listen-port
+### `http-listen-port`
 
 Port on which JSON-RPC HTTP listens. Default is 8545.
 
@@ -106,7 +113,7 @@ Port on which JSON-RPC HTTP listens. Default is 8545.
 --http-lisentport=6174
 ```
 
-### logging
+### `logging`
 
 Logging verbosity levels. Options are: `OFF`, `FATAL`, `WARN`, `INFO`, `DEBUG`, `TRACE`, `ALL`.
 Default is `INFO`.
@@ -119,7 +126,7 @@ Default is `INFO`.
 --logging=DEBUG
 ```
 
-### help
+### `help`
 
 Displays the help and exits.
 
@@ -127,7 +134,7 @@ Displays the help and exits.
 -h, --help
 ```
 
-### version
+### `version`
 
 Displays the version and exits.
 
@@ -135,9 +142,9 @@ Displays the version and exits.
 -V, --version
 ```
 
-## File Options
+## File options
 
-### key-file
+### `key-file`
 
 File containing [key with which transactions are signed](../../Tutorials/Start-EthSigner.md#create-password-and-key-files).
 
@@ -149,7 +156,7 @@ File containing [key with which transactions are signed](../../Tutorials/Start-E
 --key-file=/Users/me/my_node/transactionKey
 ```
 
-### password-file
+### `password-file`
 
 File containing password for the [key with which transactions are signed](../../Tutorials/Start-EthSigner.md#create-password-and-key-files).
 
@@ -161,9 +168,9 @@ File containing password for the [key with which transactions are signed](../../
 --password-file=/Users/me/my_node/password
 ```
 
-## Hashicorp Options
+## Hashicorp options
 
-### auth-file
+### `auth-file`
 
 File containing authentication data for Hashicorp Vault. The authentication data is the [root token displayed by
 the Hashicorp Vault server](../../HowTo/Store-Keys/Use-Hashicorp.md#storing-private-key-in-hashcorp-vault).
@@ -176,7 +183,7 @@ the Hashicorp Vault server](../../HowTo/Store-Keys/Use-Hashicorp.md#storing-priv
 --auth-file=/Users/me/my_node/auth_file
 ```
 
-### host
+### `host`
 
 Host of the Hashicorp Vault server. Default is `localhost`.
 
@@ -188,7 +195,7 @@ Host of the Hashicorp Vault server. Default is `localhost`.
 --host="http://host.com"
 ```
 
-### port
+### `port`
 
 Port of the Hashicorp Vault server. Default is 8200.
 
@@ -200,7 +207,7 @@ Port of the Hashicorp Vault server. Default is 8200.
 --port=23000
 ```
 
-### signing-key-path
+### `signing-key-path`
 
 Path to secret in the Hashicorp Vault containing the private key for signing transactions. Default is
 ` /secret/data/ethsignerSigningKey`.
@@ -213,7 +220,7 @@ Path to secret in the Hashicorp Vault containing the private key for signing tra
 --signing-key-path=/my_secret/ethsignerSigningKey
 ```
 
-### timeout
+### `timeout`
 
 Timeout in milliseconds for requests to the Hashicorp Vault server. Default is 10000.
 
@@ -225,9 +232,9 @@ Timeout in milliseconds for requests to the Hashicorp Vault server. Default is 1
 --timeout=5000
 ```
 
-## Azure Options
+## Azure options
 
-### client-id
+### `client-id`
 
 ID used to authenticate with Azure Key Vault.
 
@@ -239,7 +246,7 @@ ID used to authenticate with Azure Key Vault.
 --client-id="MyClientID"
 ```
 
-### client-secret-path
+### `client-secret-path`
 
 Path to file containing secret used to access the vault.
 
@@ -251,7 +258,7 @@ Path to file containing secret used to access the vault.
 --client-secret-path=/Path/MySecret
 ```
 
-### key-name
+### `key-name`
 
 Name of key to be used.
 
@@ -263,7 +270,7 @@ Name of key to be used.
 --key-name="MyKey"
 ```
 
-### key-version
+### `key-version`
 
 Version of the specified key to use.
 
@@ -275,7 +282,7 @@ Version of the specified key to use.
 --key-version="7c01fe58d68148bba5824ce418241092"
 ```
 
-### keyvault-name
+### `keyvault-name`
 
 Name of the vault to access. Sub-domain of `vault.azure.net`.
 
@@ -287,11 +294,12 @@ Name of the vault to access. Sub-domain of `vault.azure.net`.
 --keyvault-name="MyKeyVault"
 ```
 
-## Multifile Options
+## Multikey Options
 
-### directory
+### `directory`
 
-Path to the directory containing the key and password files.
+Path to the directory containing the [TOML files](../Multikey-Parameters.md)
+required to access keys.
 
 ```bash tab="Syntax"
 --directory=<directoryPath>
@@ -300,4 +308,3 @@ Path to the directory containing the key and password files.
 ```bash tab="Example"
 --directory=/Users/me/keys
 ```
-

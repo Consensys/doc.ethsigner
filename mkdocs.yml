@@ -54,25 +54,27 @@ theme:
   logo:
     icon: vpn_key
 nav:
-    - How To:
-        - Get Started with EthSigner:
-            - Install Binary Distribution: HowTo/Get-Started/Install-Binaries.md
-            - Use Docker: HowTo/Get-Started/Use-Docker.md
-            - Build from Source: HowTo/Get-Started/Build-From-Source.md
-        - Make Transactions: HowTo/Transactions/Make-Transactions.md
-        - Store Keys Externally:
+    - How to:
+        - Get started with EthSigner:
+            - Install binary distribution: HowTo/Get-Started/Install-Binaries.md
+            - Run EthSigner from Docker image: HowTo/Get-Started/Use-Docker.md
+            - Build from source: HowTo/Get-Started/Build-From-Source.md
+        - Use a single signing key: HowTo/Use-Single-Signer.md
+        - Use multiple signing keys: HowTo/Use-Multiple-Signers.md
+        - Make transactions: HowTo/Transactions/Make-Transactions.md
+        - Store keys externally:
             - Use Hashicorp Vault: HowTo/Store-Keys/Use-Hashicorp.md
             - Use Azure Key Vault: HowTo/Store-Keys/Use-Azure.md
-        - Create External Signers: HowTo/Extending-EthSigner/Add-Signer.md
+        - Create external signers: HowTo/Extending-EthSigner/Add-Signer.md
     - Tutorials:
-        - Start EthSigner with a Single Signer: Tutorials/Start-EthSigner.md
-        - Start EthSigner with Multiple Signers: Tutorials/Multifile.md
+        - Start EthSigner with a single signer: Tutorials/Start-EthSigner.md
+        - Start EthSigner with multiple signers: Tutorials/Multifile.md
     - Concepts:
         - Overview: Concepts/Overview.md
-        - Store Multiple Key Files: Concepts/Multiple-Key-Files.md
     - Reference:
-        - EthSigner Command Line: Reference/CLI/CLI-Syntax.md
-        - Security Disclosure Policy: Reference/Responsible-Disclosure.md
+        - EthSigner command line: Reference/CLI/CLI-Syntax.md
+        - Multikey TOML parameters: Reference/Multikey-Parameters.md
+        - Security disclosure policy: Reference/Responsible-Disclosure.md
 markdown_extensions:
   - toc:
       permalink: 
