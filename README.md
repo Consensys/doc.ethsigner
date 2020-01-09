@@ -1,4 +1,4 @@
-# EthSigner documentation
+# EthSigner documentation [![Documentation Status](https://readthedocs.org/projects/ethsigner/badge/?version=stable)](https://docs.ethsigner.pegasys.tech/en/stable/?badge=stable)
 
 [EthSigner] is a transaction signing application to be used with a web3 provider.
 
