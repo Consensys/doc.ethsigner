@@ -89,6 +89,55 @@ Timeout period (in milliseconds) for downstream requests. Default is 5000.
 --downstream-http-request-timeout=3000
 ```
 
+### downstream-http-tls-truststore-file
+
+PKCS #12 formatted truststore. Used to enable TLS for outbound
+connections.
+
+```bash tab="Syntax"
+--downstream-http-tls-truststore-file=<truststoreFile>
+```
+
+```bash tab="Example"
+--downstream-http-tls-truststore-file=/Users/me/my_node/mytrustStore
+```
+
+### downstream-http-tls-truststore-password-file
+
+Password file file used to decrypt the truststore.
+
+```bash tab="Syntax"
+--downstream-http-tls-truststore-password-file=<passwordFile>
+```
+
+```bash tab="Example"
+--downstream-http-tls-truststore-password-file=/Users/me/my_node/password
+```
+
+### downstream-http-tls-keystore-file
+
+Keystore file that is presented during client authentication.
+
+```bash tab="Syntax"
+--downstream-http-tls-keystore-file=<keystoreFile>
+```
+
+```bash tab="Example"
+--downstream-http-tls-keystore-file=/Users/me/my_node/certificate.pfx
+```
+
+### downstream-http-tls-keystore-password-file
+
+Password file used to decrypt the keystore.
+
+```bash tab="Syntax"
+--downstream-http-tls-keystore-password-file=<passwordFile>
+```
+
+```bash tab="Example"
+--downstream-http-tls-keystore-password-file=/Users/me/my_node/password
+```
+
 ### http-listen-host
 
 Host on which JSON-RPC HTTP listens. Default is `localhost`.
@@ -132,6 +181,43 @@ Displays the help and exits.
 
 ```bash tab="Syntax"
 -h, --help
+```
+
+### tls-keystore-file
+
+PKCS #12 formatted keystore. Used to enable TLS on inbound connections.
+
+```bash tab="Syntax"
+--tls-keystore-file=<keystoreFile>
+```
+
+```bash tab="Example"
+--tls-keystore-file=/Users/me/my_node/certificate.pfx
+```
+
+### tls-keystore-password-file
+
+Password file file used to decrypt the keystore.
+
+```bash tab="Syntax"
+--tls-keystore-password-file=<passwordFile>
+```
+
+```bash tab="Example"
+--tls-keystore-password-file=/Users/me/my_node/password
+```
+
+### tls-known-clients-file
+
+File containing the SHA-256 fingerprints of authorized clients.
+Any client can connect if not specified.
+
+```bash tab="Syntax"
+--tls-known-clients-file=<clientsFile>
+```
+
+```bash tab="Example"
+--tls-keystore-file=/Users/me/my_node/knownClients
 ```
 
 ### version
