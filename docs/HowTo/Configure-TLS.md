@@ -6,8 +6,7 @@ description: Secure communication using TLS
 
 Configure inbound and outbound TLS connections from the command line.
 
-EthSigner only supports PKSC #12 certificates for TLS. Each PKCS #12 certificate
-must be password protected.
+EthSigner only supports password-protected PKSC #12 keystores and truststores.
 
 ## Inbound TLS
 
@@ -16,7 +15,7 @@ An inbound TLS connection allows external clients to connect to EthSigner.
 **Prerequisites**:
 
 * Password-protected PKSC #12 keystore.
-* Password file containing the password used to create the keystore.
+* File containing the password used to create the keystore.
 
 ### Create Known Clients File
 
@@ -57,9 +56,9 @@ connection.
 
 **Prerequisites**:
 
-* Password-protected PKSC #12 keystore and trustore containing all trusted
+* Password-protected PKSC #12 keystore and truststore containing all trusted
 certificates.
-* Password file containing the password used to create the keystore and
+* File containing the password used to create the keystore and
 truststore.
 
 ### Start EthSigner

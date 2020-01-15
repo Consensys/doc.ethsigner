@@ -209,7 +209,7 @@ Password file file used to decrypt the keystore.
 
 ### tls-known-clients-file
 
-File containing the SHA-256 fingerprints of authorized clients.
+File containing the SHA-256 fingerprints of [authorized clients](../../HowTo/Configure-TLS.md#create-known-clients-file).
 Any client can connect if not specified.
 
 ```bash tab="Syntax"
