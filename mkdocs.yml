@@ -105,3 +105,17 @@ markdown_extensions:
 plugins:
   - search
   - markdownextradata
+  - redirects:
+      redirect_maps:
+        # Configure redirects using key:value pairs:
+        # old_path.md: new_path.md
+        # you can't use an already redirected path as an old_path.
+        # new_path can be a file inside the docs/ folder or any URL (http://...)
+        Reference/EthSigner-CLI.md: Reference/CLI/CLI-Syntax.md
+        Extending-EthSigner/Adding-Signer.md: HowTo/Extending-EthSigner/Add-Signer.md
+        Using-EthSigner/Azure.md: HowTo/Store-Keys/Use-Azure.md
+        Using-EthSigner/Hashicorp.md: HowTo/Store-Keys/Use-Hashicorp.md
+        Using-EthSigner/Using-EthSigner.md: HowTo/Transactions/Make-Transactions.md
+        Using-EthSigner/Getting-Started.md: Tutorials/Start-EthSigner.md
+        Installation/Build-From-Source.md: HowTo/Get-Started/Build-From-Source.md
+        Installation/Install-Binaries.md: HowTo/Get-Started/Install-Binaries.md
