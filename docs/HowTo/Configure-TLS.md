@@ -15,7 +15,7 @@ An inbound TLS connection allows external clients to connect to EthSigner.
 **Prerequisites**:
 
 * Password-protected PKSC #12 keystore.
-* File keystore password.
+* File containing the keystore password.
 
 ### Create Known Clients File
 
