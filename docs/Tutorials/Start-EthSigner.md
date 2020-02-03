@@ -22,14 +22,15 @@ For file-based signing, EthSigner requires a V3 Keystore key file and a password
 
 ## Start Besu
 
-[Start Besu](https://besu.hyperledger.org/en/stable/HowTo/Get-Started/Starting-node/) with the
-[`--rpc-http-port`](https://besu.hyperledger.org/en/stable/Reference/CLI/CLI-Syntax/#rpc-http-port)
-option set to `8590`.
+[Start Besu](https://besu.hyperledger.org/en/stable/HowTo/Get-Started/Starting-node/), setting the:
+
+* [`--rpc-http-port`](https://besu.hyperledger.org/en/stable/Reference/CLI/CLI-Syntax/#rpc-http-port) option to `8590`
+* [`--data-path`](https://besu.hyperledger.org/en/stable/Reference/CLI/CLI-Syntax/#rpc-data-path) option to an existing directory.
 
 !!! example
 
     ```bash
-    besu --network=dev --miner-enabled --miner-coinbase=0xfe3b557e8fb62b89f4916b721be55ceb828dbd73 --rpc-http-cors-origins="all" --host-whitelist=* --rpc-http-enabled --rpc-http-port=8590 --data-path=/Users/me/Datadir
+    besu --network=dev --miner-enabled --miner-coinbase=0xfe3b557e8fb62b89f4916b721be55ceb828dbd73 --rpc-http-cors-origins="all" --host-whitelist="*" --rpc-http-enabled --rpc-http-port=8590 --data-path=/Users/<user.name>/Datadir
     ```
 
 !!! important
