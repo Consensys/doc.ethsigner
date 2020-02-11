@@ -25,7 +25,7 @@ For file-based signing, EthSigner requires a V3 Keystore key file and a password
 [Start Besu](https://besu.hyperledger.org/en/stable/HowTo/Get-Started/Starting-node/), setting the:
 
 * [`--rpc-http-port`](https://besu.hyperledger.org/en/stable/Reference/CLI/CLI-Syntax/#rpc-http-port) option to `8590`
-* [`--data-path`](https://besu.hyperledger.org/en/stable/Reference/CLI/CLI-Syntax/#rpc-data-path) option to an existing directory.
+* [`--data-path`](https://besu.hyperledger.org/en/stable/Reference/CLI/CLI-Syntax/#rpc-data-path) option to an appropriate directory.
 
 !!! example
 
