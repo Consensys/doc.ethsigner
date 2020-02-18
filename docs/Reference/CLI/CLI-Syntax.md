@@ -89,41 +89,45 @@ Timeout period (in milliseconds) for downstream requests. Default is 5000.
 --downstream-http-request-timeout=3000
 ```
 
-### downstream-http-tls-truststore-file
+### downstream-http-tls-enabled
 
-PKCS #12 formatted truststore. Used to enable TLS for outbound
-connections.
+Enable or disable [TLS for server connections](../../Concepts/TLS.md).
 
 ```bash tab="Syntax"
---downstream-http-tls-truststore-file=<truststoreFile>
+--downstream-http-tls-enabled
 ```
 
 ```bash tab="Example"
---downstream-http-tls-truststore-file=/Users/me/my_node/mytrustStore
+--downstream-http-tls-enabled
 ```
 
-### downstream-http-tls-truststore-password-file
+### downstream-http-tls-ca-auth-enabled
 
-Password file file used to decrypt the truststore.
+Allow connections to servers with trusted CAs.
+
+Defaults to `true`.
 
 ```bash tab="Syntax"
---downstream-http-tls-truststore-password-file=<passwordFile>
+--downstream-http-tls-ca-auth-enabled[=<true|false>]
 ```
 
 ```bash tab="Example"
---downstream-http-tls-truststore-password-file=/Users/me/my_node/password
+--downstream-http-tls-enabled=false
 ```
 
 ### downstream-http-tls-keystore-file
 
-Keystore file that is presented during client authentication.
+Keystore file that is presented to the server during authentication.
+
+Private keys and certificates for server TLS connections must be
+stored in password-protected PKCS #12 keystore files.
 
 ```bash tab="Syntax"
 --downstream-http-tls-keystore-file=<keystoreFile>
 ```
 
 ```bash tab="Example"
---downstream-http-tls-keystore-file=/Users/me/my_node/certificate.pfx
+--downstream-http-tls-keystore-file=/Users/me/my_node/keystore.pfx
 ```
 
 ### downstream-http-tls-keystore-password-file
@@ -136,6 +140,19 @@ Password file used to decrypt the keystore.
 
 ```bash tab="Example"
 --downstream-http-tls-keystore-password-file=/Users/me/my_node/password
+```
+
+### downstream-http-tls-known-servers-file
+
+File containing the hostnames, ports, and SHA256 certificate fingerprints
+of [trusted servers](../../HowTo/Configure-TLS.md#create-the-known-servers-file).
+
+```bash tab="Syntax"
+--downstream-http-tls-known-servers-file=<serversFile>
+```
+
+```bash tab="Example"
+--downstream-http-tls-known-servers-file=/Users/me/my_node/knownServers
 ```
 
 ### http-listen-host
@@ -183,9 +200,28 @@ Displays the help and exits.
 -h, --help
 ```
 
+### tls-allow-any-client
+
+Allows any client that presents a certificate to connect.
+
+!!! important 
+    Cannot be used with `--tls-allow-ca-clients` and `--tls-known-clients-file`
+    
+```bash tab="Syntax"
+--tls-allow-any-client
+```
+
+### tls-allow-ca-clients
+
+Allows clients with trusted CA certificates to connect.
+
+```bash tab="Syntax"
+--tls-allow-ca-clients
+```
+
 ### tls-keystore-file
 
-PKCS #12 formatted keystore. Used to enable TLS on inbound connections.
+PKCS #12 formatted keystore. Used to enable TLS for [client connections](../../Concepts/TLS.md).
 
 ```bash tab="Syntax"
 --tls-keystore-file=<keystoreFile>
@@ -209,8 +245,7 @@ Password file file used to decrypt the keystore.
 
 ### tls-known-clients-file
 
-File containing the SHA-256 fingerprints of [authorized clients](../../HowTo/Configure-TLS.md#create-known-clients-file).
-Any client can connect if not specified.
+File containing the SHA-256 fingerprints of [authorized clients](../../HowTo/Configure-TLS.md#create-the-known-clients-file).
 
 ```bash tab="Syntax"
 --tls-known-clients-file=<clientsFile>
@@ -316,6 +351,30 @@ Timeout in milliseconds for requests to the Hashicorp Vault server. Default is 1
 
 ```bash tab="Example"
 --timeout=5000
+```
+
+### tls-enabled
+
+Connect to Hashicorp Vault server using TLS. Default is `true`.
+
+```bash tab="Syntax"
+--tls-enabled[=<true|false>]
+```
+
+```bash tab="Example"
+--tls-enabled=false
+```
+### tls-known-server-file
+
+File containing the hostname, port, and SHA256 certificate fingerprint
+of the Hashicorp Vault server.
+
+```bash tab="Syntax"
+--tls-known-server-file=<hashicorpServerFile>
+```
+
+```bash tab="Example"
+--tls-known-server-file=/Users/me/my_node/knownHashicorpServers
 ```
 
 ## Azure options

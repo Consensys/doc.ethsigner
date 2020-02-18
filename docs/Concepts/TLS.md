@@ -4,9 +4,15 @@ description: Secure communication using TLS
 
 # TLS Communication
 
-EthSigner supports TLS to secure inbound and outbound communication.
+EthSigner supports TLS to secure inbound and outbound HTTP JSON-RPC
+requests, and [communication with Hashicorp Vault](../HowTo/Store-Keys/Use-Hashicorp.md).
 
-All TLS versions are supported. However, certificates must be PKCS #12 
-formatted.
+![EthSigner TLS](../images/Ethsigner_TLS.png)
 
-Use the command line options to [specify the truststore and keystore](../HowTo/Configure-TLS.md) locations.
+
+Private keys and certificates for client and server TLS connections must be
+stored in password-protected PKCS #12 files. The server 
+(in this example, Hyperledger Besu) must be configured to accept TLS
+connections.
+
+Use the command line options to [enable and configure](../HowTo/Configure-TLS.md) TLS.
