@@ -113,11 +113,12 @@ The command line:
 * Specifies the keystore to present during authentication using the
   [`--downstream-http-tls-keystore-file`](../Reference/CLI/CLI-Syntax.md#downstream-http-tls-keystore-file) option.
 * Specifies the file that contains the password to decrypt the keystore using
-  the [`--downstream-http-tls-keystore-password-file`](../Reference/CLI/CLI-Syntax.md#downstream-http-tls-keystore-password-file) option.
+  the [`--downstream-http-tls-keystore-password-file`](../Reference/CLI/CLI-Syntax.md#downstream-http-tls-keystore-password-file)
+  option.
 * [Specifies the servers](#create-the-known-servers-file) to connect to using the
   [`--downstream-http-tls-known-servers-file`](../Reference/CLI/CLI-Syntax.md#downstream-http-tls-known-servers-file) option.
 
 !!! note
-    The [`--downstream-http-tls-ca-auth-enabled`](../Reference/CLI/CLI-Syntax.md#downstream-http-tls-ca-auth-enabled) option is `true`
-    by default and allows connections to servers with trusted root CAs.
+    The [`--downstream-http-tls-ca-auth-enabled`](../Reference/CLI/CLI-Syntax.md#downstream-http-tls-ca-auth-enabled)
+    option is `true` by default and allows connections to servers with trusted root CAs.
 
