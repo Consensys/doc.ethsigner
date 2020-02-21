@@ -57,10 +57,11 @@ The command line:
 
 * Specifies the EthSigner keystore using the [`--tls-keystore-file`](../Reference/CLI/CLI-Syntax.md#tls-keystore-file) option.
 * Specifies the file that contains the password to decrypt the
-keystore using the [`--tls-keystore-password-file`](../Reference/CLI/CLI-Syntax.md#tls-keystore-password-file) option.
+  keystore using the [`--tls-keystore-password-file`](../Reference/CLI/CLI-Syntax.md#tls-keystore-password-file) option.
 * [Specifies the clients](#create-the-known-clients-file) that are trusted to connect to EthSigner
-using the [`tls-known-clients-file`](../Reference/CLI/CLI-Syntax.md#tls-known-clients-file) option.
-* Allow access to clients with trusted CA certificates using the [`--tls-allow-ca-clients`](../Reference/CLI/CLI-Syntax.md#tls-allow-ca-clients) option.
+  using the [`tls-known-clients-file`](../Reference/CLI/CLI-Syntax.md#tls-known-clients-file) option.
+* Allow access to clients with trusted CA certificates using the [`--tls-allow-ca-clients`](../Reference/CLI/CLI-Syntax.md#tls-allow-ca-clients)
+  option.
 
 !!! note
     Use the [`--tls-allow-any-client`](../Reference/CLI/CLI-Syntax.md#tls-allow-any-client) option to allow
@@ -108,12 +109,13 @@ ethsigner --downstream-http-tls-enabled --downstream-http-tls-keystore-file=/Use
 The command line:
 
 * Enables TLS using the [`--downstream-http-tls-enabled`](../Reference/CLI/CLI-Syntax.md#downstream-http-tls-enabled)
-option.
+  option.
 * Specifies the keystore to present during authentication using the
-[`--downstream-http-tls-keystore-file`](../Reference/CLI/CLI-Syntax.md#downstream-http-tls-keystore-file) option.
+  [`--downstream-http-tls-keystore-file`](../Reference/CLI/CLI-Syntax.md#downstream-http-tls-keystore-file) option.
 * Specifies the file that contains the password to decrypt the keystore using
-the [`--downstream-http-tls-keystore-password-file`](../Reference/CLI/CLI-Syntax.md#downstream-http-tls-keystore-password-file) option.
-* [Specifies the servers](#create-the-known-servers-file) to connect to using the [`--downstream-http-tls-known-servers-file`](../Reference/CLI/CLI-Syntax.md#downstream-http-tls-known-servers-file) option.
+  the [`--downstream-http-tls-keystore-password-file`](../Reference/CLI/CLI-Syntax.md#downstream-http-tls-keystore-password-file) option.
+* [Specifies the servers](#create-the-known-servers-file) to connect to using the
+  [`--downstream-http-tls-known-servers-file`](../Reference/CLI/CLI-Syntax.md#downstream-http-tls-known-servers-file) option.
 
 !!! note
     The [`--downstream-http-tls-ca-auth-enabled`](../Reference/CLI/CLI-Syntax.md#downstream-http-tls-ca-auth-enabled) option is `true`
