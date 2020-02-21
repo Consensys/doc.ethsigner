@@ -7,23 +7,23 @@ description: Secure communication using TLS
 Configure TLS communication from the command line. Clients and servers
 communicate using HTTP JSON-RPCs.
 
-**Prerequisites**:
+**EthSigner prerequisites**:
 
-* EthSigner's password-protected PKSC #12 keystore.
+* EthSigner's password-protected PKCS #12 keystore.
 * File containing the keystore password.
 
-## Client TLS Connection
+## Client TLS connection
 
 Allow clients (for example a dApp, or curl) to send and receive secure
 HTTP JSON-RPCs.
 
-**Prerequisites**:
+**Client prerequisites**:
 
 * The client must be configured for TLS.
-* Client's PKSC #12 keystore information.
+* Client's PKCS #12 keystore information.
 
 
-### Create the Known Clients File
+### Create the known clients file
 
 Create a file (in this example, `knownClients`) that lists one or more clients
 that are trusted to connect to EthSigner. The file contents use the format
@@ -37,7 +37,7 @@ that are trusted to connect to EthSigner. The file contents use the format
     curl_client DF:65:B8:02:08:5E:91:82:0F:91:F5:1C:96:56:92:C4:1A:F6:C6:27:FD:6C:FC:31:F2:BB:90:17:22:59:5B:50
     ```
     
-You can use openssl or keytool to display the fingerprint. For example:
+You can use [OpenSSL](https://www.openssl.org/) or [keytool](https://docs.oracle.com/javase/6/docs/technotes/tools/solaris/keytool.html) to display the fingerprint. For example:
 
 !!! example
     ```
@@ -55,7 +55,7 @@ The command line:
 * Specifies the EthSigner keystore using the [`--tls-keystore-file`](../Reference/CLI/CLI-Syntax.md#tls-keystore-file) option.
 * Specifies the file that contains the password to decrypt the
 keystore using the [`--tls-keystore-password-file`](../Reference/CLI/CLI-Syntax.md#tls-keystore-password-file) option.
-* [Specify the clients](#create-the-known-clients-file) that are trusted to connect to EthSigner using the
+* [Specifies the clients](#create-the-known-clients-file) that are trusted to connect to EthSigner using the
 [`tls-known-clients-file`](../Reference/CLI/CLI-Syntax.md#tls-known-clients-file) option.
 * Allow access to clients with trusted CA certificates using the [`--tls-allow-ca-clients`](../Reference/CLI/CLI-Syntax.md#tls-allow-ca-clients) option.
 
@@ -65,18 +65,18 @@ keystore using the [`--tls-keystore-password-file`](../Reference/CLI/CLI-Syntax.
     
     [`--tls-allow-any-client`](../Reference/CLI/CLI-Syntax.md#tls-allow-any-client) cannot be used with [`tls-known-clients-file`](../Reference/CLI/CLI-Syntax.md#tls-known-clients-file) or [`--tls-allow-ca-clients`](../Reference/CLI/CLI-Syntax.md#tls-allow-ca-clients).
     
-## Server TLS Connection
+## Server TLS connection
 
 Allow EthSigner to to send and receive secure HTTP JSON-RPCs from the
 server (for example Besu).
 
-**Prerequisites**:
+**Server prerequisites**:
 
 * The server must be configured to allow TLS communication
-* Server's password-protected PKSC #12 keystore information.
+* Server's password-protected PKCS #12 keystore information.
 
 
-### Create the Known Servers file
+### Create the known servers file
 
 Create a file (in this example, `knownServers`) that lists one or more trusted
 servers. The file contents use the format `<hostame>:<port> <hex-string>`
@@ -113,6 +113,6 @@ the [`--downstream-http-tls-keystore-password-file`](../Reference/CLI/CLI-Syntax
 * [Specifies the servers](#create-the-known-servers-file) to connect to using the [`--downstream-http-tls-known-servers-file`](../Reference/CLI/CLI-Syntax.md#downstream-http-tls-known-servers-file) option.
 
 !!! note
-    The [`--downstream-http-tls-ca-auth-enabled`](../Reference/CLI/CLI-Syntax.md#downstream-http-tls-ca-auth-enabled) option is enabled
+    The [`--downstream-http-tls-ca-auth-enabled`](../Reference/CLI/CLI-Syntax.md#downstream-http-tls-ca-auth-enabled) option is `true`
     by default and allows connections to servers with trusted root CAs.
 

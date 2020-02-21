@@ -68,6 +68,9 @@ trusted Hashicorp Vault servers. The file contents use the format
     127.0.0.1:8200 7C:B3:3E:F9:98:43:5E:62:69:9F:A9:9D:41:14:03:BA:83:24:AC:04:CE:BD:92:49:1B:8D:B2:A4:86:39:4C:BB
     ```
 
+The file is required if TLS is enabled, to disable TLS, set
+[`hashicorp-signer --tls-enabled`](../../Reference/CLI/CLI-Syntax.md#tls-enabled) to `false`.
+
 ## Start EthSigner with Hashicorp Vault signing
 
 Start EthSigner.
@@ -77,8 +80,6 @@ Start EthSigner.
     ```bash
     ethsigner --chain-id=2018 --downstream-http-port=8590 hashicorp-signer --host=127.0.0.1 --port=8200 --auth-file=authFile --tls-known-server-file=/Users/me/my_node/knownHashicorpServers
     ```
-To disable TLS set [`hashicorp-signer --tls-enabled`](../../Reference/CLI/CLI-Syntax.md#tls-enabled) to `false`.
-
 !!! tip
     Use the [--http-listen-port](../../Reference/CLI/CLI-Syntax.md#http-listen-port) option to change the
     EthSigner listening port if `8545` is in use.

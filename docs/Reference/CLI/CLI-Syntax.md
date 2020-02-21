@@ -89,19 +89,20 @@ Timeout period (in milliseconds) for downstream requests. Default is 5000.
 --downstream-http-request-timeout=3000
 ```
 
-### downstream-http-tls-enabled
+### `downstream-http-tls-enabled`
 
 Enable or disable [TLS for server connections](../../Concepts/TLS.md).
+Defaults to `false`.
 
 ```bash tab="Syntax"
---downstream-http-tls-enabled
+--downstream-http-tls-enabled[=<true|false>]
 ```
 
 ```bash tab="Example"
 --downstream-http-tls-enabled
 ```
 
-### downstream-http-tls-ca-auth-enabled
+### `downstream-http-tls-ca-auth-enabled`
 
 Allow connections to servers with trusted CAs.
 
@@ -115,7 +116,7 @@ Defaults to `true`.
 --downstream-http-tls-enabled=false
 ```
 
-### downstream-http-tls-keystore-file
+### `downstream-http-tls-keystore-file`
 
 Keystore file (in PKCS #12 format) that contains the private key and certificate
 presented to the server during authentication.
@@ -128,7 +129,7 @@ presented to the server during authentication.
 --downstream-http-tls-keystore-file=/Users/me/my_node/keystore.pfx
 ```
 
-### downstream-http-tls-keystore-password-file
+### `downstream-http-tls-keystore-password-file`
 
 Password file used to decrypt the keystore.
 
@@ -140,7 +141,7 @@ Password file used to decrypt the keystore.
 --downstream-http-tls-keystore-password-file=/Users/me/my_node/password
 ```
 
-### downstream-http-tls-known-servers-file
+### `downstream-http-tls-known-servers-file`
 
 File containing the hostnames, ports, and SHA256 certificate fingerprints
 of [trusted servers](../../HowTo/Configure-TLS.md#create-the-known-servers-file).
@@ -153,7 +154,7 @@ of [trusted servers](../../HowTo/Configure-TLS.md#create-the-known-servers-file)
 --downstream-http-tls-known-servers-file=/Users/me/my_node/knownServers
 ```
 
-### http-listen-host
+### `http-listen-host`
 
 Host on which JSON-RPC HTTP listens. Default is `localhost`.
 
@@ -198,7 +199,7 @@ Displays the help and exits.
 -h, --help
 ```
 
-### tls-allow-any-client
+### `tls-allow-any-client`
 
 Allows any client to connect.
 
@@ -209,7 +210,7 @@ Allows any client to connect.
 --tls-allow-any-client
 ```
 
-### tls-allow-ca-clients
+### `tls-allow-ca-clients`
 
 Allows clients signed with trusted CA certificates to connect.
 
@@ -217,7 +218,7 @@ Allows clients signed with trusted CA certificates to connect.
 --tls-allow-ca-clients
 ```
 
-### tls-keystore-file
+### `tls-keystore-file`
 
 PKCS #12 formatted keystore. Used to enable TLS for [client connections](../../Concepts/TLS.md).
 
@@ -229,7 +230,7 @@ PKCS #12 formatted keystore. Used to enable TLS for [client connections](../../C
 --tls-keystore-file=/Users/me/my_node/certificate.pfx
 ```
 
-### tls-keystore-password-file
+### `tls-keystore-password-file`
 
 Password file file used to decrypt the keystore.
 
@@ -241,7 +242,7 @@ Password file file used to decrypt the keystore.
 --tls-keystore-password-file=/Users/me/my_node/password
 ```
 
-### tls-known-clients-file
+### `tls-known-clients-file`
 
 File containing the SHA-256 fingerprints of [authorized clients](../../HowTo/Configure-TLS.md#create-the-known-clients-file).
 
@@ -253,7 +254,7 @@ File containing the SHA-256 fingerprints of [authorized clients](../../HowTo/Con
 --tls-keystore-file=/Users/me/my_node/knownClients
 ```
 
-### version
+### `version`
 
 Displays the version and exits.
 
