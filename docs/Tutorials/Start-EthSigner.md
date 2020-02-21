@@ -62,7 +62,7 @@ Use the [web3.js library](https://github.com/ethereum/web3.js/) to create a key 
 * `<AccountPrivateKey>` is the private key of the account with which EthSigner will sign transactions.
 
 * `<Password>` is the password for the key file being created. The password must match the password saved in the
-   password file created above (`passwordFile` in this example).
+   password file created previously (`passwordFile` in this example).
 
 !!! example
 
