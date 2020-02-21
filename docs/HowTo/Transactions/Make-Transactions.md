@@ -21,7 +21,7 @@ The sender specified in [`eea_sendTransaction`](#eea_sendtransaction) and
 [`eth_sendTransaction`](#eth_sendtransaction) requires a signing key.
 Signing keys can be [stored externally or locally](../../Concepts/Overview.md).
 
-## eea_sendTransaction
+## `eea_sendTransaction`
 
 Creates and signs a [private transaction](https://besu.hyperledger.org/en/stable/Concepts/Privacy/Privacy-Overview/)
 using the [signing key](../../Concepts/Overview.md).
@@ -36,17 +36,17 @@ EthSigner submits the signed transaction to Besu using [`eea_sendRawTransaction`
 
 Transaction object for private transactions:
 
-| Key             | Type                | Required/Optional                  | Value                                                                                                                         |
-|-----------------|--:-:----------------|----------------------------------- |-------------------------------------------------------------------------------------------------------------------------------|
-| **from**        | Data, 20&nbsp;bytes | Required                           | Address of the sender. Must be the address of the keystore account.                           |
-| **to**          | Data, 20&nbsp;bytes | Not required for contract creation | `null` for contract creation transaction. Contract address for contract invocation transactions.                                                           |
-| **gas**         | Quantity            | Optional                           | Gas provided by the sender. Default is `90000`.                                                                               |
-| **gasPrice**    | Quantity            | Optional                           | Gas price provided by the sender in Wei. Default is `0`.                                                                      |
-| **nonce**       | Quantity            | Optional                           | Number of transactions sent from the `from` account before this one.  |                                                                    |
-| **data**        | Quantity            | Optional                           | Compiled contract code or hash of the invoked method signature and encoded parameters.                                        |
-| **privateFrom** | Data, 20&nbsp;bytes | Required                           | Orion address of the sender                                                                                                         |
-| **privateFor**  | Array of data       | Required                           | Orion addresses of recipients                                                                                                       |
-| **restriction** | String              | Required                           | Must be [`restricted`](https://besu.hyperledger.org/en/stable/Concepts/Privacy/Privacy-Overview/#private-transaction-attributes) |
+| Key                                  | Type                  | Required/Optional                  | Value                                                                                                                            |  |
+|--------------------------------------|--:-:------------------|------------------------------------|----------------------------------------------------------------------------------------------------------------------------------|--|
+| **from**                             | Data, 20&nbsp;bytes   | Required                           | Address of the sender. Must be the address of the keystore account.                                                              |  |
+| **to**                               | Data, 20&nbsp;bytes   | Not required for contract creation | `null` for contract creation transaction. Contract address for contract invocation transactions.                                 |  |
+| **gas**                              | Quantity              | Optional                           | Gas provided by the sender. Default is `90000`.                                                                                  |  |
+| **gasPrice**                         | Quantity              | Optional                           | Gas price provided by the sender in Wei. Default is `0`.                                                                         |  |
+| **nonce**                            | Quantity              | Optional                           | Number of transactions sent from the `from` account before this one.                                                             |  |
+| **data**                             | Quantity              | Optional                           | Compiled contract code or hash of the invoked method signature and encoded parameters.                                           |  |
+| **privateFrom**                      | Data, 20&nbsp;bytes   | Required                           | Orion address of the sender                                                                                                      |  |
+| **privateFor** or **privacyGroupId** | Array of data or data | Required                           | Orion addresses of recipients or [privacy group ID](https://besu.hyperledger.org/en/stable/Concepts/Privacy/Privacy-Groups/)                                                                                |  |
+| **restriction**                      | String                | Required                           | Must be [`restricted`](https://besu.hyperledger.org/en/stable/Concepts/Privacy/Privacy-Overview/#private-transaction-attributes) |  |
 
 !!! tip
     Submitting a transaction with the same nonce as a pending transaction and a higher gas price replaces
@@ -64,8 +64,12 @@ Transaction object for private transactions:
 
 !!! example
 
-    ```bash tab="curl HTTP request"
+    ```bash tab="curl HTTP request with privateFor"
     curl -X POST --data '{"jsonrpc":"2.0","method":"eea_sendTransaction","params":[{"from": "0xfe3b557e8fb62b89f4916b721be55ceb828dbd73","data": "0x608060405234801561001057600080fd5b5060dc8061001f6000396000f3006080604052600436106049576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680633fa4f24514604e57806355241077146076575b600080fd5b348015605957600080fd5b50606060a0565b6040518082815260200191505060405180910390f35b348015608157600080fd5b50609e6004803603810190808035906020019092919050505060a6565b005b60005481565b80600081905550505600a165627a7a723058202bdbba2e694dba8fff33d9d0976df580f57bff0a40e25a46c398f8063b4c00360029", "privateFrom": "negmDcN2P4ODpqn/6WkJ02zT/0w0bjhGpkZ8UP6vARk=","privateFor": ["g59BmTeJIn7HIcnq8VQWgyh/pDbvbt2eyP0Ii60aDDw="],"restriction": "restricted"}], "id":1}' http://127.0.0.1:8545
+    ```
+
+    ```bash tab="curl HTTP request with privacy group ID"
+    curl -X POST --data '{"jsonrpc":"2.0","method":"eea_sendTransaction","params":[{"from": "0xfe3b557e8fb62b89f4916b721be55ceb828dbd73","data": "0x608060405234801561001057600080fd5b5060d8061001f6000396000f3006080604052600436106049576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680633fa4f24514604e57806355241077146076575b600080fd5b348015605957600080fd5b50606060a0565b6040518082815260200191505060405180910390f35b348015608157600080fd5b50609e6004803603810190808035906020019092919050505060a6565b005b60005481565b80600081905550505600a165627a7a723058202bdbba2e694dba8fff33d9d0976df580f57bff0a40e25a46c398f8063b4c00360029", "privateFrom": "negmDcN2P4ODpqn/6WkJ02zT/0w0bjhGpkZ8UP6vARk=","privacyGroupId": "kAbelwaVW7okoEn1+okO+AbA4Hhz/7DaCOWVQz9nx5M=","restriction": "restricted"}], "id":1}' http://127.0.0.1:8545
     ```
 
     ```json tab="JSON result"
@@ -76,7 +80,7 @@ Transaction object for private transactions:
     }
     ```
 
-## eth_accounts
+## `eth_accounts`
 
 Returns the account address with which EthSigner is signing transactions. That is, the account of the [signing key](../../Concepts/Overview.md).
 
@@ -104,7 +108,7 @@ None
     }
     ```
 
-## eth_sendTransaction
+## `eth_sendTransaction`
 
 Creates and signs a transaction using the [signing key](../../Concepts/Overview.md).
 
