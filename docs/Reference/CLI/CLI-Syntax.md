@@ -203,9 +203,9 @@ Displays the help and exits.
 
 Allows any client to connect.
 
-!!! important 
+!!! important
     Cannot be used with `--tls-allow-ca-clients` and `--tls-known-clients-file`
-    
+
 ```bash tab="Syntax"
 --tls-allow-any-client
 ```
@@ -363,6 +363,7 @@ Connect to Hashicorp Vault server using TLS. Default is `true`.
 ```bash tab="Example"
 --tls-enabled=false
 ```
+
 ### tls-known-server-file
 
 File containing the hostname, port, and SHA256 certificate fingerprint

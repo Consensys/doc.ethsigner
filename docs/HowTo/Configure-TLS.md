@@ -36,14 +36,15 @@ that are trusted to connect to EthSigner. The file contents use the format
     ```
     curl_client DF:65:B8:02:08:5E:91:82:0F:91:F5:1C:96:56:92:C4:1A:F6:C6:27:FD:6C:FC:31:F2:BB:90:17:22:59:5B:50
     ```
-    
-You can use [OpenSSL](https://www.openssl.org/) or [keytool](https://docs.oracle.com/javase/6/docs/technotes/tools/solaris/keytool.html) to display the fingerprint. For example:
+
+You can use [OpenSSL](https://www.openssl.org/) or [keytool](https://docs.oracle.com/javase/6/docs/technotes/tools/solaris/keytool.html) to display
+the fingerprint. For example:
 
 !!! example
     ```
     keytool -list -v -keystore <keystore> -storetype PKCS12 -storepass <password>
     ```
-    
+
 ### Start EthSigner
 
 ```bash
@@ -55,16 +56,16 @@ The command line:
 * Specifies the EthSigner keystore using the [`--tls-keystore-file`](../Reference/CLI/CLI-Syntax.md#tls-keystore-file) option.
 * Specifies the file that contains the password to decrypt the
 keystore using the [`--tls-keystore-password-file`](../Reference/CLI/CLI-Syntax.md#tls-keystore-password-file) option.
-* [Specifies the clients](#create-the-known-clients-file) that are trusted to connect to EthSigner using the
-[`tls-known-clients-file`](../Reference/CLI/CLI-Syntax.md#tls-known-clients-file) option.
+* [Specifies the clients](#create-the-known-clients-file) that are trusted to connect to EthSigner
+using the [`tls-known-clients-file`](../Reference/CLI/CLI-Syntax.md#tls-known-clients-file) option.
 * Allow access to clients with trusted CA certificates using the [`--tls-allow-ca-clients`](../Reference/CLI/CLI-Syntax.md#tls-allow-ca-clients) option.
 
 !!! note
     Use the [`--tls-allow-any-client`](../Reference/CLI/CLI-Syntax.md#tls-allow-any-client) option to allow
-    access to any client. 
-    
+    access to any client.
+
     [`--tls-allow-any-client`](../Reference/CLI/CLI-Syntax.md#tls-allow-any-client) cannot be used with [`tls-known-clients-file`](../Reference/CLI/CLI-Syntax.md#tls-known-clients-file) or [`--tls-allow-ca-clients`](../Reference/CLI/CLI-Syntax.md#tls-allow-ca-clients).
-    
+
 ## Server TLS connection
 
 Allow EthSigner to to send and receive secure HTTP JSON-RPCs from the
@@ -74,7 +75,6 @@ server (for example Besu).
 
 * The server must be configured to allow TLS communication
 * Server's password-protected PKCS #12 keystore information.
-
 
 ### Create the known servers file
 
@@ -95,7 +95,7 @@ where:
 !!! note
     Specify both hostname and IP address in the file if unsure which is used in
     requests.
-    
+
 ### Start EthSigner
 
 ```bash
