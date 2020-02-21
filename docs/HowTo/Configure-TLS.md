@@ -22,7 +22,6 @@ HTTP JSON-RPCs.
 * The client must be configured for TLS.
 * Client's PKCS #12 keystore information.
 
-
 ### Create the known clients file
 
 Create a file (in this example, `knownClients`) that lists one or more clients
@@ -33,14 +32,17 @@ that are trusted to connect to EthSigner. The file contents use the format
 * `<hex-string>` is the SHA-256 fingerprint of the client's keystore.
 
 !!! example
+
     ```
     curl_client DF:65:B8:02:08:5E:91:82:0F:91:F5:1C:96:56:92:C4:1A:F6:C6:27:FD:6C:FC:31:F2:BB:90:17:22:59:5B:50
     ```
 
-You can use [OpenSSL](https://www.openssl.org/) or [keytool](https://docs.oracle.com/javase/6/docs/technotes/tools/solaris/keytool.html) to display
-the fingerprint. For example:
+You can use [OpenSSL](https://www.openssl.org/) or
+[keytool](https://docs.oracle.com/javase/6/docs/technotes/tools/solaris/keytool.html)
+to display the fingerprint. For example:
 
 !!! example
+
     ```
     keytool -list -v -keystore <keystore> -storetype PKCS12 -storepass <password>
     ```
@@ -87,6 +89,7 @@ where:
 * `<hex-string>` is the SHA-256 fingerprint of the server's certificate.
 
 !!! example
+
     ```
     localhost:8590 6C:B2:3E:F9:88:43:5E:62:69:9F:A9:9D:41:14:03:BA:83:24:AC:04:CE:BD:92:49:1B:8D:B2:A4:86:39:4C:BB
     127.0.0.1:8590 6C:B2:3E:F9:88:43:5E:62:69:9F:A9:9D:41:14:03:BA:83:24:AC:04:CE:BD:92:49:1B:8D:B2:A4:86:39:4C:BB
@@ -106,7 +109,7 @@ The command line:
 
 * Enables TLS using the [`--downstream-http-tls-enabled`](../Reference/CLI/CLI-Syntax.md#downstream-http-tls-enabled)
 option.
-* Specifies the keystore to present during authentication using the 
+* Specifies the keystore to present during authentication using the
 [`--downstream-http-tls-keystore-file`](../Reference/CLI/CLI-Syntax.md#downstream-http-tls-keystore-file) option.
 * Specifies the file that contains the password to decrypt the keystore using
 the [`--downstream-http-tls-keystore-password-file`](../Reference/CLI/CLI-Syntax.md#downstream-http-tls-keystore-password-file) option.
