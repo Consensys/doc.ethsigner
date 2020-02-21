@@ -61,7 +61,7 @@ keystore using the [`--tls-keystore-password-file`](../Reference/CLI/CLI-Syntax.
 
 !!! note
     Use the [`--tls-allow-any-client`](../Reference/CLI/CLI-Syntax.md#tls-allow-any-client) option to allow
-    access to any client that presents a certificate. 
+    access to any client. 
     
     [`--tls-allow-any-client`](../Reference/CLI/CLI-Syntax.md#tls-allow-any-client) cannot be used with [`tls-known-clients-file`](../Reference/CLI/CLI-Syntax.md#tls-known-clients-file) or [`--tls-allow-ca-clients`](../Reference/CLI/CLI-Syntax.md#tls-allow-ca-clients).
     
@@ -113,6 +113,6 @@ the [`--downstream-http-tls-keystore-password-file`](../Reference/CLI/CLI-Syntax
 * [Specifies the servers](#create-the-known-servers-file) to connect to using the [`--downstream-http-tls-known-servers-file`](../Reference/CLI/CLI-Syntax.md#downstream-http-tls-known-servers-file) option.
 
 !!! note
-    The [`downstream-http-tls-ca-auth-enabled`](../Reference/CLI/CLI-Syntax.md#downstream-http-tls-ca-auth-enabled) option is enabled
+    The [`--downstream-http-tls-ca-auth-enabled`](../Reference/CLI/CLI-Syntax.md#downstream-http-tls-ca-auth-enabled) option is enabled
     by default and allows connections to servers with trusted root CAs.
 

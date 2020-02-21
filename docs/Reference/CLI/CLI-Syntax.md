@@ -117,10 +117,8 @@ Defaults to `true`.
 
 ### downstream-http-tls-keystore-file
 
-Keystore file that is presented to the server during authentication.
-
-Private keys and certificates for server TLS connections must be
-stored in password-protected PKCS #12 keystore files.
+Keystore file (in PKCS #12 format) that contains the private key and certificate
+presented to the server during authentication.
 
 ```bash tab="Syntax"
 --downstream-http-tls-keystore-file=<keystoreFile>
@@ -202,7 +200,7 @@ Displays the help and exits.
 
 ### tls-allow-any-client
 
-Allows any client that presents a certificate to connect.
+Allows any client to connect.
 
 !!! important 
     Cannot be used with `--tls-allow-ca-clients` and `--tls-known-clients-file`
@@ -213,7 +211,7 @@ Allows any client that presents a certificate to connect.
 
 ### tls-allow-ca-clients
 
-Allows clients with trusted CA certificates to connect.
+Allows clients signed with trusted CA certificates to connect.
 
 ```bash tab="Syntax"
 --tls-allow-ca-clients
