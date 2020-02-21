@@ -65,12 +65,14 @@ nav:
         - Store keys externally:
             - Use Hashicorp Vault: HowTo/Store-Keys/Use-Hashicorp.md
             - Use Azure Key Vault: HowTo/Store-Keys/Use-Azure.md
+        - Configure TLS: HowTo/Configure-TLS.md 
         - Create external signers: HowTo/Extending-EthSigner/Add-Signer.md
     - Tutorials:
         - Start EthSigner with a single signer: Tutorials/Start-EthSigner.md
         - Start EthSigner with multiple signers: Tutorials/Multifile.md
     - Concepts:
         - Overview: Concepts/Overview.md
+        - TLS Communication: Concepts/TLS.md
     - Reference:
         - EthSigner command line: Reference/CLI/CLI-Syntax.md
         - Multikey TOML parameters: Reference/Multikey-Parameters.md
