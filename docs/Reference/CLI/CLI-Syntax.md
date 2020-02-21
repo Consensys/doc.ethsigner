@@ -232,7 +232,7 @@ PKCS #12 formatted keystore. Used to enable TLS for [client connections](../../C
 
 ### `tls-keystore-password-file`
 
-Password file file used to decrypt the keystore.
+Password file used to decrypt the keystore.
 
 ```bash tab="Syntax"
 --tls-keystore-password-file=<passwordFile>

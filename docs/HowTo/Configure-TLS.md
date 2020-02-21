@@ -71,7 +71,7 @@ The command line:
 
 ## Server TLS connection
 
-Allow EthSigner to to send and receive secure HTTP JSON-RPCs from the
+Allow EthSigner to send and receive secure HTTP JSON-RPCs from the
 server (for example Besu).
 
 **Server prerequisites**:
