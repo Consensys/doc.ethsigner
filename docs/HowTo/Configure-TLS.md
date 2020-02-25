@@ -76,7 +76,7 @@ server (for example Besu).
 
 **Server prerequisites**:
 
-* The server must be configured to allow TLS communication
+* [The server must be configured to allow TLS communication](https://besu.hyperledger.org/en/latest/HowTo/Configure/Configure-TLS/).
 * Server's password-protected PKCS #12 keystore information.
 
 ### Create the known servers file
