@@ -11,7 +11,7 @@ requests, and communication with Hashicorp Vault.
 
 Private keys and certificates for client and server TLS connections must be
 stored in password-protected PKCS #12 keystores. The [server
-(in this example, Hyperledger Besu) must be configured](https://besu.hyperledger.org/en/latest/Concepts/TLS/) to 
+(in this example, Hyperledger Besu) must be configured](https://besu.hyperledger.org/en/latest/Concepts/TLS/) to
 accept TLS connections.
 
 Use the command line options to configure TLS on
