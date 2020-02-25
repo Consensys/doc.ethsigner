@@ -89,6 +89,71 @@ Timeout period (in milliseconds) for downstream requests. Default is 5000.
 --downstream-http-request-timeout=3000
 ```
 
+### `downstream-http-tls-enabled`
+
+Enable or disable [TLS for server connections](../../Concepts/TLS.md).
+Defaults to `false`.
+
+```bash tab="Syntax"
+--downstream-http-tls-enabled[=<true|false>]
+```
+
+```bash tab="Example"
+--downstream-http-tls-enabled
+```
+
+### `downstream-http-tls-ca-auth-enabled`
+
+Allow connections to servers with trusted CAs.
+
+Defaults to `true`.
+
+```bash tab="Syntax"
+--downstream-http-tls-ca-auth-enabled[=<true|false>]
+```
+
+```bash tab="Example"
+--downstream-http-tls-enabled=false
+```
+
+### `downstream-http-tls-keystore-file`
+
+Keystore file (in PKCS #12 format) that contains the private key and certificate
+presented to the server during authentication.
+
+```bash tab="Syntax"
+--downstream-http-tls-keystore-file=<keystoreFile>
+```
+
+```bash tab="Example"
+--downstream-http-tls-keystore-file=/Users/me/my_node/keystore.pfx
+```
+
+### `downstream-http-tls-keystore-password-file`
+
+Password file used to decrypt the keystore.
+
+```bash tab="Syntax"
+--downstream-http-tls-keystore-password-file=<passwordFile>
+```
+
+```bash tab="Example"
+--downstream-http-tls-keystore-password-file=/Users/me/my_node/password
+```
+
+### `downstream-http-tls-known-servers-file`
+
+File containing the hostnames, ports, and SHA256 certificate fingerprints
+of [trusted servers](../../HowTo/Configure-TLS.md#create-the-known-servers-file).
+
+```bash tab="Syntax"
+--downstream-http-tls-known-servers-file=<serversFile>
+```
+
+```bash tab="Example"
+--downstream-http-tls-known-servers-file=/Users/me/my_node/knownServers
+```
+
 ### `http-listen-host`
 
 Host on which JSON-RPC HTTP listens. Default is `localhost`.
@@ -132,6 +197,61 @@ Displays the help and exits.
 
 ```bash tab="Syntax"
 -h, --help
+```
+
+### `tls-allow-any-client`
+
+Allows any client to connect.
+
+!!! important
+    Cannot be used with `--tls-allow-ca-clients` and `--tls-known-clients-file`
+
+```bash tab="Syntax"
+--tls-allow-any-client
+```
+
+### `tls-allow-ca-clients`
+
+Allows clients signed with trusted CA certificates to connect.
+
+```bash tab="Syntax"
+--tls-allow-ca-clients
+```
+
+### `tls-keystore-file`
+
+PKCS #12 formatted keystore. Used to enable TLS for [client connections](../../Concepts/TLS.md).
+
+```bash tab="Syntax"
+--tls-keystore-file=<keystoreFile>
+```
+
+```bash tab="Example"
+--tls-keystore-file=/Users/me/my_node/certificate.pfx
+```
+
+### `tls-keystore-password-file`
+
+Password file used to decrypt the keystore.
+
+```bash tab="Syntax"
+--tls-keystore-password-file=<passwordFile>
+```
+
+```bash tab="Example"
+--tls-keystore-password-file=/Users/me/my_node/password
+```
+
+### `tls-known-clients-file`
+
+File containing the SHA-256 fingerprints of [authorized clients](../../HowTo/Configure-TLS.md#create-the-known-clients-file).
+
+```bash tab="Syntax"
+--tls-known-clients-file=<clientsFile>
+```
+
+```bash tab="Example"
+--tls-keystore-file=/Users/me/my_node/knownClients
 ```
 
 ### `version`
@@ -230,6 +350,31 @@ Timeout in milliseconds for requests to the Hashicorp Vault server. Default is 1
 
 ```bash tab="Example"
 --timeout=5000
+```
+
+### tls-enabled
+
+Connect to Hashicorp Vault server using TLS. Default is `true`.
+
+```bash tab="Syntax"
+--tls-enabled[=<true|false>]
+```
+
+```bash tab="Example"
+--tls-enabled=false
+```
+
+### tls-known-server-file
+
+File containing the hostname, port, and SHA256 certificate fingerprint
+of the Hashicorp Vault server.
+
+```bash tab="Syntax"
+--tls-known-server-file=<hashicorpServerFile>
+```
+
+```bash tab="Example"
+--tls-known-server-file=/Users/me/my_node/knownHashicorpServers
 ```
 
 ## Azure options

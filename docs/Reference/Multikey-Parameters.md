@@ -53,6 +53,7 @@ for the signing type.
     port = 9001
     auth-file = "/Users/me/project/hashicorp_auth"
     timeout = 500
+    tls-known-server-file = "/Users/me/project/knownHashicorpServers"
     ```
 
 !!! note
@@ -68,6 +69,8 @@ for the signing type.
 | **port**             | Port of the Hashicorp Vault server  |
 | **auth-file**        | File containing authentication data for Hashicorp Vault. The authentication data is the [root token displayed by the Hashicorp Vault server](../HowTo/Store-Keys/Use-Hashicorp.md#storing-private-key-in-hashcorp-vault)    |
 | **timeout**    | Timeout in milliseconds for requests to the Hashicorp Vault server    |
+| **tls-enabled**      | [Enable or disable TLS](../Concepts/TLS.md). Defaults to `true` |
+| **tls-known-server-file**  | Path to the file containing a list of [trusted Hashicorp Vault servers](../HowTo/Store-Keys/Use-Hashicorp.md#create-the-known-servers-file) |
 
 ## Azure Key Vault Signing
 
