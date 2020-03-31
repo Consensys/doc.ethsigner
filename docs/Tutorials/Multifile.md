@@ -14,7 +14,7 @@ This tutorial covers configuring multiple keys using V3 keystore files. To confi
 !!! note
 
     Multiple signing keys in EthSigner is not the same as multi-tenancy. EthSigner does not support
-    Multi-tenancy.
+    multi-tenancy.
 
     Multi-tenancy is a feature in
     [Hyperledger Besu](https://besu.hyperledger.org/en/stable/Concepts/Privacy/Multi-Tenancy/) and
