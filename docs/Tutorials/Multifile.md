@@ -129,7 +129,7 @@ account address. For example, `78e6e236592597c09d5c137c2af40aecd42d12a2.toml`.
 Start EthSigner with options:
 
 * `chain-id` is the chain ID specified in the
-[Besu genesis file](https://besu.hyperledger.org/en/stable/Reference/Config-Items/).
+  [Besu genesis file](https://besu.hyperledger.org/en/stable/Reference/Config-Items/).
 * `downstream-http-port` is the `rpc-http-port` specified for Besu (`8590` in this example).
 * `directory` is the location of TOML file [created above](#create-the-toml-file).
 
