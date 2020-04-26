@@ -36,22 +36,6 @@ You can create one or more password and V3 Keystore key files. Create a text
 file containing the password for the V3 Keystore key file to be created
 (for example, `passwordFile`).
 
-!!! attention "Password text file must not contain characters other than those used in your password"
-    EthSigner reads the password file as binary and any character in the file is
-    considered part of your password.
-
-    _Some POSIX compliant editors automatically add an end-of-line in text files.
-    If your editor adds an end-of-line character, the end-of-line is considered
-    part of your password._
-
-    Use the following command to ensure the password file is correct:
-
-    ```bash
-    echo -n "Type your password:";read -s password;echo -ne $password > passwordFile;
-    ```
-
-    Enter the password when prompted.
-
 Use the [web3.js library](https://github.com/ethereum/web3.js/) to create a key file where:
 
 * `<AccountPrivateKey>` is the private key of the account with which EthSigner
