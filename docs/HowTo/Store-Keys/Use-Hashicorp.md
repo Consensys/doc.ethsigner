@@ -6,7 +6,13 @@ description: Signing transactions with key stored in Hashicorp Key Vault
 
 EthSigner supports storing the signing key in [Hashicorp Vault](https://www.hashicorp.com/products/vault/).
 
-TLS is enabled by default between EthSigner and Hashicorp Vault.
+This example uses a Hashicorp development server without TLS and disables TLS when starting EthSigner.
+TLS is enabled by default between EthSigner and Hashicorp Vault and [must be configured](../Configure-TLS.md) 
+when not explicitly disabled.  
+
+!!! caution
+
+    We do not recommented disabling TLS in production environments.
 
 ## Storing private key in Hashicorp Vault
 
@@ -52,26 +58,6 @@ option set to `8590` to avoid conflict with the default EthSigner listening port
     protection. That is, the genesis file must include at least the Spurious Dragon milestone
     (defined as `eip158Block` in the genesis file) so the blockchain is using a chain ID.
 
-## Create the Known Servers File
-
-Create a file (in this example, `knownHashicorpServers`) that lists one or more
-trusted Hashicorp Vault servers. The file contents use the format
-`<hostame>:<port> <hex-string>` where:
-
-* `<hostname>` is the server hostname
-* `<port>` is the port used for communication
-* `<hex-string>` is the SHA-256 fingerprint of the server's certificate.
-
-!!! example
-
-    ```
-    localhost:8200 7C:B3:3E:F9:98:43:5E:62:69:9F:A9:9D:41:14:03:BA:83:24:AC:04:CE:BD:92:49:1B:8D:B2:A4:86:39:4C:BB
-    127.0.0.1:8200 7C:B3:3E:F9:98:43:5E:62:69:9F:A9:9D:41:14:03:BA:83:24:AC:04:CE:BD:92:49:1B:8D:B2:A4:86:39:4C:BB
-    ```
-
-The file is required if TLS is enabled, to disable TLS, set
-[`hashicorp-signer --tls-enabled`](../../Reference/CLI/CLI-Syntax.md#tls-enabled) to `false`.
-
 ## Start EthSigner with Hashicorp Vault signing
 
 Start EthSigner.
@@ -79,7 +65,7 @@ Start EthSigner.
 !!! example
 
     ```bash
-    ethsigner --chain-id=2018 --downstream-http-port=8590 hashicorp-signer --host=127.0.0.1 --port=8200 --auth-file=authFile --tls-known-server-file=/Users/me/my_node/knownHashicorpServers
+    ethsigner --chain-id=2018 --downstream-http-port=8590 hashicorp-signer --host=127.0.0.1 --port=8200 --auth-file=authFile --tls-enabled=false
     ```
 
 !!! tip
@@ -88,3 +74,5 @@ Start EthSigner.
 
 You can now [use EthSigner to sign transactions](../Transactions/Make-Transactions.md) with the key
 stored in the Hashicorp Vault.
+
+ 
