@@ -65,8 +65,15 @@ Start EthSigner.
 !!! example
 
     ```bash
-    ethsigner --chain-id=2018 --downstream-http-port=8590 hashicorp-signer --host=127.0.0.1 --port=8200 --auth-file=authFile --tls-enabled=false
+    ethsigner --chain-id=2018 --downstream-http-port=8590 hashicorp-signer --host=127.0.0.1 --port=8200 --auth-file=authFile --tls-enabled=false --signing-key-path=/v1/secret/data/ethsignerSigningKey
     ```
+
+The path to the key in the Hashicorp Vault specified by `--signing-key-path` is prefixed by the 
+key version and includes `data`. For example, if the following command is used put the key into the 
+Vault: 
+`vault kv put secret/ethsignerSigningKey value=<Private Key>`
+
+The path specified for `--signing-key-path` is `/v1/secret/data/ethsignerSigningKey`
 
 !!! tip
     Use the [--http-listen-port](../../Reference/CLI/CLI-Syntax.md#http-listen-port) option to change the
