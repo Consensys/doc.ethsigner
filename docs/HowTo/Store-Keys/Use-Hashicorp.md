@@ -8,7 +8,7 @@ EthSigner supports storing the signing key in [Hashicorp Vault](https://www.hash
 
 This example uses a Hashicorp development server without TLS and disables TLS when starting EthSigner.
 TLS is enabled by default between EthSigner and Hashicorp Vault and [must be configured](../Configure-TLS.md) 
-when not explicitly disabled.  
+when not explicitly disabled.
 
 !!! caution
 
@@ -68,9 +68,9 @@ Start EthSigner.
     ethsigner --chain-id=2018 --downstream-http-port=8590 hashicorp-signer --host=127.0.0.1 --port=8200 --auth-file=authFile --tls-enabled=false --signing-key-path=/v1/secret/data/ethsignerSigningKey
     ```
 
-The path to the key in the Hashicorp Vault specified by `--signing-key-path` is prefixed by the 
-key version and includes `data`. For example, if the following command is used put the key into the 
-Vault: 
+The path to the key in the Hashicorp Vault specified by `--signing-key-path` is prefixed by the
+key version and includes `data`. For example, if the following command is used put the key into the
+Vault:
 `vault kv put secret/ethsignerSigningKey value=<Private Key>`
 
 The path specified for `--signing-key-path` is `/v1/secret/data/ethsignerSigningKey`
@@ -81,5 +81,3 @@ The path specified for `--signing-key-path` is `/v1/secret/data/ethsignerSigning
 
 You can now [use EthSigner to sign transactions](../Transactions/Make-Transactions.md) with the key
 stored in the Hashicorp Vault.
-
- 
