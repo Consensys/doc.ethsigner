@@ -7,7 +7,7 @@ description: Signing transactions with key stored in Hashicorp Key Vault
 EthSigner supports storing the signing key in [Hashicorp Vault](https://www.hashicorp.com/products/vault/).
 
 This example uses a Hashicorp development server without TLS and disables TLS when starting EthSigner.
-TLS is enabled by default between EthSigner and Hashicorp Vault and [must be configured](../Configure-TLS.md) 
+TLS is enabled by default between EthSigner and Hashicorp Vault and [must be configured](../Configure-TLS.md)
 when not explicitly disabled.
 
 !!! caution
