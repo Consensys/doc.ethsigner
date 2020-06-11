@@ -31,7 +31,8 @@ signs transaction with a key stored in an encrypted file or an external vault (f
 
 ### `chain-id`
 
-Chain ID of the network to receive the signed transactions.
+[Chain ID]()https://besu.hyperledger.org/en/stable/Concepts/NetworkID-And-ChainID/ of the network to
+receive the signed transactions.
 
 ```bash tab="Syntax"
 --chain-id=<chainId>
@@ -55,7 +56,7 @@ Directory in which to store temporary files.
 
 ### `downstream-http-host`
 
-Endpoint to which received requests are forwarded. Default is `localhost`.
+Host to which received requests are forwarded. Default is `localhost`.
 
 ```bash tab="Syntax"
 --downstream-http-host=<downstreamHttpHost>
@@ -63,6 +64,19 @@ Endpoint to which received requests are forwarded. Default is `localhost`.
 
 ```bash tab="Example"
 --downstream-http-host=192.168.05.14
+```
+
+### `downstream-http-path`
+
+Path to which received requests are forwarded. Default is `/`. Required if [connecting to a
+cloud-based Ethereum client] such as [Infura].
+
+```bash tab="Syntax"
+--downstream-http-path=<downstreamHttpPath>
+```
+
+```bash tab="Example"
+--downstream-http-path=/v3/d0e63ca5bb1e4eef2284422efbc51a56
 ```
 
 ### `downstream-http-port`
@@ -453,3 +467,7 @@ required to access keys.
 ```bash tab="Example"
 --directory=/Users/me/keys
 ```
+
+<!-- links -->
+[connecting to a cloud-based Ethereum client]: ../../Tutorials/Start-EthSigner.md#start-ethsigner
+[Infura]: https://infura.io/

@@ -115,6 +115,20 @@ Start EthSigner with options specified as follows:
     ethsigner --chain-id=2018 --downstream-http-port=8590 file-based-signer --key-file=/mydirectory/keyFile --password-file=/mydirectory/passwordFile
     ```
 
+If using a cloud-based Ethereum client such as [Infura], specify the endpoint using
+the [`--downstream-http-host`](../Reference/CLI/CLI-Syntax.md#downstream-http-host) and
+[`--downstream-http-path`](../Reference/CLI/CLI-Syntax.md#downstream-http-path) command line
+options.
+    
+!!! example
+
+    ```
+    ethsigner --chain-id=5 --downstream-http-host=goerli.infura.io \
+    --downstream-http-path=/v3/d0e63ca5bb1e4eef2284422efbc51a56 --downstream-http-port=443 \
+    --downstream-http-tls-enabled file-based-signer --key-file=/mydirectory/keyFile \
+    --password-file=/mydirectory/passwordFile
+    ```
+
 ## Confirm EthSigner is up
 
 Use the `upcheck` endpoint to confirm EthSigner is running.
@@ -142,3 +156,6 @@ You can now [use EthSigner to sign transactions](../HowTo/Transactions/Make-Tran
 the key stored in the V3 Keystore key file.
 
 [`eth_blockNumber`]:https://besu.hyperledger.org/en/stable/Reference/API-Methods/#eth_blocknumber
+
+<!-- links -->
+[Infura]: https://infura.io/
