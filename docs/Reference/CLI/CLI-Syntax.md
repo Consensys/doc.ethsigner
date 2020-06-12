@@ -31,7 +31,7 @@ signs transaction with a key stored in an encrypted file or an external vault (f
 
 ### `chain-id`
 
-[Chain ID]()https://besu.hyperledger.org/en/stable/Concepts/NetworkID-And-ChainID/ of the network to
+[Chain ID](https://besu.hyperledger.org/en/stable/Concepts/NetworkID-And-ChainID/) of the network to
 receive the signed transactions.
 
 ```bash tab="Syntax"
@@ -68,8 +68,9 @@ Host to which received requests are forwarded. Default is `localhost`.
 
 ### `downstream-http-path`
 
-Path to which received requests are forwarded. Default is `/`. Required if [connecting to a
-cloud-based Ethereum client] such as [Infura].
+Path to which received requests are forwarded. Default is `/`. 
+
+Might be required if [connecting to a cloud-based Ethereum client] such as [Infura].
 
 ```bash tab="Syntax"
 --downstream-http-path=<downstreamHttpPath>
@@ -81,7 +82,7 @@ cloud-based Ethereum client] such as [Infura].
 
 ### `downstream-http-port`
 
-Endpoint to which received requests are forwarded.
+Port to which received requests are forwarded.
 
 ```bash tab="Syntax"
 --downstream-http-port=<downstreamHttpPort>
