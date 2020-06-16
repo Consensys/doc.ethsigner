@@ -68,7 +68,7 @@ Host to which received requests are forwarded. Default is `localhost`.
 
 ### `downstream-http-path`
 
-Path to which received requests are forwarded. Default is `/`. 
+Path to which received requests are forwarded. Default is `/`.
 
 Might be required if [connecting to a cloud-based Ethereum client] such as [Infura].
 

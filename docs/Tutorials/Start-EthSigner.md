@@ -119,7 +119,7 @@ If using a cloud-based Ethereum client such as [Infura], specify the endpoint us
 the [`--downstream-http-host`](../Reference/CLI/CLI-Syntax.md#downstream-http-host) and
 [`--downstream-http-path`](../Reference/CLI/CLI-Syntax.md#downstream-http-path) command line
 options.
-    
+
 !!! example
 
     ```

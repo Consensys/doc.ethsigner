@@ -31,7 +31,7 @@ This tutorial covers configuring multiple keys using V3 keystore files. To confi
 !!! note
     The Ethereum client used in this documentation is Hyperledger Besu but EthSigner can be used
     with any Ethereum client.
-    
+
 ## Start Besu
 
 [Start Besu](https://besu.hyperledger.org/en/stable/HowTo/Get-Started/Starting-node/) with the
@@ -147,7 +147,7 @@ If using a cloud-based Ethereum client such as [Infura], specify the endpoint us
 the [`--downstream-http-host`](../Reference/CLI/CLI-Syntax.md#downstream-http-host) and
 [`--downstream-http-path`](../Reference/CLI/CLI-Syntax.md#downstream-http-path) command line
 options.
-    
+
 !!! example
 
     ```
@@ -155,7 +155,7 @@ options.
     --downstream-http-path=/v3/d0e63ca5bb1e4eef2284422efbc51a56 --downstream-http-port=443 \
     --downstream-http-tls-enabled multikey-signer --directory=/Users/me/project
     ```
-     
+
 ## Confirm EthSigner is running
 
 Use the `upcheck` endpoint to confirm EthSigner is running.
