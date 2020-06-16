@@ -28,6 +28,10 @@ This tutorial covers configuring multiple keys using V3 keystore files. To confi
 * [Node.js](https://nodejs.org/en/download/)
 * [web3.js](https://github.com/ethereum/web3.js/).
 
+!!! note
+    The Ethereum client used in this documentation is Hyperledger Besu but EthSigner can be used
+    with any Ethereum client.
+
 ## Start Besu
 
 [Start Besu](https://besu.hyperledger.org/en/stable/HowTo/Get-Started/Starting-node/) with the
@@ -123,6 +127,19 @@ Start EthSigner with options:
     ethsigner --chain-id=2018 --downstream-http-port=8590 multikey-signer --directory=/Users/me/project
     ```
 
+If using a cloud-based Ethereum client such as [Infura], specify the endpoint using
+the [`--downstream-http-host`](../Reference/CLI/CLI-Syntax.md#downstream-http-host) and
+[`--downstream-http-path`](../Reference/CLI/CLI-Syntax.md#downstream-http-path) command line
+options.
+
+!!! example
+
+    ```
+    ethsigner --chain-id=5 --downstream-http-host=goerli.infura.io \
+    --downstream-http-path=/v3/d0e63ca5bb1e4eef2284422efbc51a56 --downstream-http-port=443 \
+    --downstream-http-tls-enabled multikey-signer --directory=/Users/me/project
+    ```
+
 ## Confirm EthSigner is running
 
 Use the `upcheck` endpoint to confirm EthSigner is running.
@@ -149,3 +166,6 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id
 
 You can now [use EthSigner to sign transactions](../HowTo/Transactions/Make-Transactions.md) with
 the keys stored in the V3 Keystore key files.
+
+<!-- links -->
+[Infura]: https://infura.io/
