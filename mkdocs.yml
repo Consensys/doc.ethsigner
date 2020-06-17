@@ -74,8 +74,8 @@ nav:
         - Overview: Concepts/Overview.md
         - TLS Communication: Concepts/TLS.md
     - Reference:
-        - EthSigner command line: Reference/CLI/CLI-Syntax.md
-        - EthSigner API Methods: Reference/API-Methods.md
+        - Command line: Reference/CLI/CLI-Syntax.md
+        - API Methods: Reference/API-Methods.md
         - Multikey TOML parameters: Reference/Multikey-Parameters.md
         - Security disclosure policy: Reference/Responsible-Disclosure.md
 markdown_extensions:
