@@ -146,3 +146,36 @@ Transaction object:
     }
     ```
 
+### `eth_sign`
+
+Signs data using an account address.
+
+This prevents misuse where a malicious DApp signs arbitrary data (for example a transaction)
+and uses the signature to impersonate the victim.
+
+!!! note
+    The account address used to sign the transaction must be unlocked.
+
+#### Parameters
+
+`DATA` : 20-byte account address
+
+`DATA` : data string to sign
+
+#### Returns
+
+`DATA` : RLP encoded signature
+
+!!! example
+
+    ```bash tab="curl HTTP request"
+    curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sign","params":["0x78e6e236592597c09d5c137c2af40aecd42d12a2", "0x2eadbe1f"], "id":1}' http://127.0.0.1:8545
+    ```
+
+    ```json tab="JSON result"
+    {
+       "jsonrpc": "2.0",
+       "id": 1,
+       "result":"0xa6122e277f46fea78f3e97d3354a03ad20b2296733dfefbadc7305c80e70ce9826d44f12ab5aa488689744657491c70d3b654d7f60f8f50beefac9abcf02a4cf1b"
+    }
+    ```
