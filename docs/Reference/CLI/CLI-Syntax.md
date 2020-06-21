@@ -169,6 +169,30 @@ of [trusted servers](../../HowTo/Configure-TLS.md#create-the-known-servers-file)
 --downstream-http-tls-known-servers-file=/Users/me/my_node/knownServers
 ```
 
+### `http-cors-origins`
+
+A list of domain URLs for CORS validation. You must enclose the URLs in double quotes and separate
+them with commas.
+
+Listed domains can access the node using JSON-RPC. If your client interacts with EthSigner using a
+browser app (such as Remix or a block explorer), you must allow the client domains.
+
+The default value is "none". If you do not allow any domains, browser apps cannot interact with your
+EthSigner node.
+
+!!! tip
+
+    For testing and development purposes, use `"all"` or `"*"` to accept requests from any domain.
+    We don't recommend accepting requests from any domain for production environments.
+
+```bash tab="Syntax"
+--http-cors-origins=<httpListenHost>
+```
+
+```bash tab="Example"
+----http-cors-origins="http://remix.ethereum.org","http://medomain.com"
+```
+
 ### `http-listen-host`
 
 Host on which JSON-RPC HTTP listens. Default is `localhost`.
