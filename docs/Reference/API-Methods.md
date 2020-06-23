@@ -148,13 +148,12 @@ Transaction object:
 
 ### `eth_sign`
 
-Signs data using an account address.
+Calculates an Ethereum specific signature using
+`sign(keccak256("\x19Ethereum Signed Message:\n" + len(message) + message)))."`
 
-This prevents misuse where a malicious DApp signs arbitrary data (for example a transaction)
-and uses the signature to impersonate the victim.
-
-!!! note
-    The account address used to sign the transaction must be unlocked.
+Adds a prefix to the message that makes the calculated signature recognisable as an Ethereum
+specific signature. This prevents misuse where a malicious DApp signs arbitrary data
+(for example a transaction) and uses the signature to impersonate the victim.
 
 #### Parameters
 
@@ -164,7 +163,7 @@ and uses the signature to impersonate the victim.
 
 #### Returns
 
-`DATA` : RLP encoded signature
+`DATA` : Signature
 
 !!! example
 
