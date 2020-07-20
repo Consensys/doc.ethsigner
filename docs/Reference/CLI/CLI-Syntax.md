@@ -34,13 +34,17 @@ signs transaction with a key stored in an encrypted file or an external vault (f
 [Chain ID](https://besu.hyperledger.org/en/stable/Concepts/NetworkID-And-ChainID/) of the network to
 receive the signed transactions.
 
-```bash tab="Syntax"
---chain-id=<chainId>
-```
+=== "Syntax"
 
-```bash tab="Example"
---chain-id=2017
-```
+    ```bash
+    --chain-id=<chainId>
+    ```
+
+=== "Example"
+
+    ```bash
+    --chain-id=2017
+    ```
 
 ### `data-path`
 
