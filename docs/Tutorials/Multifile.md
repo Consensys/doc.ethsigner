@@ -57,27 +57,31 @@ Use the [web3.js library](https://github.com/ethereum/web3.js/) to create a key 
 
 !!! example
 
-    ```javascript linenums="1" tab="Create Key File"
-    const Web3 = require('web3')
+    === "Create Key File"
 
-    // Web3 initialization (should point to the JSON-RPC endpoint)
-    const web3 = new Web3(new Web3.providers.HttpProvider('http://127.0.0.1:8590'))
+        ```javascript linenums="1"
+        const Web3 = require('web3')
 
-    var V3KeyStore = web3.eth.accounts.encrypt("<AccountPrivateKey>", "<Password>");
-    console.log(JSON.stringify(V3KeyStore));
-    process.exit();
-    ```
+        // Web3 initialization (should point to the JSON-RPC endpoint)
+        const web3 = new Web3(new Web3.providers.HttpProvider('http://127.0.0.1:8590'))
 
-    ```javascript linenums="1" tab="Example"
-    const Web3 = require('web3')
+        var V3KeyStore = web3.eth.accounts.encrypt("<AccountPrivateKey>", "<Password>");
+        console.log(JSON.stringify(V3KeyStore));
+        process.exit();
+        ```
 
-    // Web3 initialization (should point to the JSON-RPC endpoint)
-    const web3 = new Web3(new Web3.providers.HttpProvider('http://127.0.0.1:8590'))
+    === "Example"
 
-    var V3KeyStore = web3.eth.accounts.encrypt("0x8f2a55949038a9610f50fb23b5883af3b4ecb3c3bb792cbcefbd1542c692be63", "password");
-    console.log(JSON.stringify(V3KeyStore));
-    process.exit();
-    ```
+        ```javascript linenums="1"
+        const Web3 = require('web3')
+
+        // Web3 initialization (should point to the JSON-RPC endpoint)
+        const web3 = new Web3(new Web3.providers.HttpProvider('http://127.0.0.1:8590'))
+
+        var V3KeyStore = web3.eth.accounts.encrypt("0x8f2a55949038a9610f50fb23b5883af3b4ecb3c3bb792cbcefbd1542c692be63", "password");
+        console.log(JSON.stringify(V3KeyStore));
+        process.exit();
+        ```
 
 Copy and paste the example JS script to a file (for example, `createKeyFile.js`) and replace the
 placeholders.
@@ -146,13 +150,17 @@ Use the `upcheck` endpoint to confirm EthSigner is running.
 
 !!! example
 
-    ```bash tab="curl HTTP request"
-    curl -X GET http://127.0.0.1:8545/upcheck
-    ```
+    === "curl HTTP request"
 
-    ```json tab="Result"
-    I'm up
-    ```
+        ```bash
+        curl -X GET http://127.0.0.1:8545/upcheck
+        ```
+
+    === "Result"
+
+        ```json
+        I'm up
+        ```
 
 ## Confirm EthSigner is passing requests to Besu
 

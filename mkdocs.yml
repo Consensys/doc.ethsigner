@@ -80,6 +80,8 @@ markdown_extensions:
       permalink: 
       toc_depth: 3
   - codehilite
+  - pymdownx.tabbed
+  - pymdownx.superfences
   - markdown_include.include:
       base_path: docs
   - admonition
@@ -95,7 +97,6 @@ markdown_extensions:
   - pymdownx.magiclink
   - pymdownx.mark
   - pymdownx.smartsymbols
-  - pymdownx.tabbed
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde

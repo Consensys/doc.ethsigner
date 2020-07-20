@@ -19,10 +19,14 @@ Unpack the downloaded files and change into the `ethsigner-<release>` directory.
 
 Display EthSigner command line help to confirm installation:
 
-```bash tab="Linux/macOS"
-$ bin/ethsigner --help
-```
+=== "Linux/macOS"
 
-```bat tab="Windows"
-bin\ethsigner --help
-```
+    ``` bash
+    bin/ethsigner --help
+    ```
+
+=== "Windows"
+
+    ``` bat
+    bin\ethsigner --help
+    ```
