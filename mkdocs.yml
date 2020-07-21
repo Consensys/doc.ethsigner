@@ -19,7 +19,6 @@ copyright: EthSigner and its documentation are licensed under Apache 2.0 license
 
 #extra project info and template customisation
 extra:
-  doc_site_edit_url: https://github.com/PegaSysEng/doc.ethsigner/
   versions:
     stable: '0.1.1'
   latest_version_warning:
@@ -35,9 +34,6 @@ extra:
   google:
     site_verification: 'za1cLzyS6LXDGO-pMzvfQdYTZ0Zc67uZtY0asA4YXZ0'
     tag_manager: 'GTM-5VXGSDM'
-  search:
-    language: 'en'
-    tokenizer: '[\s]+'
 
 
 # Software Repository
@@ -51,8 +47,9 @@ theme:
     primary: orange
     accent: teal
   favicon: favicon.ico
-  logo:
-    icon: vpn_key
+  icon:
+    logo: material/key
+    repo: fontawesome/brands/git-alt
 nav:
     - How to:
         - Get started with EthSigner:
@@ -83,6 +80,8 @@ markdown_extensions:
       permalink: 
       toc_depth: 3
   - codehilite
+  - pymdownx.tabbed
+  - pymdownx.superfences
   - markdown_include.include:
       base_path: docs
   - admonition
@@ -98,11 +97,6 @@ markdown_extensions:
   - pymdownx.magiclink
   - pymdownx.mark
   - pymdownx.smartsymbols
-  # pymdownx.superfences is deprecated.
-  # It must be replaced with pymdownx.tabbed but it requires new CSS
-  # TODO with material 5 update
-  - pymdownx.superfences:
-      legacy_tab_classes: true
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
@@ -110,7 +104,9 @@ markdown_extensions:
   - smarty
 
 plugins:
-  - search
+  - search:
+      lang: 'en'
+      separator: '[\s]+'
   - markdownextradata
   - redirects:
       redirect_maps:

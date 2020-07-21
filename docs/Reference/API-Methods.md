@@ -58,21 +58,27 @@ Transaction object for private transactions:
 
 !!! example
 
-    ```bash tab="curl HTTP request with privateFor"
-    curl -X POST --data '{"jsonrpc":"2.0","method":"eea_sendTransaction","params":[{"from": "0xfe3b557e8fb62b89f4916b721be55ceb828dbd73","data": "0x608060405234801561001057600080fd5b5060dc8061001f6000396000f3006080604052600436106049576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680633fa4f24514604e57806355241077146076575b600080fd5b348015605957600080fd5b50606060a0565b6040518082815260200191505060405180910390f35b348015608157600080fd5b50609e6004803603810190808035906020019092919050505060a6565b005b60005481565b80600081905550505600a165627a7a723058202bdbba2e694dba8fff33d9d0976df580f57bff0a40e25a46c398f8063b4c00360029", "privateFrom": "negmDcN2P4ODpqn/6WkJ02zT/0w0bjhGpkZ8UP6vARk=","privateFor": ["g59BmTeJIn7HIcnq8VQWgyh/pDbvbt2eyP0Ii60aDDw="],"restriction": "restricted"}], "id":1}' http://127.0.0.1:8545
-    ```
+    === "curl HTTP request with privateFor"
 
-    ```bash tab="curl HTTP request with privacy group ID"
-    curl -X POST --data '{"jsonrpc":"2.0","method":"eea_sendTransaction","params":[{"from": "0xfe3b557e8fb62b89f4916b721be55ceb828dbd73","data": "0x608060405234801561001057600080fd5b5060d8061001f6000396000f3006080604052600436106049576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680633fa4f24514604e57806355241077146076575b600080fd5b348015605957600080fd5b50606060a0565b6040518082815260200191505060405180910390f35b348015608157600080fd5b50609e6004803603810190808035906020019092919050505060a6565b005b60005481565b80600081905550505600a165627a7a723058202bdbba2e694dba8fff33d9d0976df580f57bff0a40e25a46c398f8063b4c00360029", "privateFrom": "negmDcN2P4ODpqn/6WkJ02zT/0w0bjhGpkZ8UP6vARk=","privacyGroupId": "kAbelwaVW7okoEn1+okO+AbA4Hhz/7DaCOWVQz9nx5M=","restriction": "restricted"}], "id":1}' http://127.0.0.1:8545
-    ```
+        ```bash
+        curl -X POST --data '{"jsonrpc":"2.0","method":"eea_sendTransaction","params":[{"from": "0xfe3b557e8fb62b89f4916b721be55ceb828dbd73","data": "0x608060405234801561001057600080fd5b5060dc8061001f6000396000f3006080604052600436106049576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680633fa4f24514604e57806355241077146076575b600080fd5b348015605957600080fd5b50606060a0565b6040518082815260200191505060405180910390f35b348015608157600080fd5b50609e6004803603810190808035906020019092919050505060a6565b005b60005481565b80600081905550505600a165627a7a723058202bdbba2e694dba8fff33d9d0976df580f57bff0a40e25a46c398f8063b4c00360029", "privateFrom": "negmDcN2P4ODpqn/6WkJ02zT/0w0bjhGpkZ8UP6vARk=","privateFor": ["g59BmTeJIn7HIcnq8VQWgyh/pDbvbt2eyP0Ii60aDDw="],"restriction": "restricted"}], "id":1}' http://127.0.0.1:8545
+        ```
 
-    ```json tab="JSON result"
-    {
-       "jsonrpc": "2.0",
-       "id": 1,
-       "result": "0x6052dd2131667ef3e0a0666f2812db2defceaec91c470bb43de92268e8306778"
-    }
-    ```
+    === "curl HTTP request with privacy group ID"
+
+        ```bash
+        curl -X POST --data '{"jsonrpc":"2.0","method":"eea_sendTransaction","params":[{"from": "0xfe3b557e8fb62b89f4916b721be55ceb828dbd73","data": "0x608060405234801561001057600080fd5b5060d8061001f6000396000f3006080604052600436106049576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680633fa4f24514604e57806355241077146076575b600080fd5b348015605957600080fd5b50606060a0565b6040518082815260200191505060405180910390f35b348015608157600080fd5b50609e6004803603810190808035906020019092919050505060a6565b005b60005481565b80600081905550505600a165627a7a723058202bdbba2e694dba8fff33d9d0976df580f57bff0a40e25a46c398f8063b4c00360029", "privateFrom": "negmDcN2P4ODpqn/6WkJ02zT/0w0bjhGpkZ8UP6vARk=","privacyGroupId": "kAbelwaVW7okoEn1+okO+AbA4Hhz/7DaCOWVQz9nx5M=","restriction": "restricted"}], "id":1}' http://127.0.0.1:8545
+        ```
+
+    === "JSON result"
+
+        ```json
+        {
+           "jsonrpc": "2.0",
+           "id": 1,
+           "result": "0x6052dd2131667ef3e0a0666f2812db2defceaec91c470bb43de92268e8306778"
+        }
+        ```
 
 ## Eth methods
 
@@ -92,17 +98,21 @@ None
 
 !!! example
 
-    ```bash tab="curl HTTP request"
-    curl -X POST --data '{"jsonrpc":"2.0","method":"eth_accounts","params":[],"id":1}' http://127.0.0.1:8545
-    ```
+    === "curl HTTP request"
 
-    ```json tab="JSON result"
-    {
-      "jsonrpc":"2.0",
-      "id":1,
-      "result":["0xfe3b557e8fb62b89f4916b721be55ceb828dbd73"]
-    }
-    ```
+        ```bash
+        curl -X POST --data '{"jsonrpc":"2.0","method":"eth_accounts","params":[],"id":1}' http://127.0.0.1:8545
+        ```
+
+    === "JSON result"
+
+        ```json
+        {
+          "jsonrpc":"2.0",
+          "id":1,
+          "result":["0xfe3b557e8fb62b89f4916b721be55ceb828dbd73"]
+        }
+        ```
 
 ### `eth_sendTransaction`
 
@@ -134,17 +144,21 @@ Transaction object:
 
 !!! example
 
-    ```bash tab="curl HTTP request"
-    curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sendTransaction","params":[{"from": "0xfe3b557e8fb62b89f4916b721be55ceb828dbd73","to": "0xd46e8dd67c5d32be8058bb8eb970870f07244567","gas": "0x7600","gasPrice": "0x9184e72a000","value": "0x9184e72a"}], "id":1}' http://127.0.0.1:8545
-    ```
+    === "curl HTTP request"
 
-    ```json tab="JSON result"
-    {
-       "jsonrpc": "2.0",
-       "id": 1,
-       "result": "0x6052dd2131667ef3e0a0666f2812db2defceaec91c470bb43de92268e8306778"
-    }
-    ```
+        ```bash
+        curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sendTransaction","params":[{"from": "0xfe3b557e8fb62b89f4916b721be55ceb828dbd73","to": "0xd46e8dd67c5d32be8058bb8eb970870f07244567","gas": "0x7600","gasPrice": "0x9184e72a000","value": "0x9184e72a"}], "id":1}' http://127.0.0.1:8545
+        ```
+
+    === "JSON result"
+
+        ```json
+        {
+           "jsonrpc": "2.0",
+           "id": 1,
+           "result": "0x6052dd2131667ef3e0a0666f2812db2defceaec91c470bb43de92268e8306778"
+        }
+        ```
 
 ### `eth_sign`
 
@@ -167,14 +181,18 @@ specific signature. This prevents misuse where a malicious DApp signs arbitrary 
 
 !!! example
 
-    ```bash tab="curl HTTP request"
-    curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sign","params":["0x78e6e236592597c09d5c137c2af40aecd42d12a2", "0x2eadbe1f"], "id":1}' http://127.0.0.1:8545
-    ```
+    === "curl HTTP request"
 
-    ```json tab="JSON result"
-    {
-       "jsonrpc": "2.0",
-       "id": 1,
-       "result":"0xa6122e277f46fea78f3e97d3354a03ad20b2296733dfefbadc7305c80e70ce9826d44f12ab5aa488689744657491c70d3b654d7f60f8f50beefac9abcf02a4cf1b"
-    }
-    ```
+        ```bash
+        curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sign","params":["0x78e6e236592597c09d5c137c2af40aecd42d12a2", "0x2eadbe1f"], "id":1}' http://127.0.0.1:8545
+        ```
+
+    === "JSON result"
+
+        ```json
+        {
+           "jsonrpc": "2.0",
+           "id": 1,
+           "result":"0xa6122e277f46fea78f3e97d3354a03ad20b2296733dfefbadc7305c80e70ce9826d44f12ab5aa488689744657491c70d3b654d7f60f8f50beefac9abcf02a4cf1b"
+        }
+        ```

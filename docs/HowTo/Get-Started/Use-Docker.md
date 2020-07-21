@@ -19,9 +19,11 @@ A Docker image is provided to run EthSigner in a Docker container.
 
 Display the EthSigner command line help using the Docker image:
 
-```bash tab="latest"
-docker run pegasyseng/ethsigner:latest --help
-```
+=== "latest"
+
+    ```bash
+    docker run pegasyseng/ethsigner:latest --help
+    ```
 
 !!! note
     `latest` runs the latest cached version. To pull the latest version, use `docker pull pegasyseng/ethsigner:latest`.
