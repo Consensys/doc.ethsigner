@@ -35,7 +35,7 @@ After installing [Hashicorp Vault](https://learn.hashicorp.com/vault/getting-sta
         vault kv put secret/ethsignerSigningKey value=<Private Key without 0x prefix>
         ```
 
-    == "Example"
+    === "Example"
 
         ```bash
         vault kv put secret/ethsignerSigningKey value=8f2a55949038a9610f50fb23b5883af3b4ecb3c3bb792cbcefbd1542c692be63

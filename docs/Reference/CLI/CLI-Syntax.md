@@ -50,25 +50,33 @@ receive the signed transactions.
 
 Directory in which to store temporary files.
 
-```bash tab="Syntax"
---data-path=<PATH>
-```
+=== "Syntax"
 
-```bash tab="Example"
---data-path=/Users/me/my_node/data
-```
+    ```bash
+    --data-path=<PATH>
+    ```
+
+=== "Example"
+
+    ```bash
+    --data-path=/Users/me/my_node/data
+    ```
 
 ### `downstream-http-host`
 
 Host to which received requests are forwarded. Default is `localhost`.
 
-```bash tab="Syntax"
---downstream-http-host=<downstreamHttpHost>
-```
+=== "Syntax"
 
-```bash tab="Example"
---downstream-http-host=192.168.05.14
-```
+    ```bash
+    --downstream-http-host=<downstreamHttpHost>
+    ```
+
+=== "Example"
+
+    ```bash
+    --downstream-http-host=192.168.05.14
+    ```
 
 ### `downstream-http-path`
 
@@ -76,50 +84,66 @@ Path to which received requests are forwarded. Default is `/`.
 
 Might be required if [connecting to a cloud-based Ethereum client] such as [Infura].
 
-```bash tab="Syntax"
---downstream-http-path=<downstreamHttpPath>
-```
+=== "Syntax"
 
-```bash tab="Example"
---downstream-http-path=/v3/d0e63ca5bb1e4eef2284422efbc51a56
-```
+    ```bash
+    --downstream-http-path=<downstreamHttpPath>
+    ```
+
+=== "Example"
+
+    ```bash
+    --downstream-http-path=/v3/d0e63ca5bb1e4eef2284422efbc51a56
+    ```
 
 ### `downstream-http-port`
 
 Port to which received requests are forwarded.
 
-```bash tab="Syntax"
---downstream-http-port=<downstreamHttpPort>
-```
+=== "Syntax"
 
-```bash tab="Example"
---downstream-http-port=6174
-```
+    ```bash
+    --downstream-http-port=<downstreamHttpPort>
+    ```
+
+=== "Example"
+
+    ```bash
+    --downstream-http-port=6174
+    ```
 
 ### `downstream-http-request-timeout`
 
 Timeout period (in milliseconds) for downstream requests. Default is 5000.
 
-```bash tab="Syntax"
---downstream-http-request-timeout=<downstreamHttpRequestTimeout>
-```
+=== "Syntax"
 
-```bash tab="Example"
---downstream-http-request-timeout=3000
-```
+    ```bash
+    --downstream-http-request-timeout=<downstreamHttpRequestTimeout>
+    ```
+
+=== "Example"
+
+    ```bash
+    --downstream-http-request-timeout=3000
+    ```
 
 ### `downstream-http-tls-enabled`
 
 Enable or disable [TLS for server connections](../../Concepts/TLS.md).
 Defaults to `false`.
 
-```bash tab="Syntax"
---downstream-http-tls-enabled[=<true|false>]
-```
+=== "Syntax"
 
-```bash tab="Example"
---downstream-http-tls-enabled
-```
+    ```bash
+    --downstream-http-tls-enabled[=<true|false>]
+    ```
+
+=== "Example"
+
+    ```bash
+    --downstream-http-tls-enabled
+    ```
 
 ### `downstream-http-tls-ca-auth-enabled`
 
@@ -127,51 +151,67 @@ Allow connections to servers with trusted CAs.
 
 Defaults to `true`.
 
-```bash tab="Syntax"
---downstream-http-tls-ca-auth-enabled[=<true|false>]
-```
+=== "Syntax"
 
-```bash tab="Example"
---downstream-http-tls-enabled=false
-```
+    ```bash
+    --downstream-http-tls-ca-auth-enabled[=<true|false>]
+    ```
+
+=== "Example"
+
+    ```bash
+    --downstream-http-tls-enabled=false
+    ```
 
 ### `downstream-http-tls-keystore-file`
 
 Keystore file (in PKCS #12 format) that contains the private key and certificate
 presented to the server during authentication.
 
-```bash tab="Syntax"
---downstream-http-tls-keystore-file=<keystoreFile>
-```
+=== "Syntax"
 
-```bash tab="Example"
---downstream-http-tls-keystore-file=/Users/me/my_node/keystore.pfx
-```
+    ```bash
+    --downstream-http-tls-keystore-file=<keystoreFile>
+    ```
+
+=== "Example"
+
+    ```bash
+    --downstream-http-tls-keystore-file=/Users/me/my_node/keystore.pfx
+    ```
 
 ### `downstream-http-tls-keystore-password-file`
 
 Password file used to decrypt the keystore.
 
-```bash tab="Syntax"
---downstream-http-tls-keystore-password-file=<passwordFile>
-```
+=== "Syntax"
 
-```bash tab="Example"
---downstream-http-tls-keystore-password-file=/Users/me/my_node/password
-```
+    ```bash
+    --downstream-http-tls-keystore-password-file=<passwordFile>
+    ```
+
+=== "Example"
+
+    ```bash
+    --downstream-http-tls-keystore-password-file=/Users/me/my_node/password
+    ```
 
 ### `downstream-http-tls-known-servers-file`
 
 File containing the hostnames, ports, and SHA256 certificate fingerprints
 of [trusted servers](../../HowTo/Configure-TLS.md#create-the-known-servers-file).
 
-```bash tab="Syntax"
---downstream-http-tls-known-servers-file=<serversFile>
-```
+=== "Syntax"
 
-```bash tab="Example"
---downstream-http-tls-known-servers-file=/Users/me/my_node/knownServers
-```
+    ```bash
+    --downstream-http-tls-known-servers-file=<serversFile>
+    ```
+
+=== "Example"
+
+    ```bash
+    --downstream-http-tls-known-servers-file=/Users/me/my_node/knownServers
+    ```
 
 ### `http-cors-origins`
 
@@ -189,58 +229,76 @@ EthSigner node.
     For testing and development purposes, use `"all"` or `"*"` to accept requests from any domain.
     We don't recommend accepting requests from any domain for production environments.
 
-```bash tab="Syntax"
---http-cors-origins=<httpListenHost>
-```
+=== "Syntax"
 
-```bash tab="Example"
-----http-cors-origins="http://remix.ethereum.org","http://medomain.com"
-```
+    ```bash
+    --http-cors-origins=<httpListenHost>
+    ```
+
+=== "Example"
+
+    ```bash
+    ----http-cors-origins="http://remix.ethereum.org","http://medomain.com"
+    ```
 
 ### `http-listen-host`
 
 Host on which JSON-RPC HTTP listens. Default is `localhost`.
 
-```bash tab="Syntax"
---http-listen-host=<httpListenHost>
-```
+=== "Syntax"
 
-```bash tab="Example"
---http-listen-host=8.8.8.8
-```
+    ```bash
+    --http-listen-host=<httpListenHost>
+    ```
+
+=== "Example"
+
+    ```bash
+    --http-listen-host=10.100.111.1
+    ```
 
 ### `http-listen-port`
 
 Port on which JSON-RPC HTTP listens. Default is 8545.
 
-```bash tab="Syntax"
---http-listen-port=<httpListenPort>
-```
+=== "Syntax"
 
-```bash tab="Example"
---http-lisentport=6174
-```
+    ```bash
+    --http-listen-port=<httpListenPort>
+    ```
+
+=== "Example"
+
+    ```bash
+    --http-lisentport=6174
+    ```
 
 ### `logging`
 
 Logging verbosity levels. Options are: `OFF`, `FATAL`, `WARN`, `INFO`, `DEBUG`, `TRACE`, `ALL`.
 Default is `INFO`.
 
-```bash tab="Syntax"
--l, --logging=<LOG VERBOSITY LEVEL>
-```
+=== "Syntax"
 
-```bash tab="Example"
---logging=DEBUG
-```
+    ```bash
+    -l, --logging=<LOG VERBOSITY LEVEL>
+    ```
+
+=== "Example"
+
+    ```bash
+    --logging=DEBUG
+    ```
 
 ### `help`
 
 Displays the help and exits.
 
-```bash tab="Syntax"
--h, --help
-```
+=== "Syntax"
+
+    ```bash
+    -h, --help
+    ```
 
 ### `tls-allow-any-client`
 
@@ -249,61 +307,79 @@ Allows any client to connect.
 !!! important
     Cannot be used with `--tls-allow-ca-clients` and `--tls-known-clients-file`
 
-```bash tab="Syntax"
---tls-allow-any-client
-```
+=== "Syntax"
+
+    ```bash
+    --tls-allow-any-client
+    ```
 
 ### `tls-allow-ca-clients`
 
 Allows clients signed with trusted CA certificates to connect.
 
-```bash tab="Syntax"
---tls-allow-ca-clients
-```
+=== "Syntax"
+
+    ```bash
+    --tls-allow-ca-clients
+    ```
 
 ### `tls-keystore-file`
 
 PKCS #12 formatted keystore. Used to enable TLS for [client connections](../../Concepts/TLS.md).
 
-```bash tab="Syntax"
---tls-keystore-file=<keystoreFile>
-```
+=== "Syntax"
 
-```bash tab="Example"
---tls-keystore-file=/Users/me/my_node/certificate.pfx
-```
+    ```bash
+    --tls-keystore-file=<keystoreFile>
+    ```
+
+=== "Example"
+
+    ```bash
+    --tls-keystore-file=/Users/me/my_node/certificate.pfx
+    ```
 
 ### `tls-keystore-password-file`
 
 Password file used to decrypt the keystore.
 
-```bash tab="Syntax"
---tls-keystore-password-file=<passwordFile>
-```
+=== "Syntax"
 
-```bash tab="Example"
---tls-keystore-password-file=/Users/me/my_node/password
-```
+    ```bash
+    --tls-keystore-password-file=<passwordFile>
+    ```
+
+=== "Example"
+
+    ```bash
+    --tls-keystore-password-file=/Users/me/my_node/password
+    ```
 
 ### `tls-known-clients-file`
 
 File containing the SHA-256 fingerprints of [authorized clients](../../HowTo/Configure-TLS.md#create-the-known-clients-file).
 
-```bash tab="Syntax"
---tls-known-clients-file=<clientsFile>
-```
+=== "Syntax"
 
-```bash tab="Example"
---tls-keystore-file=/Users/me/my_node/knownClients
-```
+    ```bash
+    --tls-known-clients-file=<clientsFile>
+    ```
+
+=== "Example"
+
+    ```bash
+    --tls-keystore-file=/Users/me/my_node/knownClients
+    ```
 
 ### `version`
 
 Displays the version and exits.
 
-```bash tab="Syntax"
--V, --version
-```
+=== "Syntax"
+
+    ```bash
+    -V, --version
+    ```
 
 ## File options
 
@@ -311,25 +387,33 @@ Displays the version and exits.
 
 File containing [key with which transactions are signed](../../Tutorials/Start-EthSigner.md#create-password-and-key-files).
 
-```bash tab="Syntax"
--k, --key-file=<keyFile>
-```
+=== "Syntax"
 
-```bash tab="Example"
---key-file=/Users/me/my_node/transactionKey
-```
+    ```bash
+    -k, --key-file=<keyFile>
+    ```
+
+=== "Example"
+
+    ```bash
+    --key-file=/Users/me/my_node/transactionKey
+    ```
 
 ### `password-file`
 
 File containing password for the [key with which transactions are signed](../../Tutorials/Start-EthSigner.md#create-password-and-key-files).
 
-```bash tab="Syntax"
--p, --password-file=<passwordFile>
-```
+=== "Syntax"
 
-```bash tab="Example"
---password-file=/Users/me/my_node/password
-```
+    ```bash
+    -p, --password-file=<passwordFile>
+    ```
+
+=== "Example"
+
+    ```bash
+    --password-file=/Users/me/my_node/password
+    ```
 
 ## Hashicorp options
 
@@ -338,87 +422,115 @@ File containing password for the [key with which transactions are signed](../../
 File containing authentication data for Hashicorp Vault. The authentication data is the [root token displayed by
 the Hashicorp Vault server](../../HowTo/Store-Keys/Use-Hashicorp.md#storing-private-key-in-hashcorp-vault).
 
-```bash tab="Syntax"
---auth-file=<authFile>
-```
+=== "Syntax"
 
-```bash tab="Example"
---auth-file=/Users/me/my_node/auth_file
-```
+    ```bash
+    --auth-file=<authFile>
+    ```
+
+=== "Example"
+
+    ```bash
+    --auth-file=/Users/me/my_node/auth_file
+    ```
 
 ### `host`
 
 Host of the Hashicorp Vault server. Default is `localhost`.
 
-```bash tab="Syntax"
---host=<serverHost>
-```
+=== "Syntax"
 
-```bash tab="Example"
---host="http://host.com"
-```
+    ```bash
+    --host=<serverHost>
+    ```
+
+=== "Example"
+
+    ```bash
+    --host="http://host.com"
+    ```
 
 ### `port`
 
 Port of the Hashicorp Vault server. Default is 8200.
 
-```bash tab="Syntax"
---port=<serverPort>
-```
+=== "Syntax"
 
-```bash tab="Example"
---port=23000
-```
+    ```bash
+    --port=<serverPort>
+    ```
+
+=== "Example"
+
+    ```bash
+    --port=23000
+    ```
 
 ### `signing-key-path`
 
 Path to secret in the Hashicorp Vault containing the private key for signing transactions. Default is
 ` /secret/data/ethsignerSigningKey`.
 
-```bash tab="Syntax"
---signing-key-path=<signingKeyPath>
-```
+=== "Syntax"
 
-```bash tab="Example"
---signing-key-path=/my_secret/ethsignerSigningKey
-```
+    ```bash
+    --signing-key-path=<signingKeyPath>
+    ```
+
+=== "Example"
+
+    ```bash
+    --signing-key-path=/my_secret/ethsignerSigningKey
+    ```
 
 ### `timeout`
 
 Timeout in milliseconds for requests to the Hashicorp Vault server. Default is 10000.
 
-```bash tab="Syntax"
---timeout=<timeout>
-```
+=== "Syntax"
 
-```bash tab="Example"
---timeout=5000
-```
+    ```bash
+    --timeout=<timeout>
+    ```
+
+=== "Example"
+
+    ```bash
+    --timeout=5000
+    ```
 
 ### tls-enabled
 
 Connect to Hashicorp Vault server using TLS. Default is `true`.
 
-```bash tab="Syntax"
---tls-enabled[=<true|false>]
-```
+=== "Syntax"
 
-```bash tab="Example"
---tls-enabled=false
-```
+    ```bash
+    --tls-enabled[=<true|false>]
+    ```
+
+=== "Example"
+
+    ```bash
+    --tls-enabled=false
+    ```
 
 ### tls-known-server-file
 
 File containing the hostname, port, and SHA256 certificate fingerprint
 of the Hashicorp Vault server.
 
-```bash tab="Syntax"
---tls-known-server-file=<hashicorpServerFile>
-```
+=== "Syntax"
 
-```bash tab="Example"
---tls-known-server-file=/Users/me/my_node/knownHashicorpServers
-```
+    ```bash
+    --tls-known-server-file=<hashicorpServerFile>
+    ```
+
+=== "Example"
+
+    ```bash
+    --tls-known-server-file=/Users/me/my_node/knownHashicorpServers
+    ```
 
 ## Azure options
 
@@ -426,61 +538,81 @@ of the Hashicorp Vault server.
 
 ID used to authenticate with Azure Key Vault.
 
-```bash tab="Syntax"
---client-id=<clientID>
-```
+=== "Syntax"
 
-```bash tab="Example"
---client-id="MyClientID"
-```
+    ```bash
+    --client-id=<clientID>
+    ```
+
+=== "Example"
+
+    ```bash
+    --client-id="MyClientID"
+    ```
 
 ### `client-secret-path`
 
 Path to file containing secret used to access the vault.
 
-```bash tab="Syntax"
---client-secret-path=<clientSecretPath>
-```
+=== "Syntax"
 
-```bash tab="Example"
---client-secret-path=/Path/MySecret
-```
+    ```bash
+    --client-secret-path=<clientSecretPath>
+    ```
+
+=== "Example"
+
+    ```bash
+    --client-secret-path=/Path/MySecret
+    ```
 
 ### `key-name`
 
 Name of key to be used.
 
-```bash tab="Syntax"
---key-name=<keyName>
-```
+=== "Syntax"
 
-```bash tab="Example"
---key-name="MyKey"
-```
+    ```bash
+    --key-name=<keyName>
+    ```
+
+=== "Example"
+
+    ```bash
+    --key-name="MyKey"
+    ```
 
 ### `key-version`
 
 Version of the specified key to use.
 
-```bash tab="Syntax"
---key-version=<keyVersion>
-```
+=== "Syntax"
 
-```bash tab="Example"
---key-version="7c01fe58d68148bba5824ce418241092"
-```
+    ```bash
+    --key-version=<keyVersion>
+    ```
+
+=== "Example"
+
+    ```bash
+    --key-version="7c01fe58d68148bba5824ce418241092"
+    ```
 
 ### `keyvault-name`
 
 Name of the vault to access. Sub-domain of `vault.azure.net`.
 
-```bash tab="Syntax"
---keyvault-name=<keyVaultName>
-```
+=== "Syntax"
 
-```bash tab="Example"
---keyvault-name="MyKeyVault"
-```
+    ```bash
+    --keyvault-name=<keyVaultName>
+    ```
+
+=== "Example"
+
+    ```bash
+    --keyvault-name="MyKeyVault"
+    ```
 
 ## Multikey Options
 
@@ -489,13 +621,17 @@ Name of the vault to access. Sub-domain of `vault.azure.net`.
 Path to the directory containing the [TOML files](../Multikey-Parameters.md)
 required to access keys.
 
-```bash tab="Syntax"
---directory=<directoryPath>
-```
+=== "Syntax"
 
-```bash tab="Example"
---directory=/Users/me/keys
-```
+    ```bash
+    --directory=<directoryPath>
+    ```
+
+=== "Example"
+
+    ```bash
+    --directory=/Users/me/keys
+    ```
 
 <!-- links -->
 [connecting to a cloud-based Ethereum client]: ../../Tutorials/Start-EthSigner.md#start-ethsigner

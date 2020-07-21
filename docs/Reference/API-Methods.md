@@ -98,17 +98,21 @@ None
 
 !!! example
 
-    ```bash tab="curl HTTP request"
-    curl -X POST --data '{"jsonrpc":"2.0","method":"eth_accounts","params":[],"id":1}' http://127.0.0.1:8545
-    ```
+    === "curl HTTP request"
 
-    ```json tab="JSON result"
-    {
-      "jsonrpc":"2.0",
-      "id":1,
-      "result":["0xfe3b557e8fb62b89f4916b721be55ceb828dbd73"]
-    }
-    ```
+        ```bash
+        curl -X POST --data '{"jsonrpc":"2.0","method":"eth_accounts","params":[],"id":1}' http://127.0.0.1:8545
+        ```
+
+    === "JSON result"
+
+        ```json
+        {
+          "jsonrpc":"2.0",
+          "id":1,
+          "result":["0xfe3b557e8fb62b89f4916b721be55ceb828dbd73"]
+        }
+        ```
 
 ### `eth_sendTransaction`
 
@@ -140,17 +144,21 @@ Transaction object:
 
 !!! example
 
-    ```bash tab="curl HTTP request"
-    curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sendTransaction","params":[{"from": "0xfe3b557e8fb62b89f4916b721be55ceb828dbd73","to": "0xd46e8dd67c5d32be8058bb8eb970870f07244567","gas": "0x7600","gasPrice": "0x9184e72a000","value": "0x9184e72a"}], "id":1}' http://127.0.0.1:8545
-    ```
+    === "curl HTTP request"
 
-    ```json tab="JSON result"
-    {
-       "jsonrpc": "2.0",
-       "id": 1,
-       "result": "0x6052dd2131667ef3e0a0666f2812db2defceaec91c470bb43de92268e8306778"
-    }
-    ```
+        ```bash
+        curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sendTransaction","params":[{"from": "0xfe3b557e8fb62b89f4916b721be55ceb828dbd73","to": "0xd46e8dd67c5d32be8058bb8eb970870f07244567","gas": "0x7600","gasPrice": "0x9184e72a000","value": "0x9184e72a"}], "id":1}' http://127.0.0.1:8545
+        ```
+
+    === "JSON result"
+
+        ```json
+        {
+           "jsonrpc": "2.0",
+           "id": 1,
+           "result": "0x6052dd2131667ef3e0a0666f2812db2defceaec91c470bb43de92268e8306778"
+        }
+        ```
 
 ### `eth_sign`
 
@@ -173,14 +181,18 @@ specific signature. This prevents misuse where a malicious DApp signs arbitrary 
 
 !!! example
 
-    ```bash tab="curl HTTP request"
-    curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sign","params":["0x78e6e236592597c09d5c137c2af40aecd42d12a2", "0x2eadbe1f"], "id":1}' http://127.0.0.1:8545
-    ```
+    === "curl HTTP request"
 
-    ```json tab="JSON result"
-    {
-       "jsonrpc": "2.0",
-       "id": 1,
-       "result":"0xa6122e277f46fea78f3e97d3354a03ad20b2296733dfefbadc7305c80e70ce9826d44f12ab5aa488689744657491c70d3b654d7f60f8f50beefac9abcf02a4cf1b"
-    }
-    ```
+        ```bash
+        curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sign","params":["0x78e6e236592597c09d5c137c2af40aecd42d12a2", "0x2eadbe1f"], "id":1}' http://127.0.0.1:8545
+        ```
+
+    === "JSON result"
+
+        ```json
+        {
+           "jsonrpc": "2.0",
+           "id": 1,
+           "result":"0xa6122e277f46fea78f3e97d3354a03ad20b2296733dfefbadc7305c80e70ce9826d44f12ab5aa488689744657491c70d3b654d7f60f8f50beefac9abcf02a4cf1b"
+        }
+        ```
