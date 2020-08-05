@@ -46,10 +46,8 @@ theme:
   palette:
     primary: orange
     accent: teal
-  favicon: favicon.ico
-  icon:
-    logo: material/key
-    repo: fontawesome/brands/git-alt
+  logo: 'images/logo.svg'
+  favicon: 'images/favicon.svg'
 nav:
     - How to:
         - Get started with EthSigner:
