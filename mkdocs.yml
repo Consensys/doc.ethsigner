@@ -14,8 +14,7 @@ site_name: EthSigner
 site_url: https://docs.ethsigner.pegasys.tech/en/latest/
 site_description: EthSigner Transaction Signer documentation.
 site_author: EthSigner community
-copyright: EthSigner and its documentation are licensed under Apache 2.0 license /
-  This <a href="https://readthedocs.org/">Readthedocs.org</a> documentation is maintained with love by <a href="https://pegasys.tech/">PegaSys</a>.
+copyright: EthSigner and its documentation are licensed under Apache 2.0 license
 
 #extra project info and template customisation
 extra:
@@ -27,10 +26,12 @@ extra:
     some displayed features may not be available in the stable release.
     You can switch to stable version using the version box at screen bottom.'
   support:
-    gitter: https://gitter.im/PegaSysEng/EthSigner
+    tool: Discord
+    channel: https://discord.gg/5U9Jwp7
     email: support@pegasys.tech
-    pegasys_website: https://pegasys.tech/
-    issues: https://pegasys1.atlassian.net/secure/Dashboard.jspa?selectPageId=10000
+    website: https://pegasys.tech/
+    company: Pegasys
+    issues: https://github.com/PegaSysEng/ethsigner/issues
   google:
     site_verification: 'za1cLzyS6LXDGO-pMzvfQdYTZ0Zc67uZtY0asA4YXZ0'
     tag_manager: 'GTM-5VXGSDM'
@@ -46,10 +47,8 @@ theme:
   palette:
     primary: orange
     accent: teal
-  favicon: favicon.ico
-  icon:
-    logo: material/key
-    repo: fontawesome/brands/git-alt
+  logo: 'images/logo.svg'
+  favicon: 'images/favicon.svg'
 nav:
     - How to:
         - Get started with EthSigner:
