@@ -11,3 +11,8 @@ EthSigner is an open-source, client-agnostic, Ethereum transaction signer develo
 2.0 license and written in Java. EthSigner separates private key management from transaction
 validation by [signing transactions](Concepts/Overview.md) using a private key that can be secured
 in a variety of cloud providers, or encrypted on a local disk.
+
+## Is EthSigner part of ConsenSys Quorum? 
+
+Yes. [ConsenSys Quorum](https://consensys.net/quorum/developers) is the complete open source blockchain
+layer with enterprise support available from [ConsenSys](https://consensys.net/quorum/contact-us).

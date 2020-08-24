@@ -23,6 +23,8 @@ EthSigner submits the signed transaction to Besu using [`eea_sendRawTransaction`
 !!! note
     Besu uses a Transaction Manager to implement privacy. [Orion](http://docs.orion.pegasys.tech) is
     the Transaction Manager used in this documentation but EthSigner can be used with other Transaction Managers.
+    
+    EthSigner does not implement signing for [GoQuorum private transactions](https://docs.goquorum.consensys.net/en/latest/Concepts/Privacy/Privacy/).
 
 #### Parameters
 
@@ -130,7 +132,7 @@ Transaction object:
 | **to**       | Data, 20&nbsp;bytes | Optional for contract creation | Address of the receiver. `null` if a contract creation transaction.                    |
 | **gas**      | Quantity            | Optional                       | Gas provided by the sender. Default is `90000`.                                                           |
 | **gasPrice** | Quantity            | Optional                       | Gas price provided by the sender in Wei. Default is `0`.                                              |
-| **nonce**    | Quantity            | Optional                       | Number of transactions made by the sender before this one.                             |
+| **nonce**    | Quantity            | Optional                       | Number of transactions made by the sender before this one. Must be specified if using [GoQuorum](https://docs.goquorum.consensys.net/).                            |
 | **value**    | Quantity            | Optional                       | Value transferred in Wei.                                                              |
 | **data**     | Quantity            | Optional                       | Compiled contract code or hash of the invoked method signature and encoded parameters. |
 
