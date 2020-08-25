@@ -31,6 +31,7 @@ extra:
     website: https://consensys.net/quorum/developers
     company: Consensys
     issues: https://github.com/PegaSysEng/ethsigner/issues
+    faq: https://consensys.net/quorum/faq
   google:
     site_verification: 'za1cLzyS6LXDGO-pMzvfQdYTZ0Zc67uZtY0asA4YXZ0'
     tag_manager: 'GTM-5VXGSDM'
