@@ -60,6 +60,7 @@ nav:
         - Store keys externally:
             - Use Hashicorp Vault: HowTo/Store-Keys/Use-Hashicorp.md
             - Use Azure Key Vault: HowTo/Store-Keys/Use-Azure.md
+        - Use a configuration file: HowTo/Use-Configuration-File.md
         - Configure TLS: HowTo/Configure-TLS.md
         - Create external signers: HowTo/Extending-EthSigner/Add-Signer.md
     - Tutorials:
@@ -69,14 +70,16 @@ nav:
         - Overview: Concepts/Overview.md
         - TLS Communication: Concepts/TLS.md
     - Reference:
-        - Command line: Reference/CLI/CLI-Syntax.md
+        - Command Line:
+          - Options: Reference/CLI/CLI-Syntax.md
+          - Subcommands: Reference/CLI/CLI-Subcommands.md
         - API Methods: Reference/API-Methods.md
         - Multikey TOML parameters: Reference/Multikey-Parameters.md
         - Security disclosure policy: Reference/Responsible-Disclosure.md
 markdown_extensions:
   - toc:
       permalink: 
-      toc_depth: 3
+      toc_depth: 4
   - codehilite
   - pymdownx.tabbed
   - pymdownx.superfences
