@@ -33,7 +33,7 @@ You can specify [environment variables] with the docker image instead of the com
 === "example"
 
     ```bash
-    docker run -e ETHSIGNER_CONFIG_FILE=/home/me/me_node/config.toml pegasyseng/ethsigner:latest file-based-signer
+    docker run --mount type=bind,source=/home/me/me_node,target=/var/lib/ethsigner -e ETHSIGNER_CONFIG_FILE=/var/lib/ethsigner/config.toml pegasyseng/ethsigner:latest file-based-signer
     ```
 
 ## Expose listening port

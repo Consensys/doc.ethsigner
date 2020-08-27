@@ -1,5 +1,5 @@
 ---
-description: Ethsigner command line interface subcommands
+description: EthSigner command line interface subcommands
 ---
 
 # Subcommands
@@ -35,7 +35,7 @@ or a configuration file, but the subcommand must be specified in the command lin
 !!! example
 
     ```bash
-    ethsigner --config-file=./config.yaml azure-signer
+    ethsigner --config-file=./config.toml azure-signer
     ```
 
 If you specify an option in more than one place, the order of priority is command line, environment
