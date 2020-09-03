@@ -126,7 +126,7 @@ File containing password for the [key with which transactions are signed](../../
 
 ### hashicorp-signer
 
-##### `auth-file`
+#### `auth-file`
 
 File containing authentication data for Hashicorp Vault. The authentication data is the [root token displayed by
 the Hashicorp Vault server](../../HowTo/Store-Keys/Use-Hashicorp.md#storing-private-key-in-hashcorp-vault).

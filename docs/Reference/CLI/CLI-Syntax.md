@@ -4,7 +4,7 @@ description: EthSigner command line interface reference
 
 # EthSigner command line
 
-This reference describes the syntax of the EthSigner Command Line Interface (CLI) options. 
+This reference describes the syntax of the EthSigner Command Line Interface (CLI) options.
 
 ## Specifying Options
 
@@ -12,7 +12,7 @@ Eth2Signer options can be specified:
 
 * On the command line
 * As an [environment variable](#environment-variables)
-* In a YAML configuration file.
+* In a [TOML configuration file].
 
 If you specify an option in more than one place, the order of priority is command line, environment
 variable, configuration file.
@@ -34,7 +34,7 @@ You can include [subcommand] options as environment variables as well, for examp
 
 ### config-file
 
-The path to the [TOML configuration file](../../HowTo/Configure/Using-Configuration-File.md).
+The path to the [TOML configuration file](../../HowTo/Use-Configuration-File.md).
 The default is `none`.
 
 === "Syntax"
@@ -651,3 +651,4 @@ Displays the version and exits.
 [connecting to a cloud-based Ethereum client]: ../../Tutorials/Start-EthSigner.md#start-ethsigner
 [Infura]: https://infura.io/
 [subcommand]: CLI-Subcommands.md
+[TOML configuration file]: ../../HowTo/Use-Configuration-File.md
