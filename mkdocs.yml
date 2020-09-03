@@ -1,4 +1,4 @@
-# Copyright 2019 ConsenSys AG.
+# Copyright 2020 ConsenSys Software Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with
 # the License. You may obtain a copy of the License at
@@ -11,7 +11,7 @@
 
 # Project information
 site_name: EthSigner
-site_url: https://docs.ethsigner.pegasys.tech/en/latest/
+site_url: https://docs.ethsigner.consensys.net/
 site_description: EthSigner Transaction Signer documentation.
 site_author: EthSigner community
 copyright: EthSigner and its documentation are licensed under Apache 2.0 license
@@ -27,14 +27,14 @@ extra:
   support:
     tool: Discord
     channel: https://discord.gg/5U9Jwp7
-    email: support@pegasys.tech
-    website: https://pegasys.tech/
-    company: Pegasys
+    email: quorum@consensys.net
+    website: https://consensys.net/quorum/developers
+    company: Consensys
     issues: https://github.com/PegaSysEng/ethsigner/issues
+    faq: https://consensys.net/quorum/faq
   google:
     site_verification: 'za1cLzyS6LXDGO-pMzvfQdYTZ0Zc67uZtY0asA4YXZ0'
     tag_manager: 'GTM-5VXGSDM'
-
 
 # Software Repository
 repo_name: PegaSysEng/EthSigner
