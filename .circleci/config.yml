@@ -40,7 +40,7 @@ jobs:
           command: |
             python3 -m venv venv
             . venv/bin/activate
-            pip install -r ./common/build_tools/requirements.txt
+            pip install -q -r ./common/build_tools/requirements.txt
       - save_cache:
           paths:
             - ./venv
@@ -75,11 +75,11 @@ jobs:
       - prepare
       - restore_cache:
           keys:
-            - deps-{{ checksum "./common/build_tools/package.json" }}
+            - deps-{{ checksum "./common/build_tools/package-lock.json" }}
       - run:
           name: Install dependencies
           command: |
-            npm install
+            npm ci
       - run:
           name: Run markdown link checker
           command: |
@@ -88,7 +88,7 @@ jobs:
       - save_cache:
           paths:
             - ./node_modules
-          key: deps-{{ checksum "./common/build_tools/package.json" }}
+          key: deps-{{ checksum "./common/build_tools/package-lock.json" }}
       - store_artifacts:
           path: ./linkchecker.out
           destination: ./linkchecker.out
