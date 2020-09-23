@@ -121,4 +121,3 @@ The command line:
 !!! note
     The [`--downstream-http-tls-ca-auth-enabled`](../Reference/CLI/CLI-Syntax.md#downstream-http-tls-ca-auth-enabled)
     option is `true` by default and allows connections to servers with trusted root CAs.
-

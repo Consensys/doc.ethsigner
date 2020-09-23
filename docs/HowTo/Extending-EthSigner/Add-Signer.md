@@ -30,4 +30,3 @@ To create an external signer:
 1. In `EthSignerApp.java`, register the new `SignerSubCommand` with the `cmdLineParser` as for existing signers.
 
 1. Update the EthSigner::app module dependency list to include the module created in step 2.
-
