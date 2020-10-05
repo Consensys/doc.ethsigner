@@ -2,7 +2,7 @@
 description: TOML file parameters for multi signers.
 ---
 
-# Multikey Parameters
+# multikey Parameters
 
 The optional `[metadata]` section in the TOML files contains data that is not
 required by EthSigner. The `[signing]` section contains the parameters required

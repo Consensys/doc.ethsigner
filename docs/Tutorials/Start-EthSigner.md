@@ -4,11 +4,11 @@ description: Getting started with EthSigner
 
 # Start EthSigner with a single signer
 
-For file-based signing, EthSigner requires a V3 Keystore key file and a password file.
+For file-based signing, EthSigner requires a V3 keystore key file and a password file.
 
 !!! tip
     EthSigner also supports signing transactions with a key stored in an external vault (for example,
-    [Hashicorp Vault](../HowTo/Store-Keys/Use-Hashicorp.md)), or using [multiple V3 Keystore key files](../Tutorials/Multifile.md).
+    [Hashicorp Vault](../HowTo/Store-Keys/Use-Hashicorp.md)), or using [multiple V3 keystore key files](../Tutorials/Multifile.md).
 
 ## Prerequisites
 
@@ -41,7 +41,7 @@ For file-based signing, EthSigner requires a V3 Keystore key file and a password
 
 ## Create password and key files
 
-Create a text file containing the password for the V3 Keystore key file to be created (for example, `passwordFile`).
+Create a text file containing the password for the V3 keystore key file to be created (for example, `passwordFile`).
 
 Use the [web3.js library](https://github.com/ethereum/web3.js/) to create a key file where:
 
@@ -86,7 +86,7 @@ Use the JS script to display the text for the key file:
 node createKeyFile.js
 ```
 
-Copy and paste the text to a file (for example, `keyFile`). The file is your V3 Keystore key file.
+Copy and paste the text to a file (for example, `keyFile`). The file is your V3 keystore key file.
 
 ## Start EthSigner
 
@@ -146,7 +146,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id
 ```
 
 You can now [use EthSigner to sign transactions](../HowTo/Transactions/Make-Transactions.md) with
-the key stored in the V3 Keystore key file.
+the key stored in the V3 keystore key file.
 
 [`eth_blockNumber`]:https://besu.hyperledger.org/en/stable/Reference/API-Methods/#eth_blocknumber
 

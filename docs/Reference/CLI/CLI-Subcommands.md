@@ -66,7 +66,7 @@ To view the command line help for the subcommands:
 
 ## Options
 
-### file-based-signer
+### `file-based-signer`
 
 #### `key-file`
 
@@ -124,7 +124,7 @@ File containing password for the [key with which transactions are signed](../../
     file-based-signer.password-file="/Users/me/my_node/password"
     ```
 
-### hashicorp-signer
+### `hashicorp-signer`
 
 #### `auth-file`
 
@@ -268,7 +268,7 @@ Timeout in milliseconds for requests to the Hashicorp Vault server. Default is 1
     hashicorp-signer.timeout=5000
     ```
 
-#### tls-enabled
+#### `tls-enabled`
 
 Connect to Hashicorp Vault server using TLS. Default is `true`.
 
@@ -296,7 +296,7 @@ Connect to Hashicorp Vault server using TLS. Default is `true`.
     hashicorp-signer.tls-enabled=false
     ```
 
-#### tls-known-server-file
+#### `tls-known-server-file`
 
 File containing the hostname, port, and SHA256 certificate fingerprint
 of the Hashicorp Vault server.
@@ -325,7 +325,7 @@ of the Hashicorp Vault server.
     hashicorp-signer.tls-known-server-file="/Users/me/my_node/knownHashicorpServers"
     ```
 
-### azure-signer
+### `azure-signer`
 
 #### `client-id`
 
@@ -467,7 +467,7 @@ Name of the vault to access. Sub-domain of `vault.azure.net`.
     azure-signer.keyvault-name="MyKeyVault"
     ```
 
-### multikey-signer
+### `multikey-signer`
 
 #### `directory`
 

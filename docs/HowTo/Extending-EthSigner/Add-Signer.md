@@ -10,7 +10,7 @@ To create an external signer:
 
 1. Clone the [EthSigner repository](https://github.com/PegaSysEng/ethsigner).
 
-1. Create a gradle module for the new signer in the `ethsigner/signer` directory.
+1. Create a Gradle module for the new signer in the `ethsigner/signer` directory.
 
 1. To ensure the module for the new signer is built, add the module to the `settings.gradle` file.
 
