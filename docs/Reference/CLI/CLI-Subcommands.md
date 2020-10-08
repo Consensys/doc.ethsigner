@@ -467,6 +467,34 @@ Name of the vault to access. Sub-domain of `vault.azure.net`.
     azure-signer.keyvault-name="MyKeyVault"
     ```
 
+#### tenant-id
+
+The tenant ID of the Azure Portal instance being used.
+
+=== "Syntax"
+
+    ```bash
+    --tenant-id=<STRING>
+    ```
+
+=== "Command Line"
+
+    ```bash
+    --tenant-id=34255fb0-379b-4a1a-bd47-d211ab86df81
+    ```
+
+=== "Environment Variable"
+
+    ```bash
+    ETHSIGNER_AZURE_SIGNER_TENANT_ID=34255fb0-379b-4a1a-bd47-d211ab86df81
+    ```
+
+=== "Configuration File"
+
+    ```bash
+    azure-signer.tenant-id="34255fb0-379b-4a1a-bd47-d211ab86df81"
+    ```
+
 ### multikey-signer
 
 #### `directory`

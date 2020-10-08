@@ -88,6 +88,7 @@ for the signing type.
     key-version = "7c01fe58d68148bba5824ce418241092"
     client-id = "47efee5c-8079-4b48-31bb4f2e9a22"
     client-secret = "TW_3Uc/HLPdpLp5*om@MGcd1T29MuP*5"
+    tenant-id = "34255fb0-379b-4a1a-bd47-d211ab86df81"
     ```
 
 | Key                  | Description                           |
@@ -98,3 +99,4 @@ for the signing type.
 | **key-version**      | Version of the specified key |
 | **client-id**        | ID used to authenticate with Azure Key Vault |
 | **client-secret**    | Secret used to access the vault |
+| **tenant-id**        | The tenant ID used to authenticate with Azure Key Vault. |
