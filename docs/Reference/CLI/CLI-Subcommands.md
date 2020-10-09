@@ -128,8 +128,8 @@ File containing password for the [key with which transactions are signed](../../
 
 #### `auth-file`
 
-File containing authentication data for Hashicorp Vault. The authentication data is the [root token displayed by
-the Hashicorp Vault server](../../HowTo/Store-Keys/Use-Hashicorp.md#storing-private-key-in-hashcorp-vault).
+File containing authentication data for HashiCorp Vault. The authentication data is the [root token displayed by
+the HashiCorp Vault server](../../HowTo/Store-Keys/Use-Hashicorp.md#storing-private-key-in-hashcorp-vault).
 
 === "Syntax"
 
@@ -157,7 +157,7 @@ the Hashicorp Vault server](../../HowTo/Store-Keys/Use-Hashicorp.md#storing-priv
 
 #### `host`
 
-Host of the Hashicorp Vault server. Default is `localhost`.
+Host of the HashiCorp Vault server. Default is `localhost`.
 
 === "Syntax"
 
@@ -185,7 +185,7 @@ Host of the Hashicorp Vault server. Default is `localhost`.
 
 #### `port`
 
-Port of the Hashicorp Vault server. Default is 8200.
+Port of the HashiCorp Vault server. Default is 8200.
 
 === "Syntax"
 
@@ -213,7 +213,7 @@ Port of the Hashicorp Vault server. Default is 8200.
 
 #### `signing-key-path`
 
-Path to secret in the Hashicorp Vault containing the private key for signing transactions. Default is
+Path to secret in the HashiCorp Vault containing the private key for signing transactions. Default is
 ` /secret/data/ethsignerSigningKey`.
 
 === "Syntax"
@@ -242,7 +242,7 @@ Path to secret in the Hashicorp Vault containing the private key for signing tra
 
 #### `timeout`
 
-Timeout in milliseconds for requests to the Hashicorp Vault server. Default is 10000.
+Timeout in milliseconds for requests to the HashiCorp Vault server. Default is 10000.
 
 === "Syntax"
 
@@ -270,7 +270,7 @@ Timeout in milliseconds for requests to the Hashicorp Vault server. Default is 1
 
 #### `tls-enabled`
 
-Connect to Hashicorp Vault server using TLS. Default is `true`.
+Connect to HashiCorp Vault server using TLS. Default is `true`.
 
 === "Syntax"
 
@@ -299,7 +299,7 @@ Connect to Hashicorp Vault server using TLS. Default is `true`.
 #### `tls-known-server-file`
 
 File containing the hostname, port, and SHA256 certificate fingerprint
-of the Hashicorp Vault server.
+of the HashiCorp Vault server.
 
 === "Syntax"
 

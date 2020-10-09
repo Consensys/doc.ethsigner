@@ -12,7 +12,7 @@ EthSigner can sign transactions with keys stored in:
 
 * A [V3 keystore file](../Tutorials/Start-EthSigner.md#create-password-and-key-files) stored on a file
   system accessible by the host.
-* [Hashicorp Vault](../HowTo/Store-Keys/Use-Hashicorp.md).
+* [HashiCorp Vault](../HowTo/Store-Keys/Use-Hashicorp.md).
 * [Azure Key Vault](../HowTo/Store-Keys/Use-Azure.md).
 
 !!! note

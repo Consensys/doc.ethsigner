@@ -5,7 +5,7 @@ description: Secure communication using TLS
 # TLS communication
 
 EthSigner supports TLS to secure inbound and outbound HTTP JSON-RPC
-requests, and communication with Hashicorp Vault.
+requests, and communication with HashiCorp Vault.
 
 ![EthSigner TLS](../images/Ethsigner_TLS.png)
 
@@ -15,4 +15,4 @@ stored in password-protected PKCS #12 keystores. The [server
 accept TLS connections.
 
 Use the command line options to configure TLS on
-[HTTP JSON-RPC requests](../HowTo/Configure-TLS.md) and [Hashicorp Vault](../HowTo/Store-Keys/Use-Hashicorp.md).
+[HTTP JSON-RPC requests](../HowTo/Configure-TLS.md) and [HashiCorp Vault](../HowTo/Store-Keys/Use-Hashicorp.md).
