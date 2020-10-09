@@ -37,14 +37,14 @@ for the signing type.
 | **key-file**         | V3 keystore file containing the [key with which transactions are signed](../Tutorials/Multifile.md#create-password-and-key-files) |
 | **password-file**    | File containing the password for the [key with which transactions are signed](../Tutorials/Multifile.md#create-password-and-key-files).    |
 
-## Hashicorp Vault Signing
+## HashiCorp Vault Signing
 
 !!! example
 
     ```
     [metadata]
     createdAt = 2019-07-01T12:11:30Z
-    description = "Example of a valid Hashicorp based configuration"
+    description = "Example of a valid HashiCorp based configuration"
 
     [signing]
     type = "hashicorp-signer"
@@ -64,13 +64,13 @@ for the signing type.
 | Key                  | Description                           |
 |----------------------|---------------------------------------|
 | **type**             | Type of key signing. Use `hashicorp-signer`|
-| **signing-key-path** | Path to secret in the Hashicorp Vault containing the private key for signing transactions |
-| **host**             | Host of the Hashicorp Vault server  |
-| **port**             | Port of the Hashicorp Vault server  |
-| **auth-file**        | File containing authentication data for Hashicorp Vault. The authentication data is the [root token displayed by the Hashicorp Vault server](../HowTo/Store-Keys/Use-Hashicorp.md#storing-private-key-in-hashcorp-vault)    |
-| **timeout**    | Timeout in milliseconds for requests to the Hashicorp Vault server    |
+| **signing-key-path** | Path to secret in the HashiCorp Vault containing the private key for signing transactions |
+| **host**             | Host of the HashiCorp Vault server  |
+| **port**             | Port of the HashiCorp Vault server  |
+| **auth-file**        | File containing authentication data for HashiCorp Vault. The authentication data is the [root token displayed by the HashiCorp Vault server](../HowTo/Store-Keys/Use-Hashicorp.md#storing-private-key-in-hashcorp-vault)    |
+| **timeout**    | Timeout in milliseconds for requests to the HashiCorp Vault server    |
 | **tls-enabled**      | [Enable or disable TLS](../Concepts/TLS.md). Defaults to `true` |
-| **tls-known-server-file**  | Path to the file containing a list of [trusted Hashicorp Vault servers](../HowTo/Store-Keys/Use-Hashicorp.md#create-the-known-servers-file) |
+| **tls-known-server-file**  | Path to the file containing a list of [trusted HashiCorp Vault servers](../HowTo/Store-Keys/Use-Hashicorp.md#create-the-known-servers-file) |
 
 ## Azure Key Vault Signing
 

@@ -1,22 +1,22 @@
 ---
-description: Signing transactions with key stored in Hashicorp Key Vault
+description: Signing transactions with key stored in HashiCorp Key Vault
 ---
 
-# Using EthSigner with Hashicorp Vault
+# Using EthSigner with HashiCorp Vault
 
-EthSigner supports storing the signing key in [Hashicorp Vault](https://www.hashicorp.com/products/vault/).
+EthSigner supports storing the signing key in [HashiCorp Vault](https://www.hashicorp.com/products/vault/).
 
-This example uses a Hashicorp development server without TLS and disables TLS when starting EthSigner.
-TLS is enabled by default between EthSigner and Hashicorp Vault and [must be configured](../Configure-TLS.md)
+This example uses a HashiCorp development server without TLS and disables TLS when starting EthSigner.
+TLS is enabled by default between EthSigner and HashiCorp Vault and [must be configured](../Configure-TLS.md)
 when not explicitly disabled.
 
 !!! caution
 
     We do not recommented disabling TLS in production environments.
 
-## Storing private key in Hashicorp Vault
+## Storing private key in HashiCorp Vault
 
-After installing [Hashicorp Vault](https://learn.hashicorp.com/vault/getting-started/install) and
+After installing [HashiCorp Vault](https://learn.hashicorp.com/vault/getting-started/install) and
 [starting the server](https://learn.hashicorp.com/vault/getting-started/dev-server):
 
 1. Set the `VAULT_ADDR` environment variable using the command displayed after starting the server:
@@ -27,7 +27,7 @@ After installing [Hashicorp Vault](https://learn.hashicorp.com/vault/getting-sta
 
 1. Save the root token displayed after starting the server in a file called `authFile`.
 
-1. Put your signing key into the Hashicorp Vault:
+1. Put your signing key into the HashiCorp Vault:
 
     === "Command"
 
@@ -62,7 +62,7 @@ option set to `8590` to avoid conflict with the default EthSigner listening port
     protection. That is, the genesis file must include at least the Spurious Dragon milestone
     (defined as `eip158Block` in the genesis file) so the blockchain is using a chain ID.
 
-## Start EthSigner with Hashicorp Vault signing
+## Start EthSigner with HashiCorp Vault signing
 
 Start EthSigner.
 
@@ -72,7 +72,7 @@ Start EthSigner.
     ethsigner --chain-id=2018 --downstream-http-port=8590 hashicorp-signer --host=127.0.0.1 --port=8200 --auth-file=authFile --tls-enabled=false --signing-key-path=/v1/secret/data/ethsignerSigningKey
     ```
 
-The path to the key in the Hashicorp Vault specified by `--signing-key-path` is prefixed by the
+The path to the key in the HashiCorp Vault specified by `--signing-key-path` is prefixed by the
 key version and includes `data`. For example, if the following command is used put the key into the
 Vault:
 `vault kv put secret/ethsignerSigningKey value=<Private Key>`
@@ -84,4 +84,4 @@ The path specified for `--signing-key-path` is `/v1/secret/data/ethsignerSigning
     EthSigner listening port if `8545` is in use.
 
 You can now [use EthSigner to sign transactions](../Transactions/Make-Transactions.md) with the key
-stored in the Hashicorp Vault.
+stored in the HashiCorp Vault.

@@ -7,7 +7,7 @@ description: Signing transactions with multiple keys.
 EthSigner supports transaction signing using [multiple keys](../HowTo/Use-Multiple-Signers.md).
 
 This tutorial covers configuring multiple keys using V3 keystore files. To configure keys for
-[Hashicorp Vault](../HowTo/Store-Keys/Use-Hashicorp.md) or
+[HashiCorp Vault](../HowTo/Store-Keys/Use-Hashicorp.md) or
 [Azure Key Vault](../HowTo/Store-Keys/Use-Azure.md), update the
 [TOML configuration file](../Reference/Multikey-Parameters.md) accordingly.
 

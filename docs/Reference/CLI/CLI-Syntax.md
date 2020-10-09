@@ -379,7 +379,7 @@ them with commas.
 Listed domains can access the node using JSON-RPC. If your client interacts with EthSigner using a
 browser app (such as Remix or a block explorer), you must allow the client domains.
 
-The default value is "none". If you do not allow any domains, browser apps cannot interact with your
+The default value is `none`. If you do not allow any domains, browser apps cannot interact with your
 EthSigner node.
 
 !!! tip
