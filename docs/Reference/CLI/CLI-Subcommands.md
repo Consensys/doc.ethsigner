@@ -66,7 +66,7 @@ To view the command line help for the subcommands:
 
 ## Options
 
-### file-based-signer
+### `file-based-signer`
 
 #### `key-file`
 
@@ -124,12 +124,12 @@ File containing password for the [key with which transactions are signed](../../
     file-based-signer.password-file="/Users/me/my_node/password"
     ```
 
-### hashicorp-signer
+### `hashicorp-signer`
 
 #### `auth-file`
 
-File containing authentication data for Hashicorp Vault. The authentication data is the [root token displayed by
-the Hashicorp Vault server](../../HowTo/Store-Keys/Use-Hashicorp.md#storing-private-key-in-hashcorp-vault).
+File containing authentication data for HashiCorp Vault. The authentication data is the [root token displayed by
+the HashiCorp Vault server](../../HowTo/Store-Keys/Use-Hashicorp.md#storing-private-key-in-hashcorp-vault).
 
 === "Syntax"
 
@@ -157,7 +157,7 @@ the Hashicorp Vault server](../../HowTo/Store-Keys/Use-Hashicorp.md#storing-priv
 
 #### `host`
 
-Host of the Hashicorp Vault server. Default is `localhost`.
+Host of the HashiCorp Vault server. Default is `localhost`.
 
 === "Syntax"
 
@@ -185,7 +185,7 @@ Host of the Hashicorp Vault server. Default is `localhost`.
 
 #### `port`
 
-Port of the Hashicorp Vault server. Default is 8200.
+Port of the HashiCorp Vault server. Default is 8200.
 
 === "Syntax"
 
@@ -213,7 +213,7 @@ Port of the Hashicorp Vault server. Default is 8200.
 
 #### `signing-key-path`
 
-Path to secret in the Hashicorp Vault containing the private key for signing transactions. Default is
+Path to secret in the HashiCorp Vault containing the private key for signing transactions. Default is
 ` /secret/data/ethsignerSigningKey`.
 
 === "Syntax"
@@ -242,7 +242,7 @@ Path to secret in the Hashicorp Vault containing the private key for signing tra
 
 #### `timeout`
 
-Timeout in milliseconds for requests to the Hashicorp Vault server. Default is 10000.
+Timeout in milliseconds for requests to the HashiCorp Vault server. Default is 10000.
 
 === "Syntax"
 
@@ -268,9 +268,9 @@ Timeout in milliseconds for requests to the Hashicorp Vault server. Default is 1
     hashicorp-signer.timeout=5000
     ```
 
-#### tls-enabled
+#### `tls-enabled`
 
-Connect to Hashicorp Vault server using TLS. Default is `true`.
+Connect to HashiCorp Vault server using TLS. Default is `true`.
 
 === "Syntax"
 
@@ -296,10 +296,10 @@ Connect to Hashicorp Vault server using TLS. Default is `true`.
     hashicorp-signer.tls-enabled=false
     ```
 
-#### tls-known-server-file
+#### `tls-known-server-file`
 
 File containing the hostname, port, and SHA256 certificate fingerprint
-of the Hashicorp Vault server.
+of the HashiCorp Vault server.
 
 === "Syntax"
 
@@ -325,7 +325,7 @@ of the Hashicorp Vault server.
     hashicorp-signer.tls-known-server-file="/Users/me/my_node/knownHashicorpServers"
     ```
 
-### azure-signer
+### `azure-signer`
 
 #### `client-id`
 
@@ -467,7 +467,7 @@ Name of the vault to access. Sub-domain of `vault.azure.net`.
     azure-signer.keyvault-name="MyKeyVault"
     ```
 
-#### tenant-id
+#### `tenant-id`
 
 The tenant ID of the Azure Portal instance being used.
 
@@ -495,7 +495,7 @@ The tenant ID of the Azure Portal instance being used.
     azure-signer.tenant-id="34255fb0-379b-4a1a-bd47-d211ab86df81"
     ```
 
-### multikey-signer
+### `multikey-signer`
 
 #### `directory`
 

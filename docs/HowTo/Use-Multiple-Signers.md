@@ -10,7 +10,7 @@ in:
 
 * A [V3 keystore file](../Tutorials/Multifile.md##create-password-and-key-files)
   stored on a file system accessible by the host.
-* A [Hashicorp Vault](../HowTo/Store-Keys/Use-Hashicorp.md).
+* A [HashiCorp Vault](../HowTo/Store-Keys/Use-Hashicorp.md).
 * An [Azure Key Vault](../HowTo/Store-Keys/Use-Azure.md).
 
 !!! caution

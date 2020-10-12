@@ -2,7 +2,7 @@
 
 [EthSigner] is a transaction signing application to be used with a web3 provider.
 
-The software sources are hosted in https://github.com/PegaSysEng/ethsigner
+The software sources are hosted in [`https://github.com/PegaSysEng/ethsigner`](https://github.com/PegaSysEng/ethsigner)
 
 This repository only contains the sources for [EthSigner documentation website hosted by ReadTheDocs].
 
