@@ -17,9 +17,7 @@ in a variety of cloud providers, or encrypted on a local disk.
 Yes. [ConsenSys Quorum](https://consensys.net/quorum/developers) is the complete open source blockchain
 layer with enterprise support available from [ConsenSys](https://consensys.net/quorum/contact-us).
 
-## New to ConsenSys Quorum? 
+## New to ConsenSys Quorum?
 
 Get started with the [Quorum Developer Quickstart](Tutorials/Quorum-Dev-Quickstart.md). Use the quickstart
 to rapidly generate local Quorum blockchain networks.
-
-
