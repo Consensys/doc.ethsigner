@@ -66,6 +66,7 @@ nav:
     - Tutorials:
         - Start EthSigner with a single signer: Tutorials/Start-EthSigner.md
         - Start EthSigner with multiple signers: Tutorials/Multifile.md
+        - Quorum Developer Quickstart: Tutorials/Quorum-Dev-Quickstart.md
     - Concepts:
         - Overview: Concepts/Overview.md
         - TLS Communication: Concepts/TLS.md
