@@ -53,7 +53,7 @@ option set to `8590` to avoid conflict with the default EthSigner listening port
 !!! example
 
     ```bash
-    besu --network=dev --miner-enabled --miner-coinbase=0xfe3b557e8fb62b89f4916b721be55ceb828dbd73 --rpc-http-cors-origins="all" --host-whitelist=* --rpc-http-enabled --rpc-http-port=8590 --data-path=/tmp/tmpDatdir
+    besu --network=dev --miner-enabled --miner-coinbase=0xfe3b557e8fb62b89f4916b721be55ceb828dbd73 --rpc-http-cors-origins="all" --host-allowlist=* --rpc-http-enabled --rpc-http-port=8590 --data-path=/tmp/tmpDatdir
     ```
 
 !!! important
