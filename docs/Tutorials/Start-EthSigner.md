@@ -30,7 +30,7 @@ For file-based signing, EthSigner requires a V3 keystore key file and a password
 !!! example
 
     ```bash
-    besu --network=dev --miner-enabled --miner-coinbase=0xfe3b557e8fb62b89f4916b721be55ceb828dbd73 --rpc-http-cors-origins="all" --host-whitelist="*" --rpc-http-enabled --rpc-http-port=8590 --data-path=/Users/<user.name>/Datadir
+    besu --network=dev --miner-enabled --miner-coinbase=0xfe3b557e8fb62b89f4916b721be55ceb828dbd73 --rpc-http-cors-origins="all" --host-allowlist="*" --rpc-http-enabled --rpc-http-port=8590 --data-path=/Users/<user.name>/Datadir
     ```
 
 !!! important
