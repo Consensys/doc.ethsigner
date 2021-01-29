@@ -17,10 +17,10 @@ description: Building EthSigner from source code
 
 ### Clone the EthSigner Repository
 
-Clone the `PegaSysEng/ethsigner` repository:
+Clone the `ConsenSys/ethsigner` repository:
 
 ```bash
-git clone https://github.com/PegaSysEng/ethsigner.git
+git clone https://github.com/ConsenSys/ethsigner.git
 ```
 
 ### Build EthSigner
@@ -56,10 +56,10 @@ bin/ethsigner --help
 
 ### Install EthSigner
 
-Clone the `PegaSysEng/ethsigner` repository:
+Clone the `ConsenSys/ethsigner` repository:
 
 ```bat
-git clone https://github.com/PegaSysEng/ethsigner.git
+git clone https://github.com/ConsenSys/ethsigner.git
 ```
 
 ### Build EthSigner
