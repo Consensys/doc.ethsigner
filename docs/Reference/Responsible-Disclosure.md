@@ -4,14 +4,14 @@ description: EthSigner responsible disclosure statement.
 
 # Responsible disclosure policy
 
-At PegaSys, security is a priority. But regardless of how much effort we put into system security,
+At ConsenSys, security is a priority. But regardless of how much effort we put into system security,
 there may still be vulnerabilities present.
 If you discover a vulnerability, we want to know about it so we can take steps to address it as
 quickly as possible. You can help us better protect our clients and our systems.
 
 Please do the following:
 
-* E-mail your findings to <mailto:security@pegasys.tech>. Provide sufficient information to reproduce the
+* E-mail your findings to <mailto:private-quorum@consensys.net>. Provide sufficient information to reproduce the
   problem, so we can resolve it as quickly as possible.
 * Do not take advantage of the vulnerability you have discovered.
 * Practice responsible disclosure. That is, don’t reveal the problem to others until either:
