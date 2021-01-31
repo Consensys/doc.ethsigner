@@ -8,7 +8,7 @@ EthSigner supports the addition of more external signers in same way as HashiCor
 
 To create an external signer:
 
-1. Clone the [EthSigner repository](https://github.com/PegaSysEng/ethsigner).
+1. Clone the [EthSigner repository](https://github.com/ConsenSys/ethsigner).
 
 1. Create a Gradle module for the new signer in the `ethsigner/signer` directory.
 

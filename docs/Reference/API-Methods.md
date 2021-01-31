@@ -21,7 +21,7 @@ using the [signing key](../Concepts/Overview.md).
 EthSigner submits the signed transaction to Besu using [`eea_sendRawTransaction`](https://besu.hyperledger.org/en/stable/Reference/API-Methods/#eea_sendrawtransaction).
 
 !!! note
-    Besu uses a Transaction Manager to implement privacy. [Orion](http://docs.orion.pegasys.tech) is
+    Besu uses a Transaction Manager to implement privacy. [Orion](http://docs.orion.consensys.net) is
     the Transaction Manager used in this documentation but EthSigner can be used with other Transaction Managers.
 
     EthSigner does not implement signing for [GoQuorum private transactions](https://docs.goquorum.consensys.net/en/latest/Concepts/Privacy/Privacy/).

@@ -18,7 +18,7 @@ This tutorial covers configuring multiple keys using V3 keystore files. To confi
 
     Multi-tenancy is a feature in
     [Hyperledger Besu](https://besu.hyperledger.org/en/stable/Concepts/Privacy/Multi-Tenancy/) and
-    [Orion](https://docs.orion.pegasys.tech/en/stable/Concepts/Multi-Tenancy/) allowing multiple
+    [Orion](https://docs.orion.consensys.net/en/stable/Concepts/Multi-Tenancy/) allowing multiple
     participants in a privacy network to use the same Besu and Orion node.
 
 ## Prerequisites
