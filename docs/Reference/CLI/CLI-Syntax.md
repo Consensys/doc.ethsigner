@@ -8,7 +8,7 @@ This reference describes the syntax of the EthSigner Command Line Interface (CLI
 
 ## Specifying Options
 
-Eth2Signer options can be specified:
+EthSigner options can be specified:
 
 * On the command line
 * As an [environment variable](#environment-variables)
