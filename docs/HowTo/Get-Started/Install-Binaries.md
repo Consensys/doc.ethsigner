@@ -13,7 +13,7 @@ description: Install EthSigner from binary distribution
 
 ## Install binaries
 
-Download the EthSigner [packaged binaries](https://bintray.com/consensys/pegasys-repo/ethsigner/_latestVersion#files).
+Download the EthSigner [packaged binaries](https://cloudsmith.io/~consensys/repos/ethsigner/packages/?q=tag%3Alatest).
 
 Unpack the downloaded files and change into the `ethsigner-<release>` directory.
 
