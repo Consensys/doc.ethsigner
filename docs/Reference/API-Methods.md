@@ -198,6 +198,7 @@ specific signature. This prevents misuse where a malicious DApp signs arbitrary 
            "result":"0xa6122e277f46fea78f3e97d3354a03ad20b2296733dfefbadc7305c80e70ce9826d44f12ab5aa488689744657491c70d3b654d7f60f8f50beefac9abcf02a4cf1b"
         }
         ```
+
 ### `eth_signTransaction`
 
 Signs a transaction that can be submitted to Besu at a later time using [`eth_sendRawTransaction`](https://besu.hyperledger.org/en/stable/Reference/API-Methods/#eth_sendrawtransaction).
