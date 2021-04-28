@@ -556,7 +556,6 @@ categories are enabled by default.
 The host on which [Prometheus](https://prometheus.io/) accesses EthSigner metrics. The default is
 `127.0.0.1`.
 
-
 === "Syntax"
 
     ```bash
@@ -581,7 +580,6 @@ The host on which [Prometheus](https://prometheus.io/) accesses EthSigner metric
     metrics-host="127.0.0.1"
     ```
 
-
 ### `metrics-host-allowlist`
 
 A comma-separated list of hostnames to allow access to the EthSigner metrics. By default, EthSigner
@@ -590,7 +588,6 @@ accepts access from `localhost` and `127.0.0.1`.
 !!! tip
 
     To allow all hostnames, use "*". We don’t recommend allowing all hostnames for production environments.
-
 
 === "Syntax"
 
