@@ -496,14 +496,150 @@ Default is `INFO`.
     logging="DEBUG"
     ```
 
-### `help`
+### `metrics-enabled`
 
-Displays the help and exits.
+Enables the [metrics exporter](../../HowTo/Monitor-Nodes/Metrics.md). The default is `false`.
 
 === "Syntax"
 
     ```bash
-    -h, --help
+    --metrics-enabled[=<true|false>]
+    ```
+
+=== "Environment Variable"
+
+    ```bash
+    ETHSIGNER__METRICS_ENABLED=true
+    ```
+
+=== "Configuration File"
+
+    ```bash
+    metrics-enabled=true
+    ```
+
+### `metrics-category`
+
+Categories for which to track metrics. Options are `HTTP`, `SIGNING`, `JVM`, and `PROCESS`. All
+categories are enabled by default.
+
+!!! note
+
+    There are currently no metrics available for the `HTTP` and `SIGNING` categories.
+
+=== "Syntax"
+
+    ```bash
+    --metrics-category=<metrics-category>[,metrics-category...]...
+    ```
+
+=== "Command Line"
+
+    ```bash
+    --metrics-category=HTTP,SIGNING
+    ```
+
+=== "Environment Variable"
+
+    ```bash
+    ETHSIGNER_METRICS_CATEGORY=HTTP,SIGNING
+    ```
+
+=== "Configuration File"
+
+    ```bash
+    metrics-category=["HTTP","SIGNING"]
+    ```
+
+### `metrics-host`
+
+The host on which [Prometheus](https://prometheus.io/) accesses EthSigner metrics. The default is
+`127.0.0.1`.
+
+=== "Syntax"
+
+    ```bash
+    --metrics-host=<HOST>
+    ```
+
+=== "Command Line"
+
+    ```bash
+    --metrics-host=127.0.0.1
+    ```
+
+=== "Environment Variable"
+
+    ```bash
+    ETHSIGNER_METRICS_HOST=127.0.0.1
+    ```
+
+=== "Configuration File"
+
+    ```bash
+    metrics-host="127.0.0.1"
+    ```
+
+### `metrics-host-allowlist`
+
+A comma-separated list of hostnames to allow access to the EthSigner metrics. By default, EthSigner
+accepts access from `localhost` and `127.0.0.1`.
+
+!!! tip
+
+    To allow all hostnames, use "*". We don’t recommend allowing all hostnames for production environments.
+
+=== "Syntax"
+
+    ```bash
+    --metrics-host-allowlist=<hostname>[,<hostname>...]... or "*"
+    ```
+
+=== "Command Line"
+
+    ```bash
+    --metrics-host-allowlist=medomain.com,meotherdomain.com
+    ```
+
+=== "Environment Variable"
+
+    ```bash
+    ETHSIGNER_METRICS_HOST_ALLOWLIST=medomain.com,meotherdomain.com
+    ```
+
+=== "Configuration File"
+
+    ```bash
+    metrics-host-allowlist=["medomain.com", "meotherdomain.com"]
+    ```
+
+### `metrics-port`
+
+The port (TCP) on which [Prometheus](https://prometheus.io/) accesses
+EthSigner metrics. The default is `8546`.
+
+=== "Syntax"
+
+    ```bash
+    --metrics-port=<PORT>
+    ```
+
+=== "Command Line"
+
+    ```bash
+    --metrics-port=6174
+    ```
+
+=== "Environment Variable"
+
+    ```bash
+    ETHSIGNER_METRICS_PORT=6174
+    ```
+
+=== "Configuration File"
+
+    ```bash
+    metrics-port=6174
     ```
 
 ### `tls-allow-any-client`
@@ -635,6 +771,16 @@ File containing the SHA-256 fingerprints of [authorized clients](../../HowTo/Con
 
     ```bash
     tls-known-clients-file=""/Users/me/my_node/knownClients"
+    ```
+
+### `help`
+
+Displays the help and exits.
+
+=== "Syntax"
+
+    ```bash
+    -h, --help
     ```
 
 ### `version`
