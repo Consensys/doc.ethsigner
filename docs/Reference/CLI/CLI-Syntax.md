@@ -636,7 +636,7 @@ EthSigner metrics. The default is `8546`.
 === "Environment Variable"
 
     ```bash
-    BESU_METRICS_PORT=6174
+    ETHSIGNER_METRICS_PORT=6174
     ```
 
 === "Configuration File"

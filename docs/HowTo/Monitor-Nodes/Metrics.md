@@ -42,10 +42,8 @@ To configure Prometheus to run with EthSigner:
         ```
 
     !!! note
-    
-        Alternatively create your own YAML file and add the above example configuration.
 
-1. [Start Besu].
+        Alternatively create your own YAML file and add the above example configuration.
 
 1. Start EthSigner with the
     [`--metrics-enabled`](../../Reference/CLI/CLI-Syntax.md#metrics-enabled) option.
@@ -61,7 +59,7 @@ To configure Prometheus to run with EthSigner:
     command line option to update the available categories.
 
     !!! tip
-     
+
         To view the full list of available EthSigner metrics view
         `http://<metrics-host>:<metrics-port>/metrics`. By default this is
         `http://localhost:8546/metrics`.
@@ -82,5 +80,3 @@ To configure Prometheus to run with EthSigner:
 
 1. From the **Insert metric at cursor** drop-down, select a metric and click **Execute**. The
    values display.
-
-[Start Besu]: https://besu.hyperledger.org/en/latest/HowTo/Get-Started/Starting-node/
