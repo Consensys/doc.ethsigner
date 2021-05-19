@@ -439,7 +439,7 @@ Version of the specified key to use.
     azure-signer.key-name=key-version="7c01fe58d68148bba5824ce418241092"
     ```
 
-#### `keyvault-name`
+#### `keyvault-name`, `key-vault-name`
 
 Name of the vault to access. Sub-domain of `vault.azure.net`.
 
@@ -458,7 +458,7 @@ Name of the vault to access. Sub-domain of `vault.azure.net`.
 === "Environment variable"
 
     ```bash
-    ETHSIGNER_AZURE_SIGNER_KEYVAULT_NAME=MyKeyVault
+    ETHSIGNER_AZURE_SIGNER_KEY_VAULT_NAME=MyKeyVault
     ```
 
 === "Configuration file"
