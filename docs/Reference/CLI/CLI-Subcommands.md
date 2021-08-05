@@ -436,7 +436,7 @@ Version of the specified key to use.
 === "Configuration file"
 
     ```bash
-    azure-signer.key-name=key-version="7c01fe58d68148bba5824ce418241092"
+    azure-signer.key-version="7c01fe58d68148bba5824ce418241092"
     ```
 
 #### `keyvault-name`, `key-vault-name`

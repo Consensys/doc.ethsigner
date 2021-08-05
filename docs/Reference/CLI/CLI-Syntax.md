@@ -217,7 +217,7 @@ Timeout period (in milliseconds) for downstream requests. Default is 5000.
 === "Environment variable"
 
     ```bash
-    ETHSIGNER_DOWNSTREAM_HTTP_REQUEST_TIMOUT=3000
+    ETHSIGNER_DOWNSTREAM_HTTP_REQUEST_TIMEOUT=3000
     ```
 
 === "Configuration file"
@@ -509,7 +509,7 @@ Enables the [metrics exporter](../../HowTo/Monitor-Nodes/Metrics.md). The defaul
 === "Environment Variable"
 
     ```bash
-    ETHSIGNER__METRICS_ENABLED=true
+    ETHSIGNER_METRICS_ENABLED=true
     ```
 
 === "Configuration File"
@@ -770,7 +770,7 @@ File containing the SHA-256 fingerprints of [authorized clients](../../HowTo/Con
 === "Configuration file"
 
     ```bash
-    tls-known-clients-file=""/Users/me/my_node/knownClients"
+    tls-known-clients-file="/Users/me/my_node/knownClients"
     ```
 
 ### `help`
