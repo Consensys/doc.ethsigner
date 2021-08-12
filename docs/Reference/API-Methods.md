@@ -21,7 +21,7 @@ using the [signing key](../Concepts/Overview.md).
 EthSigner submits the signed transaction to Besu using [`eea_sendRawTransaction`](https://besu.hyperledger.org/en/stable/Reference/API-Methods/#eea_sendrawtransaction).
 
 !!! note
-    Besu uses a Transaction Manager to implement privacy. [Orion](http://docs.orion.consensys.net) is
+    Besu uses a Transaction Manager to implement privacy. [Tessera](http://docs.tessera.consensys.net) is
     the Transaction Manager used in this documentation but EthSigner can be used with other Transaction Managers.
 
     EthSigner does not implement signing for [GoQuorum private transactions](https://docs.goquorum.consensys.net/en/latest/Concepts/Privacy/Privacy/).
@@ -38,8 +38,8 @@ Transaction object for private transactions:
 | **gasPrice**                         | Quantity              | Optional                           | Gas price provided by the sender in Wei. Default is `0`.                                                                         |  |
 | **nonce**                            | Quantity              | Optional                           | Number of transactions sent from the `from` account before this one.                                                             |  |
 | **data**                             | Quantity              | Optional                           | Compiled contract code or hash of the invoked method signature and encoded parameters.                                           |  |
-| **privateFrom**                      | Data, 20&nbsp;bytes   | Required                           | Orion address of the sender                                                                                                      |  |
-| **privateFor** or **privacyGroupId** | Array of data or data | Required                           | Orion addresses of recipients or [privacy group ID](https://besu.hyperledger.org/en/stable/Concepts/Privacy/Privacy-Groups/)                                                                                |  |
+| **privateFrom**                      | Data, 20&nbsp;bytes   | Required                           | Tessera address of the sender                                                                                                    |  |
+| **privateFor** or **privacyGroupId** | Array of data or data | Required                           | Tessera addresses of recipients or [privacy group ID](https://besu.hyperledger.org/en/stable/Concepts/Privacy/Privacy-Groups/)                                                                              |  |
 | **restriction**                      | String                | Required                           | Must be [`restricted`](https://besu.hyperledger.org/en/stable/Concepts/Privacy/Privacy-Overview/#private-transaction-attributes) |  |
 
 !!! tip
