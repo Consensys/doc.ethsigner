@@ -1,5 +1,5 @@
 ---
-description: Use a Single Signer
+description: Use a single signer
 ---
 
 # Use a single signing key
