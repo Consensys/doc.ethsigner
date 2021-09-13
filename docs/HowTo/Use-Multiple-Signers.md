@@ -1,5 +1,5 @@
 ---
-description: Use Multiple Signers
+description: Use multiple signers
 ---
 
 # Use multiple signing keys

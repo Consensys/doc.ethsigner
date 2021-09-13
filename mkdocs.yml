@@ -62,8 +62,8 @@ nav:
             - Use Azure Key Vault: HowTo/Store-Keys/Use-Azure.md
         - Use a configuration file: HowTo/Use-Configuration-File.md
         - Configure TLS: HowTo/Configure-TLS.md
-        - Monitor Nodes:
-            - Use Metrics: HowTo/Monitor-Nodes/Metrics.md
+        - Monitor nodes:
+            - Use metrics: HowTo/Monitor-Nodes/Metrics.md
         - Create external signers: HowTo/Extending-EthSigner/Add-Signer.md
     - Tutorials:
         - Start EthSigner with a single signer: Tutorials/Start-EthSigner.md
@@ -71,12 +71,12 @@ nav:
         - Quorum Developer Quickstart: Tutorials/Quorum-Dev-Quickstart.md
     - Concepts:
         - Overview: Concepts/Overview.md
-        - TLS Communication: Concepts/TLS.md
+        - TLS communication: Concepts/TLS.md
     - Reference:
-        - Command Line:
+        - Command line:
           - Options: Reference/CLI/CLI-Syntax.md
           - Subcommands: Reference/CLI/CLI-Subcommands.md
-        - API Methods: Reference/API-Methods.md
+        - API methods: Reference/API-Methods.md
         - Multikey TOML parameters: Reference/Multikey-Parameters.md
         - Security disclosure policy: Reference/Responsible-Disclosure.md
 markdown_extensions:

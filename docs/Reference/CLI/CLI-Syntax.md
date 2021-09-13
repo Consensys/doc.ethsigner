@@ -6,7 +6,7 @@ description: EthSigner command line interface reference
 
 This reference describes the syntax of the EthSigner Command Line Interface (CLI) options.
 
-## Specifying Options
+## Specifying options
 
 EthSigner options can be specified:
 
@@ -49,7 +49,7 @@ The default is `none`.
     --config-file=/home/me/me_node/config.toml
     ```
 
-=== "Environment Variable"
+=== "Environment variable"
 
     ```bash
     ETHSIGNER_CONFIG_FILE=/home/me/me_node/config.toml
@@ -506,13 +506,13 @@ Enables the [metrics exporter](../../HowTo/Monitor-Nodes/Metrics.md). The defaul
     --metrics-enabled[=<true|false>]
     ```
 
-=== "Environment Variable"
+=== "Environment variable"
 
     ```bash
     ETHSIGNER_METRICS_ENABLED=true
     ```
 
-=== "Configuration File"
+=== "Configuration file"
 
     ```bash
     metrics-enabled=true
@@ -533,19 +533,19 @@ categories are enabled by default.
     --metrics-category=<metrics-category>[,metrics-category...]...
     ```
 
-=== "Command Line"
+=== "Example"
 
     ```bash
     --metrics-category=HTTP,SIGNING
     ```
 
-=== "Environment Variable"
+=== "Environment variable"
 
     ```bash
     ETHSIGNER_METRICS_CATEGORY=HTTP,SIGNING
     ```
 
-=== "Configuration File"
+=== "Configuration file"
 
     ```bash
     metrics-category=["HTTP","SIGNING"]
@@ -562,19 +562,19 @@ The host on which [Prometheus](https://prometheus.io/) accesses EthSigner metric
     --metrics-host=<HOST>
     ```
 
-=== "Command Line"
+=== "Example"
 
     ```bash
     --metrics-host=127.0.0.1
     ```
 
-=== "Environment Variable"
+=== "Environment variable"
 
     ```bash
     ETHSIGNER_METRICS_HOST=127.0.0.1
     ```
 
-=== "Configuration File"
+=== "Configuration file"
 
     ```bash
     metrics-host="127.0.0.1"
@@ -595,19 +595,19 @@ accepts access from `localhost` and `127.0.0.1`.
     --metrics-host-allowlist=<hostname>[,<hostname>...]... or "*"
     ```
 
-=== "Command Line"
+=== "Example"
 
     ```bash
     --metrics-host-allowlist=medomain.com,meotherdomain.com
     ```
 
-=== "Environment Variable"
+=== "Environment variable"
 
     ```bash
     ETHSIGNER_METRICS_HOST_ALLOWLIST=medomain.com,meotherdomain.com
     ```
 
-=== "Configuration File"
+=== "Configuration file"
 
     ```bash
     metrics-host-allowlist=["medomain.com", "meotherdomain.com"]
@@ -624,19 +624,19 @@ EthSigner metrics. The default is `8546`.
     --metrics-port=<PORT>
     ```
 
-=== "Command Line"
+=== "Example"
 
     ```bash
     --metrics-port=6174
     ```
 
-=== "Environment Variable"
+=== "Environment variable"
 
     ```bash
     ETHSIGNER_METRICS_PORT=6174
     ```
 
-=== "Configuration File"
+=== "Configuration file"
 
     ```bash
     metrics-port=6174

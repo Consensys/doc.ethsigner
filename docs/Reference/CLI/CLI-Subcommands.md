@@ -477,19 +477,19 @@ The tenant ID of the Azure Portal instance being used.
     --tenant-id=<STRING>
     ```
 
-=== "Command Line"
+=== "Example"
 
     ```bash
     --tenant-id=34255fb0-379b-4a1a-bd47-d211ab86df81
     ```
 
-=== "Environment Variable"
+=== "Environment variable"
 
     ```bash
     ETHSIGNER_AZURE_SIGNER_TENANT_ID=34255fb0-379b-4a1a-bd47-d211ab86df81
     ```
 
-=== "Configuration File"
+=== "Configuration file"
 
     ```bash
     azure-signer.tenant-id="34255fb0-379b-4a1a-bd47-d211ab86df81"

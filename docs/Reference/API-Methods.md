@@ -11,7 +11,7 @@ description: EthSigner JSON-RPC API methods reference
       [`--http-listen-port`](CLI/CLI-Syntax.md#http-listen-port) options, update the endpoint.
     * The examples use Hyperledger Besu, but any Ethereum client can be used.
 
-## EEA Methods
+## EEA methods
 
 ### `eea_sendTransaction`
 

@@ -2,7 +2,7 @@
 description: TOML file parameters for multi signers.
 ---
 
-# Multikey Parameters
+# Multikey parameters
 
 The optional `[metadata]` section in the TOML files contains data that is not
 required by EthSigner. The `[signing]` section contains the parameters required
@@ -11,7 +11,7 @@ for the signing type.
 !!! important
     All parameters in the `[signing]` section are mandatory.
 
-## File-based Signing
+## File-based signing
 
 !!! example
 
@@ -37,7 +37,7 @@ for the signing type.
 | **key-file**         | V3 keystore file containing the [key with which transactions are signed](../Tutorials/Multifile.md#create-password-and-key-files) |
 | **password-file**    | File containing the password for the [key with which transactions are signed](../Tutorials/Multifile.md#create-password-and-key-files).    |
 
-## HashiCorp Vault Signing
+## HashiCorp Vault signing
 
 !!! example
 
@@ -72,7 +72,7 @@ for the signing type.
 | **tls-enabled**      | [Enable or disable TLS](../Concepts/TLS.md). Defaults to `true` |
 | **tls-known-server-file**  | Path to the file containing a list of [trusted HashiCorp Vault servers](../HowTo/Store-Keys/Use-Hashicorp.md#create-the-known-servers-file) |
 
-## Azure Key Vault Signing
+## Azure Key Vault signing
 
 !!! example
 

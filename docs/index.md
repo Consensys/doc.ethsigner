@@ -1,9 +1,9 @@
 ---
-title: EthSigner Transaction Signer
+title: EthSigner transaction signer
 description: EthSigner is an open-source private transaction manager developed under the Apache 2.0 license and written in Java.
 ---
 
-# EthSigner Transaction Signer
+# EthSigner transaction signer
 
 ## What is EthSigner?
 
