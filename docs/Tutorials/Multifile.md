@@ -18,8 +18,8 @@ This tutorial covers configuring multiple keys using V3 keystore files. To confi
 
     Multi-tenancy is a feature in
     [Hyperledger Besu](https://besu.hyperledger.org/en/stable/Concepts/Privacy/Multi-Tenancy/) and
-    [Orion](https://docs.orion.consensys.net/en/stable/Concepts/Multi-Tenancy/) allowing multiple
-    participants in a privacy network to use the same Besu and Orion node.
+    [Tessera](https://docs.tessera.consensys.net/en/stable/HowTo/Migrate/Migration-Multitenancy/) allowing multiple
+    participants in a privacy network to use the same Besu and Tessera node.
 
 ## Prerequisites
 
@@ -57,7 +57,7 @@ Use the [web3.js library](https://github.com/ethereum/web3.js/) to create a key 
 
 !!! example
 
-    === "Create Key File"
+    === "Create key file"
 
         ```javascript linenums="1"
         const Web3 = require('web3')

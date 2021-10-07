@@ -1,5 +1,5 @@
 ---
-description: Make Transactions
+description: Make transactions
 ---
 
 # Make transactions

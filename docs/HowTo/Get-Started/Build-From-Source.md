@@ -15,7 +15,7 @@ description: Building EthSigner from source code
 
 ## Installation on Linux / Unix / macOS
 
-### Clone the EthSigner Repository
+### Clone the EthSigner repository
 
 Clone the `ConsenSys/ethsigner` repository:
 

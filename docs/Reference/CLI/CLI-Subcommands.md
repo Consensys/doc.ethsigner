@@ -436,10 +436,10 @@ Version of the specified key to use.
 === "Configuration file"
 
     ```bash
-    azure-signer.key-name=key-version="7c01fe58d68148bba5824ce418241092"
+    azure-signer.key-version="7c01fe58d68148bba5824ce418241092"
     ```
 
-#### `keyvault-name`
+#### `keyvault-name`, `key-vault-name`
 
 Name of the vault to access. Sub-domain of `vault.azure.net`.
 
@@ -458,7 +458,7 @@ Name of the vault to access. Sub-domain of `vault.azure.net`.
 === "Environment variable"
 
     ```bash
-    ETHSIGNER_AZURE_SIGNER_KEYVAULT_NAME=MyKeyVault
+    ETHSIGNER_AZURE_SIGNER_KEY_VAULT_NAME=MyKeyVault
     ```
 
 === "Configuration file"
@@ -477,19 +477,19 @@ The tenant ID of the Azure Portal instance being used.
     --tenant-id=<STRING>
     ```
 
-=== "Command Line"
+=== "Example"
 
     ```bash
     --tenant-id=34255fb0-379b-4a1a-bd47-d211ab86df81
     ```
 
-=== "Environment Variable"
+=== "Environment variable"
 
     ```bash
     ETHSIGNER_AZURE_SIGNER_TENANT_ID=34255fb0-379b-4a1a-bd47-d211ab86df81
     ```
 
-=== "Configuration File"
+=== "Configuration file"
 
     ```bash
     azure-signer.tenant-id="34255fb0-379b-4a1a-bd47-d211ab86df81"

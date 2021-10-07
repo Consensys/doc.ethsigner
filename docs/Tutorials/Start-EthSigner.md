@@ -52,7 +52,7 @@ Use the [web3.js library](https://github.com/ethereum/web3.js/) to create a key 
 
 !!! example
 
-    === "Create Key File"
+    === "Create key file"
 
         ```javascript linenums="1"
         const Web3 = require('web3')
