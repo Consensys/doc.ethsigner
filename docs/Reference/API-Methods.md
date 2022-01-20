@@ -130,7 +130,7 @@ Transaction object:
 | **to**       | Data, 20&nbsp;bytes | Optional for contract creation | Address of the receiver. `null` if a contract creation transaction.                    |
 | **gas**      | Quantity            | Optional                       | Gas provided by the sender. Default is `90000`.                                                           |
 | **gasPrice** | Quantity            | Optional                       | Gas price provided by the sender in Wei. Default is `0`.                                              |
-| **nonce**    | Quantity            | Optional                       | Number of transactions made by the sender before this one. Must be specified if using [GoQuorum](https://docs.goquorum.consensys.net/).                            |
+| **nonce**    | Quantity            | Optional                       | Number of transactions made by the sender before this one. Must be specified if using [GoQuorum](https://consensys.net/docs/goquorum/).                            |
 | **value**    | Quantity            | Optional                       | Value transferred in Wei.                                                              |
 | **data**     | Quantity            | Optional                       | Compiled contract code or hash of the invoked method signature and encoded parameters. |
 
@@ -211,7 +211,7 @@ Transaction object:
 | **to**       | Data, 20&nbsp;bytes | Optional for contract creation | Address of the receiver. `null` if a contract creation transaction.                    |
 | **gas**      | Quantity            | Optional                       | Gas provided by the sender. Default is `90000`.                                        |
 | **gasPrice** | Quantity            | Optional                       | Gas price provided by the sender in Wei. Default is `0`.                               |
-| **nonce**    | Quantity            | Optional                       | Number of transactions made by the sender before this one. Must be specified if using [GoQuorum](https://docs.goquorum.consensys.net/). |
+| **nonce**    | Quantity            | Optional                       | Number of transactions made by the sender before this one. Must be specified if using [GoQuorum](https://consensys.net/docs/goquorum/). |
 | **value**    | Quantity            | Optional                       | Value transferred in Wei.                                                              |
 | **data**     | Quantity            | Optional                       | Compiled contract code or hash of the invoked method signature and encoded parameters. |
 
