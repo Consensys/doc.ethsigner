@@ -168,19 +168,19 @@ Host of the HashiCorp Vault server. Default is `localhost`.
 === "Example"
 
     ```bash
-    --host="http://host.com"
+    --host="10.0.0.3"
     ```
 
 === "Environment variable"
 
     ```bash
-    ETHSIGNER_HASHICORP_SIGNER_HOST=http://host.com
+    ETHSIGNER_HASHICORP_SIGNER_HOST=10.0.0.3
     ```
 
 === "Configuration file"
 
     ```bash
-    hashicorp-signer.host="http://host.com"
+    hashicorp-signer.host="10.0.0.3"
     ```
 
 #### `port`
