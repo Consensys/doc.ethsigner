@@ -616,7 +616,7 @@ accepts access from `localhost` and `127.0.0.1`.
 ### `metrics-port`
 
 The port (TCP) on which [Prometheus](https://prometheus.io/) accesses
-EthSigner metrics. The default is `8546`.
+EthSigner metrics. The default is `9546`.
 
 === "Syntax"
 

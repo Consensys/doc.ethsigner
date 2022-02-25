@@ -38,7 +38,7 @@ To configure Prometheus to run with EthSigner:
             metrics_path: /metrics
             scheme: http
             static_configs:
-            - targets: ["localhost:8546"]
+            - targets: ["localhost:9546"]
         ```
 
     !!! note
@@ -62,7 +62,7 @@ To configure Prometheus to run with EthSigner:
 
         To view the full list of available EthSigner metrics view
         `http://<metrics-host>:<metrics-port>/metrics`. By default this is
-        `http://localhost:8546/metrics`.
+        `http://localhost:9546/metrics`.
 
 1. In another terminal, run Prometheus specifying the `prometheus.yml` file:
 
