@@ -10,7 +10,7 @@ title: ''
 Report EthSigner software issues at https://github.com/consensys/ethsigner.
 Report documentation tool issues using the "Documentation tool bug report" template.
 
-Before creating an issue, did use the search field in the documentation to find what you're looking for?
+Before creating an issue, did you use the search field in the documentation to find what you're looking for?
 -->
 
 ## Describe the bug
