@@ -60,24 +60,24 @@ for the signing type.
     ```
 
 !!! note
-    The value of `keyPath` is dependent on how Hashicorp Vault secret engine is configured.
-    It is usually in the format of `/v1/<secret-engine-name>/data/<secret-path>`. For example,
-    in Hashicorp Vault `dev` mode, a default secret engine with name `secret` is created.
+    The value of `keyPath` is dependent on how HashiCorp Vault secret engine is configured.
+    It's usually in the format of `/v1/<secret-engine-name>/data/<secret-path>`. For example,
+    in HashiCorp Vault `dev` mode, a default secret engine with name `secret` is created.
     Creating a path `EthSignerKeys` in `secret` would result the `keyPath` value to be `/v1/secret/data/EthSignerKeys`.
 
-| Key                       | Description                                                                                                                                                                                      |
-|---------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **type**                  | Type of key signing. Use `hashicorp-signer`                                                                                                                                                      |
-| **keyPath**               | Path to secret in the HashiCorp Vault containing the private key for signing transactions.                                                                                                       |
-| **keyName**               | Name of the key that maps to the private key in the secret. Defaults to `value`.                                                                                                                 |
-| **token**                 | Hashicorp Vault authentication token that is required to access the secret defined by the `keyPath`.                                                                                             |
-| **serverHost**            | Host of the HashiCorp Vault server.                                                                                                                                                              |
-| **serverPort**            | Port of the HashiCorp Vault server. Defaults to `8200`.                                                                                                                                          |
-| **timeout**               | Timeout in milliseconds for requests to the HashiCorp Vault server. Defaults to `10000`.                                                                                                         |
-| **tlsEnable**             | Enable/Disable TLS communication with Hashicorp Vault server. Defaults to `true`.                                                                                                                |
-| **tlsTrustStoreType**     | The type of Truststore that stores Hashicorp Vault server TLS certificate. Valid values are `ALLOWLIST`, `JKS`, `PKCS12` and `PEM`. Can be omitted if Hashicorp server's CA is already trusted.  |
-| **tlsTrustStorePath**     | Path to the Truststore file. Required when `tlsTrustStoreType` is specified. See example of [how to create an ALLOWLIST Truststore file](../HowTo/Configure-TLS/#create-the-known-servers-file). |
-| **tlsTrustStorePassword** | Password to decrypt truststore file. Only required for `JKS` and `PKCS12` truststore types.                                                                                                      |
+| Key                       | Description                                                                                                                                                                                        |
+|---------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **type**                  | Type of key signing. Use `hashicorp-signer`                                                                                                                                                        |
+| **keyPath**               | Path to secret in the HashiCorp Vault containing the private key for signing transactions.                                                                                                         |
+| **keyName**               | Name of the key that maps to the private key in the secret. Defaults to `value`.                                                                                                                   |
+| **token**                 | HashiCorp Vault authentication token that is required to access the secret defined by the `keyPath`.                                                                                               |
+| **serverHost**            | Host of the HashiCorp Vault server.                                                                                                                                                                |
+| **serverPort**            | Port of the HashiCorp Vault server. Defaults to `8200`.                                                                                                                                            |
+| **timeout**               | Timeout in milliseconds for requests to the HashiCorp Vault server. Defaults to `10000`.                                                                                                           |
+| **tlsEnable**             | Enable/Disable TLS communication with HashiCorp Vault server. Defaults to `true`.                                                                                                                  |
+| **tlsTrustStoreType**     | The type of Truststore that stores HashiCorp Vault server TLS certificate. Valid values are `ALLOWLIST`, `JKS`, `PKCS12` and `PEM`. Can be omitted if HashiCorp server's CA is already trusted.    |
+| **tlsTrustStorePath**     | Path to the Truststore file. Required when `tlsTrustStoreType` is specified. See example of [how to create an ALLOWLIST Truststore file](../HowTo/Configure-TLS.md#create-the-known-servers-file). |
+| **tlsTrustStorePassword** | Password to decrypt truststore file. Only required for `JKS` and `PKCS12` truststore types.                                                                                                        |
 
 ## Azure Key Vault signing
 
