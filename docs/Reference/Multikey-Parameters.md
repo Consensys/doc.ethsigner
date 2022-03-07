@@ -48,7 +48,7 @@ for the signing type.
 
     [signing]
     type = "hashicorp-signer"
-    keyPath = "ethsignerKey"
+    keyPath = "/v1/secret/data/ethsignerKey"
     keyName = "value"
     token = "root_token"
     serverHost = "localhost"
@@ -60,12 +60,15 @@ for the signing type.
     ```
 
 !!! note
-    Do not specify the prefix `/v1/secret/data/` when specifying the `keyPath`.
+    The value of `keyPath` is dependent on how Hashicorp Vault secret engine is configured.
+    It is usually in the format of `/v1/<secret-engine-name>/data/<secret-path>`. For example,
+    in Hashicorp Vault `dev` mode, a default secret engine with name `secret` is created.
+    Creating a path `EthSignerKeys` in `secret` would result the `keyPath` value to be `/v1/secret/data/EthSignerKeys`.
 
 | Key                       | Description                                                                                                                                                                                      |
 |---------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **type**                  | Type of key signing. Use `hashicorp-signer`                                                                                                                                                      |
-| **keyPath**               | Path to secret in the HashiCorp Vault containing the private key for signing transactions. **NOTE:** Do not specify the prefix `/v1/secret/data/` when specifying the `keyPath`.                 |
+| **keyPath**               | Path to secret in the HashiCorp Vault containing the private key for signing transactions.                                                                                                       |
 | **keyName**               | Name of the key that maps to the private key in the secret. Defaults to `value`.                                                                                                                 |
 | **token**                 | Hashicorp Vault authentication token that is required to access the secret defined by the `keyPath`.                                                                                             |
 | **serverHost**            | Host of the HashiCorp Vault server.                                                                                                                                                              |
