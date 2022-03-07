@@ -63,7 +63,8 @@ for the signing type.
     The value of `keyPath` is dependent on how HashiCorp Vault secret engine is configured.
     It's usually in the format of `/v1/<secret-engine-name>/data/<secret-path>`. For example,
     in HashiCorp Vault `dev` mode, a default secret engine with name `secret` is created.
-    Creating a path `EthSignerKeys` in `secret` would result the `keyPath` value to be `/v1/secret/data/EthSignerKeys`.
+    Creating a path `EthSignerKeys` in `secret` would result in the `keyPath` value to be
+    `/v1/secret/data/EthSignerKeys`.
 
 | Key                       | Description                                                                                                                                                                                        |
 |---------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
