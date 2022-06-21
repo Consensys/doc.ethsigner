@@ -3,7 +3,12 @@ site/
 env/
 *.out
 node_modules/
-.circleci/process.yml
 .DS_Store
 **/.DS_Store
 *.iml
+common/
+.doctools.action-builder
+docker-compose.dev.yml
+.env.dev
+.env
+__pycache__

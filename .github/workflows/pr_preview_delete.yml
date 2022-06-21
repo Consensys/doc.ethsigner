@@ -1,0 +1,29 @@
+---
+name: Delete PR preview
+
+on:
+  pull_request_target:
+    types: [closed]
+
+jobs:
+  deploy:
+    name: Remove PR preview from pages
+    runs-on: [self-hosted, linux, X64, generic]
+    environment: no-secret
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - name: 'checkout code from repos'
+        uses: actions/checkout@v2
+        with:
+          ref: pr-preview
+
+      - name: Checkout actions
+        uses: actions/checkout@v2
+        with:
+          path: actions
+
+      - name: Delete PR preview
+        uses: ConsenSys/doctools.action-builder/actions/pr_preview_delete@main

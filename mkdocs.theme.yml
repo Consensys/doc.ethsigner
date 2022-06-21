@@ -1,5 +1,5 @@
 ---
-# Copyright 2022 ConsenSys Software Inc.
+# Copyright 2021 ConsenSys Software Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with
 # the License. You may obtain a copy of the License at
@@ -12,16 +12,19 @@
 
 # This configuration must inherit the base configuration file available in the Doctools docker image.
 # See source at https://github.com/ConsenSys/doctools.action-builder/blob/main/common/custom_theme/base.yml
-INHERIT: mkdocs.theme.yml # DO NOT MODIFY THIS LINE
+INHERIT: mkdocs.redirects.yml # DO NOT MODIFY THIS LINE
 
-# Project information
-site_name: EthSigner
-site_description: EthSigner Transaction Signer documentation
-
-# Project information
-site_author: EthSigner community
-copyright: This documentation is hosted by <a href="https://consensys.net/">ConsenSys</a> and licensed under Apache 2.0 license
-
-# Software Repository
-repo_name: ConsenSys/EthSigner
-repo_url: https://github.com/ConsenSys/ethsigner
+theme:
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: consensys
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: consensys-dark
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+  logo: 'assets/logo.svg'
+  favicon: 'assets/favicon.svg'
