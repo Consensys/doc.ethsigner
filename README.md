@@ -1,4 +1,4 @@
-# Consensys Quorum Blockchain Service documentation
+# Consensys EthSigner documentation
 
 [![Publish latest doc site](https://github.com/ConsenSys/doc.ethsigner/actions/workflows/latest_publish.yml/badge.svg)](https://github.com/ConsenSys/doc.ethsigner/actions/workflows/latest_publish.yml)
 [![Publish release doc site](https://github.com/ConsenSys/doc.ethsigner/actions/workflows/release_publish.yml/badge.svg)](https://github.com/ConsenSys/doc.ethsigner/actions/workflows/release_publish.yml)
