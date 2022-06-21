@@ -1,5 +1,5 @@
 ---
-name: Publish release doc site
+name: Publish doc site release
 
 on:
   release:
@@ -8,9 +8,9 @@ on:
   workflow_dispatch:
 
 jobs:
-  deploy:
-    name: Build and publish released site
-    runs-on: [self-hosted, linux, X64, generic]
+  release:
+    name: Release
+    runs-on: ubuntu-latest
     environment: production
     permissions:
       contents: read
@@ -20,7 +20,7 @@ jobs:
     if: github.event.repository.fork == false && github.repository_owner == 'ConsenSys' && startsWith(github.ref, 'refs/tags/')
     steps:
       - name: checkout code from repos
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0 # Required for mkdocs to be able to display pages last update info
 
@@ -33,4 +33,3 @@ jobs:
           AWS_REGION: ${{ secrets.AWS_REGION }}
           AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
           PROJECT: ${{ secrets.PROJECT }}
-          LANGUAGE: 'en'

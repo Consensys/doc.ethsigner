@@ -8,8 +8,8 @@ on:
 
 jobs:
   deploy:
-    name: Build and publish latest site
-    runs-on: [self-hosted, linux, X64, generic]
+    name: Deploy
+    runs-on: ubuntu-latest
     environment: production
     permissions:
       contents: read
@@ -19,7 +19,7 @@ jobs:
     if: github.event.repository.fork == false && github.repository_owner == 'ConsenSys' && github.ref == 'refs/heads/main'
     steps:
       - name: checkout code from repos
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0 # Required for mkdocs to be able to display pages last update info
 
@@ -32,4 +32,3 @@ jobs:
           AWS_REGION: ${{ secrets.AWS_REGION }}
           AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
           PROJECT: ${{ secrets.PROJECT }}
-          LANGUAGE: 'en'

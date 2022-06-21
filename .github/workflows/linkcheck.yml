@@ -1,18 +1,17 @@
 ---
-name: Test the links
+name: Verify links
 
-on: [push, pull_request]
+on: [pull_request]
 
 jobs:
-  links-check:
-    name: Check links
-    runs-on: [self-hosted, linux, X64, generic]
-    environment: no-secret
+  check:
+    name: Run check
+    runs-on: ubuntu-latest
     permissions:
       contents: read
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Links check
         uses: ConsenSys/doctools.action-builder/actions/tests/links@main

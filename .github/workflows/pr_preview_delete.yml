@@ -6,24 +6,23 @@ on:
     types: [closed]
 
 jobs:
-  deploy:
-    name: Remove PR preview from pages
-    runs-on: [self-hosted, linux, X64, generic]
-    environment: no-secret
+  remove:
+    name: Remove
+    runs-on: ubuntu-latest
     permissions:
       contents: write
       pull-requests: write
 
     steps:
       - name: 'checkout code from repos'
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           ref: pr-preview
 
       - name: Checkout actions
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           path: actions
 
-      - name: Delete PR preview
+      - name: Remove PR preview from pages
         uses: ConsenSys/doctools.action-builder/actions/pr_preview_delete@main
