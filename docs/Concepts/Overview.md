@@ -24,4 +24,4 @@ EthSigner can sign transactions with keys stored in:
 
 The transaction process when using EthSigner is:
 
-![EthSigner Transaction](../images/EthSigner_Transaction.png)
+![EthSigner Transaction](../assets/images/EthSigner_Transaction.png)
