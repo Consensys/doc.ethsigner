@@ -7,7 +7,7 @@ title: ''
 
 <!-- IMPORTANT: This is only for reporting documentation tool bugs.
 
-Report Quorum Blockchain Service software issues at https://consensys.net/quorum/contact-us/.
+Report EthSigner software issues at https://consensys.net/quorum/contact-us/.
 Report documentation content issues using the "Documentation content issue report" template.
 
 Before creating an issue, did you refresh your browser cache for the site?

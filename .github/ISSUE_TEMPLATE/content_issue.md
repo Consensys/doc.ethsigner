@@ -7,7 +7,7 @@ title: ''
 
 <!-- IMPORTANT: This is only for reporting documentation content issues.
 
-Report Quorum Blockchain Service software issues at https://consensys.net/quorum/contact-us/.
+Report EthSigner software issues at https://consensys.net/quorum/contact-us/.
 Report documentation tool issues using the "Documentation tool bug report" template.
 
 Before creating an issue, did you use the search field in the documentation to find what you're looking for?

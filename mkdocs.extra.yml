@@ -35,7 +35,7 @@ extra:
     - icon: material/web
       link: https://consensys.net/quorum/developers
   version:
-    switch: false # displays the version dropdown
+    switch: true # displays the version dropdown
 
 # Uncomment and add path if needed to have custom extra scripts and CSS
 #extra_css:
