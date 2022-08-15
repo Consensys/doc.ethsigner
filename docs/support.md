@@ -27,3 +27,5 @@ Need help on using EthSigner? Ask our community or request paid support.
     - Free, no subscription
     - Community led
     - 24/7 worldwide coverage
+
+{!../.git/config!}
