@@ -26,9 +26,9 @@ the [`multikey-signer --directory`](../Reference/CLI/CLI-Syntax.md#multikey-opti
 
     Files can be added or removed from the directory without needing to restart EthSigner.
 
-The TOML file name must use the format `[<prefix>]<accountAddress>.toml`. The prefix can be
-anything you want. No two TOML files can have the same key address in the file name, even if the
-prefix differs.
+The TOML file name must use the format `[<prefix>]<accountAddress>.toml`. The account address must
+be in lowercase. The prefix can be anything you want. No two TOML files can have the same key
+address in the file name, even if the prefix differs.
 
 Remove the `0x` portion of the account address. For example,
 `78e6e236592597c09d5c137c2af40aecd42d12a2.toml`.
