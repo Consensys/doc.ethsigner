@@ -5,7 +5,7 @@ on: [ pull_request ]
 
 jobs:
   deploy:
-    if: ${{ github.repository_owner	== "ConsenSys" }}
+    if: ${{ github.repository_owner == 'ConsenSys' }}
     name: Deploy
     runs-on: ubuntu-latest
     environment: preview
