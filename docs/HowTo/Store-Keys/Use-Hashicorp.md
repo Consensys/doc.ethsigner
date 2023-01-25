@@ -84,4 +84,4 @@ The path specified for `--signing-key-path` is `/v1/secret/data/ethsignerSigning
 
 :::
 
-You can now [use EthSigner to sign transactions](../Transactions/Make-Transactions.md) with the key stored in the HashiCorp Vault.
+You can now [use EthSigner to sign transactions](../Make-Transactions.md) with the key stored in the HashiCorp Vault.
