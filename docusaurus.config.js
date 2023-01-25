@@ -8,7 +8,7 @@ const baseUrl = isDev ? "/" : "/doc.ethsigner";
 const config = {
   title: "ConsenSys EthSigner",
   tagline:
-    "EthSigner is an open-source, client-agnostic, Ethereum transaction signer that separates private key management from transaction validation by signing transactions using a private key that can be secured in a variety of cloud providers, or encrypted on a local disk.",
+    "An open-source, client-agnostic, Ethereum transaction signer that separates private key management from transaction validation by signing transactions using a private key that can be secured in a variety of cloud providers, or encrypted on a local disk.",
   url: "https://consensys.github.io",
   baseUrl,
   onBrokenLinks: "throw",
