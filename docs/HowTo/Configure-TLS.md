@@ -28,23 +28,15 @@ Create a file (in this example, `knownClients`) that lists one or more clients t
 - `<common_name>` is the Common Name used for the client's keystore
 - `<hex-string>` is the SHA-256 fingerprint of the client's keystore.
 
-:::info
-
 ```
 curl_client DF:65:B8:02:08:5E:91:82:0F:91:F5:1C:96:56:92:C4:1A:F6:C6:27:FD:6C:FC:31:F2:BB:90:17:22:59:5B:50
 ```
 
-:::
-
 You can use [OpenSSL](https://www.openssl.org/) or [keytool](https://docs.oracle.com/javase/6/docs/technotes/tools/solaris/keytool.html) to display the fingerprint. For example:
-
-:::info
 
 ```
 keytool -list -v -keystore <keystore> -storetype PKCS12 -storepass <password>
 ```
-
-:::
 
 ### Start EthSigner
 
@@ -84,14 +76,10 @@ Create a file (in this example, `knownServers`) that lists one or more trusted s
 - `<port>` is the port used for communication
 - `<hex-string>` is the SHA-256 fingerprint of the server's certificate.
 
-:::info
-
 ```
 localhost:8590 6C:B2:3E:F9:88:43:5E:62:69:9F:A9:9D:41:14:03:BA:83:24:AC:04:CE:BD:92:49:1B:8D:B2:A4:86:39:4C:BB
 127.0.0.1:8590 6C:B2:3E:F9:88:43:5E:62:69:9F:A9:9D:41:14:03:BA:83:24:AC:04:CE:BD:92:49:1B:8D:B2:A4:86:39:4C:BB
 ```
-
-:::
 
 :::note
 

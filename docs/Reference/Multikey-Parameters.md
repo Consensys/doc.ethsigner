@@ -14,8 +14,6 @@ All parameters in the `[signing]` section are mandatory.
 
 ## File-based signing
 
-:::info
-
 ```
 [metadata]
 createdAt = 1994-11-05T08:15:30-05:00
@@ -26,8 +24,6 @@ type = "file-based-signer"
 key-file = "/Users/me/project/78e6e236592597c09d5c137c2af40aecd42d12a2.key"
 password-file = "/Users/me/project/78e6e236592597c09d5c137c2af40aecd42d12a2.password"
 ```
-
-:::
 
 :::note
 
@@ -42,8 +38,6 @@ EthSigner supports absolute paths or relative paths when specifying `key-file` a
 | **password-file** | File containing the password for the [key with which transactions are signed](../Tutorials/Multifile.md#create-password-and-key-files). |
 
 ## HashiCorp Vault signing
-
-:::info
 
 ```
 [metadata]
@@ -62,8 +56,6 @@ tlsEnabled = true
 tlsTrustStoreType = "ALLOWLIST"
 tlsTrustStorePath = "/Users/me/project/knownHashicorpServers"
 ```
-
-:::
 
 :::note
 
@@ -87,8 +79,6 @@ The value of `keyPath` is dependent on how HashiCorp Vault secret engine is conf
 
 ## Azure Key Vault signing
 
-:::info
-
 ```
 [metadata]
 createdAt = 2011-11-01T12:15:30Z
@@ -103,8 +93,6 @@ client-id = "47efee5c-8079-4b48-31bb4f2e9a22"
 client-secret = "TW_3Uc/HLPdpLp5*om@MGcd1T29MuP*5"
 tenant-id = "34255fb0-379b-4a1a-bd47-d211ab86df81"
 ```
-
-:::
 
 | Key | Description |
 | --- | --- |

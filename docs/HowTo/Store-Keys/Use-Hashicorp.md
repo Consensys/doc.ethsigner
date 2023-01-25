@@ -50,13 +50,9 @@ The private key is stored in the default location for EthSigner. The key must be
 
 [Start Besu](https://besu.hyperledger.org/en/stable/HowTo/Get-Started/Starting-node/) with the [`--rpc-http-port`](https://besu.hyperledger.org/en/stable/Reference/CLI/CLI-Syntax/#rpc-http-port) option set to `8590` to avoid conflict with the default EthSigner listening port (`8545`).
 
-:::info
-
 ```bash
 besu --network=dev --miner-enabled --miner-coinbase=0xfe3b557e8fb62b89f4916b721be55ceb828dbd73 --rpc-http-cors-origins="all" --host-allowlist=* --rpc-http-enabled --rpc-http-port=8590 --data-path=/tmp/tmpDatadir
 ```
-
-:::
 
 :::caution
 
@@ -68,13 +64,9 @@ EthSigner requires a [chain ID](https://besu.hyperledger.org/en/stable/Concepts/
 
 Start EthSigner.
 
-:::info
-
 ```bash
 ethsigner --chain-id=2018 --downstream-http-port=8590 hashicorp-signer --host=127.0.0.1 --port=8200 --auth-file=authFile --tls-enabled=false --signing-key-path=/v1/secret/data/ethsignerSigningKey
 ```
-
-:::
 
 The path to the key in the HashiCorp Vault specified by `--signing-key-path` is prefixed by the key version and includes `data`. For example, if the following command is used put the key into the Vault: `vault kv put secret/ethsignerSigningKey value=<Private Key>`
 

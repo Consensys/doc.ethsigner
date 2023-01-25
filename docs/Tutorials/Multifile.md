@@ -35,13 +35,9 @@ The Ethereum client used in this documentation is Hyperledger Besu but EthSigner
 
 [Start Besu](https://besu.hyperledger.org/en/stable/HowTo/Get-Started/Starting-node/) with the [`--rpc-http-port`](https://besu.hyperledger.org/en/stable/Reference/CLI/CLI-Syntax/#rpc-http-port) option set to `8590`.
 
-:::info
-
 ```bash
 besu --network=dev --miner-enabled --miner-coinbase=0xfe3b557e8fb62b89f4916b721be55ceb828dbd73 --rpc-http-cors-origins="all" --host-allowlist=* --rpc-http-enabled --rpc-http-port=8590 --data-path=/Users/me/Datadir
 ```
-
-:::
 
 ## Create password and key files
 
@@ -101,8 +97,6 @@ Create the TOML file that contains the settings to access the key file. Each key
 
 The file name must use the format `[<prefix>]<accountAddress>.toml`. Remove the `0x` portion of the account address. For example, `78e6e236592597c09d5c137c2af40aecd42d12a2.toml`.
 
-:::info
-
 ```
 [metadata]
 createdAt = 2019-11-05T08:15:30-05:00
@@ -114,8 +108,6 @@ key-file = "/Users/me/project/keyFile"
 password-file = "/Users/me/project/passwordFile"
 ```
 
-:::
-
 ## Start EthSigner
 
 Start EthSigner with options:
@@ -124,7 +116,7 @@ Start EthSigner with options:
 - `downstream-http-port` is the `rpc-http-port` specified for Besu (`8590` in this example).
 - `directory` is the location of TOML file [created above](#create-the-toml-file).
 
-:::info
+:::info Start EthSigner
 
 ```
 ethsigner --chain-id=2018 --downstream-http-port=8590 multikey-signer --directory=/Users/me/project
@@ -134,15 +126,11 @@ ethsigner --chain-id=2018 --downstream-http-port=8590 multikey-signer --director
 
 If using a cloud-based Ethereum client such as [Infura], specify the endpoint using the [`--downstream-http-host`](../Reference/CLI/CLI-Syntax.md#downstream-http-host) and [`--downstream-http-path`](../Reference/CLI/CLI-Syntax.md#downstream-http-path) command line options.
 
-:::info
-
 ```
 ethsigner --chain-id=5 --downstream-http-host=goerli.infura.io \
 --downstream-http-path=/v3/d0e63ca5bb1e4eef2284422efbc51a56 --downstream-http-port=443 \
 --downstream-http-tls-enabled multikey-signer --directory=/Users/me/project
 ```
-
-:::
 
 ## Confirm EthSigner is running
 

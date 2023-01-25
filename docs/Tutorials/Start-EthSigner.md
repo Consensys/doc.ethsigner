@@ -34,13 +34,9 @@ The Ethereum client used in this documentation is Hyperledger Besu but EthSigner
 - [`--rpc-http-port`](https://besu.hyperledger.org/en/stable/Reference/CLI/CLI-Syntax/#rpc-http-port) option to `8590`
 - [`--data-path`](https://besu.hyperledger.org/en/stable/Reference/CLI/CLI-Syntax/#rpc-data-path) option to an appropriate directory.
 
-:::info
-
 ```bash
 besu --network=dev --miner-enabled --miner-coinbase=0xfe3b557e8fb62b89f4916b721be55ceb828dbd73 --rpc-http-cors-origins="all" --host-allowlist="*" --rpc-http-enabled --rpc-http-port=8590 --data-path=/Users/<user.name>/Datadir
 ```
-
-:::
 
 :::caution
 
@@ -115,7 +111,7 @@ Start EthSigner with options specified as follows:
 
 - `key-file` and `password-file` are the key and password files [created above](#create-password-and-key-files).
 
-:::info
+:::info Start EthSigner
 
 ```
 ethsigner --chain-id=2018 --downstream-http-port=8590 file-based-signer --key-file=/mydirectory/keyFile --password-file=/mydirectory/passwordFile
@@ -125,16 +121,12 @@ ethsigner --chain-id=2018 --downstream-http-port=8590 file-based-signer --key-fi
 
 If using a cloud-based Ethereum client such as [Infura], specify the endpoint using the [`--downstream-http-host`](../Reference/CLI/CLI-Syntax.md#downstream-http-host) and [`--downstream-http-path`](../Reference/CLI/CLI-Syntax.md#downstream-http-path) command line options.
 
-:::info
-
 ```
 ethsigner --chain-id=5 --downstream-http-host=goerli.infura.io \
 --downstream-http-path=/v3/d0e63ca5bb1e4eef2284422efbc51a56 --downstream-http-port=443 \
 --downstream-http-tls-enabled file-based-signer --key-file=/mydirectory/keyFile \
 --password-file=/mydirectory/passwordFile
 ```
-
-:::
 
 ## Confirm EthSigner is up
 
