@@ -1,5 +1,6 @@
 ---
 description: Install EthSigner from binary distribution
+sidebar_position: 1
 ---
 
 # Install binary distribution

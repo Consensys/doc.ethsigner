@@ -1,5 +1,7 @@
 ---
+title: Start with multiple signers
 description: Signing transactions with multiple keys.
+sidebar_position: 2
 ---
 
 # Start EthSigner with multiple signing keys
@@ -170,7 +172,7 @@ Request the current block number using [`eth_blockNumber`](https://besu.hyperled
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":51}' http://127.0.0.1:8545
 ```
 
-You can now [use EthSigner to sign transactions](../HowTo/Transactions/Make-Transactions.md) with the keys stored in the V3 Keystore key files.
+You can now [use EthSigner to sign transactions](../HowTo/Make-Transactions.md) with the keys stored in the V3 Keystore key files.
 
 <!-- links -->
 

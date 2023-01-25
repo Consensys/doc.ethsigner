@@ -1,10 +1,11 @@
 ---
 description: Monitoring and metrics
+sidebar_position: 8
 ---
 
 # Use metrics to monitor performance
 
-Use the [`--metrics-enabled`](../../Reference/CLI/CLI-Syntax.md#metrics-enabled) option to enable the [Prometheus](https://prometheus.io/) monitoring and alerting service to access EthSigner.
+Use the [`--metrics-enabled`](../Reference/CLI/CLI-Syntax.md#metrics-enabled) option to enable the [Prometheus](https://prometheus.io/) monitoring and alerting service to access EthSigner.
 
 ## Install Prometheus
 
@@ -45,7 +46,7 @@ Alternatively create your own YAML file and add the above example configuration.
 
 :::
 
-1. Start EthSigner with the [`--metrics-enabled`](../../Reference/CLI/CLI-Syntax.md#metrics-enabled) option.
+1. Start EthSigner with the [`--metrics-enabled`](../Reference/CLI/CLI-Syntax.md#metrics-enabled) option.
 
    ```bash
    ethsigner --chain-id=2018 \
@@ -53,7 +54,7 @@ Alternatively create your own YAML file and add the above example configuration.
    file-based-signer --key-file=/Users/me/signer/keyFile --password-file=/Users/me/signer/passwordFile
    ```
 
-   The `JVM`, and `PROCESS` metrics categories are enabled by default. Use the [`--metrics-category`](../../Reference/CLI/CLI-Syntax.md#metrics-category) command line option to update the available categories.
+   The `JVM`, and `PROCESS` metrics categories are enabled by default. Use the [`--metrics-category`](../Reference/CLI/CLI-Syntax.md#metrics-category) command line option to update the available categories.
 
    :::tip
 

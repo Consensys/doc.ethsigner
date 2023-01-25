@@ -1,5 +1,6 @@
 ---
-description: Adding an external signer to EthSigner
+title: Create external signers
+sidebar_position: 9
 ---
 
 # Creating an external signer for EthSigner

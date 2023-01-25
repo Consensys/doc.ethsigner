@@ -134,12 +134,12 @@ const config = {
             label: "Support",
           },
           {
-            href: "https://github.com/ConsenSys/doc.ethsigner",
+            href: "https://github.com/ConsenSys/ethsigner",
             className: "header-github-link",
             position: "right",
           },
           {
-            href: "https://discord.com/invite/consensys",
+            href: "https://discord.gg/jCk2XuYtrp",
             className: "header-discord-link",
             position: "right",
           },
@@ -149,7 +149,7 @@ const config = {
             position: "right",
           },
           {
-            href: "https://hub.docker.com/r/consensys",
+            href: "https://hub.docker.com/r/consensys/ethsigner",
             className: "header-dockerhub-link",
             position: "right",
           },
@@ -162,12 +162,20 @@ const config = {
             title: "Learn",
             items: [
               {
-                label: "Introduction",
-                to: "/docs/category/getting-started",
+                label: "Get Started",
+                to: "/docs/category/get-started",
               },
               {
-                label: "Create a Page",
-                to: "/docs/tutorial-basics/create-a-page",
+                label: "Concepts",
+                to: "/docs/category/concepts",
+              },
+              {
+                label: "Tutorials",
+                to: "/docs/category/tutorials",
+              },
+              {
+                label: "Reference",
+                to: "/docs/category/reference",
               },
             ],
           },
@@ -176,11 +184,11 @@ const config = {
             items: [
               {
                 label: "Discord",
-                href: "https://discord.com/invite/consensys",
+                href: "https://discord.gg/jCk2XuYtrp",
               },
               {
                 label: "Issues",
-                href: "https://github.com/ConsenSys/doc.ethsigner/issues",
+                href: "https://github.com/ConsenSys/ethsigner/issues",
               },
             ],
           },
@@ -188,8 +196,8 @@ const config = {
             title: "More",
             items: [
               {
-                label: "GitHub",
-                href: "https://github.com/ConsenSys/protocols-docs-test",
+                label: "Documentation on GitHub",
+                href: "https://github.com/ConsenSys/doc.ethsigner",
               },
               {
                 label: "ConsenSys",

@@ -1,5 +1,6 @@
 ---
 description: Use multiple signers
+sidebar_position: 3
 ---
 
 # Use multiple signing keys

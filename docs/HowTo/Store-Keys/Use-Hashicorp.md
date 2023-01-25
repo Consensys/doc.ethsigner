@@ -28,7 +28,7 @@ After installing [HashiCorp Vault](https://learn.hashicorp.com/vault/getting-sta
 
 3. Put your signing key into the HashiCorp Vault:
 
-  <!--tabs-->
+<!--tabs-->
 
 # Command
 
@@ -42,7 +42,7 @@ vault kv put secret/ethsignerSigningKey value=<Private Key without 0x prefix>
 vault kv put secret/ethsignerSigningKey value=8f2a55949038a9610f50fb23b5883af3b4ecb3c3bb792cbcefbd1542c692be63
 ```
 
-  <!--/tabs-->
+<!--/tabs-->
 
 The private key is stored in the default location for EthSigner. The key must be a base 64 encoded private key for ECDSA for curve secp256k1.
 

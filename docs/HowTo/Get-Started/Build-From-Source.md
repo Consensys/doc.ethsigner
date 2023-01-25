@@ -1,5 +1,6 @@
 ---
 description: Building EthSigner from source code
+sidebar_position: 3
 ---
 
 # Build from source

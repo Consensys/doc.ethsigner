@@ -552,7 +552,7 @@ logging="DEBUG"
 
 ### `metrics-enabled`
 
-Enables the [metrics exporter](../../HowTo/Monitor-Nodes/Metrics.md). The default is `false`.
+Enables the [metrics exporter](../../HowTo/Metrics.md). The default is `false`.
 
 <!--tabs-->
 
@@ -726,21 +726,21 @@ Allows any client to connect.
 
 # Syntax
 
-    ```bash
-    --tls-allow-any-client
-    ```
+```bash
+--tls-allow-any-client
+```
 
 # Environment variable
 
-    ```bash
-    ETHSIGNER_TLS_ALLOW_ANY_CLIENT
-    ```
+```bash
+ETHSIGNER_TLS_ALLOW_ANY_CLIENT
+```
 
 # Configuration file
 
-    ```bash
-    tls-allow-any-client
-    ```
+```bash
+tls-allow-any-client
+```
 
 <!--/tabs-->
 

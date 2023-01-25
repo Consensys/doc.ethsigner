@@ -1,5 +1,6 @@
 ---
 description: Use a single signer
+sidebar_position: 2
 ---
 
 # Use a single signing key

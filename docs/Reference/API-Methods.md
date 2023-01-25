@@ -1,4 +1,5 @@
 ---
+title: API methods
 description: EthSigner JSON-RPC API methods reference
 ---
 

@@ -1,5 +1,6 @@
 ---
 description: Secure communication using TLS
+sidebar_position: 2
 ---
 
 # TLS communication

@@ -1,5 +1,6 @@
 ---
-description: Using the EthSigner configuration file
+title: Using the configuration file
+sidebar_position: 6
 ---
 
 # Using the EthSigner configuration file

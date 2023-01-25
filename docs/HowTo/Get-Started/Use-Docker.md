@@ -1,5 +1,7 @@
 ---
+title: Run from Docker image
 description: Run EthSigner from Docker image
+sidebar_position: 2
 ---
 
 # Run EthSigner from Docker image

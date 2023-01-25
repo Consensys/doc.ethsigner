@@ -4,6 +4,11 @@
 const sidebars = {
   docSidebar: [
     {
+      type: "doc",
+      id: "index",
+      label: "Overview",
+    },
+    {
       type: "category",
       label: "How To",
       link: {

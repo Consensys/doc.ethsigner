@@ -1,4 +1,5 @@
 ---
+title: Security disclosure policy
 description: EthSigner responsible disclosure statement.
 ---
 
