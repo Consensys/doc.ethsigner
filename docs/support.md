@@ -26,8 +26,11 @@ Need help on using EthSigner? Ask our community or request paid support.
 - Read more on [ConsenSys Quorum site](https://consensys.net/quorum/)
 - [Create an issue on the repository](https://github.com/ConsenSys/ethsigner/issues).
 
-:::info
+:::info Community support detail
 
-Community support detail - Free, no subscription - Community led - 24/7 worldwide coverage
+- Community support detail
+- Free, no subscription
+- Community led
+- 24/7 worldwide coverage
 
 :::
