@@ -16,7 +16,7 @@ Need help on using EthSigner? Ask our community or request paid support.
 - Paid subscription (yearly or monthly)
 - SLAs
 - Support level choice (Gold, Bronze, Silver)
-- Business hours worldwide coverage :::
+- Business hours worldwide coverage
 
 :::
 
