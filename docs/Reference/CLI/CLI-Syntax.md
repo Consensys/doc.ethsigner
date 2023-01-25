@@ -426,6 +426,8 @@ The default value is `none`. If you do not allow any domains, browser apps canno
 
 For testing and development purposes, use `"all"` or `"*"` to accept requests from any domain. We don't recommend accepting requests from any domain for production environments.
 
+:::
+
 <!--tabs-->
 
 # Syntax
@@ -453,8 +455,6 @@ http-cors-origins=["http://remix.ethereum.org","https://meotherdomain.com"]
 ```
 
 <!--/tabs-->
-
-:::
 
 ### `http-listen-host`
 
@@ -586,6 +586,8 @@ Categories for which to track metrics. Options are `HTTP`, `SIGNING`, `JVM`, and
 
 There are currently no metrics available for the `HTTP` and `SIGNING` categories.
 
+:::
+
 <!--tabs-->
 
 # Syntax
@@ -613,8 +615,6 @@ metrics-category=["HTTP","SIGNING"]
 ```
 
 <!--/tabs-->
-
-:::
 
 ### `metrics-host`
 
@@ -656,6 +656,8 @@ A comma-separated list of hostnames to allow access to the EthSigner metrics. By
 
 To allow all hostnames, use "\*". We don’t recommend allowing all hostnames for production environments.
 
+:::
+
 <!--tabs-->
 
 # Syntax
@@ -683,8 +685,6 @@ metrics-host-allowlist=["medomain.com", "meotherdomain.com"]
 ```
 
 <!--/tabs-->
-
-:::
 
 ### `metrics-port`
 
@@ -722,7 +722,11 @@ metrics-port=6174
 
 Allows any client to connect.
 
-:::caution Cannot be used with `--tls-allow-ca-clients` and `--tls-known-clients-file`
+:::caution
+
+Cannot be used with `--tls-allow-ca-clients` and `--tls-known-clients-file`
+
+:::
 
 <!--tabs-->
 
@@ -745,8 +749,6 @@ tls-allow-any-client
 ```
 
 <!--/tabs-->
-
-:::
 
 ### `tls-allow-ca-clients`
 
