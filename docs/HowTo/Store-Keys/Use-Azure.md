@@ -54,4 +54,4 @@ Use the [--http-listen-port](../../Reference/CLI/CLI-Syntax.md#http-listen-port)
 
 :::
 
-You can now [use EthSigner to sign transactions](../Transactions/Make-Transactions.md) with the key stored in the Azure Key Vault.
+You can now [use EthSigner to sign transactions](../Make-Transactions.md) with the key stored in the Azure Key Vault.
