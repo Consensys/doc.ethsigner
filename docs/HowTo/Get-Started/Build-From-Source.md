@@ -6,12 +6,15 @@ description: Building EthSigner from source code
 
 ## Prerequisites
 
-* [Java JDK](https://www.oracle.com/java/technologies/javase-downloads.html)
+- [Java JDK](https://www.oracle.com/java/technologies/javase-downloads.html)
 
-!!!important
-    EthSigner requires Java 11 or later releases.
+  :::caution
 
-* [Git](https://git-scm.com/downloads) or [GitHub Desktop](https://desktop.github.com/)
+  EthSigner requires Java 11 or later releases.
+
+  :::
+
+- [Git](https://git-scm.com/downloads) or [GitHub Desktop](https://desktop.github.com/)
 
 ## Installation on Linux / Unix / macOS
 
@@ -47,10 +50,10 @@ tar -xzf ethsigner-<version>.tar.gz
 
 Move to the expanded folder and display the EthSigner help to confirm installation.
 
-````bash
+```bash
 cd ethsigner-<version>/
 bin/ethsigner --help
-````
+```
 
 ## Installation on Windows
 
@@ -76,9 +79,11 @@ Build EthSigner with the Gradle wrapper `gradlew`:
 .\gradlew build
 ```
 
-!!!note
-    To run `gradlew`, you must have the **JAVA_HOME** system variable set to the Java installation directory.
-    For example: `JAVA_HOME = C:\Program Files\Java\jdk1.8.0_181`.
+:::note
+
+To run `gradlew`, you must have the **JAVA_HOME** system variable set to the Java installation directory. For example: `JAVA_HOME = C:\Program Files\Java\jdk1.8.0_181`.
+
+:::
 
 Go to the distribution directory:
 
