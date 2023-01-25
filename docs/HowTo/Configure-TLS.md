@@ -59,9 +59,13 @@ The command line:
 - [Specifies the clients](#create-the-known-clients-file) that are trusted to connect to EthSigner using the [`tls-known-clients-file`](../Reference/CLI/CLI-Syntax.md#tls-known-clients-file) option.
 - Allow access to clients with trusted CA certificates using the [`--tls-allow-ca-clients`](../Reference/CLI/CLI-Syntax.md#tls-allow-ca-clients) option.
 
-:::note Use the [`--tls-allow-any-client`](../Reference/CLI/CLI-Syntax.md#tls-allow-any-client) option to allow access to any client.
+:::note
 
-[`--tls-allow-any-client`](../Reference/CLI/CLI-Syntax.md#tls-allow-any-client) cannot be used with [`tls-known-clients-file`](../Reference/CLI/CLI-Syntax.md#tls-known-clients-file) or [`--tls-allow-ca-clients`](../Reference/CLI/CLI-Syntax.md#tls-allow-ca-clients). :::
+Use the [`--tls-allow-any-client`](../Reference/CLI/CLI-Syntax.md#tls-allow-any-client) option to allow access to any client.
+
+[`--tls-allow-any-client`](../Reference/CLI/CLI-Syntax.md#tls-allow-any-client) cannot be used with [`tls-known-clients-file`](../Reference/CLI/CLI-Syntax.md#tls-known-clients-file) or [`--tls-allow-ca-clients`](../Reference/CLI/CLI-Syntax.md#tls-allow-ca-clients).
+
+:::
 
 ## Server TLS connection
 
@@ -89,7 +93,11 @@ localhost:8590 6C:B2:3E:F9:88:43:5E:62:69:9F:A9:9D:41:14:03:BA:83:24:AC:04:CE:BD
 
 :::
 
-:::note Specify both hostname and IP address in the file if unsure which is used in requests. :::
+:::note
+
+Specify both hostname and IP address in the file if unsure which is used in requests.
+
+:::
 
 ### Start EthSigner
 
@@ -104,4 +112,8 @@ The command line:
 - Specifies the file that contains the password to decrypt the keystore using the [`--downstream-http-tls-keystore-password-file`](../Reference/CLI/CLI-Syntax.md#downstream-http-tls-keystore-password-file) option.
 - [Specifies the servers](#create-the-known-servers-file) to connect to using the [`--downstream-http-tls-known-servers-file`](../Reference/CLI/CLI-Syntax.md#downstream-http-tls-known-servers-file) option.
 
-:::note The [`--downstream-http-tls-ca-auth-enabled`](../Reference/CLI/CLI-Syntax.md#downstream-http-tls-ca-auth-enabled) option is `true` by default and allows connections to servers with trusted root CAs. :::
+:::note
+
+The [`--downstream-http-tls-ca-auth-enabled`](../Reference/CLI/CLI-Syntax.md#downstream-http-tls-ca-auth-enabled) option is `true` by default and allows connections to servers with trusted root CAs.
+
+:::

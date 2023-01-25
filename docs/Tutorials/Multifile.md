@@ -25,7 +25,11 @@ Multi-tenancy is a feature in [Hyperledger Besu](https://besu.hyperledger.org/en
 - [Node.js](https://nodejs.org/en/download/)
 - [web3.js](https://github.com/ethereum/web3.js/).
 
-:::note The Ethereum client used in this documentation is Hyperledger Besu but EthSigner can be used with any Ethereum client. :::
+:::note
+
+The Ethereum client used in this documentation is Hyperledger Besu but EthSigner can be used with any Ethereum client.
+
+:::
 
 ## Start Besu
 

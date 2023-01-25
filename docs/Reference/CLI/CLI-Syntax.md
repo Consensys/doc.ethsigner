@@ -1,5 +1,7 @@
 ---
+title: Options
 description: EthSigner command line interface reference
+sidebar_position: 1
 ---
 
 # EthSigner command line

@@ -58,7 +58,9 @@ To run EthSigner exposing listening port for access:
 docker run -p <listenPort>:8545 consensys/ethsigner:latest <options>
 ```
 
-:::info To run EthSigner using [file-based signing](../../Tutorials/Start-EthSigner.md) using the default listing port and 8590 as the downstream port:
+:::info
+
+To run EthSigner using [file-based signing](../../Tutorials/Start-EthSigner.md) using the default listing port and 8590 as the downstream port:
 
 ```bash
 docker run -p <listenPort>:8545 -v <~/myKeyFile>:/opt/ethsigner/keyfile -v <~/myPasswordFile>:/opt/ethsigner/passwordfile consensys/ethsigner:latest --chain-id=2018 --downstream-http-host=<PantheonHost> --downstream-http-port=8590 --http-listen-host=0.0.0.0 file-based-signer -k /opt/ethsigner/keyfile -p /opt/ethsigner/passwordfile

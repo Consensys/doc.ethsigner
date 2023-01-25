@@ -29,7 +29,11 @@ password-file = "/Users/me/project/78e6e236592597c09d5c137c2af40aecd42d12a2.pass
 
 :::
 
-:::note EthSigner supports absolute paths or relative paths when specifying `key-file` and `password-file`. Relative paths are relative to the directory specified in the [`multikey-signer --directory`](../Reference/CLI/CLI-Syntax.md#multikey-options) subcommand. :::
+:::note
+
+EthSigner supports absolute paths or relative paths when specifying `key-file` and `password-file`. Relative paths are relative to the directory specified in the [`multikey-signer --directory`](../Reference/CLI/CLI-Syntax.md#multikey-options) subcommand.
+
+:::
 
 | Key | Description |
 | --- | --- |
@@ -61,7 +65,11 @@ tlsTrustStorePath = "/Users/me/project/knownHashicorpServers"
 
 :::
 
-:::note The value of `keyPath` is dependent on how HashiCorp Vault secret engine is configured. It's usually in the format of `/v1/<secret-engine-name>/data/<secret-path>`. For example, in HashiCorp Vault `dev` mode, a default secret engine with name `secret` is created. Creating a path `EthSignerKeys` in `secret` would result in the `keyPath` value to be `/v1/secret/data/EthSignerKeys`. :::
+:::note
+
+The value of `keyPath` is dependent on how HashiCorp Vault secret engine is configured. It's usually in the format of `/v1/<secret-engine-name>/data/<secret-path>`. For example, in HashiCorp Vault `dev` mode, a default secret engine with name `secret` is created. Creating a path `EthSignerKeys` in `secret` would result in the `keyPath` value to be `/v1/secret/data/EthSignerKeys`.
+
+:::
 
 | Key | Description |
 | --- | --- |

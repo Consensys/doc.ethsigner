@@ -1,5 +1,7 @@
 ---
+title: Subcommands
 description: EthSigner command line interface subcommands
+sidebar_position: 2
 ---
 
 # Subcommands
@@ -47,7 +49,11 @@ For each subcommand option, the equivalent environment variable is:
 - `_` replaces `-`
 - Has an `ETHSIGNER_` + `<SIGNING_OPTION>_` prefix. For example set `azure-signer --client-id` using the `ETHSIGNER_AZURE_SIGNER_CLIENT_ID` environment variable.
 
-:::note Only subcommand options can be set in environment variables. The actual subcommand must be specified in the command line. :::
+:::note
+
+Only subcommand options can be set in environment variables. The actual subcommand must be specified in the command line.
+
+:::
 
 ## View help
 

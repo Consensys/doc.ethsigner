@@ -42,9 +42,19 @@ Transaction object for private transactions:
 | **privateFor** or **privacyGroupId** | Array of data or data | Required | Tessera addresses of recipients or [privacy group ID](https://besu.hyperledger.org/en/stable/Concepts/Privacy/Privacy-Groups/) |  |
 | **restriction** | String | Required | Must be [`restricted`](https://besu.hyperledger.org/en/stable/Concepts/Privacy/Privacy-Overview/#private-transaction-attributes) |  |
 
-:::tip Submitting a transaction with the same nonce as a pending transaction and a higher gas price replaces the pending transaction with the new one. Use [`priv_getTransactionCount`](https://besu.hyperledger.org/en/stable/Reference/API-Methods/#priv_gettransactioncount) to calculate the nonce.
+:::tip
 
-If not attempting to replace a pending transaction, do not include the `nonce` in the private transaction object and nonce management is handled automatically. ::: :::note If a non-zero `value` is included in the transaction object, an error is returned. Ether transfers cannot be private transactions. :::
+Submitting a transaction with the same nonce as a pending transaction and a higher gas price replaces the pending transaction with the new one. Use [`priv_getTransactionCount`](https://besu.hyperledger.org/en/stable/Reference/API-Methods/#priv_gettransactioncount) to calculate the nonce.
+
+If not attempting to replace a pending transaction, do not include the `nonce` in the private transaction object and nonce management is handled automatically.
+
+:::
+
+:::note
+
+If a non-zero `value` is included in the transaction object, an error is returned. Ether transfers cannot be private transactions.
+
+:::
 
 #### Returns
 
@@ -140,7 +150,11 @@ Transaction object:
 | **value** | Quantity | Optional | Value transferred in Wei. |
 | **data** | Quantity | Optional | Compiled contract code or hash of the invoked method signature and encoded parameters. |
 
-:::tip Submitting a transaction with the same nonce as a pending transaction and a higher gas price replaces the pending transaction with the new one. :::
+:::tip
+
+Submitting a transaction with the same nonce as a pending transaction and a higher gas price replaces the pending transaction with the new one.
+
+:::
 
 #### Returns
 
