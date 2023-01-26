@@ -5,20 +5,7 @@ description: EthSigner support plans
 
 # Support
 
-Need help on using EthSigner? Ask our community or request paid support.
-
-## Professional support (paid)
-
-:envelope: Ask our [ConsenSys Quorum support team](mailto:quorum@consensys.net) for a professional subscription.
-
-:::info Professional support detail
-
-- Paid subscription (yearly or monthly)
-- SLAs
-- Support level choice (Gold, Bronze, Silver)
-- Business hours worldwide coverage
-
-:::
+Need help on using EthSigner? Ask our community for support.
 
 ## Community support (free)
 
@@ -29,7 +16,7 @@ Need help on using EthSigner? Ask our community or request paid support.
 :::info Community support detail
 
 - Community support detail
-- Free, no subscription
+- Free
 - Community led
 - 24/7 worldwide coverage
 

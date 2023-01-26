@@ -3,7 +3,8 @@ import clsx from "clsx";
 import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
-import HomepageFeatures from "@site/src/components/HomepageFeatures";
+// import HomepageFeatures from "@site/src/components/HomepageFeatures";
+import HomepageCards from "@site/src/components/HomepageCards";
 
 import styles from "./index.module.css";
 
@@ -31,10 +32,11 @@ export default function Home(): JSX.Element {
   return (
     <Layout
       title={`Welcome`}
-      description="Description will go into a meta tag in <head />">
+      description="An open-source, client-agnostic, Ethereum transaction signer that separates private key management from transaction validation by signing transactions using a private key that can be secured in a variety of cloud providers, or encrypted on a local disk.">
       <HomepageHeader />
       <main>
-        <HomepageFeatures />
+        <HomepageCards />
+        {/* <HomepageFeatures /> */}
       </main>
     </Layout>
   );
