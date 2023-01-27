@@ -59,7 +59,7 @@ const CardList: CardItem[] = [
 
 function Card({ title, link, description, buttonName, buttonType }: CardItem) {
   return (
-    <div className={clsx("col col--4")}>
+    <div className={clsx("col", "col--4", "margin-top--md")}>
       <div className="card-demo">
         <div className="card">
           <div className="card__header">
