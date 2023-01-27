@@ -21,7 +21,7 @@ type CardItem = {
 const CardList: CardItem[] = [
   {
     title: "🏁 Getting Started",
-    link: "string",
+    link: "/docs/category/get-started",
     description: (
       <>
         The quickest way to get started by either deploying with Docker,
@@ -33,7 +33,7 @@ const CardList: CardItem[] = [
   },
   {
     title: "💭 Concepts",
-    link: "string",
+    link: "/docs/category/concepts",
     description: (
       <>
         Check out some general concepts that will help you understand how
@@ -45,7 +45,7 @@ const CardList: CardItem[] = [
   },
   {
     title: "👨‍💻 Reference",
-    link: "string",
+    link: "/docs/category/reference",
     description: (
       <>
         Find command line arguments, API methods through JSON-RPC, and general
