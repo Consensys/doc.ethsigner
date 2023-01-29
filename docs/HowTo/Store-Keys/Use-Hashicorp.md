@@ -72,7 +72,9 @@ The path to the key in the HashiCorp Vault specified by `--signing-key-path` is 
 
 The path specified for `--signing-key-path` is `/v1/secret/data/ethsignerSigningKey`
 
-:::tip Use the [--http-listen-port](../../Reference/CLI/CLI-Syntax.md#http-listen-port) option to change the EthSigner listening port if `8545` is in use.
+:::tip
+
+Use the [--http-listen-port](../../Reference/CLI/CLI-Syntax.md#http-listen-port) option to change the EthSigner listening port if `8545` is in use.
 
 :::
 

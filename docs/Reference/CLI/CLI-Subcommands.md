@@ -13,7 +13,8 @@ EthSigner signs transaction with a key stored in an encrypted file or an externa
 - `ethsigner [Options] azure-signer [Azure Options]`
 - `ethsigner [Options] multikey-signer [Multikey Options]`
 
-The [`file-based-signer`](#file-options), [`hashicorp-signer`](#hashicorp-options), and [`azure-signer`](#azure-options) subcommands are used for [single keys only](../../Tutorials/Start-EthSigner.md), and the [`multikey-signer`](#multikey-options) subcommand is used for [one or more keys](../../Tutorials/Multifile.md).
+The [`file-based-signer`](#file-based-signer), [`hashicorp-signer`](#hashicorp-signer), and
+[`azure-signer`](#azure-signer) subcommands are used for [single keys only](../../Tutorials/Start-EthSigner.md), and the [`multikey-signer`](#multikey-options) subcommand is used for [one or more keys](../../Tutorials/Multifile.md).
 
 :::caution
 
