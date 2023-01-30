@@ -38,7 +38,8 @@ const config = {
           sidebarPath: require.resolve("./sidebars.js"),
           // Set a base path separate from default /docs
           editUrl: "https://github.com/ConsenSys/doc.ethsigner/tree/main/",
-          routeBasePath: "/docs",
+          routeBasePath: "/",
+          path: "docs",
           // @ts-ignore
           // eslint-disable-next-line global-require
           remarkPlugins: [require("remark-docusaurus-tabs")],
@@ -125,12 +126,12 @@ const config = {
           {
             type: "docSidebar",
             sidebarId: "docSidebar",
-            docId: "index",
+            docId: "overview",
             position: "left",
             label: "Docs",
           },
           {
-            to: "/docs/support",
+            to: "/support",
             label: "Support",
           },
           {
@@ -163,19 +164,19 @@ const config = {
             items: [
               {
                 label: "Get Started",
-                to: "/docs/category/get-started",
+                to: "/category/get-started",
               },
               {
                 label: "Concepts",
-                to: "/docs/category/concepts",
+                to: "/category/concepts",
               },
               {
                 label: "Tutorials",
-                to: "/docs/category/tutorials",
+                to: "/category/tutorials",
               },
               {
                 label: "Reference",
-                to: "/docs/category/reference",
+                to: "/category/reference",
               },
             ],
           },

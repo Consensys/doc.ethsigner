@@ -5,7 +5,7 @@ const sidebars = {
   docSidebar: [
     {
       type: "doc",
-      id: "index",
+      id: "overview",
       label: "Overview",
     },
     {
