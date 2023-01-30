@@ -33,7 +33,7 @@ const CardList: CardItem[] = [
   },
   {
     title: "💭 Concepts",
-    link: "/category/concepts",
+    link: "/Concepts",
     description: (
       <>
         Check out some general concepts that will help you understand how
@@ -45,7 +45,7 @@ const CardList: CardItem[] = [
   },
   {
     title: "👨‍💻 Reference",
-    link: "/category/reference",
+    link: "/Reference",
     description: (
       <>
         Find command line arguments, API methods through JSON-RPC, and general

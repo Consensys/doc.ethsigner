@@ -57,10 +57,9 @@ const config = {
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
         },
-        // gtag: {
-        //   trackingID: "G-999X9XX9XX",
-        //   anonymizeIP: true,
-        // },
+        googleTagManager: {
+          containerId: "GTM-P8DD38T",
+        },
       },
     ],
   ],
@@ -168,15 +167,15 @@ const config = {
               },
               {
                 label: "Concepts",
-                to: "/category/concepts",
+                to: "/Concepts",
               },
               {
                 label: "Tutorials",
-                to: "/category/tutorials",
+                to: "/Tutorials",
               },
               {
                 label: "Reference",
-                to: "/category/reference",
+                to: "/Reference",
               },
             ],
           },

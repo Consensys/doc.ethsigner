@@ -13,6 +13,7 @@ const sidebars = {
       label: "How To",
       link: {
         type: "generated-index",
+        slug: "HowTo",
       },
       items: [
         {
@@ -26,6 +27,7 @@ const sidebars = {
       label: "Concepts",
       link: {
         type: "generated-index",
+        slug: "Concepts",
       },
       items: [
         {
@@ -39,6 +41,7 @@ const sidebars = {
       label: "Tutorials",
       link: {
         type: "generated-index",
+        slug: "Tutorials",
       },
       items: [
         {
@@ -52,6 +55,7 @@ const sidebars = {
       label: "Reference",
       link: {
         type: "generated-index",
+        slug: "Reference",
       },
       items: [
         {
