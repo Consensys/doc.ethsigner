@@ -21,30 +21,30 @@ To configure Prometheus to run with EthSigner:
 
 1. Configure Prometheus to poll EthSigner. For example, add the following YAML fragment to the the `prometheus.yml` file:
 
-    :::info Example configuration
+   :::info Example configuration
 
-    ```yml
-    global:
-      scrape_interval: 15s
-    scrape_configs:
-      - job_name: "prometheus"
-        static_configs:
-          - targets: ["localhost:9090"]
-      - job_name: "ethsigner-prod"
-        scrape_timeout: 10s
-        metrics_path: /metrics
-        scheme: http
-        static_configs:
-          - targets: ["localhost:9546"]
-    ```
+   ```yml
+   global:
+     scrape_interval: 15s
+   scrape_configs:
+     - job_name: "prometheus"
+       static_configs:
+         - targets: ["localhost:9090"]
+     - job_name: "ethsigner-prod"
+       scrape_timeout: 10s
+       metrics_path: /metrics
+       scheme: http
+       static_configs:
+         - targets: ["localhost:9546"]
+   ```
 
-    :::
+   :::
 
-    :::note
+   :::note
 
-    Alternatively create your own YAML file and add the above example configuration.
+   Alternatively create your own YAML file and add the above example configuration.
 
-    :::
+   :::
 
 1. Start EthSigner with the [`--metrics-enabled`](../Reference/CLI/CLI-Syntax.md#metrics-enabled) option.
 
