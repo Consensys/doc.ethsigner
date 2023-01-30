@@ -57,9 +57,6 @@ const config = {
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
         },
-        googleTagManager: {
-          containerId: "GTM-P8DD38T",
-        },
       },
     ],
   ],
@@ -250,7 +247,14 @@ const config = {
         // },
       ],
     }),
-  plugins: [],
+  plugins: [
+    [
+      "@docusaurus/plugin-google-tag-manager",
+      {
+        containerId: "GTM-P8DD38T",
+      },
+    ],
+  ],
   themes: [],
 };
 
