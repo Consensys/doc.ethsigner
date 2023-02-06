@@ -9,7 +9,7 @@ const config = {
   title: "ConsenSys EthSigner",
   tagline:
     "An open-source, client-agnostic, Ethereum transaction signer that separates private key management from transaction validation by signing transactions using a private key that can be secured in a variety of cloud providers, or encrypted on a local disk.",
-  url: "https://consensys.github.io",
+  url: "https://docs.ethsigner.consensys.net",
   baseUrl,
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "throw",
