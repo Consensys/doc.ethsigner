@@ -26,7 +26,7 @@ const mainConfig = {
       },
     ],
   ],
-  repositoryUrl: "https://github.com/ConsenSys/docs-template",
+  repositoryUrl: "https://github.com/ConsenSys/doc.ethsigner",
 };
 
 module.exports = mainConfig;
