@@ -254,6 +254,13 @@ const config = {
         containerId: "GTM-P8DD38T",
       },
     ],
+    [
+      "@docusaurus/plugin-google-gtag",
+      {
+        trackingID: "G-N5TSH1NV4Q",
+        anonymizeIP: true,
+      },
+    ],
   ],
   themes: [],
 };
