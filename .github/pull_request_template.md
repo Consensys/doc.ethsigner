@@ -7,7 +7,7 @@ Use the following template to make sure your PR fits the ConsenSys documentation
 Make sure that:
 
 - [ ] You've read the [contribution guidelines](https://consensys.net/docs/doctools/).
-- [ ] You've [previewed your changes locally](https://consensys.net/docs/doctools//en/latest/preview/new-system/).
+- [ ] You've [previewed your changes locally](https://consensys.net/docs/doctools/en/latest/preview/new-system/#preview-locally).
 
 ## Describe the change
 
@@ -33,9 +33,11 @@ For content changes:
 
 For tool changes:
 
-- [ ] Github Actions workflow
-- [ ] Build and QA tools (for example, lint or vale)
+- [ ] Build and QA tools
+- [ ] MkDocs templates
 - [ ] MkDocs configuration
+- [ ] Python dependencies
+- [ ] Node dependencies and JavaScript
 - [ ] GitHub integration
 
 ## After creating your PR and tests have finished
@@ -43,4 +45,4 @@ For tool changes:
 Make sure that:
 
 - [ ] You've [fixed any issues](https://consensys.net/docs/doctools/en/latest/contribute/fix-cicd-errors/) raised by the tests.
-- [ ] You've previewed your changes (see preview link added in the PR comments)
+- [ ] You've [previewed your changes on GitHub Pages](https://consensys.net/docs/doctools/en/latest/preview/new-system/#preview-on-github-pages)

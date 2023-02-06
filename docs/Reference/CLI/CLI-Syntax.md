@@ -1,5 +1,7 @@
 ---
+title: Options
 description: EthSigner command line interface reference
+sidebar_position: 1
 ---
 
 # EthSigner command line
@@ -10,135 +12,147 @@ This reference describes the syntax of the EthSigner Command Line Interface (CLI
 
 EthSigner options can be specified:
 
-* On the command line
-* As an [environment variable](#environment-variables)
-* In a [TOML configuration file].
+- On the command line
+- As an [environment variable](#environment-variables)
+- In a [TOML configuration file].
 
-If you specify an option in more than one place, the order of priority is command line, environment
-variable, configuration file.
+If you specify an option in more than one place, the order of priority is command line, environment variable, configuration file.
 
 ### Environment variables
 
 For each command line option, the equivalent environment variable is:
 
-* Upper-case
-* `_` replaces `-`
-* Has an `ETHSIGNER_` prefix
+- Upper-case
+- `_` replaces `-`
+- Has an `ETHSIGNER_` prefix
 
 For example, set `--data-path` using the `ETHSIGNER_DATA_PATH` environment variable.
 
-You can include [subcommand] options as environment variables as well, for example set
-`multikey-signer --directory` using the `ETHSIGNER_MULTIKEY_SIGNER_DIRECTORY` environment variable.
+You can include [subcommand] options as environment variables as well, for example set `multikey-signer --directory` using the `ETHSIGNER_MULTIKEY_SIGNER_DIRECTORY` environment variable.
 
 ## Options
 
 ### config-file
 
-The path to the [TOML configuration file](../../HowTo/Use-Configuration-File.md).
-The default is `none`.
+The path to the [TOML configuration file](../../HowTo/Use-Configuration-File.md). The default is `none`.
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    --config-file=<FILE>
-    ```
+# Syntax
 
-=== "Example"
+```bash
+--config-file=<FILE>
+```
 
-    ```bash
-    --config-file=/home/me/me_node/config.toml
-    ```
+# Example
 
-=== "Environment variable"
+```bash
+--config-file=/home/me/me_node/config.toml
+```
 
-    ```bash
-    ETHSIGNER_CONFIG_FILE=/home/me/me_node/config.toml
-    ```
+# Environment variable
+
+```bash
+ETHSIGNER_CONFIG_FILE=/home/me/me_node/config.toml
+```
+
+<!--/tabs-->
 
 ### `chain-id`
 
-[Chain ID](https://besu.hyperledger.org/en/stable/Concepts/NetworkID-And-ChainID/) of the network to
-receive the signed transactions.
+[Chain ID](https://besu.hyperledger.org/en/stable/Concepts/NetworkID-And-ChainID/) of the network to receive the signed transactions.
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    --chain-id=<chainId>
-    ```
+# Syntax
 
-=== "Example"
+```bash
+--chain-id=<chainId>
+```
 
-    ```bash
-    --chain-id=2017
-    ```
+# Example
 
-=== "Environment variable"
+```bash
+--chain-id=2017
+```
 
-    ```bash
-    ETHSIGNER_CHAIN_ID=2017
-    ```
+# Environment variable
 
-=== "Configuration file"
+```bash
+ETHSIGNER_CHAIN_ID=2017
+```
 
-    ```bash
-    chain-id=2017
-    ```
+# Configuration file
+
+```bash
+chain-id=2017
+```
+
+<!--/tabs-->
 
 ### `data-path`
 
 Directory in which to store temporary files.
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    --data-path=<PATH>
-    ```
+# Syntax
 
-=== "Example"
+```bash
+--data-path=<PATH>
+```
 
-    ```bash
-    --data-path=/Users/me/my_node/data
-    ```
+# Example
 
-=== "Environment variable"
+```bash
+--data-path=/Users/me/my_node/data
+```
 
-    ```bash
-    ETHSIGNER_DATA_PATH=/Users/me/my_node/data
-    ```
+# Environment variable
 
-=== "Configuration file"
+```bash
+ETHSIGNER_DATA_PATH=/Users/me/my_node/data
+```
 
-    ```bash
-    data-path="/Users/me/my_node/data"
-    ```
+# Configuration file
+
+```bash
+data-path="/Users/me/my_node/data"
+```
+
+<!--/tabs-->
 
 ### `downstream-http-host`
 
 Host to which received requests are forwarded. Default is `localhost`.
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    --downstream-http-host=<downstreamHttpHost>
-    ```
+# Syntax
 
-=== "Example"
+```bash
+--downstream-http-host=<downstreamHttpHost>
+```
 
-    ```bash
-    --downstream-http-host=192.168.05.14
-    ```
+# Example
 
-=== "Environment variable"
+```bash
+--downstream-http-host=192.168.05.14
+```
 
-    ```bash
-    ETHSIGNER_DOWNSTREAM_HTTP_HOST=192.168.05.14
-    ```
+# Environment variable
 
-=== "Configuration file"
+```bash
+ETHSIGNER_DOWNSTREAM_HTTP_HOST=192.168.05.14
+```
 
-    ```bash
-    downstream-http-host="192.168.05.14"
-    ```
+# Configuration file
+
+```bash
+downstream-http-host="192.168.05.14"
+```
+
+<!--/tabs-->
 
 ### `downstream-http-path`
 
@@ -146,114 +160,129 @@ Path to which received requests are forwarded. Default is `/`.
 
 Might be required if [connecting to a cloud-based Ethereum client] such as [Infura].
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    --downstream-http-path=<downstreamHttpPath>
-    ```
+# Syntax
 
-=== "Example"
+```bash
+--downstream-http-path=<downstreamHttpPath>
+```
 
-    ```bash
-    --downstream-http-path=/v3/d0e63ca5bb1e4eef2284422efbc51a56
-    ```
+# Example
 
-=== "Environment variable"
+```bash
+--downstream-http-path=/v3/d0e63ca5bb1e4eef2284422efbc51a56
+```
 
-    ```bash
-    ETHSIGNER_DOWNSTREAM_HTTP_PATH=/v3/d0e63ca5bb1e4eef2284422efbc51a56
-    ```
+# Environment variable
 
-=== "Configuration file"
+```bash
+ETHSIGNER_DOWNSTREAM_HTTP_PATH=/v3/d0e63ca5bb1e4eef2284422efbc51a56
+```
 
-    ```bash
-    downstream-http-path="/v3/d0e63ca5bb1e4eef2284422efbc51a56"
-    ```
+# Configuration file
+
+```bash
+downstream-http-path="/v3/d0e63ca5bb1e4eef2284422efbc51a56"
+```
+
+<!--/tabs-->
 
 ### `downstream-http-port`
 
 Port to which received requests are forwarded.
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    --downstream-http-port=<downstreamHttpPort>
-    ```
+# Syntax
 
-=== "Example"
+```bash
+--downstream-http-port=<downstreamHttpPort>
+```
 
-    ```bash
-    --downstream-http-port=6174
-    ```
+# Example
 
-=== "Environment variable"
+```bash
+--downstream-http-port=6174
+```
 
-    ```bash
-    ETHSIGNER_DOWNSTREAM_HTTP_PORT=6174
-    ```
+# Environment variable
 
-=== "Configuration file"
+```bash
+ETHSIGNER_DOWNSTREAM_HTTP_PORT=6174
+```
 
-    ```bash
-    downstream-http-port=6174
-    ```
+# Configuration file
+
+```bash
+downstream-http-port=6174
+```
+
+<!--/tabs-->
 
 ### `downstream-http-request-timeout`
 
 Timeout period (in milliseconds) for downstream requests. Default is 5000.
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    --downstream-http-request-timeout=<downstreamHttpRequestTimeout>
-    ```
+# Syntax
 
-=== "Example"
+```bash
+--downstream-http-request-timeout=<downstreamHttpRequestTimeout>
+```
 
-    ```bash
-    --downstream-http-request-timeout=3000
-    ```
+# Example
 
-=== "Environment variable"
+```bash
+--downstream-http-request-timeout=3000
+```
 
-    ```bash
-    ETHSIGNER_DOWNSTREAM_HTTP_REQUEST_TIMEOUT=3000
-    ```
+# Environment variable
 
-=== "Configuration file"
+```bash
+ETHSIGNER_DOWNSTREAM_HTTP_REQUEST_TIMEOUT=3000
+```
 
-    ```bash
-    downstream-http-request-timeout=3000
-    ```
+# Configuration file
+
+```bash
+downstream-http-request-timeout=3000
+```
+
+<!--/tabs-->
 
 ### `downstream-http-tls-enabled`
 
-Enable or disable [TLS for server connections](../../Concepts/TLS.md).
-Defaults to `false`.
+Enable or disable [TLS for server connections](../../Concepts/TLS.md). Defaults to `false`.
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    --downstream-http-tls-enabled[=<true|false>]
-    ```
+# Syntax
 
-=== "Example"
+```bash
+--downstream-http-tls-enabled[=<true|false>]
+```
 
-    ```bash
-    --downstream-http-tls-enabled
-    ```
+# Example
 
-=== "Environment variable"
+```bash
+--downstream-http-tls-enabled
+```
 
-    ```bash
-    ETHSIGNER_DOWNSTREAM_HTTP_TLS_ENABLED
-    ```
+# Environment variable
 
-=== "Configuration file"
+```bash
+ETHSIGNER_DOWNSTREAM_HTTP_TLS_ENABLED
+```
 
-    ```bash
-    downstream-http-tls-enabled
-    ```
+# Configuration file
+
+```bash
+downstream-http-tls-enabled
+```
+
+<!--/tabs-->
 
 ### `downstream-http-tls-ca-auth-enabled`
 
@@ -261,539 +290,618 @@ Allow connections to servers with trusted CAs.
 
 Defaults to `true`.
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    --downstream-http-tls-ca-auth-enabled[=<true|false>]
-    ```
+# Syntax
 
-=== "Example"
+```bash
+--downstream-http-tls-ca-auth-enabled[=<true|false>]
+```
 
-    ```bash
-    --downstream-http-tls-ca-auth-enabled=false
-    ```
+# Example
 
-=== "Environment variable"
+```bash
+--downstream-http-tls-ca-auth-enabled=false
+```
 
-    ```bash
-    ETHSIGNER_DOWNSTREAM_HTTP_TLS_CA_AUTH_ENABLED=false
-    ```
+# Environment variable
 
-=== "Configuration file"
+```bash
+ETHSIGNER_DOWNSTREAM_HTTP_TLS_CA_AUTH_ENABLED=false
+```
 
-    ```bash
-    downstream-http-tls-ca-auth-enabled=false
-    ```
+# Configuration file
+
+```bash
+downstream-http-tls-ca-auth-enabled=false
+```
+
+<!--/tabs-->
 
 ### `downstream-http-tls-keystore-file`
 
-Keystore file (in PKCS #12 format) that contains the private key and certificate
-presented to the server during authentication.
+Keystore file (in PKCS #12 format) that contains the private key and certificate presented to the server during authentication.
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    --downstream-http-tls-keystore-file=<keystoreFile>
-    ```
+# Syntax
 
-=== "Example"
+```bash
+--downstream-http-tls-keystore-file=<keystoreFile>
+```
 
-    ```bash
-    --downstream-http-tls-keystore-file=/Users/me/my_node/keystore.pfx
-    ```
+# Example
 
-=== "Environment variable"
+```bash
+--downstream-http-tls-keystore-file=/Users/me/my_node/keystore.pfx
+```
 
-    ```bash
-    ETHSIGNER_DOWNSTREAM_HTTP_TLS_KEYSTORE_FILE=/Users/me/my_node/keystore.pfx
-    ```
+# Environment variable
 
-=== "Configuration file"
+```bash
+ETHSIGNER_DOWNSTREAM_HTTP_TLS_KEYSTORE_FILE=/Users/me/my_node/keystore.pfx
+```
 
-    ```bash
-    downstream-http-tls-keystore-file="/Users/me/my_node/keystore.pfx"
-    ```
+# Configuration file
+
+```bash
+downstream-http-tls-keystore-file="/Users/me/my_node/keystore.pfx"
+```
+
+<!--/tabs-->
 
 ### `downstream-http-tls-keystore-password-file`
 
 Password file used to decrypt the keystore.
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    --downstream-http-tls-keystore-password-file=<passwordFile>
-    ```
+# Syntax
 
-=== "Example"
+```bash
+--downstream-http-tls-keystore-password-file=<passwordFile>
+```
 
-    ```bash
-    --downstream-http-tls-keystore-password-file=/Users/me/my_node/password.txt
-    ```
+# Example
 
-=== "Environment variable"
+```bash
+--downstream-http-tls-keystore-password-file=/Users/me/my_node/password.txt
+```
 
-    ```bash
-    ETHSIGNER_DOWNSTREAM_HTTP_TLS_KEYSTORE_PASSWORD_FILE=/Users/me/my_node/password.txt
-    ```
+# Environment variable
 
-=== "Configuration file"
+```bash
+ETHSIGNER_DOWNSTREAM_HTTP_TLS_KEYSTORE_PASSWORD_FILE=/Users/me/my_node/password.txt
+```
 
-    ```bash
-    downstream-http-tls-keystore-password-file=/Users/me/my_node/password.txt
-    ```
+# Configuration file
+
+```bash
+downstream-http-tls-keystore-password-file=/Users/me/my_node/password.txt
+```
+
+<!--/tabs-->
 
 ### `downstream-http-tls-known-servers-file`
 
-File containing the hostnames, ports, and SHA256 certificate fingerprints
-of [trusted servers](../../HowTo/Configure-TLS.md#create-the-known-servers-file).
+File containing the hostnames, ports, and SHA256 certificate fingerprints of [trusted servers](../../HowTo/Configure-TLS.md#create-the-known-servers-file).
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    --downstream-http-tls-known-servers-file=<serversFile>
-    ```
+# Syntax
 
-=== "Example"
+```bash
+--downstream-http-tls-known-servers-file=<serversFile>
+```
 
-    ```bash
-    --downstream-http-tls-known-servers-file=/Users/me/my_node/knownServers
-    ```
+# Example
 
-=== "Environment variable"
+```bash
+--downstream-http-tls-known-servers-file=/Users/me/my_node/knownServers
+```
 
-    ```bash
-    ETHSIGNER_DOWNSTREAM_HTTP_TLS_KNOWN_SERVERS_FILE=/Users/me/my_node/knownServers
-    ```
+# Environment variable
 
-=== "Configuration file"
+```bash
+ETHSIGNER_DOWNSTREAM_HTTP_TLS_KNOWN_SERVERS_FILE=/Users/me/my_node/knownServers
+```
 
-    ```bash
-    downstream-http-tls-known-servers-file="/Users/me/my_node/knownServers"
-    ```
+# Configuration file
+
+```bash
+downstream-http-tls-known-servers-file="/Users/me/my_node/knownServers"
+```
+
+<!--/tabs-->
 
 ### `http-cors-origins`
 
-A list of domain URLs for CORS validation. You must enclose the URLs in double quotes and separate
-them with commas.
+A list of domain URLs for CORS validation. You must enclose the URLs in double quotes and separate them with commas.
 
-Listed domains can access the node using JSON-RPC. If your client interacts with EthSigner using a
-browser app (such as Remix or a block explorer), you must allow the client domains.
+Listed domains can access the node using JSON-RPC. If your client interacts with EthSigner using a browser app (such as Remix or a block explorer), you must allow the client domains.
 
-The default value is `none`. If you do not allow any domains, browser apps cannot interact with your
-EthSigner node.
+The default value is `none`. If you do not allow any domains, browser apps cannot interact with your EthSigner node.
 
-!!! tip
+:::tip
 
-    For testing and development purposes, use `"all"` or `"*"` to accept requests from any domain.
-    We don't recommend accepting requests from any domain for production environments.
+For testing and development purposes, use `"all"` or `"*"` to accept requests from any domain. We don't recommend accepting requests from any domain for production environments.
 
-=== "Syntax"
+:::
 
-    ```bash
-    --http-cors-origins=<httpListenHost>
-    ```
+<!--tabs-->
 
-=== "Example"
+# Syntax
 
-    ```bash
-    --http-cors-origins="http://remix.ethereum.org","http://medomain.com"
-    ```
+```bash
+--http-cors-origins=<httpListenHost>
+```
 
-=== "Environment variable"
+# Example
 
-    ```bash
-    ETHSIGNER_HTTP_CORS_ORIGINS="http://remix.ethereum.org","http://medomain.com"
-    ```
+```bash
+--http-cors-origins="http://remix.ethereum.org","http://medomain.com"
+```
 
-=== "Configuration file"
+# Environment variable
 
-    ```bash
-    http-cors-origins=["http://remix.ethereum.org","https://meotherdomain.com"]
-    ```
+```bash
+ETHSIGNER_HTTP_CORS_ORIGINS="http://remix.ethereum.org","http://medomain.com"
+```
+
+# Configuration file
+
+```bash
+http-cors-origins=["http://remix.ethereum.org","https://meotherdomain.com"]
+```
+
+<!--/tabs-->
 
 ### `http-listen-host`
 
 Host on which JSON-RPC HTTP listens. Default is `localhost`.
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    --http-listen-host=<httpListenHost>
-    ```
+# Syntax
 
-=== "Example"
+```bash
+--http-listen-host=<httpListenHost>
+```
 
-    ```bash
-    --http-listen-host=10.100.111.1
-    ```
+# Example
 
-=== "Environment variable"
+```bash
+--http-listen-host=10.100.111.1
+```
 
-    ```bash
-    ETHSIGNER_HTTP_LISTEN_HOST=10.100.111.1
-    ```
+# Environment variable
 
-=== "Configuration file"
+```bash
+ETHSIGNER_HTTP_LISTEN_HOST=10.100.111.1
+```
 
-    ```bash
-    http-listen-host="10.100.111.1"
-    ```
+# Configuration file
+
+```bash
+http-listen-host="10.100.111.1"
+```
+
+<!--/tabs-->
 
 ### `http-listen-port`
 
 Port on which JSON-RPC HTTP listens. Default is 8545.
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    --http-listen-port=<httpListenPort>
-    ```
+# Syntax
 
-=== "Example"
+```bash
+--http-listen-port=<httpListenPort>
+```
 
-    ```bash
-    --http-listen-port=6174
-    ```
+# Example
 
-=== "Environment variable"
+```bash
+--http-listen-port=6174
+```
 
-    ```bash
-    ETHSIGNER_HTTP_LISTEN_PORT=6174
-    ```
+# Environment variable
 
-=== "Configuration file"
+```bash
+ETHSIGNER_HTTP_LISTEN_PORT=6174
+```
 
-    ```bash
-    http-listen-port=6174
-    ```
+# Configuration file
+
+```bash
+http-listen-port=6174
+```
+
+<!--/tabs-->
 
 ### `logging`
 
-Logging verbosity levels. Options are: `OFF`, `FATAL`, `WARN`, `INFO`, `DEBUG`, `TRACE`, `ALL`.
-Default is `INFO`.
+Logging verbosity levels. Options are: `OFF`, `FATAL`, `WARN`, `INFO`, `DEBUG`, `TRACE`, `ALL`. Default is `INFO`.
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    -l, --logging=<LOG VERBOSITY LEVEL>
-    ```
+# Syntax
 
-=== "Example"
+```bash
+-l, --logging=<LOG VERBOSITY LEVEL>
+```
 
-    ```bash
-    --logging=DEBUG
-    ```
+# Example
 
-=== "Environment variable"
+```bash
+--logging=DEBUG
+```
 
-    ```bash
-    ETHSIGNER_LOGGING=DEBUG
-    ```
+# Environment variable
 
-=== "Configuration file"
+```bash
+ETHSIGNER_LOGGING=DEBUG
+```
 
-    ```bash
-    logging="DEBUG"
-    ```
+# Configuration file
+
+```bash
+logging="DEBUG"
+```
+
+<!--/tabs-->
 
 ### `metrics-enabled`
 
-Enables the [metrics exporter](../../HowTo/Monitor-Nodes/Metrics.md). The default is `false`.
+Enables the [metrics exporter](../../HowTo/Metrics.md). The default is `false`.
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    --metrics-enabled[=<true|false>]
-    ```
+# Syntax
 
-=== "Environment variable"
+```bash
+--metrics-enabled[=<true|false>]
+```
 
-    ```bash
-    ETHSIGNER_METRICS_ENABLED=true
-    ```
+# Environment variable
 
-=== "Configuration file"
+```bash
+ETHSIGNER_METRICS_ENABLED=true
+```
 
-    ```bash
-    metrics-enabled=true
-    ```
+# Configuration file
+
+```bash
+metrics-enabled=true
+```
+
+<!--/tabs-->
 
 ### `metrics-category`
 
-Categories for which to track metrics. Options are `HTTP`, `SIGNING`, `JVM`, and `PROCESS`. All
-categories are enabled by default.
+Categories for which to track metrics. Options are `HTTP`, `SIGNING`, `JVM`, and `PROCESS`. All categories are enabled by default.
 
-!!! note
+:::note
 
-    There are currently no metrics available for the `HTTP` and `SIGNING` categories.
+There are currently no metrics available for the `HTTP` and `SIGNING` categories.
 
-=== "Syntax"
+:::
 
-    ```bash
-    --metrics-category=<metrics-category>[,metrics-category...]...
-    ```
+<!--tabs-->
 
-=== "Example"
+# Syntax
 
-    ```bash
-    --metrics-category=HTTP,SIGNING
-    ```
+```bash
+--metrics-category=<metrics-category>[,metrics-category...]...
+```
 
-=== "Environment variable"
+# Example
 
-    ```bash
-    ETHSIGNER_METRICS_CATEGORY=HTTP,SIGNING
-    ```
+```bash
+--metrics-category=HTTP,SIGNING
+```
 
-=== "Configuration file"
+# Environment variable
 
-    ```bash
-    metrics-category=["HTTP","SIGNING"]
-    ```
+```bash
+ETHSIGNER_METRICS_CATEGORY=HTTP,SIGNING
+```
+
+# Configuration file
+
+```bash
+metrics-category=["HTTP","SIGNING"]
+```
+
+<!--/tabs-->
 
 ### `metrics-host`
 
-The host on which [Prometheus](https://prometheus.io/) accesses EthSigner metrics. The default is
-`127.0.0.1`.
+The host on which [Prometheus](https://prometheus.io/) accesses EthSigner metrics. The default is `127.0.0.1`.
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    --metrics-host=<HOST>
-    ```
+# Syntax
 
-=== "Example"
+```bash
+--metrics-host=<HOST>
+```
 
-    ```bash
-    --metrics-host=127.0.0.1
-    ```
+# Example
 
-=== "Environment variable"
+```bash
+--metrics-host=127.0.0.1
+```
 
-    ```bash
-    ETHSIGNER_METRICS_HOST=127.0.0.1
-    ```
+# Environment variable
 
-=== "Configuration file"
+```bash
+ETHSIGNER_METRICS_HOST=127.0.0.1
+```
 
-    ```bash
-    metrics-host="127.0.0.1"
-    ```
+# Configuration file
+
+```bash
+metrics-host="127.0.0.1"
+```
+
+<!--/tabs-->
 
 ### `metrics-host-allowlist`
 
-A comma-separated list of hostnames to allow access to the EthSigner metrics. By default, EthSigner
-accepts access from `localhost` and `127.0.0.1`.
+A comma-separated list of hostnames to allow access to the EthSigner metrics. By default, EthSigner accepts access from `localhost` and `127.0.0.1`.
 
-!!! tip
+:::tip
 
-    To allow all hostnames, use "*". We don’t recommend allowing all hostnames for production environments.
+To allow all hostnames, use "\*". We don’t recommend allowing all hostnames for production environments.
 
-=== "Syntax"
+:::
 
-    ```bash
-    --metrics-host-allowlist=<hostname>[,<hostname>...]... or "*"
-    ```
+<!--tabs-->
 
-=== "Example"
+# Syntax
 
-    ```bash
-    --metrics-host-allowlist=medomain.com,meotherdomain.com
-    ```
+```bash
+--metrics-host-allowlist=<hostname>[,<hostname>...]... or "*"
+```
 
-=== "Environment variable"
+# Example
 
-    ```bash
-    ETHSIGNER_METRICS_HOST_ALLOWLIST=medomain.com,meotherdomain.com
-    ```
+```bash
+--metrics-host-allowlist=medomain.com,meotherdomain.com
+```
 
-=== "Configuration file"
+# Environment variable
 
-    ```bash
-    metrics-host-allowlist=["medomain.com", "meotherdomain.com"]
-    ```
+```bash
+ETHSIGNER_METRICS_HOST_ALLOWLIST=medomain.com,meotherdomain.com
+```
+
+# Configuration file
+
+```bash
+metrics-host-allowlist=["medomain.com", "meotherdomain.com"]
+```
+
+<!--/tabs-->
 
 ### `metrics-port`
 
-The port (TCP) on which [Prometheus](https://prometheus.io/) accesses
-EthSigner metrics. The default is `9546`.
+The port (TCP) on which [Prometheus](https://prometheus.io/) accesses EthSigner metrics. The default is `9546`.
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    --metrics-port=<PORT>
-    ```
+# Syntax
 
-=== "Example"
+```bash
+--metrics-port=<PORT>
+```
 
-    ```bash
-    --metrics-port=6174
-    ```
+# Example
 
-=== "Environment variable"
+```bash
+--metrics-port=6174
+```
 
-    ```bash
-    ETHSIGNER_METRICS_PORT=6174
-    ```
+# Environment variable
 
-=== "Configuration file"
+```bash
+ETHSIGNER_METRICS_PORT=6174
+```
 
-    ```bash
-    metrics-port=6174
-    ```
+# Configuration file
+
+```bash
+metrics-port=6174
+```
+
+<!--/tabs-->
 
 ### `tls-allow-any-client`
 
 Allows any client to connect.
 
-!!! important
-    Cannot be used with `--tls-allow-ca-clients` and `--tls-known-clients-file`
+:::caution
 
-=== "Syntax"
+Cannot be used with `--tls-allow-ca-clients` and `--tls-known-clients-file`
 
-    ```bash
-    --tls-allow-any-client
-    ```
+:::
 
-=== "Environment variable"
+<!--tabs-->
 
-    ```bash
-    ETHSIGNER_TLS_ALLOW_ANY_CLIENT
-    ```
+# Syntax
 
-=== "Configuration file"
+```bash
+--tls-allow-any-client
+```
 
-    ```bash
-    tls-allow-any-client
-    ```
+# Environment variable
+
+```bash
+ETHSIGNER_TLS_ALLOW_ANY_CLIENT
+```
+
+# Configuration file
+
+```bash
+tls-allow-any-client
+```
+
+<!--/tabs-->
 
 ### `tls-allow-ca-clients`
 
 Allows clients signed with trusted CA certificates to connect.
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    --tls-allow-ca-clients
-    ```
+# Syntax
 
-=== "Environment variable"
+```bash
+--tls-allow-ca-clients
+```
 
-    ```bash
-    ETHSIGNER_TLS_ALLOW_CA_CLIENTS
-    ```
+# Environment variable
 
-=== "Configuration file"
+```bash
+ETHSIGNER_TLS_ALLOW_CA_CLIENTS
+```
 
-    ```bash
-    tls-allow-ca-clients
-    ```
+# Configuration file
+
+```bash
+tls-allow-ca-clients
+```
+
+<!--/tabs-->
 
 ### `tls-keystore-file`
 
 PKCS #12 formatted keystore. Used to enable TLS for [client connections](../../Concepts/TLS.md).
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    --tls-keystore-file=<keystoreFile>
-    ```
+# Syntax
 
-=== "Example"
+```bash
+--tls-keystore-file=<keystoreFile>
+```
 
-    ```bash
-    --tls-keystore-file=/Users/me/my_node/certificate.pfx
-    ```
+# Example
 
-=== "Environment variable"
+```bash
+--tls-keystore-file=/Users/me/my_node/certificate.pfx
+```
 
-    ```bash
-    ETHSIGNER_TLS_KEYSTORE_FILE=/Users/me/my_node/certificate.pfx
-    ```
+# Environment variable
 
-=== "Configuration file"
+```bash
+ETHSIGNER_TLS_KEYSTORE_FILE=/Users/me/my_node/certificate.pfx
+```
 
-    ```bash
-    tls-keystore-file="/Users/me/my_node/certificate.pfx"
-    ```
+# Configuration file
+
+```bash
+tls-keystore-file="/Users/me/my_node/certificate.pfx"
+```
+
+<!--/tabs-->
 
 ### `tls-keystore-password-file`
 
 Password file used to decrypt the keystore.
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    --tls-keystore-password-file=<passwordFile>
-    ```
+# Syntax
 
-=== "Example"
+```bash
+--tls-keystore-password-file=<passwordFile>
+```
 
-    ```bash
-    --tls-keystore-password-file=/Users/me/my_node/password.txt
-    ```
+# Example
 
-=== "Environment variable"
+```bash
+--tls-keystore-password-file=/Users/me/my_node/password.txt
+```
 
-    ```bash
-    ETHSIGNER_TLS_KEYSTORE_PASSWORD_FILE=/Users/me/my_node/password.txt
-    ```
+# Environment variable
 
-=== "Configuration file"
+```bash
+ETHSIGNER_TLS_KEYSTORE_PASSWORD_FILE=/Users/me/my_node/password.txt
+```
 
-    ```bash
-    tls-keystore-password-file=/Users/me/my_node/password.txt
-    ```
+# Configuration file
+
+```bash
+tls-keystore-password-file=/Users/me/my_node/password.txt
+```
+
+<!--/tabs-->
 
 ### `tls-known-clients-file`
 
 File containing the SHA-256 fingerprints of [authorized clients](../../HowTo/Configure-TLS.md#create-the-known-clients-file).
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    --tls-known-clients-file=<clientsFile>
-    ```
+# Syntax
 
-=== "Example"
+```bash
+--tls-known-clients-file=<clientsFile>
+```
 
-    ```bash
-    --tls-known-clients-file=/Users/me/my_node/knownClients
-    ```
+# Example
 
-=== "Environment variable"
+```bash
+--tls-known-clients-file=/Users/me/my_node/knownClients
+```
 
-    ```bash
-    ETHSIGNER_TLS_KNOWN_CLIENTS_FILE=/Users/me/my_node/knownClients
-    ```
+# Environment variable
 
-=== "Configuration file"
+```bash
+ETHSIGNER_TLS_KNOWN_CLIENTS_FILE=/Users/me/my_node/knownClients
+```
 
-    ```bash
-    tls-known-clients-file="/Users/me/my_node/knownClients"
-    ```
+# Configuration file
+
+```bash
+tls-known-clients-file="/Users/me/my_node/knownClients"
+```
+
+<!--/tabs-->
 
 ### `help`
 
 Displays the help and exits.
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    -h, --help
-    ```
+# Syntax
+
+```bash
+-h, --help
+```
+
+<!--/tabs-->
 
 ### `version`
 
 Displays the version and exits.
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    -V, --version
-    ```
+# Syntax
+
+```bash
+-V, --version
+```
+
+<!--/tabs-->
 
 <!-- links -->
+
 [connecting to a cloud-based Ethereum client]: ../../Tutorials/Start-EthSigner.md#start-ethsigner
 [Infura]: https://infura.io/
 [subcommand]: CLI-Subcommands.md

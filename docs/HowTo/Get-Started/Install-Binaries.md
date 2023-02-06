@@ -1,15 +1,19 @@
 ---
 description: Install EthSigner from binary distribution
+sidebar_position: 1
 ---
 
 # Install binary distribution
 
 ## Prerequisites
 
-* [Java JDK](https://www.oracle.com/java/technologies/javase-downloads.html)
+- [Java JDK](https://www.oracle.com/java/technologies/javase-downloads.html)
 
-!!!important
-    EthSigner requires Java 11 or later releases.
+:::caution
+
+EthSigner requires Java 11 or later releases.
+
+:::
 
 ## Install binaries
 
@@ -19,14 +23,18 @@ Unpack the downloaded files and change into the `ethsigner-<release>` directory.
 
 Display EthSigner command line help to confirm installation:
 
-=== "Linux/macOS"
+<!--tabs-->
 
-    ``` bash
-    bin/ethsigner --help
-    ```
+# Linux/macOS
 
-=== "Windows"
+```bash
+bin/ethsigner --help
+```
 
-    ``` bat
-    bin\ethsigner --help
-    ```
+# Windows
+
+```bat
+bin\ethsigner --help
+```
+
+<!--/tabs-->

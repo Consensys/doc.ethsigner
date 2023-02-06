@@ -1,40 +1,36 @@
 ---
 description: Use multiple signers
+sidebar_position: 3
 ---
 
 # Use multiple signing keys
 
-EthSigner supports transaction signing using [multiple stored keys](../Tutorials/Multifile.md).
-Any account submitting transactions to EthSigner can use the stored keys. The keys can be stored
-in:
+EthSigner supports transaction signing using [multiple stored keys](../Tutorials/Multifile.md). Any account submitting transactions to EthSigner can use the stored keys. The keys can be stored in:
 
-* A [V3 keystore file](../Tutorials/Multifile.md##create-password-and-key-files)
-  stored on a file system accessible by the host.
-* A [HashiCorp Vault](../HowTo/Store-Keys/Use-Hashicorp.md).
-* An [Azure Key Vault](../HowTo/Store-Keys/Use-Azure.md).
+- A [V3 keystore file](../Tutorials/Multifile.md##create-password-and-key-files) stored on a file system accessible by the host.
+- A [HashiCorp Vault](../HowTo/Store-Keys/Use-Hashicorp.md).
+- An [Azure Key Vault](../HowTo/Store-Keys/Use-Azure.md).
 
-!!! caution
+:::caution
 
-    The ability to use mulitiple signing keys should be limited to the accounts with access to the
-    stored keys.
+The ability to use multiple signing keys should be limited to the accounts with access to the stored keys.
 
-Each key requires a separate [TOML file](../Reference/Multikey-Parameters.md) that defines the
-parameters to access the key. The TOML files must be placed in a single directory specified using
-the [`multikey-signer --directory`](../Reference/CLI/CLI-Syntax.md#multikey-options) subcommand.
+:::
 
-!!! tip
+Each key requires a separate [TOML file](../Reference/Multikey-Parameters.md) that defines the parameters to access the key. The TOML files must be placed in a single directory specified using the [`multikey-signer --directory`](../Reference/CLI/CLI-Syntax.md#multikey-options) subcommand.
 
-    Files can be added or removed from the directory without needing to restart EthSigner.
+:::tip
 
-The TOML file name must use the format `[<prefix>]<accountAddress>.toml`. The account address must
-be in lowercase. The prefix can be anything you want. No two TOML files can have the same key
-address in the file name, even if the prefix differs.
+Files can be added or removed from the directory without needing to restart EthSigner.
 
-Remove the `0x` portion of the account address. For example,
-`78e6e236592597c09d5c137c2af40aecd42d12a2.toml`.
+:::
 
-!!! tip
+The TOML file name must use the format `[<prefix>]<accountAddress>.toml`. The account address must be in lowercase. The prefix can be anything you want. No two TOML files can have the same key address in the file name, even if the prefix differs.
 
-    Use the
-    [`export-address`](https://besu.hyperledger.org/en/latest/Reference/CLI/CLI-Subcommands/#export-address)
-    Hyperledger Besu subcommand to obtain the account address of the node.
+Remove the `0x` portion of the account address. For example, `78e6e236592597c09d5c137c2af40aecd42d12a2.toml`.
+
+:::tip
+
+Use the [`export-address`](https://besu.hyperledger.org/en/latest/Reference/CLI/CLI-Subcommands/#export-address) Hyperledger Besu subcommand to obtain the account address of the node.
+
+:::
