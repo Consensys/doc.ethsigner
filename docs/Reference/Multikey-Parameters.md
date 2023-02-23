@@ -52,7 +52,7 @@ token = "root_token"
 serverHost = "localhost"
 serverPort = 8200
 timeout = 5000
-tlsEnabled = true
+tlsEnable = true
 tlsTrustStoreType = "ALLOWLIST"
 tlsTrustStorePath = "/Users/me/project/knownHashicorpServers"
 ```
