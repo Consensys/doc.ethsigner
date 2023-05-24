@@ -136,7 +136,7 @@ const config = {
             position: "right",
           },
           {
-            href: "https://discord.gg/jCk2XuYtrp",
+            href: "https://discord.com/invite/consensys",
             className: "header-discord-link",
             position: "right",
           },
@@ -181,7 +181,7 @@ const config = {
             items: [
               {
                 label: "Discord",
-                href: "https://discord.gg/jCk2XuYtrp",
+                href: "https://discord.com/invite/consensys",
               },
               {
                 label: "Issues",
