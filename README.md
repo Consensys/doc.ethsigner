@@ -1,6 +1,6 @@
 # ConsenSys EthSigner
 
-This documentation repo is built using [Docusaurus 2](https://docusaurus.io/).
+This documentation repo is built
 
 ### Local Development
 
@@ -14,4 +14,5 @@ This command starts a local development server and opens up a browser window. Mo
 
     $ npm run build
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+This command generates static content into the ![IMG_3930](https://github.com/Consensys/doc.ethsigner/assets/127110010/f77c2af0-41de-4873-90f6-dc3f6bf087f8)
+directory and can be served using any static contents hosting service.
