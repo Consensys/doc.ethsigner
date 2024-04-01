@@ -7,8 +7,7 @@ const baseUrl = isDev ? "/" : "/";
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "ConsenSys EthSigner",
-  tagline:
-    "⛔️ On 31 March 2024, Consensys will deprecate Ethsigner. Please use Web3sginer instead ⛔️",
+  tagline: "⛔️ On 31 March 2024, Consensys will deprecate Ethsigner. Please use Web3sginer instead ⛔️",
   url: "https://docs.ethsigner.consensys.net",
   baseUrl,
   onBrokenLinks: "throw",
