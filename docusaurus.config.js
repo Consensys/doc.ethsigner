@@ -8,7 +8,7 @@ const baseUrl = isDev ? "/" : "/";
 const config = {
   title: "ConsenSys EthSigner",
   tagline:
-    "An open-source, client-agnostic, Ethereum transaction signer that separates private key management from transaction validation by signing transactions using a private key that can be secured in a variety of cloud providers, or encrypted on a local disk.",
+    "⛔️ On 31 March 2024, Consensys will deprecate Ethsigner. Please use Web3sginer instead ⛔️",
   url: "https://docs.ethsigner.consensys.net",
   baseUrl,
   onBrokenLinks: "throw",
@@ -87,13 +87,13 @@ const config = {
 
         // ... other Algolia params
       },
-      // announcementBar: {
-      //   id: "announcement_bar",
-      //   content: "⛔️ This documentation site is still under construction! 🚧",
-      //   backgroundColor: "#fafbfc",
-      //   textColor: "#091E42",
-      //   isCloseable: false,
-      // },
+      announcementBar: {
+        id: "announcement_bar",
+        content: "⛔️ On 31 March 2024, Consensys will deprecate Ethsigner. Please use Web3sginer instead ⛔️",
+        backgroundColor: "#fafbfc",
+        textColor: "#091E42",
+        isCloseable: false,
+      },
       colorMode: {
         defaultMode: "light",
         disableSwitch: false,
