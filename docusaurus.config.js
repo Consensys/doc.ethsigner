@@ -8,7 +8,7 @@ const baseUrl = isDev ? "/" : "/";
 const config = {
   title: "ConsenSys EthSigner",
   tagline:
-    "An open-source, client-agnostic, Ethereum transaction signer that separates private key management from transaction validation by signing transactions using a private key that can be secured in a variety of cloud providers, or encrypted on a local disk.",
+    "On March 31, 2023, Consensys will deprecate Ethsigner. Please use [Web3sginer](docs.web3signer.consensys.io) instead",
   url: "https://docs.ethsigner.consensys.net",
   baseUrl,
   onBrokenLinks: "throw",
