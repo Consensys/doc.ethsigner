@@ -7,7 +7,7 @@ const baseUrl = isDev ? "/" : "/";
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "ConsenSys EthSigner",
-  tagline: "On 31 March 2024, Consensys will deprecate Ethsigner. Please use Web3Signer instead",
+  tagline: "EthSigner is deprecated and no longer supported. Please use Web3Signer instead",
   url: "https://docs.ethsigner.consensys.net",
   baseUrl,
   onBrokenLinks: "throw",
@@ -88,7 +88,7 @@ const config = {
       },
       announcementBar: {
         id: "announcement_bar",
-        content: "⛔️ On 31 March 2024, Consensys will deprecate Ethsigner. Please use Web3Signer instead ⛔️",
+        content: "⛔️ EthSigner is deprecated and no longer supported. Please use Web3Signer instead ⛔️",
         backgroundColor: "#fafbfc",
         textColor: "#091E42",
         isCloseable: false,
